@@ -1,0 +1,23 @@
+{
+	"name" : "broom", 
+	"count" : 1, 
+	"parameters" : {
+		"baseVersion" : 1,
+
+		"itemName" : null,
+		"price" : 0,
+		"level" : 1,
+		"maxStack" : 1,
+		"twoHanded" : true,
+		"itemTags" : [],
+		"scripts" : ["/mpguns_core/main.lua"],
+		"scriptDelta" : 1,
+		"animation" : {},
+
+		"shortdescription" : "Untitled Name",
+		"category" : "Gun",
+		"inventoryIcon" : "/assetmissing.png",
+		"description" : "no description",
+		"rarity" : "Common"
+	}
+}

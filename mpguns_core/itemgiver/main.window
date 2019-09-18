@@ -1,0 +1,68 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+
+			"base" : "/mpguns_core/itemgiver/image/x.png",
+			"hover" : "/mpguns_core/itemgiver/image/x.png",
+			"pressed" : "/mpguns_core/itemgiver/image/x.png",
+			"pressedOffset" : [0, 0],
+
+			"callback" : "close",
+			"position" : [189, 132],
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : -1,
+			"type" : "background",
+
+			"fileHeader" : "/mpguns_core/itemgiver/image/header.png",
+			"fileBody" : "/mpguns_core/itemgiver/image/body.png"
+		},
+
+		"bg" : {
+			"zlevel" : 1,
+			"type" : "image",
+
+			"file" : "/mpguns_core/itemgiver/image/bg.png"
+		},
+		
+		"give" : {
+			"zlevel" : 2,
+			"type" : "button",
+			"base" : "/mpguns_core/itemgiver/image/button.png",
+			"hover" : "/mpguns_core/itemgiver/image/button.png?brightness=60",
+			"position" : [2, 2],
+			"caption" : "give",
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+
+		"itemid" : {
+			"zlevel" : 2,
+			"type" : "textbox",
+			"position" : [3, 17],
+			"maxWidth" : 195,
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"text" : "scar-h",
+			"callback" : "callback"
+		}
+
+	},
+
+	"canvasClickCallbacks" : {},
+	
+	"canvasKeyCallbacks" : {},
+	
+	"scriptWidgetCallbacks" : [
+		"callback"
+	],
+		
+	"directory" : "/mpguns_core/itemgiver/",
+	"scripts" : ["/mpguns_core/main.lua"],
+	"system" : "/mpguns_core/itemgiver/ui.lua",
+	"scriptDelta" : 1
+}

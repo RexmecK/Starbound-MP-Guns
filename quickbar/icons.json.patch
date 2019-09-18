@@ -1,0 +1,7 @@
+[
+	{
+		"op": "add",
+    	"path": "/normal/-",
+    	"value": { "label" : "MP Guns", "pane" : "/mpguns_core/itemgiver/main.window", "icon" : "/assetmissing.png" }
+    }
+]
