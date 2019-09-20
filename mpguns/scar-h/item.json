@@ -142,8 +142,8 @@
 			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
 			"firesound1" : {"pool" : ["/sfx/gun/ar6.ogg"], "pitchMultiplier" : 1.355},
 			"firesound2" : {"pool" : ["/sfx/gun/grenadeblast_small3.ogg"], "pitchMultiplier" : 1.25},
-			"firesound3" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.25},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.25}
+			"firesound3" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.5},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.5}
 		},
 		"lights" : {
 			"muzzleFlash" : {

@@ -29,6 +29,17 @@
 			"file" : "/mpguns_core/itemgiver/image/bg.png"
 		},
 		
+		"scarh" : {
+			"zlevel" : 2,
+			"type" : "button",
+			"base" : "/mpguns_core/itemgiver/image/button.png",
+			"hover" : "/mpguns_core/itemgiver/image/button.png?brightness=60",
+			"position" : [2, 28],
+			"caption" : "Scar-H",
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+
 		"give" : {
 			"zlevel" : 2,
 			"type" : "button",

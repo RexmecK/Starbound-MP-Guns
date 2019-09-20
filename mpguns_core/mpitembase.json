@@ -10,7 +10,8 @@
 		"maxStack" : 1,
 		"twoHanded" : true,
 		"itemTags" : [],
-		"scripts" : ["/mpguns_core/main.lua"],
+		"scripts" : ["/projectiles/killable.lua"],
+		"loadscript" : "/mpguns_core/main.lua",
 		"scriptDelta" : 1,
 		"animation" : {},
 

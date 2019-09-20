@@ -31,3 +31,7 @@ function buttons.give()
         end
     end
 end
+
+function buttons.scarh()
+    widget.setText("itemid", "scar-h")
+end

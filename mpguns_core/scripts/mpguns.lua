@@ -9,7 +9,7 @@ end
 
 -- get item from index
 function mpguns:get(index)
-    local res, item = pcall(root.assetJson, directory(index, "/mpguns/").."/item.json")
+    local res, item = pcall(root.assetJson, directory(index, "/mpguns/", "/").."item.json")
     if not res then sb.logWarn("Couldnt load item!") return end
 
     item.directory = directory(index, "/mpguns/", "/")
@@ -57,8 +57,8 @@ function mpguns:updateMpitem(check_mpitem)
     local item = self:get(directory)
     if not item then return nil, 2 end
 
-    if item.itemVersion ~= check_mpitem.parameters.itemVersion or 
-        mpitem.parameters.baseVersion ~= check_mpitem.parameters.baseVersion then
+    if (item.itemVersion ~= check_mpitem.parameters.itemVersion) or 
+        (mpitem.parameters.baseVersion ~= check_mpitem.parameters.baseVersion) then
         return self:makeMpitem(item)
     end
     
