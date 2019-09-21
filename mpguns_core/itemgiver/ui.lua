@@ -35,3 +35,7 @@ end
 function buttons.scarh()
     widget.setText("itemid", "scar-h")
 end
+
+function buttons.fiveseven()
+    widget.setText("itemid", "fiveseven")
+end
