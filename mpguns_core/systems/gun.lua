@@ -35,7 +35,8 @@ function main:init()
 	else
 		self.config = config.gun
 	end
-	aim.recoilRecovery = self.config.recoilRecovery
+	aim.recoilRecovery = self.config.recoilRecovery or 8
+	aim.recoilResponse = self.config.recoilResponse or 1
 
 	sprites:load(config.sprites)
 

@@ -12,8 +12,10 @@ local function round(n)
 end
 
 aim = {}
+aim._recoillerp = 0
 aim._recoil = 0
 aim.recoilRecovery = 8
+aim.recoilResponse = 8
 
 aim.offset = 0
 
@@ -30,6 +32,7 @@ end
 
 function aim:update(dt)
 	if self.enabled then
+		self._recoillerp = lerp(self._recoillerp, self._recoil, 1 / self.recoilResponse)
 		if round(self._recoil) ~= 0 then
 			self._recoil = lerp(self._recoil, 0, 1 / self.recoilRecovery)
 			if round(self._recoil) == 0 then
@@ -38,7 +41,7 @@ function aim:update(dt)
 		end
 
 		self.current = self.angle
-		activeItem.setArmAngle(math.rad(self.current + self.offset + self._recoil))
+		activeItem.setArmAngle(math.rad(self.current + self.offset + self._recoillerp))
 		activeItem.setFacingDirection(self.facing)
 	else
 		activeItem.setArmAngle(math.rad(self.offset))
