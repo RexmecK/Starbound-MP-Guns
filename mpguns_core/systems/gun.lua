@@ -9,6 +9,7 @@ include "arms"
 include "sprites"
 include "directory"
 include "camera"
+include "crosshair"
 
 main = {}
 main.config = {}
@@ -97,6 +98,8 @@ function main:update(dt, firemode, shift, moves)
 
 
 	camera.target = ((activeItem.ownerAimPosition() - mcontroller.position()) * vec2(self.config.aimRatio / 2)) + vec2(0, aim:getRecoil() * 0.125)
+	muzzle.inaccuracy = self:getInaccuracy()
+	crosshair.value = (self:getInaccuracy() / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 10
 
 	animations:update(dt)
 	transforms:reset()
@@ -137,6 +140,19 @@ function main:isPlaying(animationname)
 		return animations:isPlaying(animationname.."_dry")
 	else
 		return animations:isPlaying(animationname)
+	end
+end
+
+function main:getInaccuracy()
+	local vel = math.max(math.abs(mcontroller.xVelocity()), math.abs(mcontroller.yVelocity() + 1.27))
+	local movingRatio = math.min(vel / 14, 1)
+
+	local acc = (self.config.movingInaccuracy * movingRatio) + (self.config.standingInaccuracy * (1 - movingRatio))
+
+	if mcontroller.crouching() then
+		return acc * self.config.crouchInaccuracyMultiplier
+	else
+		return acc
 	end
 end
 
