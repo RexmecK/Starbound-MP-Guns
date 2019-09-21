@@ -99,8 +99,8 @@ function main:update(dt, firemode, shift, moves)
 
 	camera.target = ((activeItem.ownerAimPosition() - mcontroller.position()) * vec2(self.config.aimRatio / 2)) + vec2(0, aim:getRecoil() * 0.125)
 	muzzle.inaccuracy = self:getInaccuracy()
-	crosshair.value = (self:getInaccuracy() / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 10
-
+	crosshair.value = (muzzle.inaccuracy / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 10
+	item.setCount(math.max(self:ammoCount(), 1))
 	animations:update(dt)
 	transforms:reset()
 	transforms:apply(animations:transforms())
@@ -154,6 +154,14 @@ function main:getInaccuracy()
 	else
 		return acc
 	end
+end
+
+function main:ammoCount()
+	local ammo = self.storage.ammo
+	if self.storage.loaded and self.storage.loaded == 1 then
+		ammo = ammo + 1
+	end
+	return ammo
 end
 
 function main:eject()
