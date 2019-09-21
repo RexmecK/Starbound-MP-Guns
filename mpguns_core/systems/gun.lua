@@ -15,6 +15,7 @@ main = {}
 main.config = {}
 main.storage = {}
 main.fireCooldown = 0
+main.queuedFire = 0
 main.reloadLooping = false
 
 function main:setupEvents()
@@ -57,27 +58,15 @@ function main:update(dt, firemode, shift, moves)
 		self:save()
 	end
 	
-	if firemode == "primary" and self.storage.loaded == 1 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
-		if self.config.chamberEject then
-			self:eject()
-		else
-			self.storage.loaded = 2
-			self:save()
+	self:updateFire(dt)
+	if firemode == "primary" and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
+		if self.config.firemode == "auto" and self.queuedFire == 0 then
+			self.queuedFire = 1
+		elseif self.config.firemode == "burst" and self.queuedFire == 0 then
+			self.queuedFire = 3
+		elseif self.config.firemode == "semi" and update_lastInfo[2] ~= "primary" then
+			self.queuedFire = 1
 		end
-		if self.config.chamberAutoLoad and self.storage.ammo > 0 then
-			self.storage.canLoad = true
-			self:save()
-		end
-
-		self:fireProjectile()
-		self.fireCooldown = 60 / self.config.rpm
-
-		if self.storage.ammo == 0 then
-			self.storage.dry = true
-			self:save()
-		end
-
-		self:animate("fire")
 	end
 
 	if self.reloadLooping and not animations:isAnyPlaying() then
@@ -112,6 +101,46 @@ end
 
 function main:uninit()
 	self:save()
+end
+
+function main:updateFire(dt)
+	if self.queuedFire > 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
+		if self:fire() then
+			self.queuedFire = self.queuedFire - 1
+		else
+			self.queuedFire = 0
+		end
+	elseif self.queuedFire > 0 and self.storage.ammo == 0 and self.storage.loaded ~= 1 then
+		self.queuedFire = 0
+	end
+end
+
+function main:fire()
+	if self.storage.loaded == 1 then
+		if self.config.chamberEject then
+			self:eject()
+		else
+			self.storage.loaded = 2
+			self:save()
+		end
+		if self.config.chamberAutoLoad and self.storage.ammo > 0 then
+			self.storage.canLoad = true
+			self:save()
+		end
+
+		self:fireProjectile()
+		self.fireCooldown = 60 / self.config.rpm
+
+		if self.storage.ammo == 0 then
+			self.storage.dry = true
+			self:save()
+		end
+
+		self:animate("fire")
+		return true
+	else
+		return false
+	end
 end
 
 function main:save()

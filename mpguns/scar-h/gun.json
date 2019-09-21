@@ -1,4 +1,23 @@
 {
+
+	"damageMultiplier" : 1,
+
+	"magazineCapacity" : 30,
+	"chamberAutoLoad" : true,
+	"chamberEject" : true,
+
+	"recoil" : 4,
+	"recoilRecovery" : 16,
+	
+	"movingInaccuracy" : 45,
+	"standingInaccuracy" : 1,
+	"crouchInaccuracyMultiplier" : 0.5,
+
+	"aimRatio" : 0.75,
+
+	"firemode" : "semi",
+	"rpm" : 550,
+
 	"casingParticle" : "casing",
 	"projectileName" : "bullet-4",
 	"projectileConfig" : {
@@ -101,19 +120,5 @@
 				]
 			}
 		]
-	},
-	"damageMultiplier" : 1,
-	"magazineCapacity" : 30,
-	"chamberAutoLoad" : true,
-	"chamberEject" : true,
-
-	"recoil" : 4,
-	"recoilRecovery" : 16,
-	
-	"movingInaccuracy" : 45,
-	"standingInaccuracy" : 1,
-	"crouchInaccuracyMultiplier" : 0.5,
-
-	"aimRatio" : 0.75,
-	"rpm" : 550
+	}
 }
