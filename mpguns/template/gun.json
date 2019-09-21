@@ -13,10 +13,10 @@
 	"standingInaccuracy" : 1,
 	"crouchInaccuracyMultiplier" : 0.5,
 
-	"aimRatio" : 0.75,
+	"aimRatio" : 0.5,
 
 	"firemode" : "auto",
-	"rpm" : 550,
+	"rpm" : 600,
 
 	"casingParticle" : "casing",
 	"projectileName" : "bullet-4",
