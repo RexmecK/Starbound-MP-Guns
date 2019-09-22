@@ -43,11 +43,6 @@ function main:init()
 	self.storage = config.storage or {}
 	self.storage.ammo = self.storage.ammo or self.config.magazineCapacity
 	self.storage.loaded = self.storage.loaded or 0
-	if type(self.storage.dry) == "boolean" and self.storage.dry then
-		self.storage.dry = false
-	else
-		self.storage.dry = true
-	end
 
 	transforms:init()
 	animations:init()
