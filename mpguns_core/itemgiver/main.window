@@ -51,6 +51,18 @@
 			"callback" : "callback"
 		},
 
+
+		"mp5sd" : {
+			"zlevel" : 2,
+			"type" : "button",
+			"base" : "/mpguns_core/itemgiver/image/button.png",
+			"hover" : "/mpguns_core/itemgiver/image/button.png?brightness=60",
+			"position" : [2, 93],
+			"caption" : "MP5-SD",
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+
 		"give" : {
 			"zlevel" : 2,
 			"type" : "button",

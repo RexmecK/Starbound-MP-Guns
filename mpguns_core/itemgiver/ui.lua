@@ -39,3 +39,7 @@ end
 function buttons.fiveseven()
     widget.setText("itemid", "fiveseven")
 end
+
+function buttons.mp5sd()
+    widget.setText("itemid", "mp5-sd")
+end
