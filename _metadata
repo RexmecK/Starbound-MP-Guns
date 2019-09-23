@@ -1,0 +1,10 @@
+{
+  "author" : "Rexmeck",
+  "description" : ">> This is very early in mod developpement!\n\nCurrent Guns:\n- Scar-H\n- Five-SeveN\n- MP5-SD",
+  "friendlyName" : "MP Guns",
+  "link" : "steam://url/CommunityFilePage/1870566371",
+  "name" : "mpguns",
+  "steamContentId" : "1870566371",
+  "tags" : "Weapons",
+  "version" : "pre-alpha 1"
+}
