@@ -6,5 +6,6 @@
   "name" : "mpguns",
   "steamContentId" : "1870566371",
   "tags" : "Weapons",
+  "includes" : ["QuickbarMini"],
   "version" : "pre-alpha 1"
 }
