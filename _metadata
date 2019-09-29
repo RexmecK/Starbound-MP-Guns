@@ -1,11 +1,11 @@
 {
   "author" : "Rexmeck",
-  "description" : ">> This is very early in mod developpement!\n\nCurrent Guns:\n- Scar-H\n- Five-SeveN\n- MP5-SD",
-  "friendlyName" : "MP Guns",
+  "description" : ">> This is very early in mod developpement!\n\nCurrent Guns:\n- Scar-H\n- Five-SeveN\n- MP5-SD\n- M1 Garand\n\nhttps://www.discord.gg/yJAruMV",
+  "friendlyName" : "Multiplayer guns",
+  "includes" : ["QuickbarMini"],
   "link" : "steam://url/CommunityFilePage/1870566371",
   "name" : "mpguns",
   "steamContentId" : "1870566371",
   "tags" : "Weapons",
-  "includes" : ["QuickbarMini"],
-  "version" : "pre-alpha 1"
+  "version" : "pre-alpha 2"
 }
