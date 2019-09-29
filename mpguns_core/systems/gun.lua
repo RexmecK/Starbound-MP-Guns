@@ -212,6 +212,9 @@ function main:eject()
 end
 
 function main:load()
+	if self.storage.loaded > 0 then
+		main:eject()
+	end
 	if self.storage.ammo <= 0 then return end
 	self.storage.loaded = 1
 	self.storage.ammo = self.storage.ammo - 1

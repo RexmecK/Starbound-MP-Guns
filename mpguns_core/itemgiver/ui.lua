@@ -47,3 +47,7 @@ end
 function buttons.m1garand()
     widget.setText("itemid", "m1garand")
 end
+
+function buttons.deagle()
+    widget.setText("itemid", "deagle")
+end
