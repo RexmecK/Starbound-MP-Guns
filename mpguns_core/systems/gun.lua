@@ -25,6 +25,7 @@ function main:setupEvents()
 	animations:addEvent("reload1", function() self:reload(1) end)
 	animations:addEvent("eject", function() self:eject() end)
 	animations:addEvent("load", function() self:load() end)
+	animations:addEvent("unload", function() self:unload() end)
 end
 
 function main:init()
@@ -215,6 +216,12 @@ function main:load()
 	self.storage.loaded = 1
 	self.storage.ammo = self.storage.ammo - 1
 	self.storage.dry = false
+	self:save()
+end
+
+function main:unload()
+	if self.storage.ammo <= 0 then return end
+	self.storage.loaded = 0
 	self:save()
 end
 

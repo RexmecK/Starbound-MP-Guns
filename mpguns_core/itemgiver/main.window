@@ -63,6 +63,17 @@
 			"callback" : "callback"
 		},
 
+		"m1garand" : {
+			"zlevel" : 2,
+			"type" : "button",
+			"base" : "/mpguns_core/itemgiver/image/button.png",
+			"hover" : "/mpguns_core/itemgiver/image/button.png?brightness=60",
+			"position" : [2, 80],
+			"caption" : "M1 Garand",
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+
 		"give" : {
 			"zlevel" : 2,
 			"type" : "button",

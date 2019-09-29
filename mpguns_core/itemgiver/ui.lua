@@ -43,3 +43,7 @@ end
 function buttons.mp5sd()
     widget.setText("itemid", "mp5-sd")
 end
+
+function buttons.m1garand()
+    widget.setText("itemid", "m1garand")
+end
