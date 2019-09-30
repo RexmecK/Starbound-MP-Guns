@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1, // add up a number to force update
+	"itemVersion" : 1.02, // add up a number to force update
 
 	"shortdescription" : "Five-seveN",
 	"category" : "Pistol",
@@ -141,8 +141,8 @@
 			"click4" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 1.75},
 			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
 			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
-			"firesound1" : {"pool" : ["/sfx/gun/pistol1.ogg"], "pitchMultiplier" : 1.5},
-			"firesound2" : {"pool" : ["/sfx/gun/mp1.ogg"], "pitchMultiplier" : 0.5},
+			"firesound1" : {"pool" : ["/sfx/gun/pistol1.ogg"], "pitchMultiplier" : 1.35},
+			"firesound2" : {"pool" : ["/sfx/gun/mp1.ogg"], "pitchMultiplier" : 1.125},
 			"firesound3" : {"pool" : ["/sfx/gun/mp3.ogg"], "pitchMultiplier" : 0.875},
 			"firesound4" : {"pool" : ["/sfx/gun/grapplegun.ogg"], "pitchMultiplier" : 1.5}
 		},
@@ -383,7 +383,7 @@
 		},
 
 		"transformationGroups" : {
-			"gun":{"interpolated":false,"transform":{"rotationPoint":[2.25,1.6875],"scale":[0.25,0.25],"rotation":0,"position":[-1.125,-0.5625]}},
+			"gun":{"interpolated":false,"transform":{"rotationPoint":[2.25,1.6875],"scale":[0.225,0.225],"rotation":0,"position":[-1.125,-0.5625]}},
 			"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.25,0.25]}},
 			"trigger":{"interpolated":false,"transform":{"rotationPoint":[2.1875,2.3125],"rotation":0,"position":[0,0]}},
 			"mag":{"interpolated":false,"transform":{"rotationPoint":[0.875,1.5625],"scalePoint":[1.25,2.875],"scale":[1,1],"rotation":0,"position":[0,0]}},

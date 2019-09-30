@@ -51,3 +51,7 @@ end
 function buttons.deagle()
     widget.setText("itemid", "deagle")
 end
+
+function buttons.ak47()
+    widget.setText("itemid", "ak47")
+end

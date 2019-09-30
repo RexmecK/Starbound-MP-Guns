@@ -6,9 +6,9 @@
 	"chamberAutoLoad" : true,
 	"chamberEject" : true,
 
-	"recoil" : 4,
+	"recoil" : 6,
 	"recoilRecovery" : 16,
-	"recoilResponse" : 2,
+	"recoilResponse" : 3,
 	
 	"movingInaccuracy" : 45,
 	"standingInaccuracy" : 1,
@@ -17,7 +17,7 @@
 	"aimRatio" : 0.5,
 
 	"firemode" : "auto",
-	"rpm" : 550,
+	"rpm" : 600,
 
 	"casingParticle" : "casing",
 	"projectileName" : "bullet-4",
