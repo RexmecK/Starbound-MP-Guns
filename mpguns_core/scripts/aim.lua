@@ -55,6 +55,9 @@ function aim:at(at)
 end
 
 function aim:recoil(angle)
+	if self.current < -45 then
+		angle = -angle
+	end
 	self._recoil = self._recoil + angle
 end
 
