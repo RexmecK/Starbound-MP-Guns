@@ -1,5 +1,50 @@
 include "class"
 
+local vec2OP = {}
+
+function vec2OP.angle(self)
+	local angle = math.atan(self[1], self[2])
+	if angle < 0 then angle = angle + 2 * math.pi end
+	return angle
+end
+
+function vec2OP.clamp(self, min, max)
+	local v = {0,0}
+	if self[1] < min[1] then
+		v[1] = min[1]
+	elseif self[1] > max[1] then
+		v[1] = max[1]
+	else
+		v[1] = self[1]
+	end
+	if self[2] < min[2] then
+		v[2] = min[2]
+	elseif self[2] > max[2] then
+		v[2] = max[2]
+	else
+		v[2] = self[2]
+	end
+	return vec2(v)
+end
+
+function vec2OP.rotate(self, angle)
+	local sinAngle = math.sin(angle)
+	local cosAngle = math.cos(angle)
+
+	return vec2(
+		{
+			self[1] * cosAngle - self[2] * sinAngle,
+			self[1] * sinAngle + self[2] * cosAngle,
+		}
+	)
+end
+
+function vec2OP.lerp(self, b, ratio)
+	if type(b) == "number" then b = vec2(b) end
+	return self + (b - self) * ratio
+end
+
+
 local v2 = {}
 v2[1] = 0
 v2[2] = 0
@@ -10,52 +55,8 @@ function v2:__index(a)
 			return self[1]
 		elseif a == "y" then 
 			return self[2]
-		elseif a == "angle" then
-			return 
-			function(self)		
-				local angle = math.atan(self[1], self[2])
-				if angle < 0 then angle = angle + 2 * math.pi end
-				return angle
-			end
-		elseif a == "clamp" then
-			return 
-			function(self, min, max)		
-				local v = {0,0}
-				if self[1] < min[1] then
-					v[1] = min[1]
-				elseif self[1] > max[1] then
-					v[1] = max[1]
-				else
-					v[1] = self[1]
-				end
-				if self[2] < min[2] then
-					v[2] = min[2]
-				elseif self[2] > max[2] then
-					v[2] = max[2]
-				else
-					v[2] = self[2]
-				end
-				return vec2(v)
-			end
-		elseif a == "rotate" then
-			return
-			function(self, angle)
-				local sinAngle = math.sin(angle)
-				local cosAngle = math.cos(angle)
-
-				return vec2(
-					{
-						self[1] * cosAngle - self[2] * sinAngle,
-						self[1] * sinAngle + self[2] * cosAngle,
-					}
-				)
-			end
-		elseif a == "lerp" then
-			return
-			function(self, b, ratio)
-				if type(b) == "number" then b = vec2(b) end
-				return self + (b - self) * ratio
-			end
+		elseif vec2OP[a] then
+			return function(...) return vec2OP[a](...) end 
 		end
 	end
 end

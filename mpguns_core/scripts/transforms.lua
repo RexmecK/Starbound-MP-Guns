@@ -33,15 +33,11 @@ function transforms:update(dt)
 		elseif animator.hasTransformationGroup(name) then
 			local current = self.override[name] or self.current[name] or {}
 			local cal = {
-				scale			= vec2(current.scale or def.scale or 1),
-				scalePoint		= vec2(current.scalePoint or def.scalePoint or 0),
-				position		= vec2(current.position or def.position or 0) * vec2(current.scale or def.scale or 1),
+				scale			= current.scale or def.scale or 1,
+				scalePoint		= current.scalePoint or def.scalePoint or 0,
+				position		= (current.position or def.position or 0) * (current.scale or def.scale or 1),
 				rotation		= current.rotation or def.rotation or 0,
-				rotationPoint	= lerp(
-					vec2(current.scalePoint or def.scalePoint or 0), 
-					vec2(current.rotationPoint or def.rotationPoint or 0), 
-					vec2(current.scale or def.scale or 1)
-				)
+				rotationPoint	= vec2(current.scalePoint or def.scalePoint or 0):lerp( current.rotationPoint or def.rotationPoint or 0, current.scale or def.scale or 1)
 			}
 			animator.resetTransformationGroup(name) 
 			animator.scaleTransformationGroup(name, cal.scale, cal.scalePoint)
