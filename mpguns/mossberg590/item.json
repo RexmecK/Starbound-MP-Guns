@@ -282,7 +282,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 80],
-							"color" : [255,255,255,24],
+							"color" : [255,255,255,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,

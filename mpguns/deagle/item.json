@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.01, // add up a number to force update
+	"itemVersion" : 1.02, // add up a number to force update
 
 	"shortdescription" : "Desert Eagle",
 	"category" : "Pistol",
@@ -143,8 +143,8 @@
 			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
 				
 			"firesound1" : {"pool" : ["/sfx/gun/sniper4.ogg"], "pitchMultiplier" : 1.4},
-			"firesound2" : {"pool" : ["/sfx/gun/ar6.ogg"], "pitchMultiplier" : 1.7},
-			"firesound3" : {"pool" : ["/sfx/gun/grenadeblast_small_fire3.ogg"], "pitchMultiplier" : 1.75},
+			"firesound2" : {"pool" : ["/sfx/gun/ar6.ogg"], "pitchMultiplier" : 1.5},
+			"firesound3" : {"pool" : ["/sfx/gun/grenadeblast_small_fire3.ogg"], "pitchMultiplier" : 1.5},
 			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.66}
 		},
 		"lights" : {
@@ -283,7 +283,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 80],
-							"color" : [255,255,255,24],
+							"color" : [255,255,255,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -312,7 +312,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,24],
+							"color" : [128,128,128,45],
 							"initialVelocity" : [5.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -341,7 +341,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,24],
+							"color" : [128,128,128,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -370,14 +370,17 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, -100],
 							"approach" : [0, 80],
-							"initialVelocity" : [-5.0, 20.0],
-							"angularVelocity" : 360,
+							"initialVelocity" : [-1.5, 8.0],
+							"angularVelocity" : 720,
 							"collidesForeground" : true,
-							"size" : 0.25,
+							"destructionAction" : "fade",
+							"destructionTime" : 0.85,
+							"size" : 0.375,
 							"layer" : "front",
 							"timeToLive" : 2.0,
 							"variance" : {
-								"initialVelocity" : [10.0,2.0]
+								"angularVelocity" : 360,
+								"initialVelocity" : [3.0,2.0]
 							}
 						}
 					}

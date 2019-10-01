@@ -266,7 +266,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 80],
-							"color" : [255,255,255,24],
+							"color" : [255,255,255,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -295,7 +295,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,24],
+							"color" : [128,128,128,45],
 							"initialVelocity" : [5.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -324,7 +324,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,24],
+							"color" : [128,128,128,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -353,14 +353,17 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, -100],
 							"approach" : [0, 80],
-							"initialVelocity" : [-5.0, 20.0],
-							"angularVelocity" : 360,
+							"initialVelocity" : [-1.5, 8.0],
+							"angularVelocity" : 720,
 							"collidesForeground" : true,
+							"destructionAction" : "fade",
+							"destructionTime" : 0.85,
 							"size" : 0.75,
 							"layer" : "front",
 							"timeToLive" : 2.0,
 							"variance" : {
-								"initialVelocity" : [10.0,2.0]
+								"angularVelocity" : 360,
+								"initialVelocity" : [3.0,2.0]
 							}
 						}
 					}

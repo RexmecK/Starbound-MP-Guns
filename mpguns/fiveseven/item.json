@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.02, // add up a number to force update
+	"itemVersion" : 1.03, // add up a number to force update
 
 	"shortdescription" : "Five-seveN",
 	"category" : "Pistol",
@@ -141,10 +141,10 @@
 			"click4" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 1.75},
 			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
 			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
-			"firesound1" : {"pool" : ["/sfx/gun/pistol1.ogg"], "pitchMultiplier" : 1.35},
+			"firesound1" : {"pool" : ["/sfx/gun/pistol1.ogg"], "pitchMultiplier" : 1.2},
 			"firesound2" : {"pool" : ["/sfx/gun/mp1.ogg"], "pitchMultiplier" : 1.125},
 			"firesound3" : {"pool" : ["/sfx/gun/mp3.ogg"], "pitchMultiplier" : 0.875},
-			"firesound4" : {"pool" : ["/sfx/gun/grapplegun.ogg"], "pitchMultiplier" : 1.5}
+			"firesound4" : {"pool" : ["/sfx/gun/grapplegun.ogg"], "pitchMultiplier" : 1.25}
 		},
 		"lights" : {
 			"muzzleFlash" : {
@@ -280,7 +280,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 80],
-							"color" : [255,255,255,24],
+							"color" : [255,255,255,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -309,7 +309,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,24],
+							"color" : [128,128,128,45],
 							"initialVelocity" : [5.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -338,7 +338,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,24],
+							"color" : [128,128,128,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -367,14 +367,17 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, -100],
 							"approach" : [0, 80],
-							"initialVelocity" : [-5.0, 20.0],
-							"angularVelocity" : 360,
+							"initialVelocity" : [-1.5, 8.0],
+							"angularVelocity" : 720,
 							"collidesForeground" : true,
+							"destructionAction" : "fade",
+							"destructionTime" : 0.85,
 							"size" : 0.25,
 							"layer" : "front",
 							"timeToLive" : 2.0,
 							"variance" : {
-								"initialVelocity" : [10.0,2.0]
+								"angularVelocity" : 360,
+								"initialVelocity" : [3.0,2.0]
 							}
 						}
 					}
