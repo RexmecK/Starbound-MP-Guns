@@ -1,11 +1,11 @@
 {
   "author" : "Rexmeck",
-  "description" : ">> This is very early in mod developpement!\n\nCurrent Guns:\n- Scar-H\n- Five-SeveN\n- MP5-SD\n- M1 Garand\n- Desert eagle\n- AK-47\n\nhttps://www.discord.gg/yJAruMV",
+  "description" : ">> This is very early in mod developpement!\n\nCurrent Guns:\n- Scar-H\n- Five-SeveN\n- MP5-SD\n- M1 Garand\n- Desert eagle\n- AK-47\n- Mossberg 590\n\nhttps://www.discord.gg/yJAruMV",
   "friendlyName" : "Multiplayer guns",
   "includes" : ["QuickbarMini"],
   "link" : "steam://url/CommunityFilePage/1870566371",
   "name" : "mpguns",
   "steamContentId" : "1870566371",
   "tags" : "Weapons",
-  "version" : "pre-alpha 4"
+  "version" : "pre-alpha 5"
 }

@@ -101,7 +101,7 @@
 			"type" : "button",
 			"base" : "/mpguns_core/itemgiver/image/button.png",
 			"hover" : "/mpguns_core/itemgiver/image/button.png?brightness=60",
-			"position" : [2, 54],
+			"position" : [2, 41],
 			"caption" : "Mossberg 590",
 			"hAnchor" : "left",
 			"callback" : "callback"
