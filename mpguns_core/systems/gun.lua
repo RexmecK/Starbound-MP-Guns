@@ -77,15 +77,20 @@ function main:update(dt, firemode, shift, moves)
 		end
 	end
 
+	if self.reloadLooping and firemode ~= "none" then
+		self.interuptReload = true
+	end
+
 	if self.reloadLooping and not animations:isAnyPlaying() then
-		if self.storage.ammo < self.config.magazineCapacity then
+		if self.storage.ammo < self.config.magazineCapacity and not self.interuptReload then
 			self:animate("reloadLoop")
 		else
 			self:animate("reloadLoopEnd")
 			self.reloadLooping = false
+			self.interuptReload = false
 		end
 	else
-		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and not animations:isAnyPlaying() then
+		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and self.storage.ammo < self.config.magazineCapacity and firemode == "none" and not animations:isAnyPlaying() then
 			self:animate("reload")
 		end
 		if ((not shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0)) and not animations:isAnyPlaying() then
@@ -229,5 +234,7 @@ function main:unload()
 end
 
 function main:fireProjectile()
-	muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig)
+	for i=1,self.config.projectileCount or 1 do
+		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig)
+	end
 end

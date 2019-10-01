@@ -55,3 +55,7 @@ end
 function buttons.ak47()
     widget.setText("itemid", "ak47")
 end
+
+function buttons.mossberg590()
+    widget.setText("itemid", "mossberg590")
+end

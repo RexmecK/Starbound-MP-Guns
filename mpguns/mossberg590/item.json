@@ -1,0 +1,392 @@
+{
+	"itemVersion" : 1.0, // add up a number to force update
+
+	"shortdescription" : "Mossberg 590",
+	"category" : "Shotgun",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=200000;e4e4e4=000009;6a6a6a=200009?multiply=fff0?scale=31.5;8.5?crop=0;0;32;9?replace;00000200=111;00000300=111;00000400=111;00000500=222;01000200=333;01000300=444;01000400=444;01000500=333;02000200=222;02000300=333;02000400=444;02000500=555;03000300=333;03000400=444;03000500=555;04000300=222;04000400=444;04000500=555;05000400=333;05000500=555;06000400=222;06000500=444;07000400=444;07000500=333;08000400=222;08000500=444;08000600=333;09000500=333;09000600=555;0a000500=222;0a000600=444;0a000700=333;0b000400=333;0b000500=222;0b000600=444;0b000700=333;0c000400=333;0c000500=222;0c000600=444;0c000700=333;0d000500=222;0d000600=444;0d000700=333;0e000500=222;0e000600=bbb;0e000700=333;0f000500=222;0f000600=bbb;0f000700=333;10000500=222;10000600=333;10000700=333;11000500=333;11000600=111;11000700=444;12000500=333;12000600=111;12000700=444;13000500=333;13000600=111;13000700=555;14000500=333;14000600=222;14000700=555;15000500=333;15000600=222;15000700=555;16000500=333;16000600=222;16000700=555;17000500=333;17000600=222;17000700=555;18000500=333;18000600=222;18000700=555;19000500=333;19000600=222;19000700=555;1a000500=333;1a000700=555;1b000500=333;1b000700=555;1c000500=222;1c000600=111;1c000700=555;1d000500=333;1d000700=444;1e000700=444;1e000800=555;1f000700=444",
+	"description" : "The 590 shotgun is the perfect choice for your personal and home defense.",
+	"rarity" : "Common",
+	"maxStack" : 11,
+
+	"system" : "gun",
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+	
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"reloadLoop" : "animations/reloadLoop.keyframes",
+		"reloadLoopEnd" : "animations/reloadLoopEnd.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"animation" : {
+		"globalTagDefaults" : {
+			"R_a1" : "/assetmissing.png",
+			"R_a2" : "/assetmissing.png",
+			"R_af1" : "/assetmissing.png",
+			"R_af2" : "/assetmissing.png",
+			"R_hand" : "/assetmissing.png",
+			"R_handf" : "/assetmissing.png",
+			"L_a1" : "/assetmissing.png",
+			"L_a2" : "/assetmissing.png",
+			"L_af1" : "/assetmissing.png",
+			"L_af2" : "/assetmissing.png",
+			"L_hand" : "/assetmissing.png",
+			"L_handf" : "/assetmissing.png",
+			"selfimage" : "/assetmissing.png"
+		},
+		"animatedParts" : {
+			"parts" : {
+				//those are needed for the arm api
+				"R_arm1"	: {
+					"properties":{"zLevel" : 160,"centered" : false,"image" : "<R_a1>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm1", "R_offset", "global", "base"]},
+					"partStates":{"right" : {"front" : {"properties" : {"zLevel" : 160}},"back" : {"properties" : {"zLevel" : 5}}}}
+				},
+				"R_af1"	: {
+					"properties":{"zLevel" : 170,"centered" : false,"image" : "<R_af1>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm1", "R_offset", "global", "base"]},
+					"partStates":{"right" : {"front" : {"properties" : {"zLevel" : 170}},"back" : {"properties" : {"zLevel" : 6}}}}
+				},
+				"R_arm2"	: {
+					"properties":{"zLevel" : 140,"centered" : false,"image" : "<R_a2>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm2", "R_arm1", "R_offset", "global", "base"]},
+					"partStates":{"right" : {"front" : {"properties" : {"zLevel" : 140}},"back" : {"properties" : {"zLevel" : 3}}}}
+				},
+				"R_af2"		: {
+					"properties":{"zLevel":150,"centered":false,"image":"<R_af2>","offset":[0.0,0.0],"transformationGroups":["R_arm2","R_arm1","R_offset","global","base"]},
+					"partStates":{"right":{"front":{"properties":{"zLevel":150}},"back":{"properties":{"zLevel":4}}}}
+				},
+				"R_hand"	: {
+					"properties":{"zLevel":120,"centered":false,"image":"<R_hand>","offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","global","base"]},
+					"partStates":{"right":{"front":{"properties":{"zLevel":120}},"back":{"properties":{"zLevel":1}}}}
+				},
+				"R_handf"	: {
+					"properties":{"zLevel":130,"centered":false,"image":"<R_handf>","offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","global","base"]},
+					"partStates":{"right":{"front":{"properties":{"zLevel":130}},"back":{"properties":{"zLevel":2}}}}
+				},
+				"L_arm1"	: {
+					"properties":{"zLevel":5,"centered":false,"image":"<L_a1>","offset":[0.0,0.0],"transformationGroups":["L_arm1","L_offset","global","base"]},
+					"partStates":{"left":{"front":{"properties":{"zLevel":160}},"back":{"properties":{"zLevel":5}}}}
+				},
+				"L_af1"		: {
+					"properties":{"zLevel":6,"centered":false,"image":"<L_af1>","offset":[0.0,0.0],"transformationGroups":["L_arm1","L_offset","global","base"]},
+					"partStates":{"left":{"front":{"properties":{"zLevel":170}},"back":{"properties":{"zLevel":6}}}}
+				},
+				"L_arm2"	: {
+					"properties":{"zLevel":3,"centered":false,"image":"<L_a2>","offset":[0.0,0.0],"transformationGroups":["L_arm2","L_arm1","L_offset","global","base"]},
+					"partStates":{"left":{"front":{"properties":{"zLevel":140}},"back":{"properties":{"zLevel":3}}}}
+				},
+				"L_af2"		: {
+					"properties":{"zLevel":4,"centered":false,"image":"<L_af2>","offset":[0.0,0.0],"transformationGroups":["L_arm2","L_arm1","L_offset","global","base"]},
+					"partStates":{"left":{"front":{"properties":{"zLevel":150}},"back":{"properties":{"zLevel":4}}}}
+				},
+				"L_hand"	: {
+					"properties":{"zLevel":1,"centered":false,"image":"<L_hand>","offset":[0.0,0.0],"transformationGroups":["L_hand","L_arm2","L_arm1","L_offset","global","base"]},
+					"partStates":{"left":{"front":{"properties":{"zLevel":120}},"back":{"properties":{"zLevel":1}}}}
+				},
+				"L_handf"	: {
+					"properties":{"zLevel":2,"centered":false,"image":"<L_handf>","offset":[0.0,0.0],"transformationGroups":["L_hand","L_arm2","L_arm1","L_offset","global","base"]},
+					"partStates":{"left":{"front":{"properties":{"zLevel":130}},"back":{"properties":{"zLevel":2}}}}
+				}
+				//
+			},
+			"stateTypes" : {
+				//arm api
+				"left" : {"default" : "back",
+					"states" : {
+						"back" : {"frames" : 1,"mode" : "end","cycle" : 0.1},
+						"front" : {"frames" : 1,"mode" : "end","cycle" : 0.1}
+					}
+				},
+				"right" : {"default" : "front",
+					"states" : {
+						"back" : {"frames" : 1,"mode" : "end","cycle" : 0.1},
+						"front" : {"frames" : 1,"mode" : "end","cycle" : 0.1}
+					}
+				}
+			}
+		},
+		"particleEmitters" : {},
+		"sounds" : {
+			"null" : []
+		},
+		"transformationGroups" : {
+			"R_hand" 	: {"ignore" : true,"interpolated" : false},
+			"R_arm2" 	: {"ignore" : true,"interpolated" : false},
+			"R_offset" 	: {"ignore" : true,"interpolated" : false},
+			"R_arm1" 	: {"ignore" : true,"interpolated" : false},
+			"L_hand" 	: {"ignore" : true,"interpolated" : false},
+			"L_arm2" 	: {"ignore" : true,"interpolated" : false},
+			"L_offset" 	: {"ignore" : true,"interpolated" : false,"transform" : {"curve" : 1,"position" : [0.6875, 0]}},
+			"L_arm1" 	: {"ignore" : true,"interpolated" : false},
+	
+			"global" 	: {"ignore" : true,"interpolated" : false},
+			"base"		: {"interpolated" : false}
+		}
+	},
+	
+	"animationCustom" : {
+		"sounds" : {
+			"click1" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 1.5},
+			"click2" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip3.ogg"], "pitchMultiplier" : 0.75},
+			"click3" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip3.ogg"], "pitchMultiplier" : 0.8},
+			"click4" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip3.ogg"], "pitchMultiplier" : 1.35},
+			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
+			"click6" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip3.ogg"], "pitchMultiplier" : 0.85},
+			"firesound1" : {"pool" : ["/sfx/gun/tankshot.ogg"], "pitchMultiplier" : 1.125},
+			"firesound2" : {"pool" : ["/sfx/gun/rifle1.ogg"], "pitchMultiplier" : 1.5},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.125},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.79}
+		},
+		"lights" : {
+			"muzzleFlash" : {
+				"pointBeam" : 0,
+				"pointAngle" : 0,
+				"color" : [155, 155, 0],
+				"pointLight" : false,
+				"anchorPart" : "muzzlePosition",
+				"active" : false,
+				"position" : [0, 0]
+			}
+		},
+		"animatedParts" : {
+			"parts" : {
+				"gunbg" : {
+					"properties" : {
+						"zLevel" : 14,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"shell" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0,0],
+						"image" : "<sprite_4>",
+						"centered" : true,
+						"transformationGroups" : ["shell", "gun", "base"]
+					}
+				},
+				"lever" : {
+					"properties" : {
+						"zLevel" : 16,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"transformationGroups" : ["lever", "gun", "base"]
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 17,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"pump" : {
+					"properties" : {
+						"zLevel" : 18,
+						"offset" : [0,0],
+						"image" : "<sprite_3>",
+						"centered" : false,
+						"transformationGroups" : ["lever", "gun", "base"]
+					}
+				},
+				"muzzlePosition" : {
+					"properties" : {
+						"offset" : [8.25,1.75],
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [-1.375,-1],
+						"centered" : false,
+						"fullbright" : true,
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"2" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							},
+							"3" : {
+								"properties" : {
+									"image" : "<muzzleFlash_2>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						"offset" : [4,1.75],
+						"transformationGroups" : ["gun", "base"]
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.032, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "smoke2"]}},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.032, "properties" : {"particleEmittersOff" : []}},
+						"3" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.032},
+						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "smoke2"]}}
+					}
+				},
+				"vapor" : {"default" : "off",
+					"states" : {
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 2.0, "properties" : {"particleEmittersOff" : ["vapor"]}},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 1.0, "properties" : {"particleEmittersOn" : ["vapor"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["vapor"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"vapor" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 80],
+							"color" : [255,255,255,24],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.05,
+							"layer" : "front",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [0.2,0.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [128,128,128,45],
+							"initialVelocity" : [5.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "front",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"smoke2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [128,128,128,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "front", 
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [1.0,2.0],
+								"size" : 0.5
+							}
+						}
+					}
+				]
+			},
+			"casing" : {
+				"emissionRate" : 16.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "textured",
+							"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=050000;e4e4e4=000002;6a6a6a=050002?multiply=fff0?scale=4.5;1.5?crop=0;0;5;2?replace;0000=9f913a;00000100=b5a642;01000000=701818;01000100=891e1e;02000000=701818;02000100=891e1e;03000000=701818;03000100=891e1e;04000000=701818;04000100=891e1e",
+							"position" : [0, 0],
+							"finalVelocity" : [0, -100],
+							"approach" : [0, 80],
+							"initialVelocity" : [-1.5, 8.0],
+							"angularVelocity" : 720,
+							"collidesForeground" : true,
+							"destructionAction" : "fade",
+							"destructionTime" : 0.85,
+							"size" : 0.5,
+							"layer" : "front",
+							"timeToLive" : 2.0,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [3.0,2.0]
+							}
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[2.9375,1.1875],"scalePoint":[0,0],"rotation":0,"scale":[0.5,0.5],"position":[-3.1875,-0.5625]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.0625,-0.1875]}},"lever":{"transform":{"position":[0,0]}},"shell":{"transform":{"scale":[0,0],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-14.375}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.4375,0.3125],"rotation":0}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.1875,0.0625]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":14.1875}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-4.75}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":35.9375}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-19.875}}}
+	}
+}

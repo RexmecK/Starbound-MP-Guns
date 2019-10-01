@@ -35,7 +35,7 @@ function transforms:update(dt)
 			local cal = {
 				scale			= current.scale or def.scale or 1,
 				scalePoint		= current.scalePoint or def.scalePoint or 0,
-				position		= (current.position or def.position or 0) * (current.scale or def.scale or 1),
+				position		= vec2(current.position or def.position or 0) * vec2(current.scale or def.scale or 1),
 				rotation		= current.rotation or def.rotation or 0,
 				rotationPoint	= vec2(current.scalePoint or def.scalePoint or 0):lerp( current.rotationPoint or def.rotationPoint or 0, current.scale or def.scale or 1)
 			}
