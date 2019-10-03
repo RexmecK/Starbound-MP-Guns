@@ -59,3 +59,7 @@ end
 function buttons.mossberg590()
     widget.setText("itemid", "mossberg590")
 end
+
+function buttons.m249()
+    widget.setText("itemid", "m249")
+end
