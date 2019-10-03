@@ -116,6 +116,7 @@ end
 
 function main:uninit()
 	self:save()
+	item.setCount(1)
 end
 
 function main:updateFire(dt)
