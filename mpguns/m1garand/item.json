@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1, // add up a number to force update
+	"itemVersion" : 1.01, // add up a number to force update
 
 	"shortdescription" : "M1 Garand",
 	"category" : "Rifle",
@@ -301,7 +301,7 @@
 							"destructionTime" : 0.85,
 							"fade" : 1,
 							"size" : 0.25,
-							"layer" : "front",
+							"layer" : "back",
 							"timeToLive" : 0.45,
 							"variance" : {
 								"initialVelocity" : [2.0,2.0],

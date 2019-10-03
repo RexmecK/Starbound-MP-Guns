@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.02, // add up a number to force update
+	"itemVersion" : 1.03, // add up a number to force update
 
 	"shortdescription" : "Desert Eagle",
 	"category" : "Pistol",
@@ -318,7 +318,7 @@
 							"destructionTime" : 0.85,
 							"fade" : 1,
 							"size" : 0.25,
-							"layer" : "front",
+							"layer" : "back",
 							"timeToLive" : 0.45,
 							"variance" : {
 								"initialVelocity" : [2.0,2.0],
