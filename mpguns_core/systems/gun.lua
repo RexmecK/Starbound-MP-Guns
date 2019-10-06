@@ -90,7 +90,7 @@ function main:update(dt, firemode, shift, moves)
 			self.interuptReload = false
 		end
 	else
-		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and self.storage.ammo < self.config.magazineCapacity and firemode == "none" and not animations:isAnyPlaying() then
+		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and (self.storage.ammo < self.config.magazineCapacity or self.config.magazineCapacity == 0) and firemode == "none" and not animations:isAnyPlaying() then
 			self:animate("reload")
 		end
 		if ((not shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0)) and not animations:isAnyPlaying() then
@@ -230,7 +230,7 @@ end
 
 function main:unload()
 	if self.storage.ammo <= 0 then return end
-	self.storage.loaded = 0
+	self.storage.ammo = 0
 	self:save()
 end
 

@@ -43,5 +43,10 @@
 		"name" : "Mac-11",
 		"image" : "/mpguns/mac11/icon.png",
 		"id" : "mac11"
+	},
+	{
+		"name" : "RPG-7",
+		"image" : "/mpguns/rpg7/icon.png",
+		"id" : "rpg7"
 	}
 ]
