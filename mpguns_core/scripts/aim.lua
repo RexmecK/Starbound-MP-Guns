@@ -54,11 +54,22 @@ function aim:at(at)
 	self.facing = facing
 end
 
+local antilock = false
+function dualwieldrecoil(angle)
+	if antilock then return end
+	antilock = true
+	aim:recoil(angle)
+	antilock = false
+end
+
 function aim:recoil(angle)
 	if self.current < -45 then
 		angle = -angle
 	end
 	self._recoil = self._recoil + angle
+	if not config.twoHanded then
+		local otherhandfunc = activeItem.callOtherHandScript("dualwieldrecoil", angle)
+	end
 end
 
 function aim:getRecoil()

@@ -119,7 +119,7 @@ end
 
 function grid:indexPosition()
     local indexMult = self.index - vec2(1,1)
-    return (self.elementSize + self.spacing) * indexMult
+    return (self.elementSize + self.spacing) * indexMult * vec2(1,-1)
 end
 
 function grid:insert(widgetconfig)

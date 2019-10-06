@@ -38,5 +38,10 @@
 		"name" : "Scar-H",
 		"image" : "/mpguns/scar-h/icon.png",
 		"id" : "scar-h"
+	},
+	{
+		"name" : "Mac-11",
+		"image" : "/mpguns/mac11/icon.png",
+		"id" : "mac11"
 	}
 ]

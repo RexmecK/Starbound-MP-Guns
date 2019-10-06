@@ -53,7 +53,7 @@ function animation:_reachkey(key)
 	end
 	for i,v in pairs(key.animationState or {}) do
 		if type(v) == "string" and type(i) == "string" then
-			animator.setAnimationState(i,v)
+			animator.setAnimationState(i,v, true)
 		end
 	end
 	for i,v in pairs(key.burstParticle or {}) do

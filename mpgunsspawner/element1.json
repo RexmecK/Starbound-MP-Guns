@@ -19,7 +19,7 @@
 			"file" : "/assetmissing.png",
 			"position" : [34.5, 14.5],
 			"centered" : true,
-			"maxSize" : [65,25],
+			"maxSize" : [63,23],
 			"callback" : "null"
 		},
 		"top" : {
