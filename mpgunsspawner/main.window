@@ -1,0 +1,68 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+
+			"base" : "/mpgunsspawner/image/x.png",
+			"hover" : "/mpgunsspawner/image/x.png",
+			"pressed" : "/mpgunsspawner/image/x.png",
+			"pressedOffset" : [0, 0],
+
+			"callback" : "close",
+			"position" : [277, 206],
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : -1,
+			"type" : "background",
+
+			"fileHeader" : "/mpgunsspawner/image/header.png",
+			"fileBody" : "/mpgunsspawner/image/body.png"
+		},
+
+		"bg" : {
+			"zlevel" : 1,
+			"type" : "image",
+
+			"file" : "/mpgunsspawner/image/bg.png"
+		},
+		
+		"scroll" : {
+			"zlevel" : 2,
+			"type" : "scrollArea",
+			"rect" : [4, 4, 287, 189],
+			"horizontalScroll" : false,
+			"verticalScroll" : false,
+			"children" : {}
+		},
+		
+		"itemid" : {
+			"zlevel" : 2,
+			"type" : "textbox",
+			"position" : [4, 194],
+			"maxWidth" : 195,
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"callback" : "callback",
+			"enterKey" : "itemidenter"
+		}
+
+	},
+
+	"canvasClickCallbacks" : {},
+	
+	"canvasKeyCallbacks" : {},
+	
+	"scriptWidgetCallbacks" : [
+		"callback",
+		"itemidenter",
+		"scrollbarcallback"
+	],
+		
+	"directory" : "/mpgunsspawner/",
+	"scripts" : ["/mpguns_core/main.lua"],
+	"system" : "/mpgunsspawner/ui.lua",
+	"scriptDelta" : 1
+}

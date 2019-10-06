@@ -62,10 +62,19 @@ function v2:__index(a)
 end
 
 function v2:__newindex(a, b)
-	if a == 1 then 
-		self[1] = b
-	elseif a == 2 then 
-		self[2] = b
+	local t =  type(a)
+	if t == "number" then
+		if a == 1 then 
+			self[1] = b
+		elseif a == 2 then 
+			self[2] = b
+		end
+	elseif t == "string" then
+		if a == "x" then 
+			self[1] = b
+		elseif a == "y" then 
+			self[2] = b
+		end
 	end
 	return self
 end

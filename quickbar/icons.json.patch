@@ -2,6 +2,6 @@
 	{
 		"op": "add",
     	"path": "/normal/-",
-    	"value": { "label" : "MP Guns", "pane" : "/mpguns_core/itemgiver/main.window", "icon" : "/mpguns_core/itemgiver/image/smallicon.png" }
+    	"value": { "label" : "MP Guns", "pane" : "/mpgunsspawner/main.window", "icon" : "/mpgunsspawner/image/smallicon.png" }
     }
 ]

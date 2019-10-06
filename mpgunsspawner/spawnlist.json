@@ -1,0 +1,42 @@
+[
+	{
+		"name" : "Ak-47",
+		"image" : "/mpguns/ak47/icon.png",
+		"id" : "ak47"
+	},
+	{
+		"name" : "Desert eagle",
+		"image" : "/mpguns/deagle/icon.png",
+		"id" : "deagle"
+	},
+	{
+		"name" : "Five SeveN",
+		"image" : "/mpguns/fiveseven/icon.png",
+		"id" : "fiveseven"
+	},
+	{
+		"name" : "M1 Garand",
+		"image" : "/mpguns/m1garand/icon.png",
+		"id" : "m1garand"
+	},
+	{
+		"name" : "M249",
+		"image" : "/mpguns/m249/icon.png",
+		"id" : "m249"
+	},
+	{
+		"name" : "Mossberg 590",
+		"image" : "/mpguns/mossberg590/icon.png",
+		"id" : "mossberg590"
+	},
+	{
+		"name" : "MP5-SD",
+		"image" : "/mpguns/mp5-sd/icon.png",
+		"id" : "mp5-sd"
+	},
+	{
+		"name" : "Scar-H",
+		"image" : "/mpguns/scar-h/icon.png",
+		"id" : "scar-h"
+	}
+]
