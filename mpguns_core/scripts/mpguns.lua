@@ -28,6 +28,9 @@ function mpguns:makeMpitem(item)
     local mpitem = self:base()
     if not mpitem then return end
     mpitem.parameters = sb.jsonMerge(mpitem.parameters, item)
+    if mpitem.parameters.preloadAnimation and type(mpitem.parameters.animation) == "string" then
+        mpitem.parameters.animation = root.assetJson(directory(mpitem.parameters.animation, item.directory))
+    end
     return mpitem
 end
 

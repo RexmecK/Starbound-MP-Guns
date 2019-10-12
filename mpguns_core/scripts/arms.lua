@@ -39,7 +39,17 @@ arms = {
 	cropA1 = "?crop=0;0;24;43",
 	cropA2 = "?crop=23;0;27;43",
 	cropA3 = "?crop=26;0;43;43",
+	fullbright = true
 }
+
+local function speciesFullbright(specie)
+	if not specie then return false end
+	local speciesConfig = root.assetJson("/species/"..specie..".species")
+	if speciesConfig and speciesConfig.humanoidOverrides and speciesConfig.humanoidOverrides.bodyFullbright then
+		return speciesConfig.humanoidOverrides.bodyFullbright
+	end
+	return false
+end
 
 function arms:init()
 	activeItem.setFrontArmFrame("rotation?scale=0")
@@ -277,7 +287,9 @@ function arms:init()
 				end
 			end
 		)
-	end	
+	end
+
+	self:setFullbright(speciesFullbright(self.specie))
 
 	createTransform()
 	self.inited = true
@@ -331,6 +343,15 @@ function arms:setArmorArm(side, img, crop)
 end
 
 --API--
+function arms:setFullbright(bool)
+	self.fullbright = bool
+	local state = "false"
+	if bool then
+		state = "true"
+	end
+	animator.setAnimationState("arms_fullbright", state)
+end
+
 function arms:setTwoHandedGrip(bool)
 	self.twohand = bool
 	self.curdirection = -self.curdirection
