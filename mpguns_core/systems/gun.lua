@@ -178,6 +178,8 @@ function main:reload(amount)
 end
 
 function main:animate(animationname)
+	animations:stop(animationname)
+	animations:stop(animationname.."_dry")
 	if self.storage.dry and animations:has(animationname.."_dry") then
 		animations:play(animationname.."_dry")
 	else
