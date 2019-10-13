@@ -37,6 +37,11 @@ update_lateInited = false
 local checked = false
 
 function update(...)
+	if not checked then
+		checked = true
+		checkUpdates()
+	end
+	
 	update_lastInfo = update_info
 	update_info = {...}
 	if not update_lateInited and main and main.lateInit then
@@ -45,11 +50,6 @@ function update(...)
 	end
 	if main and main.update then
 		main:update(...)
-	end
-
-	if not checked then
-		checked = true
-		checkUpdates()
 	end
 end
 

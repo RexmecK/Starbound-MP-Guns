@@ -48,5 +48,10 @@
 		"name" : "RPG-7",
 		"image" : "/mpguns/rpg7/icon.png",
 		"id" : "rpg7"
+	},
+	{
+		"name" : "M16A2",
+		"image" : "/mpguns/m16a2/icon.png",
+		"id" : "m16a2"
 	}
 ]

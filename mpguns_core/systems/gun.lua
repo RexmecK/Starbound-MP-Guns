@@ -15,6 +15,7 @@ main = {}
 main.config = {}
 main.storage = {}
 main.fireCooldown = 0
+main.burstCooldown = 0
 main.queuedFire = 0
 main.reloadLooping = false
 
@@ -65,17 +66,22 @@ function main:update(dt, firemode, shift, moves)
 		self.storage.canLoad = false
 		self:save()
 	end
-	
-	self:updateFire(dt)
-	if firemode == "primary" and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
-		if self.config.firemode == "auto" and self.queuedFire == 0 then
+
+	if self.burstCooldown > 0 and self.fireCooldown == 0 then
+		self.burstCooldown = math.max(self.burstCooldown - dt, 0)
+	end
+
+	if firemode == "primary" and (self.storage.ammo > 0 or self.storage.loaded == 1) and self.queuedFire == 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
+		if self.config.firemode == "auto" then
 			self.queuedFire = 1
-		elseif self.config.firemode == "burst" and self.queuedFire == 0 then
+		elseif self.config.firemode == "burst" and self.burstCooldown == 0 then
 			self.queuedFire = 3
+			self.burstCooldown = 0.3
 		elseif self.config.firemode == "semi" and update_lastInfo[2] ~= "primary" then
 			self.queuedFire = 1
 		end
 	end
+	self:updateFire(dt)
 
 	if self.reloadLooping and firemode ~= "none" then
 		self.interuptReload = true
@@ -123,10 +129,8 @@ function main:updateFire(dt)
 	if self.queuedFire > 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
 		if self:fire() then
 			self.queuedFire = self.queuedFire - 1
-		else
-			self.queuedFire = 0
 		end
-	elseif self.queuedFire > 0 and self.storage.ammo == 0 and self.storage.loaded ~= 1 then
+	elseif self.queuedFire > 0 and self.storage.ammo <= 0 and self.storage.loaded ~= 1 then
 		self.queuedFire = 0
 	end
 end
@@ -139,6 +143,7 @@ function main:fire()
 			self.storage.loaded = 2
 			self:save()
 		end
+
 		if self.config.chamberAutoLoad and self.storage.ammo > 0 then
 			self.storage.canLoad = true
 			self:save()

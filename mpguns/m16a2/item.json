@@ -1,0 +1,374 @@
+{
+	"itemVersion" : 1.01, // add up a number to force update
+
+	"shortdescription" : "M16A2",
+	"category" : "Rifle",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=3b0000;e4e4e4=00000f;6a6a6a=3b000f?multiply=fff0?scale=58.5;14.5?crop=0;0;59;15?replace;00000800=333;00000900=333;00000a00=1100;01000400=1100;01000500=333;01000600=333;01000700=333;01000800=1100;01000900=1100;01000a00=0100;02000400=0100;02000500=1100;02000600=1100;02000700=1100;02000800=1100;02000900=1100;02000a00=0100;03000300=4100;03000500=0100;03000600=1100;03000700=1100;03000800=1100;03000900=1100;03000a00=0100;04000500=0100;04000600=1100;04000700=1100;04000800=1100;04000900=1100;04000a00=0100;05000500=0100;05000600=1100;05000700=1100;05000800=1100;05000900=1100;05000a00=0100;06000600=0100;06000700=1100;06000800=1100;06000900=1100;06000a00=0100;07000600=0100;07000700=1100;07000800=1100;07000900=1100;07000a00=0100;08000600=0100;08000700=1100;08000800=1100;08000900=1100;08000a00=0100;09000700=0100;09000800=1100;09000900=1100;09000a00=0100;0a000700=0100;0a000800=1100;0a000900=1100;0a000a00=0100;0b000700=0100;0b000800=1100;0b000900=1100;0b000a00=0100;0c000800=0100;0c000900=1100;0c000a00=0100;0d000800=0100;0d000900=1100;0d000a00=0100;0e000800=0100;0e000900=1100;0e000a00=0100;0f000100=0100;0f000200=5100;0f000300=5100;0f000800=0100;0f000900=1100;0f000a00=0100;10000100=0100;10000200=5100;10000300=5100;10000400=5100;10000500=5100;10000800=1100;10000900=2100;10000a00=3100;10000b00=6100;11000100=0100;11000200=0100;11000300=0100;11000400=5100;11000500=5100;11000600=0100;11000700=1100;11000800=333;11000900=333;11000a00=6100;11000b00=1100;11000c00=333;12000100=0100;12000300=0100;12000400=0100;12000500=0100;12000600=0100;12000700=333;12000800=333;12000900=2100;12000a00=0100;12000b00=333;12000c00=333;12000d00=0100;13000300=0100;13000500=333;13000600=1100;13000700=333;13000800=1100;13000900=2100;13000a00=0100;13000b00=333;13000c00=1100;13000d00=0100;13000e00=0100;14000500=333;14000600=6100;14000700=333;14000800=1100;14000900=2100;14000a00=3100;14000b00=1100;14000d00=1100;14000e00=333;15000500=333;15000700=333;15000800=1100;15000900=2100;15000a00=3100;15000b00=1100;15000d00=1100;15000e00=333;16000500=1100;16000600=333;16000700=333;16000800=333;16000900=0100;16000a00=1100;16000b00=1100;16000d00=1100;17000300=6100;17000400=6100;17000500=6100;17000600=1100;17000700=1100;17000800=1100;17000900=2100;17000a00=333;17000b00=1100;17000d00=1100;18000000=4100;18000100=6100;18000200=6100;18000300=4100;18000400=4100;18000500=4100;18000600=1100;18000700=333;18000800=1100;18000900=2100;18000a00=1100;18000b00=1100;18000d00=1100;19000000=3100;19000100=4100;19000200=4100;19000300=3100;19000400=3100;19000500=3100;19000600=1100;19000700=333;19000800=1100;19000900=2100;19000a00=333;19000b00=1100;19000d00=1100;1a000000=2100;1a000100=3100;1a000200=3100;1a000300=4100;1a000400=4100;1a000500=4100;1a000600=1100;1a000700=1100;1a000800=0100;1a000900=2100;1a000a00=333;1a000b00=1100;1a000d00=1100;1b000000=3100;1b000100=4100;1b000200=4100;1b000600=0100;1b000900=0100;1b000a00=1100;1b000b00=1100;1b000c00=1100;1b000d00=333;1c000100=3100;1c000900=333;1c000a00=2100;1c000b00=333;1d000900=0100;1d000a00=1100;1d000b00=1100;1e000800=0100;1e000900=0100;1e000a00=333;1e000b00=1100;1f000800=0100;1f000900=0100;1f000a00=333;1f000b00=1100;20000800=5100;20000900=5100;20000a00=1100;21000800=0100;21000900=0100;21000a00=333;21000b00=1100;22000800=5100;22000900=5100;22000a00=1100;23000800=0100;23000900=0100;23000a00=333;23000b00=1100;24000800=5100;24000900=5100;24000a00=1100;25000800=0100;25000900=0100;25000a00=333;25000b00=1100;26000800=0100;26000900=0100;26000a00=333;26000b00=1100;27000900=0100;27000a00=1100;28000700=4100;28000900=0100;28000a00=1100;29000800=4100;29000900=1100;29000a00=2100;29000b00=1100;2a000a00=333;2a000c00=1100;2b000a00=333;2b000d00=1100;2c000900=1100;2c000a00=2100;2c000b00=1100;2c000c00=1100;2c000d00=1100;2c000e00=1100;2d000a00=333;2e000a00=333;2f000a00=333;30000a00=1100;31000a00=333;32000a00=1100?replace;0100=151515;1100=242424;2100=424242;3100=515151;4100=606060;5100=060606;6100=6f6f6f",
+	"description" : "A Known rifle to have issues in harsh conditions. This third variant is improved with more reliability.",
+	"rarity" : "Common",
+	"maxStack" : 31,
+
+	"system" : "gun",
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+	
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbase.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"click1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"click2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"click3" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip1.ogg"], "pitchMultiplier" : 2.0},
+			"click4" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"click5" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 2.0},
+			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"firesound1" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.675},
+			"firesound2" : {"pool" : ["/sfx/gun/bullet_hit_wood1.ogg"], "pitchMultiplier" : 0.5},
+			"firesound3" : {"pool" : ["/sfx/gun/grenadeblast_small_fire3.ogg"], "pitchMultiplier" : 1.45},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.15}
+		},
+		"lights" : {
+			"muzzleFlash" : {
+				"pointBeam" : 0,
+				"pointAngle" : 0,
+				"color" : [155, 155, 0],
+				"pointLight" : false,
+				"anchorPart" : "muzzlePosition",
+				"active" : false,
+				"position" : [0, 0]
+			}
+		},
+		"animatedParts" : {
+			"parts" : {
+				"mag" : {
+					"properties" : {
+						"zLevel" : 14,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"transformationGroups" : ["mag", "gun", "base"]
+					}
+				},
+				"gun_bg" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"lever" : {
+					"properties" : {
+						"zLevel" : 16,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"transformationGroups" : ["lever", "gun", "base"]
+					}
+				},
+				"lever2" : {
+					"properties" : {
+						"zLevel" : 16,
+						"offset" : [0,0],
+						"image" : "<sprite_3>",
+						"centered" : false,
+						"transformationGroups" : ["lever2", "gun", "base"]
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 17,
+						"offset" : [0,0],
+						"image" : "<sprite_4>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"levercover" : {
+					"properties" : {
+						"zLevel" : 18,
+						"offset" : [0,0],
+						"image" : "<sprite_5>",
+						"centered" : false,
+						"transformationGroups" : ["levercover", "gun", "base"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						"offset" : [6.375,1.375],
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [-0.125,-0.75],
+						"centered" : false,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							},
+							"2" : {
+								"properties" : {
+									"image" : "<muzzleFlash_2>"
+								}
+							},
+							"3" : {
+								"properties" : {
+									"image" : "<muzzleFlash_3>"
+								}
+							},
+							"4" : {
+								"properties" : {
+									"image" : "<muzzleFlash_4>"
+								}
+							},
+							"5" : {
+								"properties" : {
+									"image" : "<muzzleFlash_5>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						"offset" : [3.0,1.25],
+						"transformationGroups" : ["gun", "base"]
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.016},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
+						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
+						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.016},
+						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.016},
+						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
+					}
+				},
+				"vapor" : {"default" : "off",
+					"states" : {
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 2.0, "properties" : {"particleEmittersOff" : ["vapor"]}},
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 1.0, "properties" : {"particleEmittersOn" : ["vapor"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["vapor"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"vapor" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 80],
+							"color" : [255,255,255,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.05,
+							"layer" : "front",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [0.2,0.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [192,192,192,45],
+							"initialVelocity" : [5.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "back",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"spark" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,255,172,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"spark2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,128,64,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"smoke2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [192,192,192,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "back", 
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [1.0,2.0],
+								"size" : 0.5
+							}
+						}
+					}
+				]
+			},
+			"casing" : {
+				"emissionRate" : 16.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "textured",
+							"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=0c0000;e4e4e4=000003;6a6a6a=0c0003?multiply=fff0?scale=11.5;2.5?crop=0;0;12;3?replace;0000=1100;00000100=0100;00000200=0100;01000000=826923;01000100=1100;01000200=9a7c29;02000000=1100;02000100=0100;02000200=0100;03000000=1100;03000100=0100;03000200=0100;04000000=1100;04000100=0100;04000200=0100;05000000=1100;05000100=0100;05000200=0100;06000000=1100;06000100=0100;06000200=0100;07000000=1100;07000100=0100;07000200=0100;08000000=1100;08000100=0100;08000200=0100;09000000=1100;09000100=0100;09000200=0100;0a000000=826923;0a000100=1100;0a000200=9a7c29;0b000100=1100?replace;0100=b2912f;1100=9a7d29",
+							"position" : [0, 0],
+							"finalVelocity" : [0, -100],
+							"approach" : [0, 80],
+							"initialVelocity" : [-1.5, 8.0],
+							"angularVelocity" : 720,
+							"collidesForeground" : true,
+							"destructionAction" : "fade",
+							"destructionTime" : 0.85,
+							"size" : 0.25,
+							"layer" : "front",
+							"timeToLive" : 2.0,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [3.0,2.0]
+							}
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[2.5625,0.8125],"rotation":0,"scale":[0.5675,0.5675],"position":[-2.375,-0.5625]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1,-0.0625]}},"lever":{"transform":{"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"mag":{"transform":{"scalePoint":[3.125,0.5625],"rotationPoint":[3.1875,0.625],"scale":[1,1],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.375,0.25],"rotation":0,"position":[0,0]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.125,0]}},"lever2":{"transform":{"position":[0,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":15}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-15}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":20}},"levercover":{"transform":{"scalePoint":[3.0625,1.125],"scale":[1,1]}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}}}
+	}
+}

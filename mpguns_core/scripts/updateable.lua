@@ -23,7 +23,10 @@ function updateable:init()
 		if t == "table" and t.init then
 			name:init()
 		elseif t == "string" and type(_ENV[name]) == "table" and _ENV[name].init then
-			_ENV[name]:init()
+			local st, e = pcall(function() _ENV[name]:init() end)
+			if not st then
+				sb.logError(e)
+			end
 		end
 	end
 	self.hasInited = true
