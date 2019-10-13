@@ -10,12 +10,15 @@ end
 function init()
 	include "config" --needed to load certain configs
 	include "directory" 
+	init = function()
+		if main and main.init then
+			main:init()
+		end
+	end
 
 	require(directory((config.system or "default"), modPath.."systems/", ".lua"))
 
-	if main and main.init then
-		main:init()
-	end
+	init()
 end
 
 -- activeitem only

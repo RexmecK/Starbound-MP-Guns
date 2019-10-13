@@ -16,67 +16,114 @@
 	},
 	"animatedParts":{
 		"parts":{
-			"R_arm1"	:{
-				"properties":{"centered":false,"image":"<R_a1>","offset":[0.0,0.0],"transformationGroups":["R_arm1","R_offset","global","base"]},
-				"partStates":{"right":{"front":{"properties":{"zLevel":160}},"back":{"properties":{"zLevel":5}}}}
+			//Right bare arms
+			"R_hand"	:{
+				"properties":{"centered":false,"image":"<R_hand>","offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":100}},"back":{"properties":{"zLevel":1}}}}
 			},
-			"R_af1"	:{
-				"properties":{"centered":false,"image":"<R_af1>","offset":[0.0,0.0],"transformationGroups":["R_arm1","R_offset","global","base"]},
-				"partStates":{"right":{"front":{"properties":{"zLevel":170}},"back":{"properties":{"zLevel":6}}}}
+			"R_hand_FB"	:{
+				"properties":{"centered":false,"image":"<R_hand_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":100}},"back":{"properties":{"zLevel":1}}}}
 			},
 			"R_arm2"	:{
 				"properties":{"centered":false,"image":"<R_a2>","offset":[0.0,0.0],"transformationGroups":["R_arm2","R_arm1","R_offset","global","base"]},
-				"partStates":{"right":{"front":{"properties":{"zLevel":140}},"back":{"properties":{"zLevel":3}}}}
+				"partStates":{"right":{"front":{"properties":{"zLevel":110}},"back":{"properties":{"zLevel":2}}}}
+			},
+			"R_arm2_FB"	:{
+				"properties":{"centered":false,"image":"<R_a2_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["R_arm2","R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":110}},"back":{"properties":{"zLevel":2}}}}
+			},
+			"R_arm1"	:{
+				"properties":{"centered":false,"image":"<R_a1>","offset":[0.0,0.0],"transformationGroups":["R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":120}},"back":{"properties":{"zLevel":3}}}}
+			},
+			"R_arm1_FB"	:{
+				"properties":{"centered":false,"image":"<R_a1_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":120}},"back":{"properties":{"zLevel":3}}}}
+			},
+
+			//Right armor arms
+			"R_handf"	:{
+				"properties":{"centered":false,"image":"<R_handf>","offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":130}},"back":{"properties":{"zLevel":4}}}}
+			},
+			"R_handf_FB"	:{
+				"properties":{"centered":false,"image":"<R_handf_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":130}},"back":{"properties":{"zLevel":4}}}}
+			},
+			"R_af1"	:{
+				"properties":{"centered":false,"image":"<R_af1>","offset":[0.0,0.0],"transformationGroups":["R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":140}},"back":{"properties":{"zLevel":5}}}}
+			},
+			"R_af1_FB"	:{
+				"properties":{"centered":false,"image":"<R_af1_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":140}},"back":{"properties":{"zLevel":5}}}}
 			},
 			"R_af2"		:{
 				"properties":{"centered":false,"image":"<R_af2>","offset":[0.0,0.0],"transformationGroups":["R_arm2","R_arm1","R_offset","global","base"]},
-				"partStates":{"right":{"front":{"properties":{"zLevel":150}},"back":{"properties":{"zLevel":4}}}}
+				"partStates":{"right":{"front":{"properties":{"zLevel":150}},"back":{"properties":{"zLevel":6}}}}
 			},
-			"R_hand"	:{
-				"properties":{"centered":false,"image":"<R_hand>","offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","global","base"]},
-				"partStates":{"right":{"front":{"properties":{"zLevel":120}},"back":{"properties":{"zLevel":1}}}}
+			"R_af2_FB"		:{
+				"properties":{"centered":false,"image":"<R_af2_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["R_arm2","R_arm1","R_offset","global","base"]},
+				"partStates":{"right":{"front":{"properties":{"zLevel":150}},"back":{"properties":{"zLevel":6}}}}
 			},
-			"R_handf"	:{
-				"properties":{"centered":false,"image":"<R_handf>","offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","global","base"]},
-				"partStates":{"right":{"front":{"properties":{"zLevel":130}},"back":{"properties":{"zLevel":2}}}}
+
+			//Left Bare arms
+			"L_hand"	:{
+				"properties":{"centered":false,"image":"<L_hand>","offset":[0.0,0.0],"transformationGroups":["L_hand","L_arm2","L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":100}},"back":{"properties":{"zLevel":1}}}}
 			},
-			"L_arm1"	:{
-				"properties":{"centered":false,"image":"<L_a1>","offset":[0.0,0.0],"transformationGroups":["L_arm1","L_offset","global","base"]},
-				"partStates":{"left":{"front":{"properties":{"zLevel":160}},"back":{"properties":{"zLevel":5}}}}
-			},
-			"L_af1"		:{
-				"properties":{"centered":false,"image":"<L_af1>","offset":[0.0,0.0],"transformationGroups":["L_arm1","L_offset","global","base"]},
-				"partStates":{"left":{"front":{"properties":{"zLevel":170}},"back":{"properties":{"zLevel":6}}}}
+			"L_hand_FB"	:{
+				"properties":{"centered":false,"image":"<L_hand_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["L_hand","L_arm2","L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":100}},"back":{"properties":{"zLevel":1}}}}
 			},
 			"L_arm2"	:{
 				"properties":{"centered":false,"image":"<L_a2>","offset":[0.0,0.0],"transformationGroups":["L_arm2","L_arm1","L_offset","global","base"]},
-				"partStates":{"left":{"front":{"properties":{"zLevel":140}},"back":{"properties":{"zLevel":3}}}}
+				"partStates":{"left":{"front":{"properties":{"zLevel":110}},"back":{"properties":{"zLevel":2}}}}
+			},
+			"L_arm2_FB"	:{
+				"properties":{"centered":false,"image":"<L_a2_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["L_arm2","L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":110}},"back":{"properties":{"zLevel":2}}}}
+			},
+			"L_arm1"	:{
+				"properties":{"centered":false,"image":"<L_a1>","offset":[0.0,0.0],"transformationGroups":["L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":120}},"back":{"properties":{"zLevel":3}}}}
+			},
+			"L_arm1_FB"	:{
+				"properties":{"centered":false,"image":"<L_a1_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":120}},"back":{"properties":{"zLevel":3}}}}
+			},
+
+			//Left Armor arms
+			"L_handf"	:{
+				"properties":{"centered":false,"image":"<L_handf>","offset":[0.0,0.0],"transformationGroups":["L_hand","L_arm2","L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":130}},"back":{"properties":{"zLevel":4}}}}
+			},
+			"L_handf_FB"	:{
+				"properties":{"centered":false,"image":"<L_handf_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["L_hand","L_arm2","L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":130}},"back":{"properties":{"zLevel":4}}}}
 			},
 			"L_af2"		:{
 				"properties":{"centered":false,"image":"<L_af2>","offset":[0.0,0.0],"transformationGroups":["L_arm2","L_arm1","L_offset","global","base"]},
-				"partStates":{"left":{"front":{"properties":{"zLevel":150}},"back":{"properties":{"zLevel":4}}}}
+				"partStates":{"left":{"front":{"properties":{"zLevel":140}},"back":{"properties":{"zLevel":5}}}}
 			},
-			"L_hand"	:{
-				"properties":{"centered":false,"image":"<L_hand>","offset":[0.0,0.0],"transformationGroups":["L_hand","L_arm2","L_arm1","L_offset","global","base"]},
-				"partStates":{"left":{"front":{"properties":{"zLevel":120}},"back":{"properties":{"zLevel":1}}}}
+			"L_af2_FB"		:{
+				"properties":{"centered":false,"image":"<L_af2_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["L_arm2","L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":140}},"back":{"properties":{"zLevel":5}}}}
 			},
-			"L_handf"	:{
-				"properties":{"centered":false,"image":"<L_handf>","offset":[0.0,0.0],"transformationGroups":["L_hand","L_arm2","L_arm1","L_offset","global","base"]},
-				"partStates":{"left":{"front":{"properties":{"zLevel":130}},"back":{"properties":{"zLevel":2}}}}
+			"L_af1"		:{
+				"properties":{"centered":false,"image":"<L_af1>","offset":[0.0,0.0],"transformationGroups":["L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":150}},"back":{"properties":{"zLevel":6}}}}
+			},
+			"L_af1_FB"		:{
+				"properties":{"centered":false,"image":"<L_af1_FB>", "fullbright":true,"offset":[0.0,0.0],"transformationGroups":["L_arm1","L_offset","global","base"]},
+				"partStates":{"left":{"front":{"properties":{"zLevel":150}},"back":{"properties":{"zLevel":6}}}}
 			}
+
 		},
 		"stateTypes":{
-			"arms_fullbright":{
-				"default":"true",
-				"priority" : 1,
-				"states":{
-					"false":{"frames":1},
-					"true":{"frames":1}
-				}
-			},	
 			"left":{
 				"default":"back",
-				"priority" : 2,
 				"states":{
 					"back":{"frames":1,"mode":"end","cycle":0.1},
 					"front":{"frames":1,"mode":"end","cycle":0.1}
@@ -84,7 +131,6 @@
 			},
 			"right":{
 				"default":"front",
-				"priority" : 3,
 				"states":{
 					"back":{"frames":1,"mode":"end","cycle":0.1},
 					"front":{"frames":1,"mode":"end","cycle":0.1}
