@@ -52,6 +52,20 @@ function main:init()
 		self.storage.dry = true
 	end
 
+	if config.altscript then
+		require(directory(config.altscript, modPath.."altscripts/", ".lua"))
+	end
+
+	if config.additionnalScripts then
+		for i,v in pairs(config.additionnalScripts) do
+			require(directory(v, modPath.."scripts/", ".lua"))
+		end
+	end
+
+	if alt and alt.init then
+		alt:init()
+	end
+
 	transforms:init()
 	animations:init()
 	self:animate("draw")
@@ -59,6 +73,10 @@ function main:init()
 end
 
 function main:update(dt, firemode, shift, moves)
+	if alt and alt.update then
+		alt:update(dt, firemode, shift, moves)
+	end
+
 	if self.fireCooldown > 0 then
 		self.fireCooldown = math.max(self.fireCooldown - dt, 0)
 	elseif self.storage.canLoad and self.storage.loaded ~= 1 then
@@ -121,6 +139,10 @@ function main:update(dt, firemode, shift, moves)
 end
 
 function main:uninit()
+	if alt and alt.uninit then
+		alt:uninit()
+	end
+
 	self:save()
 	item.setCount(1)
 end
@@ -177,7 +199,15 @@ function main:reload(amount)
 	self:save()
 end
 
+main.overridenAnimates = {
+
+}
+
 function main:animate(animationname)
+	if self.overridenAnimates[animationname] then
+		animationname = self.overrideAnimates[animationname]
+	end
+
 	animations:stop(animationname)
 	animations:stop(animationname.."_dry")
 	if self.storage.dry and animations:has(animationname.."_dry") then
@@ -185,6 +215,12 @@ function main:animate(animationname)
 	else
 		animations:play(animationname)
 	end
+end
+
+function main:overrideAnimate(animationname, newanimationname) --temporary animation replacement
+	animations:stop(animationname)
+	animations:stop(animationname.."_dry")
+	self.overrideAnimate[animationname] = newanimationname
 end
 
 function main:isPlaying(animationname)
