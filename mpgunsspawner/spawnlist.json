@@ -58,5 +58,10 @@
 		"name" : "AA-12",
 		"image" : "/mpguns/aa12/icon.png",
 		"id" : "aa12"
+	},
+	{
+		"name" : "M82A1",
+		"image" : "/mpguns/m82a1/icon.png",
+		"id" : "m82a1"
 	}
 ]

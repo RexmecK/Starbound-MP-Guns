@@ -10,6 +10,7 @@ include "sprites"
 include "directory"
 include "camera"
 include "crosshair"
+include "events"
 
 main = {}
 main.config = {}
@@ -18,9 +19,17 @@ main.fireCooldown = 0
 main.burstCooldown = 0
 main.queuedFire = 0
 main.reloadLooping = false
+main.overridenAnimates = {}
 
 function main:setupEvents()
-	animations:addEvent("recoil", function() aim:recoil(self.config.recoil) end)
+	animations:addEvent("recoil", function() 
+			local angle = self.config.recoil
+			if self.config.crouchRecoilMultiplier and mcontroller.crouching() then 
+				angle = angle * self.config.crouchRecoilMultiplier
+			end
+			aim:recoil(angle)
+		end
+	)
 	animations:addEvent("reloadLoop", function() self.reloadLooping = true end)
 	animations:addEvent("reload", function() self:reload() end)
 	animations:addEvent("reload1", function() self:reload(1) end)
@@ -37,6 +46,8 @@ function main:init()
 	else
 		self.config = config.gun
 	end
+	muzzle.damageMultiplier = self.config.damageMultiplier or 1
+
 	aim.recoilRecovery = self.config.recoilRecovery or 8
 	aim.recoilResponse = self.config.recoilResponse or 1
 
@@ -45,7 +56,6 @@ function main:init()
 	self.storage = config.storage or {}
 	self.storage.ammo = self.storage.ammo or self.config.magazineCapacity
 	self.storage.loaded = self.storage.loaded or 0
-	
 	if type(self.storage.dry) == "boolean" and not self.storage.dry then
 		self.storage.dry = false
 	else
@@ -114,18 +124,24 @@ function main:update(dt, firemode, shift, moves)
 			self.interuptReload = false
 		end
 	else
-		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and (self.storage.ammo < self.config.magazineCapacity or self.config.magazineCapacity == 0) and firemode == "none" and not animations:isAnyPlaying() then
-			self:animate("reload")
+		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and (self.storage.ammo < self.config.magazineCapacity or self.config.magazineCapacity == 0) and firemode == "none" then
+			events:fire("reload")
+			if not animations:isAnyPlaying() then
+				self:animate("reload")
+			end
 		end
-		if ((not shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0)) and not animations:isAnyPlaying() then
-			self:animate("load")
+		if ((not shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0)) then
+			events:fire("load")
+			if not animations:isAnyPlaying() then
+				self:animate("load")
+			end
 		end
 	end
 
 
-	camera.target = ((activeItem.ownerAimPosition() - mcontroller.position()) * vec2(self.config.aimRatio / 2)) + vec2(0, aim:getRecoil() * 0.03125)
+	camera.target = (world.distance(activeItem.ownerAimPosition(), mcontroller.position()) * vec2(self.config.aimRatio / 2)) + vec2(0, aim:getRecoil() * 0.03125)
 	muzzle.inaccuracy = self:getInaccuracy()
-	crosshair.value = (muzzle.inaccuracy / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 10
+	crosshair.value = ((muzzle.inaccuracy + math.abs(aim:getRecoil())) / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 10
 	item.setCount(math.max(self:ammoCount(), 1))
 	animations:update(dt)
 	if animations:isAnyPlaying() then
@@ -150,6 +166,7 @@ end
 function main:updateFire(dt)
 	if self.queuedFire > 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
 		if self:fire() then
+			events:fire("fire")
 			self.queuedFire = self.queuedFire - 1
 		end
 	elseif self.queuedFire > 0 and self.storage.ammo <= 0 and self.storage.loaded ~= 1 then
@@ -199,13 +216,9 @@ function main:reload(amount)
 	self:save()
 end
 
-main.overridenAnimates = {
-
-}
-
 function main:animate(animationname)
 	if self.overridenAnimates[animationname] then
-		animationname = self.overrideAnimates[animationname]
+		animationname = self.overridenAnimates[animationname]
 	end
 
 	animations:stop(animationname)
@@ -220,10 +233,14 @@ end
 function main:overrideAnimate(animationname, newanimationname) --temporary animation replacement
 	animations:stop(animationname)
 	animations:stop(animationname.."_dry")
-	self.overrideAnimate[animationname] = newanimationname
+	self.overridenAnimates[animationname] = newanimationname
 end
 
 function main:isPlaying(animationname)
+	if self.overridenAnimates[animationname] then
+		animationname = self.overridenAnimates[animationname]
+	end
+
 	if self.storage.dry and animations:has(animationname.."_dry") then
 		return animations:isPlaying(animationname.."_dry")
 	else

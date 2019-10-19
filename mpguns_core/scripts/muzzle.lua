@@ -10,7 +10,7 @@ muzzle = {}
 muzzle._flash = {}
 muzzle._parts = {}
 muzzle.inaccuracy = 0
-muzzle.damageMultplier = 1
+muzzle.damageMultiplier = 1
 
 function muzzle:init()
 	local muzzleConfig = config.muzzle or {}
@@ -57,9 +57,9 @@ function muzzle:fire(ammo)
 
 		projectileArgs[3] = activeItem.ownerEntityId()
 
-		--damageMultplier
-		if self.damageMultplier ~= 1 and projectileArgs[6] then
-			projectileArgs[6].power = (projectileArgs[6].power or 1) * self.damageMultplier
+		--damageMultiplier
+		if self.damageMultiplier ~= 1 and projectileArgs[6] then
+			projectileArgs[6].power = (projectileArgs[6].power or 1) * self.damageMultiplier
 		end
 
 		world.spawnProjectile(table.unpack(projectileArgs))
@@ -81,9 +81,9 @@ function muzzle:fireProjectile(projectileName, projectileConfig)
 			direction = direction:rotate(math.rad(rand))
 		end
 
-		--damageMultplier
-		if self.damageMultplier ~= 1 and projectileConfig and projectileConfig.power then
-			projectileConfig.power = (projectileConfig.power or 1) * self.damageMultplier
+		--damageMultiplier
+		if self.damageMultiplier ~= 1 and projectileConfig and projectileConfig.power then
+			projectileConfig.power = (projectileConfig.power or 1) * self.damageMultiplier
 		end
 
 		world.spawnProjectile(projectileName, position + mcontroller.position(), ownerId, direction, false, projectileConfig)
