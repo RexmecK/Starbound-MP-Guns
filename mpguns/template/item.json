@@ -34,16 +34,7 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"click1" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip2.ogg"], "pitchMultiplier" : 1.5},
-			"click2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip1.ogg"], "pitchMultiplier" : 1.5},
-			"click3" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
-			"click4" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip3.ogg"], "pitchMultiplier" : 1.35},
-			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
-			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
-			"firesound1" : {"pool" : ["/sfx/gun/ar6.ogg"], "pitchMultiplier" : 1.15},
-			"firesound2" : {"pool" : ["/sfx/gun/crossbow1.ogg"], "pitchMultiplier" : 1.5},
-			"firesound3" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.25},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.0}
+			//"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5},
 		},
 		"lights" : {
 			"muzzleFlash" : {
@@ -58,6 +49,8 @@
 		},
 		"animatedParts" : {
 			"parts" : {
+				//arms are layered at zlevel: back:6 - front:100
+
 				"gun" : {
 					"properties" : {
 						"zLevel" : 14,
@@ -67,6 +60,7 @@
 						"transformationGroups" : ["gun", "base"]
 					}
 				},
+
 				"muzzlePosition" : {
 					"properties" : {
 						"offset" : [18.375,3.375],
@@ -76,26 +70,42 @@
 				"muzzleFlash" : {
 					"properties" : {
 						"zLevel" : 15,
-						"offset" : [-1.375,-1],
+						"offset" : [-0.125,-0.75],
 						"centered" : false,
 						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
 						"anchorPart" : "muzzlePosition"
 					},
 					"partStates" : {
 						"muzzleFlash" : {
-							"1" : {
+							"0" : {
 								"properties" : {
 									"image" : "<muzzleFlash_0>"
 								}
 							},
-							"2" : {
+							"1" : {
 								"properties" : {
 									"image" : "<muzzleFlash_1>"
 								}
 							},
-							"3" : {
+							"2" : {
 								"properties" : {
 									"image" : "<muzzleFlash_2>"
+								}
+							},
+							"3" : {
+								"properties" : {
+									"image" : "<muzzleFlash_3>"
+								}
+							},
+							"4" : {
+								"properties" : {
+									"image" : "<muzzleFlash_4>"
+								}
+							},
+							"5" : {
+								"properties" : {
+									"image" : "<muzzleFlash_5>"
 								}
 							}
 						}
@@ -113,10 +123,13 @@
 			"stateTypes" : {
 				"muzzleFlash" : {"default" : "off",
 					"states" : {
-						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.032, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "smoke2"]}},
-						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.032, "properties" : {"particleEmittersOff" : []}},
-						"3" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.032},
-						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "smoke2"]}}
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.016},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
+						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
+						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.016},
+						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.016},
+						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
 					}
 				},
 				"vapor" : {"default" : "off",
@@ -172,17 +185,73 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,45],
+							"color" : [192,192,192,45],
 							"initialVelocity" : [5.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
 							"fade" : 1,
 							"size" : 0.25,
-							"layer" : "front",
+							"layer" : "back",
 							"timeToLive" : 0.45,
 							"variance" : {
 								"initialVelocity" : [2.0,2.0],
 								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"spark" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,255,172,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"spark2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,128,64,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
 							}
 						}
 					}
@@ -201,13 +270,13 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,45],
+							"color" : [192,192,192,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
 							"fade" : 1,
 							"size" : 0.25,
-							"layer" : "front", 
+							"layer" : "back", 
 							"timeToLive" : 0.45,
 							"variance" : {
 								"initialVelocity" : [1.0,2.0],
@@ -249,6 +318,7 @@
 		},
 
 		"transformationGroups" : {
+			"muzzleFlash":{},
 			"gun":{}
 		}
 	}
