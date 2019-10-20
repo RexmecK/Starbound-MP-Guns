@@ -254,7 +254,7 @@ function main:getInaccuracy()
 
 	local acc = (self.config.movingInaccuracy * movingRatio) + (self.config.standingInaccuracy * (1 - movingRatio))
 
-	if mcontroller.crouching() then
+	if mcontroller.crouching() and self.config.crouchInaccuracyMultiplier then
 		return acc * self.config.crouchInaccuracyMultiplier
 	else
 		return acc
