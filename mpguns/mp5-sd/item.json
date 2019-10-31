@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.04, // add up a number to force update
+	"itemVersion" : 1.055, // add up a number to force update
 
 	"shortdescription" : "MP5-SD",
 	"category" : "SMG",
@@ -43,7 +43,7 @@
 
 			"firesound1" : {"pool" : ["/sfx/gun/grenadeblast3.ogg"], "pitchMultiplier" : 4.0, "volume": 0.5},
 			"firesound2" : {"pool" : ["/sfx/gun/crossbow1.ogg"], "pitchMultiplier" : 4.5, "volume": 0.5},
-			"firesound3" : {"pool" : ["/sfx/gun/blowgun3.ogg"], "pitchMultiplier" : 1.25, "volume": 0.5},
+			"firesound3" : {"pool" : ["/sfx/gun/blowgun3.ogg"], "pitchMultiplier" : 1.9, "volume": 0.5},
 			"firesound4" : {"pool" : ["/sfx/gun/mp3.ogg"], "pitchMultiplier" : 4.0, "volume": 0.5}
 		},
 		"lights" : {
@@ -262,6 +262,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[4.5625,2.6875],"scale":[0.225,0.225],"rotation":0,"position":[-4.0625,-2.9375]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.0625,0.0625]}},"slide2":{"transform":{}},"mag":{"transform":{"scalePoint":[6.25,2.125],"rotationPoint":[6.25,2.125],"rotation":0,"scale":[1,1],"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[0,0]}},"slide":{"transform":{}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":9.625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{}}}
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[4.5625,2.6875],"scale":[0.23,0.23],"rotation":0,"position":[-4.0625,-2.9375]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.0625,0.0625]}},"slide2":{"transform":{}},"mag":{"transform":{"scalePoint":[6.25,2.125],"rotationPoint":[6.25,2.125],"rotation":0,"scale":[1,1],"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[0,0]}},"slide":{"transform":{}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":9.625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{}}}
 	}
 }
