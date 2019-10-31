@@ -217,7 +217,7 @@ function main:reload(amount)
 end
 
 function main:animate(animationname)
-	if self.overridenAnimates[animationname] then
+	if self.overridenAnimates[animationname] and (animations:has(self.overridenAnimates[animationname]) or animations:has(self.overridenAnimates[animationname].."_dry")) then
 		animationname = self.overridenAnimates[animationname]
 	end
 
@@ -237,7 +237,7 @@ function main:overrideAnimate(animationname, newanimationname) --temporary anima
 end
 
 function main:isPlaying(animationname)
-	if self.overridenAnimates[animationname] then
+	if self.overridenAnimates[animationname] and (animations:has(self.overridenAnimates[animationname]) or animations:has(self.overridenAnimates[animationname].."_dry")) then
 		animationname = self.overridenAnimates[animationname]
 	end
 

@@ -68,5 +68,10 @@
 		"name" : "Sawed-off",
 		"image" : "/mpguns/sawedoff/icon.png",
 		"id" : "sawedoff"
+	},
+	{
+		"name" : "M27 IAR",
+		"image" : "/mpguns/m27/icon.png",
+		"id" : "m27"
 	}
 ]
