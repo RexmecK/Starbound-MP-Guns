@@ -8,10 +8,10 @@
 
 	"recoil" : 32,
 	"recoilRecovery" : 16,
-	"recoilResponse" : 8,
+	"recoilResponse" : 4,
 	
 	"movingInaccuracy" : 30,
-	"standingInaccuracy" : 15,
+	"standingInaccuracy" : 20,
 	"crouchInaccuracyMultiplier" : 0.5,
 
 	"aimRatio" : 0.35,
