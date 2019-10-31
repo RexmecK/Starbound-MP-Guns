@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.04, // add up a number to force update
+	"itemVersion" : 1.05, // add up a number to force update
 
 	"shortdescription" : "AK-47",
 	"category" : "Assault Rifle",
@@ -40,7 +40,7 @@
 			"click4" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip3.ogg"], "pitchMultiplier" : 1.1},
 			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
 			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
-			"firesound1" : {"pool" : ["/sfx/gun/uzi2.ogg"], "pitchMultiplier" : 1.35},
+			"firesound1" : {"pool" : ["/sfx/gun/shotgun3.ogg"], "pitchMultiplier" : 1.5},
 			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.45},
 			"firesound3" : {"pool" : ["/sfx/gun/revolver2.ogg"], "pitchMultiplier" : 1.2},
 			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.0}
@@ -103,26 +103,42 @@
 				"muzzleFlash" : {
 					"properties" : {
 						"zLevel" : 15,
-						"offset" : [-1.375,-1],
+						"offset" : [-0.125,-0.75],
 						"centered" : false,
 						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
 						"anchorPart" : "muzzlePosition"
 					},
 					"partStates" : {
 						"muzzleFlash" : {
-							"1" : {
+							"0" : {
 								"properties" : {
 									"image" : "<muzzleFlash_0>"
 								}
 							},
-							"2" : {
+							"1" : {
 								"properties" : {
 									"image" : "<muzzleFlash_1>"
 								}
 							},
-							"3" : {
+							"2" : {
 								"properties" : {
 									"image" : "<muzzleFlash_2>"
+								}
+							},
+							"3" : {
+								"properties" : {
+									"image" : "<muzzleFlash_3>"
+								}
+							},
+							"4" : {
+								"properties" : {
+									"image" : "<muzzleFlash_4>"
+								}
+							},
+							"5" : {
+								"properties" : {
+									"image" : "<muzzleFlash_5>"
 								}
 							}
 						}
@@ -140,10 +156,13 @@
 			"stateTypes" : {
 				"muzzleFlash" : {"default" : "off",
 					"states" : {
-						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.032, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "smoke2"]}},
-						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.032, "properties" : {"particleEmittersOff" : []}},
-						"3" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.032},
-						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "smoke2"]}}
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.016},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
+						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
+						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.016},
+						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.016},
+						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
 					}
 				},
 				"vapor" : {"default" : "off",
@@ -215,6 +234,62 @@
 					}
 				]
 			},
+			"spark" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,255,172,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"spark2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,128,64,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
 			"smoke2" : {
 				"emissionRate" : 64.0,
 				"zLevel" : 100,
@@ -275,6 +350,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[3.5625,1.4375],"scalePoint":[-0.125,0.125],"scale":[0.375,0.375],"rotation":0,"position":[-3.5625,-1.25]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.0625,-0.3125]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"rotationPoint":[4.6875,1],"scalePoint":[4.6875,1],"scale":[1,1],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-1.0625}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-12.375}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.375,-0.125]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":22.0625}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-19.8125}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":38.75}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-26.75}}}
+		"transformationGroups" : {"muzzleFlash":{"transform":{"scale":[2.0,2.0],"position":[0,0.03675]}},"gun":{"transform":{"rotationPoint":[3.5625,1.4375],"scalePoint":[-0.125,0.125],"scale":[0.45,0.45],"rotation":0,"position":[-3.5625,-1.25]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.0625,-0.3125]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"rotationPoint":[4.6875,1],"scalePoint":[4.6875,1],"scale":[1,1],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-1.0625}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-12.375}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.375,-0.125]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":22.0625}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-19.8125}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":38.75}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-26.75}}}
 	}
 }
