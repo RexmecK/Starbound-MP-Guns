@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.02, // add up a number to force update
+	"itemVersion" : 1.031, // add up a number to force update
 
 	"shortdescription" : "M249",
 	"category" : "Light Machine Gun",
@@ -125,26 +125,42 @@
 				"muzzleFlash" : {
 					"properties" : {
 						"zLevel" : 15,
-						"offset" : [-1.375,-1],
+						"offset" : [-0.125,-0.75],
 						"centered" : false,
 						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
 						"anchorPart" : "muzzlePosition"
 					},
 					"partStates" : {
 						"muzzleFlash" : {
-							"1" : {
+							"0" : {
 								"properties" : {
 									"image" : "<muzzleFlash_0>"
 								}
 							},
-							"2" : {
+							"1" : {
 								"properties" : {
 									"image" : "<muzzleFlash_1>"
 								}
 							},
-							"3" : {
+							"2" : {
 								"properties" : {
 									"image" : "<muzzleFlash_2>"
+								}
+							},
+							"3" : {
+								"properties" : {
+									"image" : "<muzzleFlash_3>"
+								}
+							},
+							"4" : {
+								"properties" : {
+									"image" : "<muzzleFlash_4>"
+								}
+							},
+							"5" : {
+								"properties" : {
+									"image" : "<muzzleFlash_5>"
 								}
 							}
 						}
@@ -162,10 +178,13 @@
 			"stateTypes" : {
 				"muzzleFlash" : {"default" : "off",
 					"states" : {
-						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.032, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "smoke2"]}},
-						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.032, "properties" : {"particleEmittersOff" : []}},
-						"3" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.032},
-						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "smoke2"]}}
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "0", "cycle" : 0.016},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
+						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
+						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.016},
+						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.016},
+						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
 					}
 				},
 				"vapor" : {"default" : "off",
@@ -232,6 +251,62 @@
 							"variance" : {
 								"initialVelocity" : [2.0,2.0],
 								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"spark" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,255,172,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"spark2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,128,64,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
 							}
 						}
 					}
@@ -317,6 +392,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[2.3125,0.8125],"rotation":0,"scale":[0.5,0.5],"position":[-3,-1.375]}},"bullets":{"transform":{"rotationPoint":[2.75,0.875],"rotation":0,"position":[0,0]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.625,-0.3125]}},"lever":{"transform":{}},"mag":{"transform":{"scalePoint":[5.375,1.375],"rotationPoint":[3,0.5],"rotation":0,"scale":[1,1],"position":[0,0]}},"handle":{"transform":{"rotationPoint":[3.5625,1.5625],"rotation":-11.5,"scale":[1,1],"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":9.6875}},"base":{"interpolated":false,"transform":{}},"cover":{"transform":{"rotationPoint":[3.4375,1.5625],"rotation":0}},"R_offset":{"ignore":true,"interpolated":false,"transform":{}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-45}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":45}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":9.3125}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-5.3125}}}
+		"transformationGroups" : {"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"gun":{"transform":{"rotationPoint":[2.3125,0.8125],"rotation":0,"scale":[0.5625,0.5625],"position":[-3,-1.375]}},"bullets":{"transform":{"rotationPoint":[2.75,0.875],"rotation":0,"position":[0,0]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.625,-0.3125]}},"lever":{"transform":{}},"mag":{"transform":{"scalePoint":[5.375,1.375],"rotationPoint":[3,0.5],"rotation":0,"scale":[1,1],"position":[0,0]}},"handle":{"transform":{"rotationPoint":[3.5625,1.5625],"rotation":-11.5,"scale":[1,1],"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":9.6875}},"base":{"interpolated":false,"transform":{}},"cover":{"transform":{"rotationPoint":[3.4375,1.5625],"rotation":0}},"R_offset":{"ignore":true,"interpolated":false,"transform":{}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-45}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":45}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":9.3125}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-5.3125}}}
 	}
 }
