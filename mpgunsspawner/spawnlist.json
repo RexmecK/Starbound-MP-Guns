@@ -73,5 +73,10 @@
 		"name" : "M27 IAR",
 		"image" : "/mpguns/m27/icon.png",
 		"id" : "m27"
+	},
+	{
+		"name" : "TCSG-12",
+		"image" : "/mpguns/tcsg-12/icon.png",
+		"id" : "tcsg-12"
 	}
 ]
