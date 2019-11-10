@@ -104,7 +104,7 @@ function main:update(dt, firemode, shift, moves)
 			self.queuedFire = 1
 		elseif self.config.firemode == "burst" and self.burstCooldown == 0 then
 			self.queuedFire = 3
-			self.burstCooldown = 0.3
+			self.burstCooldown = self.config.burstCooldown or 0.5
 		elseif self.config.firemode == "semi" and update_lastInfo[2] ~= "primary" then
 			self.queuedFire = 1
 		end

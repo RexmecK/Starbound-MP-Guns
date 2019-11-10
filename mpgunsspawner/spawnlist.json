@@ -78,5 +78,10 @@
 		"name" : "TCSG-12",
 		"image" : "/mpguns/tcsg-12/icon.png",
 		"id" : "tcsg-12"
+	},
+	{
+		"name" : "Glock 19x",
+		"image" : "/mpguns/glock19x/icon.png",
+		"id" : "glock19x"
 	}
 ]
