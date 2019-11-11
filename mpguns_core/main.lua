@@ -7,6 +7,10 @@ function include(util)
 	_included[includePath..util..".lua"] = true
 end
 
+function system(name)
+	require(directory(name, modPath.."systems/", ".lua"))
+end
+
 function init()
 	include "config" --needed to load certain configs
 	include "directory" 
@@ -16,7 +20,7 @@ function init()
 		end
 	end
 
-	require(directory((config.system or "default"), modPath.."systems/", ".lua"))
+	system(config.system or "default")
 
 	init()
 end

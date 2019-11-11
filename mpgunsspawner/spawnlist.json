@@ -83,5 +83,10 @@
 		"name" : "Glock 19x",
 		"image" : "/mpguns/glock19x/icon.png",
 		"id" : "glock19x"
+	},
+	{
+		"name" : "S&W Model 500",
+		"image" : "/mpguns/sw500/icon.png",
+		"id" : "sw500"
 	}
 ]
