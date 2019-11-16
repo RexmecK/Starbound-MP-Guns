@@ -1,0 +1,373 @@
+{
+	"itemVersion" : 1, // add up a number to force update
+
+	"shortdescription" : "Mosin Nagant",
+	"category" : "Rifle",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=530000;e4e4e4=00000e;6a6a6a=53000e?multiply=fff0?scale=82.5;13.5?crop=0;0;83;14?replace;00000400=2100;00000500=2100;00000600=2100;00000700=2100;01000200=2100;01000300=2100;01000400=4100;01000500=4100;01000600=4100;01000700=4100;01000800=3100;02000100=2100;02000200=4100;02000300=4100;02000400=4100;02000500=4100;02000600=4100;02000700=4100;02000800=3100;03000000=1100;03000200=2100;03000300=4100;03000400=4100;03000500=4100;03000600=4100;03000700=4100;03000800=4100;03000900=3100;04000200=2100;04000300=4100;04000400=4100;04000500=4100;04000600=4100;04000700=4100;04000800=4100;04000900=3100;05000300=2100;05000400=4100;05000500=4100;05000600=4100;05000700=4100;05000800=4100;05000900=3100;06000300=2100;06000400=4100;06000500=4100;06000600=4100;06000700=4100;06000800=4100;06000900=3100;07000300=2100;07000400=4100;07000500=4100;07000600=4100;07000700=4100;07000800=4100;07000900=3100;08000400=2100;08000500=4100;08000600=4100;08000700=4100;08000800=4100;08000900=3100;09000400=2100;09000500=4100;09000600=4100;09000700=4100;09000800=4100;09000900=3100;0a000400=2100;0a000500=4100;0a000600=4100;0a000700=4100;0a000800=4100;0a000900=3100;0b000500=2100;0b000600=4100;0b000700=4100;0b000800=4100;0b000900=3100;0c000500=2100;0c000600=4100;0c000700=4100;0c000800=4100;0c000900=3100;0d000500=2100;0d000600=4100;0d000700=4100;0d000800=4100;0d000900=3100;0e000600=2100;0e000700=4100;0e000800=4100;0e000900=3100;0f000600=2100;0f000700=4100;0f000800=3100;10000600=2100;10000700=4100;10000800=3100;11000700=2100;11000800=4100;11000900=3100;12000700=2100;12000800=4100;12000900=3100;13000700=2100;13000800=4100;13000900=4100;13000a00=3100;13000b00=333;13000c00=333;14000800=2100;14000900=4100;14000a00=4100;14000b00=1100;15000600=1100;15000700=1100;15000800=4100;15000900=4100;15000a00=4100;15000b00=1100;15000c00=333;16000500=1100;16000700=c1c1c1;16000800=4100;16000900=4100;16000a00=4100;16000b00=1100;16000c00=333;17000500=1100;17000600=c1c1c1;17000800=4100;17000900=4100;17000a00=4100;17000b00=1100;17000c00=333;18000500=1100;18000800=4100;18000900=4100;18000a00=4100;18000b00=1100;18000c00=333;19000500=1100;19000600=1100;19000700=1100;19000800=4100;19000900=4100;19000a00=4100;19000b00=1100;19000c00=333;1a000500=1100;1a000600=1100;1a000700=333;1a000800=4100;1a000900=4100;1a000a00=4100;1a000b00=949494;1a000c00=a3a3a3;1b000600=1100;1b000700=1100;1b000800=4100;1b000900=4100;1b000a00=4100;1b000b00=a3a3a3;1b000c00=b2b2b2;1c000600=1100;1c000700=333;1c000800=4100;1c000900=4100;1c000a00=4100;1c000b00=767676;1d000600=1100;1d000700=1100;1d000800=4100;1d000900=4100;1d000a00=4100;1d000b00=767676;1e000700=333;1e000800=4100;1e000900=4100;1e000a00=4100;1e000b00=767676;1f000700=1100;1f000800=4100;1f000900=4100;1f000a00=4100;1f000b00=767676;20000800=2100;20000900=1e1311;20000a00=4100;20000b00=1100;20000c00=333;21000800=2100;21000900=31201c;21000a00=4100;21000b00=1100;21000c00=333;22000800=2100;22000900=31201c;22000a00=4100;22000b00=1100;22000c00=333;23000800=2100;23000900=31201c;23000a00=4100;23000b00=0100;24000800=2100;24000900=31201c;24000a00=4100;24000b00=0100;24000c00=1100;24000d00=1100;25000800=2100;25000900=31201c;25000a00=4100;25000b00=0100;25000c00=333;26000800=2100;26000900=5100;26000a00=4100;26000b00=0100;26000c00=333;26000d00=1100;27000800=2100;27000900=5100;27000a00=4100;27000b00=0100;27000c00=333;28000900=2100;28000a00=4100;28000b00=0100;28000c00=1100;28000d00=1100;29000900=2100;29000a00=4100;29000b00=1100;29000c00=333;2a000900=2100;2a000a00=4100;2a000b00=1100;2a000c00=333;2b000900=2100;2b000a00=4100;2b000b00=2100;2b000c00=4100;2c000a00=767676;2c000b00=858585;2c000c00=949494;2d000a00=5100;2d000b00=2100;2d000c00=3100;2e000a00=5100;2e000b00=2100;2e000c00=3100;2f000a00=5100;2f000b00=2100;2f000c00=3100;30000a00=5100;30000b00=2100;30000c00=3100;31000a00=5100;31000b00=2100;31000c00=3100;32000a00=5100;32000b00=2100;32000c00=3100;33000a00=5100;33000b00=2100;33000c00=3100;34000a00=5100;34000b00=2100;34000c00=3100;35000a00=5100;35000b00=2100;35000c00=3100;36000a00=5100;36000b00=2100;36000c00=3100;37000a00=5100;37000b00=2100;37000c00=3100;38000a00=5100;38000b00=2100;38000c00=3100;39000a00=5100;39000b00=2100;39000c00=3100;3a000a00=5100;3a000b00=2100;3a000c00=3100;3b000a00=5100;3b000b00=2100;3b000c00=3100;3c000a00=5100;3c000b00=2100;3c000c00=3100;3d000a00=5100;3d000b00=2100;3d000c00=3100;3e000a00=5100;3e000b00=2100;3e000c00=3100;3f000a00=5100;3f000b00=2100;3f000c00=3100;40000a00=5100;40000b00=2100;40000c00=3100;41000a00=5100;41000b00=2100;41000c00=3100;42000a00=5100;42000b00=2100;42000c00=3100;43000900=767676;43000a00=858585;43000b00=858585;43000c00=a3a3a3;44000900=1100;44000a00=5100;44000b00=2100;44000c00=3100;45000900=1100;45000a00=5100;45000b00=2100;45000c00=3100;46000900=1100;46000a00=5100;46000b00=2100;46000c00=3100;47000900=1100;47000a00=5100;47000b00=2100;47000c00=3100;48000900=1100;48000a00=5100;48000b00=2100;48000c00=333;49000900=1100;49000a00=0100;49000b00=333;49000c00=333;4a000900=1100;4a000b00=1100;4b000900=1100;4b000b00=1100;4c000900=1100;4c000b00=1100;4d000900=1100;4d000b00=1100;4e000900=333;4e000b00=1100;4e000c00=1100;4e000d00=333;4f000b00=1100;50000b00=1100;51000b00=1100;52000b00=1100?replace;0100=151515;1100=242424;2100=442d27;3100=6b473d;4100=583a32;5100=573a32",
+	"description" : "This rifle is well-known for is reliability and accuracy.",
+	"rarity" : "Common",
+	"maxStack" : 5,
+
+	"system" : "gun",
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+	
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"reloadLoop" : "animations/reloadLoop.keyframes",
+		"reloadLoopEnd" : "animations/reloadLoopEnd.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbase.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"firesound1" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.5, "volume" : 1.5},
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.8},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.8},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.6},
+
+			"load1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip1.ogg"], "pitchMultiplier" : 2.3},
+			"load2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 2.3},
+			"load3" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 2.3},
+			"load4" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip1.ogg"], "pitchMultiplier" : 2.3},
+			"load5" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip3.ogg"], "pitchMultiplier" : 2.3},
+			"load6" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 2.3},
+
+			"reload1" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 1.9},
+
+			"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5}
+		},
+		"lights" : {
+			"muzzleFlash" : {
+				"pointBeam" : 0,
+				"pointAngle" : 0,
+				"color" : [155, 155, 0],
+				"pointLight" : false,
+				"anchorPart" : "muzzlePosition",
+				"active" : false,
+				"position" : [0, 0]
+			}
+		},
+		"animatedParts" : {
+			"parts" : {
+				//arms are layered at zlevel: back:6 - front:100
+
+				"gunbg" : {
+					"properties" : {
+						"zLevel" : 14,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+
+				"mag" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"transformationGroups" : ["mag", "gun", "base"]
+					}
+				},
+
+				"lever" : {
+					"properties" : {
+						"zLevel" : 16,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"transformationGroups" : ["lever", "gun", "base"]
+					}
+				},
+
+				"gun" : {
+					"properties" : {
+						"zLevel" : 17,
+						"offset" : [0,0],
+						"image" : "<sprite_3>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+
+				"levertop" : {
+					"properties" : {
+						"zLevel" : 18,
+						"offset" : [0,0],
+						"image" : "<sprite_4>",
+						"centered" : false,
+						"transformationGroups" : ["levertop", "lever", "gun", "base"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						"offset" : [10.375,1.5],
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [-0.125,-0.75],
+						"centered" : false,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							},
+							"2" : {
+								"properties" : {
+									"image" : "<muzzleFlash_2>"
+								}
+							},
+							"3" : {
+								"properties" : {
+									"image" : "<muzzleFlash_3>"
+								}
+							},
+							"4" : {
+								"properties" : {
+									"image" : "<muzzleFlash_4>"
+								}
+							},
+							"5" : {
+								"properties" : {
+									"image" : "<muzzleFlash_5>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						"offset" : [3.625,1.5],
+						"transformationGroups" : ["gun", "base"]
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.016},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
+						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
+						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.016},
+						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.016},
+						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
+					}
+				},
+				"vapor" : {"default" : "off",
+					"states" : {
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 2.0, "properties" : {"particleEmittersOff" : ["vapor"]}},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 1.0, "properties" : {"particleEmittersOn" : ["vapor"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["vapor"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"vapor" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 80],
+							"color" : [255,255,255,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.05,
+							"layer" : "front",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [0.2,0.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [192,192,192,45],
+							"initialVelocity" : [5.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "back",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"spark" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,255,172,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"spark2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,128,64,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.45,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.245,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"smoke2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [192,192,192,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "back", 
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [1.0,2.0],
+								"size" : 0.5
+							}
+						}
+					}
+				]
+			},
+			"casing" : {
+				"emissionRate" : 16.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "textured",
+							"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=040000;e4e4e4=000001;6a6a6a=040001?multiply=fff0?scale=3.5;0.5?crop=0;0;4;1?replace;0000=b5a642;01000000=b5a642;02000000=b5a642;03000000=b5a642",
+							"position" : [0, 0],
+							"finalVelocity" : [0, -100],
+							"approach" : [0, 80],
+							"initialVelocity" : [-1.5, 8.0],
+							"angularVelocity" : 720,
+							"collidesForeground" : true,
+							"destructionAction" : "fade",
+							"destructionTime" : 0.85,
+							"size" : 0.5,
+							"layer" : "front",
+							"timeToLive" : 2.0,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [3.0,2.0]
+							}
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"levertop":{"transform":{"position":[0,0]}},"gun":{"transform":{"rotationPoint":[2.8125,0.75],"scale":[0.5,0.5],"rotation":0,"position":[-2.75,-0.625]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.8125,-0.1875]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"scalePoint":[6,1.6875],"rotationPoint":[3.625,1.3125],"scale":[1,1],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-8.9375}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-15.5625}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.125,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-0.25}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":11.9375}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":24.9375}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-8.75}}}
+	}
+}

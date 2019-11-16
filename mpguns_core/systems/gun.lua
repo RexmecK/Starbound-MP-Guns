@@ -225,16 +225,19 @@ function main:updateReloadControls(dt, firemode, shift, moves)
 		self.interuptReload = true
 	end
 	if animations:isAnyPlaying() then return end
-	if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and (self.storage.ammo < self.config.magazineCapacity or self.config.magazineCapacity == 0) and firemode == "none" then
-		events:fire("reload")
-		if not animations:isAnyPlaying() then
-			self:animate("reload")
+	if not self.reloadLooping then
+		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and (self.storage.ammo < self.config.magazineCapacity or self.config.magazineCapacity == 0) and firemode == "none" then
+			events:fire("reload")
+			if not animations:isAnyPlaying() then
+				self:animate("reload")
+			end
 		end
-	end
-	if ((not shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0 and not self.config.disallowAnimationLoad)) then
-		events:fire("load")
-		if not animations:isAnyPlaying() then
-			self:animate("load")
+		
+		if ((not shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0 and not self.config.disallowAnimationLoad)) then
+			events:fire("load")
+			if not animations:isAnyPlaying() then
+				self:animate("load")
+			end
 		end
 	end
 end
