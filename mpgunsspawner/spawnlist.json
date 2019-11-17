@@ -93,5 +93,10 @@
 		"name" : "Mosin Nagant",
 		"image" : "/mpguns/mosinnagant/icon.png",
 		"id" : "mosinnagant"
+	},
+	{
+		"name" : "M30 LuftWaffe Drilling",
+		"image" : "/mpguns/m30/icon.png",
+		"id" : "m30"
 	}
 ]
