@@ -1,14 +1,14 @@
 {
-	"itemVersion" : 1.041, // add up a number to force update
+	"itemVersion" : 1, // add up a number to force update
 
-	"shortdescription" : "Desert Eagle",
+	"shortdescription" : "M1911",
 	"category" : "Pistol",
-	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=190000;e4e4e4=00000f;6a6a6a=19000f?multiply=fff0?scale=24.5;14.5?crop=0;0;25;15?replace;00000800=aaa;00000b00=333;01000800=aaa;01000b00=222;02000200=222;02000300=222;02000400=222;02000700=aaa;02000800=aaa;02000900=ccc;02000a00=ddd;02000b00=ddd;03000000=333;03000100=aaa;03000200=444;03000300=444;03000400=444;03000500=222;03000600=aaa;03000700=aaa;03000800=aaa;03000900=999;03000a00=888;03000b00=222;03000c00=ddd;03000d00=333;03000e00=0f0;04000000=333;04000100=aaa;04000200=333;04000300=333;04000400=333;04000500=444;04000600=444;04000700=333;04000800=222;04000900=bbb;04000a00=bbb;04000b00=900;04000c00=ddd;04000d00=222;05000000=333;05000100=aaa;05000200=222;05000300=222;05000400=222;05000500=333;05000600=333;05000700=222;05000800=aaa;05000900=999;05000a00=999;05000b00=bbb;05000c00=ddd;06000000=333;06000100=999;06000200=aaa;06000300=aaa;06000400=aaa;06000500=222;06000600=222;06000700=aaa;06000800=222;06000900=ccc;06000a00=ccc;06000b00=999;06000c00=ddd;06000d00=aaa;07000000=333;07000500=bbb;07000600=aaa;07000700=aaa;07000800=aaa;07000900=ccc;07000a00=ccc;07000b00=ddd;07000c00=ddd;07000d00=aaa;08000500=aaa;08000700=333;08000800=bbb;08000900=ccc;08000a00=bbb;08000b00=ccc;08000c00=ccc;08000d00=aaa;09000500=aaa;09000600=222;09000800=bbb;09000900=ccc;09000a00=aaa;09000b00=aaa;09000c00=aaa;0a000500=aaa;0a000800=222;0a000900=ccc;0a000a00=aaa;0a000b00=bbb;0a000c00=ccc;0b000600=aaa;0b000700=222;0b000800=aaa;0b000900=ccc;0b000a00=aaa;0b000b00=bbb;0b000c00=ccc;0c000700=aaa;0c000800=111;0c000900=ccc;0c000a00=aaa;0c000b00=bbb;0c000c00=ccc;0d000800=111;0d000900=ccc;0d000a00=aaa;0d000b00=ccc;0d000c00=aaa;0e000700=333;0e000800=222;0e000900=ccc;0e000a00=aaa;0e000b00=ccc;0f000800=111;0f000900=ccc;0f000a00=aaa;0f000b00=ccc;0f000c00=aaa;10000700=333;10000800=222;10000900=ccc;10000a00=aaa;10000b00=ccc;11000800=111;11000900=ccc;11000a00=aaa;11000b00=ccc;11000c00=aaa;12000700=333;12000800=222;12000900=ccc;12000a00=aaa;12000b00=ccc;13000800=111;13000900=ccc;13000a00=aaa;13000b00=ccc;13000c00=aaa;14000700=333;14000800=222;14000900=ccc;14000a00=aaa;14000b00=ccc;15000800=111;15000900=999;15000a00=aaa;15000b00=ccc;15000c00=aaa;16000700=333;16000800=222;16000900=bbb;16000a00=ddd;16000b00=ccc;16000c00=aaa;17000900=bbb;17000a00=ddd;17000b00=ccc;17000c00=aaa;17000d00=111;17000e00=0f0;18000a00=ddd;18000b00=ccc;18000c00=aaa;18000d00=aaa",
-	"description" : "Semi-automatic handgun notable for chambering the largest centerfire cartridge of any magazine-fed, self-loading pistol.",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=1a0000;e4e4e4=001;6a6a6a=1a0011?multiply=fff0?scale=25.5;16.5?crop=0;0;26;17?replace;02000200=0100;02000300=1100;02000400=1100;02000500=1100;02000b00=0100;03000200=0100;03000300=4100;03000400=3100;03000500=3100;03000600=1100;03000700=1100;03000a00=0100;03000b00=0100;03000d00=bababa;04000100=0100;04000200=4100;04000300=3100;04000400=5100;04000500=3100;04000600=3100;04000700=3100;04000800=1100;04000900=0100;04000a00=0100;04000b00=1100;04000c00=0100;04000d00=333;04000e00=bababa;05000100=0100;05000200=4100;05000300=4100;05000400=4100;05000500=4100;05000600=3100;05000700=3100;05000800=3100;05000900=3100;05000a00=1100;05000b00=1100;05000c00=0100;05000d00=1100;05000e00=333;06000100=0100;06000200=1100;06000300=1100;06000400=1100;06000500=1100;06000600=4100;06000700=4100;06000800=4100;06000900=5100;06000a00=3100;06000b00=1100;06000c00=000;06000d00=0100;06000e00=1100;06000f00=0100;07000300=0100;07000400=0100;07000500=0100;07000600=1100;07000700=1100;07000800=1100;07000900=4100;07000a00=3100;07000b00=3100;07000c00=060606;07000d00=1100;07000e00=333;08000600=0100;08000700=0100;08000800=5100;08000900=1100;08000a00=4100;08000b00=1100;08000c00=000;08000d00=0100;08000e00=1100;09000800=0100;09000900=0100;09000a00=1100;09000b00=1100;09000c00=0100;09000d00=333;09000e00=2100;0a000800=0100;0a000900=5100;0a000a00=0100;0a000b00=1100;0a000c00=0100;0a000d00=333;0a000e00=2100;0b000800=0100;0b000a00=0100;0b000b00=1100;0b000c00=0100;0b000d00=2100;0b000e00=5100;0c000800=0100;0c000a00=0100;0c000b00=1100;0c000c00=0100;0c000d00=2100;0c000e00=5100;0d000900=0100;0d000a00=0100;0d000b00=1100;0d000c00=0100;0d000d00=2100;0d000e00=5100;0e000b00=1100;0e000c00=0100;0e000d00=333;0e000e00=2100;0f000b00=1100;0f000c00=0100;0f000d00=333;0f000e00=2100;10000b00=1100;10000c00=0100;10000d00=333;10000e00=2100;11000b00=1100;11000c00=0100;11000d00=333;11000e00=2100;12000b00=1100;12000c00=0100;12000d00=333;12000e00=2100;13000b00=1100;13000c00=0100;13000d00=333;13000e00=2100;14000b00=0100;14000c00=060606;14000d00=333;14000e00=2100;15000b00=1100;15000c00=0100;15000d00=333;15000e00=2100;16000b00=1100;16000c00=060606;16000d00=333;16000e00=2100;16000f00=1100;17000b00=1100;17000c00=000;17000d00=1100;17000e00=333;17000f00=0100;18000b00=5100;18000d00=9c9c9c;18000e00=5100?replace;0100=151515;1100=242424;2100=424242;3100=1f1510;4100=0b0706;5100=ababab",
+	"description" : "A Classic.",
 	"rarity" : "Common",
-	"maxStack" : 9,
+	"maxStack" : 8,
 
-	"system" : "gun",
+	"system" : "revolver",
 
 	"gun" : "gun.json",
 	"sprites" : "sprites.json",
@@ -18,6 +18,9 @@
 	],
 	
 	"animations" : {
+		"ready" : "animations/ready.keyframes",
+		"unready" : "animations/unready.keyframes",
+
 		"fire" : "animations/fire.keyframes",
 		"reload" : "animations/reload.keyframes",
 		"draw" : "animations/draw.keyframes",
@@ -34,17 +37,24 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"click1" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip2.ogg"], "pitchMultiplier" : 1.75},
-			"click2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip1.ogg"], "pitchMultiplier" : 1.75},
-			"click3" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 1.75},
-			"click4" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip3.ogg"], "pitchMultiplier" : 1.35},
-			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
-			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
-				
-			"firesound1" : {"pool" : ["/sfx/gun/sniper4.ogg"], "pitchMultiplier" : 1.5},
-			"firesound2" : {"pool" : ["/sfx/gun/shotgun1.ogg"], "pitchMultiplier" : 1.2},
-			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.8},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.8}
+			//"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5},
+			"firesound1" : {"pool" : ["/sfx/gun/pistol3.ogg"], "pitchMultiplier" : 1.3},
+			"firesound2" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.1},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.085},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.2},
+
+			"reload1" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip2.ogg"], "pitchMultiplier" : 1.8},
+			"reload2" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 1.8},
+		
+			"reload3" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip1.ogg"], "pitchMultiplier" : 1.8},
+			"reload4" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip2.ogg"], "pitchMultiplier" : 2.8},
+		
+			"reload5" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 3.8},
+			"reload6" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip3.ogg"], "pitchMultiplier" : 2.7},
+		
+			"load1" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip3.ogg"], "pitchMultiplier" : 1.6},
+
+			"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5}
 		},
 		"lights" : {
 			"muzzleFlash" : {
@@ -59,16 +69,18 @@
 		},
 		"animatedParts" : {
 			"parts" : {
-				"mag" : {
+				//arms are layered at zlevel: back:6 - front:100
+
+				"cock" : {
 					"properties" : {
 						"zLevel" : 14,
 						"offset" : [0,0],
 						"image" : "<sprite_0>",
 						"centered" : false,
-						"transformationGroups" : ["mag", "gun", "base"]
+						"transformationGroups" : ["cock", "gun", "base"]
 					}
 				},
-				"gun" : {
+				"gunbg" : {
 					"properties" : {
 						"zLevel" : 15,
 						"offset" : [0,0],
@@ -77,14 +89,13 @@
 						"transformationGroups" : ["gun", "base"]
 					}
 				},
-				"gun_f" : {
+				"mag" : {
 					"properties" : {
 						"zLevel" : 16,
 						"offset" : [0,0],
 						"image" : "<sprite_2>",
 						"centered" : false,
-						"fullbright" : true,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["mag", "gun", "base"]
 					}
 				},
 				"lever" : {
@@ -96,19 +107,19 @@
 						"transformationGroups" : ["lever", "gun", "base"]
 					}
 				},
-				"lever_f" : {
+				"gun" : {
 					"properties" : {
 						"zLevel" : 18,
 						"offset" : [0,0],
 						"image" : "<sprite_4>",
 						"centered" : false,
-						"fullbright" : true,
-						"transformationGroups" : ["lever", "gun", "base"]
+						"transformationGroups" : ["gun", "base"]
 					}
 				},
+
 				"muzzlePosition" : {
 					"properties" : {
-						"offset" : [3.0,1.375],
+						"offset" : [3.125,1.75],
 						"transformationGroups" : ["gun", "base"]
 					}
 				},
@@ -159,7 +170,7 @@
 				
 				"casingPosition" : {
 					"properties" : {
-						"offset" : [1.125,1.375],
+						"offset" : [1.25,1.75],
 						"transformationGroups" : ["gun", "base"]
 					}
 				}
@@ -230,7 +241,7 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,45],
+							"color" : [192,192,192,45],
 							"initialVelocity" : [5.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
@@ -315,13 +326,13 @@
 							"position" : [0, 0],
 							"finalVelocity" : [0, 2],
 							"approach" : [0, 10],
-							"color" : [128,128,128,45],
+							"color" : [192,192,192,45],
 							"initialVelocity" : [0.0, 0.0],
 							"destructionAction" : "shrink",
 							"destructionTime" : 0.85,
 							"fade" : 1,
 							"size" : 0.25,
-							"layer" : "front", 
+							"layer" : "back", 
 							"timeToLive" : 0.45,
 							"variance" : {
 								"initialVelocity" : [1.0,2.0],
@@ -340,7 +351,7 @@
 						"count" : 1,
 						"particle" : {
 							"type" : "textured",
-							"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=0c0000;e4e4e4=000003;6a6a6a=0c0003?multiply=fff0?scale=11.5;2.5?crop=0;0;12;3?replace;0000=972;00000100=a93;00000200=a93;01000100=972;02000000=972;02000100=a93;02000200=a93;03000000=972;03000100=a93;03000200=a93",
+							"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=0c0000;e4e4e4=000003;6a6a6a=0c0003?multiply=fff0?scale=11.5;2.5?crop=0;0;12;3?replace;0000=1100;00000100=0100;00000200=0100;01000000=826923;01000100=1100;01000200=9a7c29;02000000=1100;02000100=0100;02000200=0100;03000000=1100;03000100=0100;03000200=0100;04000000=1100;04000100=0100;04000200=0100;05000000=1100;05000100=0100;05000200=0100;06000000=1100;06000100=0100;06000200=0100;07000000=1100;07000100=0100;07000200=0100;08000000=1100;08000100=0100;08000200=0100;09000000=1100;09000100=0100;09000200=0100;0a000000=826923;0a000100=1100;0a000200=9a7c29;0b000100=1100?replace;0100=b2912f;1100=9a7d29",
 							"position" : [0, 0],
 							"finalVelocity" : [0, -100],
 							"approach" : [0, 80],
@@ -349,7 +360,7 @@
 							"collidesForeground" : true,
 							"destructionAction" : "fade",
 							"destructionTime" : 0.85,
-							"size" : 0.375,
+							"size" : 0.25,
 							"layer" : "front",
 							"timeToLive" : 2.0,
 							"variance" : {
@@ -362,6 +373,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[1.125,0.8125],"scale":[0.5,0.5],"rotation":0,"position":[-1.1875,-0.4375]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.125,-0.3125]}},"lever":{"transform":{}},"muzzleFlash":{"transform":{"scale":[2,2]}},"mag":{"transform":{"rotationPoint":[0.75,0.6875],"scalePoint":[0.75,0.8125],"scale":[1,1],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":5}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-27.5}},"base":{"interpolated":false,"transform":{"position":[0.25,0.0625]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.1875,-0.125]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":17.375}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-11.8125}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-2.5625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":39.875}}}
-		}
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[1.1875,1.0625],"rotation":0,"scale":[0.5,0.5],"position":[-0.75,-0.5]}},"cock":{"transform":{"rotationPoint":[0.5625,1.625],"rotation":0}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.4375,-0.0625]}},"lever":{"transform":{"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"mag":{"transform":{"scalePoint":[2.5625,3.1875],"rotationPoint":[0.75,0.875],"rotation":0,"scale":[1,1],"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":28.625}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-26.25}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-8.5625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":46.625}}}
+	}
 }

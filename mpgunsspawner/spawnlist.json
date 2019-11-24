@@ -98,5 +98,10 @@
 		"name" : "M30 LuftWaffe Drilling",
 		"image" : "/mpguns/m30/icon.png",
 		"id" : "m30"
+	},
+	{
+		"name" : "M1911",
+		"image" : "/mpguns/m1911/icon.png",
+		"id" : "m1911"
 	}
 ]

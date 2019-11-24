@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.01, // add up a number to force update
 
 	"shortdescription" : "M82A1",
 	"category" : "Sniper Rifle",
@@ -55,10 +55,10 @@
 			"reload5" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 0.75},
 			"reload6" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip3.ogg"], "pitchMultiplier" : 0.75},
 
-			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.125},
-			"firesound2" : {"pool" : ["/sfx/gun/shotgun4.ogg"], "pitchMultiplier" : 1.125},
-			"firesound3" : {"pool" : ["/sfx/gun/grenadeblast_small3.ogg"], "pitchMultiplier" : 1.35},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.775}
+				"firesound1" : {"pool" : ["/sfx/gun/pistol3.ogg"], "pitchMultiplier" : 1.3},
+					"firesound2" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.4},
+					"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.8},
+					"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.3}
 		},
 		"lights" : {
 			"muzzleFlash" : {
