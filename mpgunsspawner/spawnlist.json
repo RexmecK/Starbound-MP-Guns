@@ -103,5 +103,10 @@
 		"name" : "M1911",
 		"image" : "/mpguns/m1911/icon.png",
 		"id" : "m1911"
+	},
+	{
+		"name" : "Musket Rifle",
+		"image" : "/mpguns/musket/icon.png",
+		"id" : "musket"
 	}
 ]
