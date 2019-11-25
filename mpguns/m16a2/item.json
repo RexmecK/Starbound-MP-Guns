@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.01, // add up a number to force update
+	"itemVersion" : 1.02, // add up a number to force update
 
 	"shortdescription" : "M16A2",
 	"category" : "Rifle",
@@ -9,6 +9,8 @@
 	"maxStack" : 31,
 
 	"system" : "gun",
+	"altscript" : "changefiremode",
+	"firemodes" : ["burst", "auto"],
 
 	"gun" : "gun.json",
 	"sprites" : "sprites.json",
@@ -34,6 +36,7 @@
 	
 	"animationCustom" : {
 		"sounds" : {
+			"switch" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip2.ogg"], "pitchMultiplier" : 0.8},
 			"click1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
 			"click2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
 			"click3" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip1.ogg"], "pitchMultiplier" : 2.0},
