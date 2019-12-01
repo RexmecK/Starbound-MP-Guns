@@ -108,5 +108,10 @@
 		"name" : "Musket Rifle",
 		"image" : "/mpguns/musket/icon.png",
 		"id" : "musket"
+	},
+	{
+		"name" : "Kel-Tec KSG",
+		"image" : "/mpguns/ksg/icon.png",
+		"id" : "ksg"
 	}
 ]
