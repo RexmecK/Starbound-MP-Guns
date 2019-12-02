@@ -23,7 +23,7 @@
 	"projectileName" : "bullet-4",
 	"projectileCount" : 5,
 	"projectileConfig" : {
-		"power" : 180, 
+		"power" : 70, 
 		"knockback" : 10,
 		"timeToLive" : 0.5, 
 		"speed" : 1000,
