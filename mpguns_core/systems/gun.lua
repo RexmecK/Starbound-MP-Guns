@@ -63,12 +63,12 @@ function main:init()
 	end
 
 	if config.altscript then
-		require(directory(config.altscript, modPath.."altscripts/", ".lua"))
+		pcall(function() require(directory(config.altscript, modPath.."altscripts/", ".lua")) end)
 	end
 
 	if config.additionnalScripts then
 		for i,v in pairs(config.additionnalScripts) do
-			require(directory(v, modPath.."scripts/", ".lua"))
+			pcall(function() require(directory(v, modPath.."scripts/", ".lua")) end)
 		end
 	end
 
@@ -187,7 +187,7 @@ function main:fire()
 		self:fireProjectile()
 		self.fireCooldown = 60 / self.config.rpm
 
-		if self.storage.ammo == 0 then
+		if self.storage.ammo == 0 or self.config.chamberDryIfFire then
 			self.storage.dry = true
 			self:save()
 		end

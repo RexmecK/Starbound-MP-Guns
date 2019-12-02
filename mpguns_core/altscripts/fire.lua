@@ -39,16 +39,36 @@ function alt:update(dt, firemode, shift)
     end
 
     -- auto/burst fire not supported yet
-    if firemode == "alt" and not shift and update_lastInfo[2] ~= "alt" and self.ammo > 0 and self.fireCooldown == 0 and not animations:isAnyPlaying() then
+    if firemode == "alt" and not shift and update_lastInfo[2] ~= "alt" and ((not self.config.usePrimaryAmmo and self.ammo > 0) or (self.config.usePrimaryAmmo and main.storage.loaded == 1)) and self.fireCooldown == 0 and (not animations:isAnyPlaying() or animations:isPlaying("altfire")) then
+		
+		if self.config.usePrimaryAmmo then
+			if self.config.chamberEject then
+				main:eject()
+			else
+				main.storage.loaded = 2
+				main:save()
+			end
+			if self.config.chamberAutoLoad and main.storage.ammo > 0 then
+				main.storage.canLoad = true
+				main:save()
+			end
+			if main.storage.ammo == 0 or self.config.chamberDryIfFire then
+				main.storage.dry = true
+				main:save()
+			end
+		else
+			self.ammo = self.ammo - 1
+		end
+		
 		self.fireCooldown = 60 / self.config.rpm
-        self:fireProjectile()
-        self.ammo = self.ammo - 1
+		self:fireProjectile()
+
         animations:play("altfire")
     end
 
-    if (self.ammo == 0 or (firemode == "alt" and shift and update_lastInfo[2] ~= "alt")) and not animations:isAnyPlaying() then
+    if not self.config.usePrimaryAmmo and (self.ammo == 0 or (firemode == "alt" and shift and update_lastInfo[2] ~= "alt")) and not animations:isAnyPlaying() then
         animations:play("altreload")
-    end
+	end
 end
 
 function alt:uninit()
@@ -56,7 +76,9 @@ function alt:uninit()
 end
 
 function alt:save()
-	config.altammo = self.ammo
+	if not self.config.usePrimaryAmmo then
+		config.altammo = self.ammo
+	end
 end
 
 function alt:getInaccuracy()

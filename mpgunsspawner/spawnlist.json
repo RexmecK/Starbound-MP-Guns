@@ -113,5 +113,10 @@
 		"name" : "Kel-Tec KSG",
 		"image" : "/mpguns/ksg/icon.png",
 		"id" : "ksg"
+	},
+	{
+		"name" : "CSAA",
+		"image" : "/mpguns/csaa/icon.png",
+		"id" : "csaa"
 	}
 ]
