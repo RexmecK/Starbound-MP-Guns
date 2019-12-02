@@ -90,4 +90,15 @@ function muzzle:fireProjectile(projectileName, projectileConfig)
 	end
 end
 
+function muzzle:canFire()
+	for i,v in pairs(self._parts) do
+		local position = mcontroller.position()
+		local end_position = activeItem.handPosition(animator.transformPoint(v, i)) + position
+		if world.lineCollision(position, end_position) then
+			return false
+		end
+	end
+	return true
+end
+
 updateable:add("muzzle")

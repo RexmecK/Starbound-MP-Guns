@@ -39,7 +39,7 @@ function alt:update(dt, firemode, shift)
     end
 
     -- auto/burst fire not supported yet
-    if firemode == "alt" and not shift and update_lastInfo[2] ~= "alt" and ((not self.config.usePrimaryAmmo and self.ammo > 0) or (self.config.usePrimaryAmmo and main.storage.loaded == 1)) and self.fireCooldown == 0 and (not animations:isAnyPlaying() or animations:isPlaying("altfire")) then
+    if firemode == "alt" and not shift and muzzle:canFire() and update_lastInfo[2] ~= "alt" and ((not self.config.usePrimaryAmmo and self.ammo > 0) or (self.config.usePrimaryAmmo and main.storage.loaded == 1)) and self.fireCooldown == 0 and (not animations:isAnyPlaying() or animations:isPlaying("altfire")) then
 		
 		if self.config.usePrimaryAmmo then
 			if self.config.chamberEject then

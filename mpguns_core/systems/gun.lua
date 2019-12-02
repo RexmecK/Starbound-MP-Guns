@@ -147,7 +147,7 @@ end
 
 function main:updateFireControls(dt, firemode, shift, moves)
 	--primary firing
-	if firemode == "primary" and (self.storage.ammo > 0 or self.storage.loaded == 1) and self.queuedFire == 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
+	if firemode == "primary" and muzzle:canFire() and (self.storage.ammo > 0 or self.storage.loaded == 1) and self.queuedFire == 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
 		if self.config.firemode == "auto" then
 			self.queuedFire = 1
 		elseif self.config.firemode == "burst" and self.burstCooldown == 0 then
@@ -160,7 +160,7 @@ function main:updateFireControls(dt, firemode, shift, moves)
 end
 
 function main:updateFire(dt)
-	if self.queuedFire > 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
+	if self.queuedFire > 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) and muzzle:canFire() then
 		if self:fire() then
 			events:fire("fire")
 			self.queuedFire = self.queuedFire - 1
