@@ -5,7 +5,7 @@
 	"type" : "layout",
 	"layoutType" : "basic",
 	"position" : [0,0],
-	"rect" : [0,0, 69, 29],
+	"rect" : [0,0, 69, 32],
 	"children" : {
 		"bg" : {
 			"zlevel" : 1,
@@ -14,29 +14,29 @@
 			"callback" : "null"
 		},
 		"content" : {
-			"zlevel" : 2,
+			"zlevel" : 3,
 			"type" : "image",
 			"file" : "/assetmissing.png",
-			"position" : [34.5, 14.5],
+			"position" : [34.5, 16.5],
 			"centered" : true,
-			"maxSize" : [63,23],
+			"maxSize" : [63,26],
 			"callback" : "null"
 		},
 		"top" : {
-			"zlevel" : 3,
+			"zlevel" : 4,
 			"type" : "button",
 			"pressedOffset" : [0,0],
 			"base" : "/mpgunsspawner/image/elementtop.png",
 			"callback" : "scrollbarcallback"
 		},
 		"name" : {
-			"zlevel" : 4,
+			"zlevel" : 5,
 			"type" : "label",
 			"value" : "a gun",
-			"position" : [3, 3],
+			"position" : [4, 2],
 			"hAnchor" : "left",
 			"vAnchor" : "bottom",
-			"color" : "white"
+			"color" : "#ffffff4b"
 		}
 	}
 }

@@ -10,7 +10,7 @@
 			"pressedOffset" : [0, 0],
 
 			"callback" : "close",
-			"position" : [277, 206],
+			"position" : [278, 206],
 			"zlevel" : 99
 		},
 
@@ -20,6 +20,13 @@
 
 			"fileHeader" : "/mpgunsspawner/image/header.png",
 			"fileBody" : "/mpgunsspawner/image/body.png"
+		},
+
+		"h1" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [3, 206],
+			"value" : "^#fff;Multiplayer guns"
 		},
 
 		"bg" : {

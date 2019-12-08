@@ -104,7 +104,7 @@ grid = {}
 grid.widgetName = "scroll"
 
 --size settings
-grid.elementSize = vec2(69,29)
+grid.elementSize = vec2(69,32)
 grid.size = vec2(283,185)
 grid.spacing = vec2(2,2)
 
