@@ -70,7 +70,8 @@ end
 --User Settings
 mpguns.userSettings = {
     cameraAim = true,
-    cameraRecoil = true
+    cameraRecoil = true,
+    disableW = false,
 }
 
 local initeduserpref = false

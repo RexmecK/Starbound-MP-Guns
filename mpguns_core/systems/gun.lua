@@ -263,7 +263,7 @@ function main:updateReloadControls(dt, firemode, shift, moves)
 			end
 		end
 		
-		if ((not shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0 and not self.config.disallowAnimationLoad)) then
+		if ((not shift and moves.up and not mpguns:getPreference("disableW")) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0 and not self.config.disallowAnimationLoad)) then
 			events:fire("load")
 			if not animations:isAnyPlaying() then
 				self:animate("load")
