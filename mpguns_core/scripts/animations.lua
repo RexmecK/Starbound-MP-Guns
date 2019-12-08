@@ -41,7 +41,7 @@ function animations:uninit()
 end
 
 function animations:add(name, keyFrames)
-	if type(keyFrames) == "string" then keyFrames = root.assetJson(directory(keyFrames)) end
+	if type(keyFrames) == "string" then pcall(function()keyFrames = root.assetJson(directory(keyFrames))end) end
 	if not keyFrames then return end
 	self.list[name] = animation:new(keyFrames)
 	self.list[name]:bindFireEvent(function(name) self:fireEvents(name) end)

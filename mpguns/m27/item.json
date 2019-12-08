@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.13333, // add up a number to force update
+	"itemVersion" : 1.15, // add up a number to force update
 
 	"shortdescription" : "M27 IAR",
 	"category" : "Rifle",
@@ -49,9 +49,9 @@
 			"click4" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
 			"click5" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 2.0},
 			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
-			"firesound1" : {"pool" : ["/sfx/gun/ar3.ogg"], "pitchMultiplier" : 1.35},
-			"firesound2" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.5},
-			"firesound3" : {"pool" : ["/sfx/gun/shotgun4.ogg"], "pitchMultiplier" : 1.24},
+			"firesound1" : {"pool" : ["/sfx/gun/grenadeblast_small_fire3.ogg"], "pitchMultiplier" : 1.5},
+			"firesound2" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.4},
+			"firesound3" : {"pool" : ["/sfx/gun/shotgun4.ogg"], "pitchMultiplier" : 1.5},
 			"firesound4" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.12}
 		},
 		"lights" : {
@@ -378,6 +378,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[2.5625,0.8125],"scale":[0.5675,0.5675],"rotation":0,"position":[-2.375,-0.5625]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1,-0.0625]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"scalePoint":[3.125,0.5625],"rotationPoint":[3.1875,0.625],"scale":[1,1],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.375,0.25],"rotation":0,"position":[0,0.0625]}},"lever2":{"transform":{"position":[0,0]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.0625,-0.1875]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":20.6875}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-15}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":11.25}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"levercover":{"transform":{"scalePoint":[3.0625,1.125],"scale":[1,1]}}}
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[2.5625,0.8125],"rotation":0,"scale":[0.5675,0.5675],"position":[-2.5,-0.875]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1,-0.3125]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"scalePoint":[3.125,0.5625],"rotationPoint":[3.1875,0.625],"scale":[1,1],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-15}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.375,0.25],"rotation":0,"position":[0,0.0625]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.0625,-0.1875]}},"lever2":{"transform":{"position":[0,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":0}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":15.0625}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":15.5625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"levercover":{"transform":{"scalePoint":[3.0625,1.125],"scale":[1,1]}}}
 	}
 }
