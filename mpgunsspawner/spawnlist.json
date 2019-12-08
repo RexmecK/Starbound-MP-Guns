@@ -123,5 +123,10 @@
 		"name" : "GM6 Lynx",
 		"image" : "/mpguns/gm6/icon.png",
 		"id" : "gm6"
+	},
+	{
+		"name" : "G2 Contender",
+		"image" : "/mpguns/g2/icon.png",
+		"id" : "g2"
 	}
 ]
