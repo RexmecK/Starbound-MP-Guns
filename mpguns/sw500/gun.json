@@ -7,8 +7,8 @@
 	"disallowAnimationLoad" : true,
 	"chamberEject" : false,
 
-	"recoil" : 45,
-	"recoilRecovery" : 12,
+	"recoil" : 60,
+	"recoilRecovery" : 16,
 	"recoilResponse" : 8,
 	
 	"movingInaccuracy" : 45,
