@@ -67,3 +67,26 @@ function mpguns:updateMpitem(check_mpitem)
     
 end
 
+--User Settings
+mpguns.userSettings = {
+    cameraAim = true,
+    cameraRecoil = true
+}
+
+local initeduserpref = false
+function mpguns:initUserPref()
+    initeduserpref = true
+    self.userSettings = sb.jsonMerge(self.userSettings, status.statusProperty("mpguns", self.userSettings))
+end
+
+function mpguns:getPreference(name)
+    if not initeduserpref then self:initUserPref() end
+    return self.userSettings[name] 
+end
+
+function mpguns:setPreference(name, value)
+    if not initeduserpref then self:initUserPref() end
+    self.userSettings[name] = value
+    status.setStatusProperty("mpguns", self.userSettings)
+end
+

@@ -26,7 +26,7 @@
 			"zlevel" : 100,
 			"type" : "label",
 			"position" : [3, 206],
-			"value" : "^#fff;Multiplayer guns"
+			"value" : "^#3b3b3b;Multiplayer guns"
 		},
 
 		"bg" : {

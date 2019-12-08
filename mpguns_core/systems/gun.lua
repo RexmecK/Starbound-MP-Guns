@@ -11,6 +11,7 @@ include "directory"
 include "camera"
 include "crosshair"
 include "events"
+include "mpguns"
 
 main = {}
 main.config = {}
@@ -24,6 +25,10 @@ main.overridenAnimates = {}
 function main:setupEvents()
 	animations:addEvent("recoil", function() 
 			local angle = self.config.recoil
+			
+			if not mpguns:getPreference("cameraRecoil") then
+				angle = angle * 1.5
+			end
 			if self.config.crouchRecoilMultiplier and mcontroller.crouching() then 
 				angle = angle * self.config.crouchRecoilMultiplier
 			end
@@ -99,9 +104,9 @@ function main:update(...)
 	self:updateReload(...)
 
 	--gameplay mechanics
-	camera.target = (world.distance(activeItem.ownerAimPosition(), mcontroller.position()) * vec2(self.config.aimRatio / 2)) + vec2(0, aim:getRecoil() * 0.03125)
+	camera.target = self:getAimCamera() + self:getRecoilCamera()
 	muzzle.inaccuracy = self:getInaccuracy()
-	crosshair.value = ((muzzle.inaccuracy + math.abs(aim:getRecoil())) / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 10
+	crosshair.value = self:getCrosshairValue()
 	item.setCount(math.max(self:ammoCount(), 1))
 
 	animations:update(dt)
@@ -111,10 +116,9 @@ function main:update(...)
 	end
 	transforms:update(dt)
 
-	aim:at(activeItem.ownerAimPosition())
+	aim:at(self:getTargetAim())
 	aim:update(dt)
 end
-
 
 function main:uninit()
 	if alt and alt.uninit then
@@ -141,6 +145,32 @@ function main:updateTimers(dt)
 	if self.burstCooldown > 0 and self.fireCooldown == 0 then
 		self.burstCooldown = math.max(self.burstCooldown - dt, 0)
 	end
+end
+
+--Aiming Mechanics
+
+function main:getAimCamera()
+	if not mpguns:getPreference("cameraAim") then
+		return vec2(0,0)
+	end
+	return world.distance(activeItem.ownerAimPosition(), mcontroller.position()) * vec2(self.config.aimRatio / 2)
+end
+
+function main:getRecoilCamera()
+	if not mpguns:getPreference("cameraRecoil") then
+		return vec2(0,0)
+	end
+	return vec2(0, (aim:getRecoil() * 0.03125))
+end
+
+function main:getTargetAim()
+	return activeItem.ownerAimPosition()
+end
+
+--UI mechanics
+
+function main:getCrosshairValue()
+	return ((muzzle.inaccuracy + math.abs(aim:getRecoil())) / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 10
 end
 
 --firing mechanics

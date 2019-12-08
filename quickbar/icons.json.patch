@@ -3,5 +3,10 @@
 		"op": "add",
     	"path": "/normal/-",
     	"value": { "label" : "MP Guns", "pane" : "/mpgunsspawner/main.window", "icon" : "/mpgunsspawner/image/smallicon.png" }
+    },
+	{
+		"op": "add",
+    	"path": "/normal/-",
+    	"value": { "label" : "MP Guns Settings", "pane" : "/mpgunssettings/main.window", "icon" : "/mpgunssettings/image/smallicon.png" }
     }
 ]

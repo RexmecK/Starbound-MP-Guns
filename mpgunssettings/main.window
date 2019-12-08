@@ -1,0 +1,93 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+
+			"base" : "/mpgunssettings/image/x.png",
+			"hover" : "/mpgunssettings/image/x.png",
+			"pressed" : "/mpgunssettings/image/x.png",
+			"pressedOffset" : [0, 0],
+
+			"callback" : "close",
+			"position" : [134, 28],
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : -1,
+			"type" : "background",
+
+			"fileHeader" : "/mpgunssettings/image/header.png",
+			"fileBody" : "/mpgunssettings/image/body.png"
+		},
+
+		"h1" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [2, 30],
+			"value" : "^#3b3b3b;Multiplayer guns settings"
+		},
+		
+		"cameraRecoil" : {
+			"type" : "button",
+			"base" : "/mpgunssettings/image/uncheck.png",
+			"hover" : "/mpgunssettings/image/uncheck.png?brightness=60",
+
+			"baseImageChecked" : "/mpgunssettings/image/checked.png",
+			"hoverImageChecked" : "/mpgunssettings/image/checked.png?brightness=60",
+
+			"checkable" : true,
+			"checked" : false,
+			"position" : [2, 2],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+		"cameraRecoil_text" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [16, 2],
+			"value" : "Camera Recoil"
+		},
+
+		"cameraAim" : {
+			"type" : "button",
+			"base" : "/mpgunssettings/image/uncheck.png",
+			"hover" : "/mpgunssettings/image/uncheck.png?brightness=60",
+
+			"baseImageChecked" : "/mpgunssettings/image/checked.png",
+			"hoverImageChecked" : "/mpgunssettings/image/checked.png?brightness=60",
+
+			"checkable" : true,
+			"checked" : false,
+			"position" : [2, 15],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+		"cameraAim_text" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [16, 15],
+			"value" : "Camera Aim"
+		}
+
+	},
+
+	"canvasClickCallbacks" : {},
+	
+	"canvasKeyCallbacks" : {},
+	
+	"scriptWidgetCallbacks" : [
+		"callback"
+	],
+
+	"checkboxes" : [
+		"cameraRecoil",
+		"cameraAim"
+	],
+		
+	"directory" : "/mpgunssettings/",
+	"scripts" : ["/mpguns_core/main.lua"],
+	"system" : "/mpgunssettings/ui.lua",
+	"scriptDelta" : 1
+}
