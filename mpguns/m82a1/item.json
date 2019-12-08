@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.01, // add up a number to force update
+	"itemVersion" : 1.02, // add up a number to force update
 
 	"shortdescription" : "M82A1",
 	"category" : "Sniper Rifle",
@@ -55,10 +55,10 @@
 			"reload5" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 0.75},
 			"reload6" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip3.ogg"], "pitchMultiplier" : 0.75},
 
-				"firesound1" : {"pool" : ["/sfx/gun/pistol3.ogg"], "pitchMultiplier" : 1.3},
-					"firesound2" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.4},
-					"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.8},
-					"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.3}
+			"firesound1" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.5},
+			"firesound2" : {"pool" : ["/sfx/gun/grenadeblast_fire1.ogg"], "pitchMultiplier" : 1.8},
+			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.75},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9}
 		},
 		"lights" : {
 			"muzzleFlash" : {
@@ -376,6 +376,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[3.5,0.8125],"rotation":0,"scale":[0.5,0.5],"position":[-3.75,-0.875]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.3125,-0.25]}},"lever":{"transform":{"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[1.5,1.5]}},"mag":{"transform":{"scalePoint":[4.5625,0.75],"rotationPoint":[4.5625,0.8125],"rotation":0,"scale":[1,1]}},"muzzle":{"transform":{"position":[0,0.0625]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-16.25}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.5625,0.125],"rotation":0}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.25,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":0.25}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":0}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":30}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-15}}}
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[3.5,0.8125],"scale":[0.4375,0.4375],"rotation":0,"position":[-3.75,-0.875]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.3125,-0.25]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"scalePoint":[4.5625,0.75],"rotationPoint":[4.5625,0.8125],"scale":[1,1],"rotation":0}},"muzzleFlash":{"transform":{"scale":[2.5,2.5]}},"muzzle":{"transform":{"position":[0,0.0625]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-16.75}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-16.25}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.5625,0.125],"rotation":0,"position":[-0.125,0]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[0,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-16}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":32.5625}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":30}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-15}}}
 	}
 }
