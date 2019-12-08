@@ -118,5 +118,10 @@
 		"name" : "CSAA",
 		"image" : "/mpguns/csaa/icon.png",
 		"id" : "csaa"
+	},
+	{
+		"name" : "GM6 Lynx",
+		"image" : "/mpguns/gm6/icon.png",
+		"id" : "gm6"
 	}
 ]
