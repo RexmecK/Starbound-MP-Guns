@@ -8,7 +8,7 @@
 
 	"recoil" : 32,
 	"recoilRecovery" : 12,
-	"recoilResponse" : 2,
+	"recoilResponse" : 6,
 	
 	"movingInaccuracy" : 45,
 	"standingInaccuracy" : 1,
