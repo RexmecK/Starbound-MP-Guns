@@ -69,6 +69,21 @@ function arms:init()
 	--get skin directives
 	self.directives = port:skinDirectives()
 	
+	local armSize = vec2(43) / vec2(8)
+	local ratioSize = vec2(1)
+
+	if port:parts().FrontArm then
+		local image = port:image("FrontArm")
+		local size = vec2(root.imageSize(image..":rotation"))
+		if size[1] < 43 then
+			ratioSize = size / 43
+			armSize = size / (vec2(8) * ratioSize)
+			self.cropA1 = "?crop=0;0;"..math.floor(24 * ratioSize[1])..";"..math.floor(43 * ratioSize[2])
+			self.cropA2 = "?crop="..math.floor(23 * ratioSize[1])..";0;"..math.floor(27 * ratioSize[1])..";"..math.floor(43 * ratioSize[2])
+			self.cropA3 = "?crop="..math.floor(26 * ratioSize[1])..";0;"..math.floor(43 * ratioSize[1])..";"..math.floor(43 * ratioSize[2])
+		end
+	end
+
 	if port:parts().FrontArmArmor then 
 		self.directory = port:image("FrontArmArmor")
 		self.armordirectives = port:directives("FrontArmArmor")
@@ -94,8 +109,7 @@ function arms:init()
 	end
 
 
-	local armSize = vec2(43) / vec2(8)
-	local armCenter = armSize / vec2(-2)
+	local armCenter = armSize / (vec2(-2) / ratioSize)
 	
 	--bunch of calculation offset from the humanoid
 	local frontArmRotationCenter = vec2(humanoidConfig.frontArmRotationCenter) / vec2(8)
