@@ -35,7 +35,9 @@ function checkUpdates()
 	if updates then
 		item.setCount(0)
 		mpguns:giveMpitem(updates)
+		return true
 	end
+	return false
 end
 
 update_lastInfo = {}
@@ -46,7 +48,7 @@ local checked = false
 function update(...)
 	if not checked then
 		checked = true
-		checkUpdates()
+		if checkUpdates() then return end
 	end
 	
 	update_lastInfo = update_info
