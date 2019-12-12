@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.01, // add up a number to force update
 
 	"shortdescription" : "Glock 19x",
 	"category" : "Pistol",
@@ -11,10 +11,7 @@
 	"system" : "gun",
 
 	"gun" : "gun.json",
-	"altscript" : "changefiremode",
 	"sprites" : "sprites.json",
-
-	"firemodes" : ["semi", "auto"],
 
 	"muzzle" : [
 		{"part" : "muzzlePosition", "offset" : [0,0]}
