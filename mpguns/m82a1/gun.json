@@ -10,6 +10,7 @@
 	"recoilRecovery" : 12,
 	"recoilResponse" : 8,
 	"crouchRecoilMultiplier" : 0.5,
+	"velocityRecoil" : [-10, 0],
 	
 	"movingInaccuracy" : 90,
 	"standingInaccuracy" : 0,

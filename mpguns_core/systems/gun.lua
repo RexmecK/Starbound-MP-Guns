@@ -12,6 +12,7 @@ include "camera"
 include "crosshair"
 include "events"
 include "mpguns"
+include "vec2"
 
 main = {}
 main.config = {}
@@ -25,13 +26,21 @@ main.overridenAnimates = {}
 function main:setupEvents()
 	animations:addEvent("recoil", function() 
 			local angle = self.config.recoil
-			
+			local recoilMultiplier = 1
 			if not mpguns:getPreference("cameraRecoil") then
-				angle = angle * 1.5
+				recoilMultiplier = recoilMultiplier * 1.5
 			end
+			
 			if self.config.crouchRecoilMultiplier and mcontroller.crouching() then 
-				angle = angle * self.config.crouchRecoilMultiplier
+				recoilMultiplier = recoilMultiplier * self.config.crouchRecoilMultiplier
 			end
+			
+			angle = angle * recoilMultiplier
+
+			if self.config.velocityRecoil then 
+				mcontroller.addMomentum(vec2(self.config.velocityRecoil):rotate(aim:angle()) * vec2(aim.facing,1) * recoilMultiplier)
+			end
+
 			aim:recoil(angle)
 		end
 	)
