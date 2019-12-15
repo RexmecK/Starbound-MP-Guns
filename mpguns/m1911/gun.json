@@ -19,6 +19,8 @@
 	"firemode" : "semi",
 	"rpm" : 600,
 
+	"revolverNoLoad" : true,
+
 	"casingParticle" : "casing",
 	"projectileName" : "bullet-4",
 	"projectileConfig" : {

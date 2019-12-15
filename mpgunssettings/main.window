@@ -10,7 +10,7 @@
 			"pressedOffset" : [0, 0],
 
 			"callback" : "close",
-			"position" : [134, 41],
+			"position" : [134, 67],
 			"zlevel" : 99
 		},
 
@@ -25,7 +25,7 @@
 		"h1" : {
 			"zlevel" : 100,
 			"type" : "label",
-			"position" : [2, 43],
+			"position" : [2, 69],
 			"value" : "^#3b3b3b;Multiplayer guns settings"
 		},
 		
@@ -90,6 +90,48 @@
 			"type" : "label",
 			"position" : [16, 28],
 			"value" : "Disable W control"
+		},
+
+		"autoreload" : {
+			"type" : "button",
+			"base" : "/mpgunssettings/image/uncheck.png",
+			"hover" : "/mpgunssettings/image/uncheck.png?brightness=60",
+
+			"baseImageChecked" : "/mpgunssettings/image/checked.png",
+			"hoverImageChecked" : "/mpgunssettings/image/checked.png?brightness=60",
+
+			"checkable" : true,
+			"checked" : false,
+			"position" : [2, 41],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+		"autoreload_text" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [16, 41],
+			"value" : "Automatic Reloading"
+		},
+
+		"autoload" : {
+			"type" : "button",
+			"base" : "/mpgunssettings/image/uncheck.png",
+			"hover" : "/mpgunssettings/image/uncheck.png?brightness=60",
+
+			"baseImageChecked" : "/mpgunssettings/image/checked.png",
+			"hoverImageChecked" : "/mpgunssettings/image/checked.png?brightness=60",
+
+			"checkable" : true,
+			"checked" : false,
+			"position" : [2, 54],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+		"autoload_text" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [16, 54],
+			"value" : "Automatic Loading"
 		}
 
 	},
@@ -105,7 +147,9 @@
 	"checkboxes" : [
 		"cameraRecoil",
 		"cameraAim",
-		"disableW"
+		"disableW",
+		"autoreload",
+		"autoload"
 	],
 		
 	"directory" : "/mpgunssettings/",

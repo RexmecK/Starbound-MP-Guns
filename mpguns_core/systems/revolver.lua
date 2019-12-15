@@ -9,7 +9,7 @@ function main:updateFireControls(dt, firemode, shift, moves)
         if not holding and update_lastInfo[2] ~= "primary"  and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
             holding = true
             self:animate("ready")
-            if self.storage.loaded ~= 1 then
+            if self.storage.loaded ~= 1 and not main.config.revolverNoLoad then
                 self:load()
             end
         elseif holding and (not animations:isAnyPlaying() or (self:isPlaying("fire") and not self:isPlaying("ready"))) then

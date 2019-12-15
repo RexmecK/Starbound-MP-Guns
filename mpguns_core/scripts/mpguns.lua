@@ -72,6 +72,8 @@ mpguns.userSettings = {
     cameraAim = true,
     cameraRecoil = true,
     disableW = false,
+    autoreload = true,
+    autoload = true,
 }
 
 local initeduserpref = false

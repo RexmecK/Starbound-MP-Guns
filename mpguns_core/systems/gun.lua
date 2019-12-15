@@ -200,11 +200,14 @@ end
 
 function main:updateFire(dt)
 	if self.queuedFire > 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) and muzzle:canFire() then
-		if self:fire() then
+		local result = self:fire()
+		if result == 1 then
 			events:fire("fire")
 			self.queuedFire = self.queuedFire - 1
+		elseif result == 2 then
+			self.queuedFire = 0
 		end
-	elseif self.queuedFire > 0 and self.storage.ammo <= 0 and self.storage.loaded ~= 1 then
+	elseif (self.queuedFire > 0 and self.storage.ammo <= 0 and self.storage.loaded ~= 1) or self:isPlaying("load") or self:isPlaying("reload") then
 		self.queuedFire = 0
 	end
 end
@@ -232,9 +235,11 @@ function main:fire()
 		end
 
 		self:animate("fire")
-		return true
+		return 1
+	elseif self.storage.loaded == 2 then
+		return 2
 	else
-		return false
+		return 0
 	end
 end
 
@@ -265,14 +270,14 @@ function main:updateReloadControls(dt, firemode, shift, moves)
 	end
 	if animations:isAnyPlaying() then return end
 	if not self.reloadLooping then
-		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0)) and (self.storage.ammo < self.config.magazineCapacity or self.config.magazineCapacity == 0) and firemode == "none" then
+		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0 and mpguns:getPreference("autoreload"))) and (self.storage.ammo < self.config.magazineCapacity or self.config.magazineCapacity == 0) and firemode == "none" then
 			events:fire("reload")
 			if not animations:isAnyPlaying() then
 				self:animate("reload")
 			end
 		end
 		
-		if ((not shift and moves.up and not mpguns:getPreference("disableW")) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0 and not self.config.disallowAnimationLoad)) then
+		if ((not shift and moves.up and not mpguns:getPreference("disableW")) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0 and mpguns:getPreference("autoload"))) and not self.config.disallowAnimationLoad then
 			events:fire("load")
 			if not animations:isAnyPlaying() then
 				self:animate("load")
@@ -322,10 +327,10 @@ function main:load()
 	if self.storage.loaded > 0 then
 		main:eject()
 	end
+	self.storage.dry = false
 	if self.storage.ammo <= 0 then return end
 	self.storage.loaded = 1
 	self.storage.ammo = self.storage.ammo - 1
-	self.storage.dry = false
 	self:save()
 end
 
