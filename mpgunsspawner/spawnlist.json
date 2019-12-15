@@ -128,5 +128,10 @@
 		"name" : "G2 Contender",
 		"image" : "/mpguns/g2/icon.png",
 		"id" : "g2"
+	},
+	{
+		"name" : "Ameli 5.56",
+		"image" : "/mpguns/ameli/icon.png",
+		"id" : "ameli"
 	}
 ]
