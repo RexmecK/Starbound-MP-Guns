@@ -133,5 +133,10 @@
 		"name" : "Ameli 5.56",
 		"image" : "/mpguns/ameli/icon.png",
 		"id" : "ameli"
+	},
+	{
+		"name" : "M14",
+		"image" : "/mpguns/m14/icon.png",
+		"id" : "m14"
 	}
 ]
