@@ -60,6 +60,18 @@ function main:init()
 	else
 		self.config = config.gun
 	end
+	if self.config.projectileConfig then
+		if type(self.config.projectileConfig) == "string" then
+			self.config.projectileConfig = root.assetJson(directory(self.config.projectileConfig))
+		end
+	else
+		self.config.projectileConfig = {}
+	end
+
+	if self.config.knockback then
+		self.config.projectileConfig.knockback = self.config.knockback
+	end
+
 	muzzle.damageMultiplier = self.config.damageMultiplier or 1
 
 	aim.recoilRecovery = self.config.recoilRecovery or 8

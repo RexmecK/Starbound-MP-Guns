@@ -1,6 +1,7 @@
 {
 
-	"damageMultiplier" : 1,
+	"damageMultiplier" : 50,
+	"knockback" : 10,
 
 	"magazineCapacity" : 10,
 	"chamberAutoLoad" : true,
@@ -22,106 +23,5 @@
 	"casingParticle" : "casing",
 	"projectileName" : "bullet-4",
 	"projectileCount" : 5,
-	"projectileConfig" : {
-		"power" : 50, 
-		"knockback" : 10,
-		"timeToLive" : 0.5, 
-		"speed" : 1000,
-		"processing" : "?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=200000;e4e4e4=000001;6a6a6a=200001?multiply=fff0?scale=31.5;0.5?crop=0;0;32;1?replace;10000000=9711;1000=9711;12000000=a921;13000000=a921;14000000=ca21;15000000=ca21;16000000=ca21;17000000=db22;18000000=db22;19000000=db22;1a000000=ec32;1b000000=ec32;1c000000=db23;1d000000=db25;1e000000=fff5;1f000000=db25",
-		"actionOnReap" : [
-			{
-				"action" : "loop",
-				"count" : 6,
-				"body" : [
-					{
-						"action" : "particle",
-						"specification" : {
-							"type" : "ember",
-							"size" : 0.75,
-							"color" : [253, 160, 57, 255],
-							"fullbright" : true,
-							"trail" : true,
-							"initialVelocity" : [0.0, 0.0],
-							"finalVelocity" : [0.0, 0.0],
-							"approach" : [0, 0],
-							"timeToLive" : 0.1,
-							"layer" : "middle",
-							"variance" : {
-								"size" : 0.25,
-								"initialVelocity" : [8.0, 8.0]
-							}
-						}
-					}
-				]
-			},
-			{
-				"action" : "loop",
-				"count" : 3,
-				"body" : [
-					{
-						"action" : "particle",
-						"specification" : {
-							"type" : "ember",
-							"size" : 0.75,
-							"color" : [255, 222, 100, 255],
-							"fullbright" : true,
-							"trail" : true,
-							"initialVelocity" : [0.0, 0.0],
-							"finalVelocity" : [0.0, 0.0],
-							"approach" : [0, 0],
-							"timeToLive" : 0.1,
-							"layer" : "middle",
-							"variance" : {
-								"size" : 0.25,
-								"initialVelocity" : [8.0, 8.0]
-							}
-						}
-					}
-				]
-			},
-			{
-				"action" : "loop",
-				"count" : 3,
-				"body" : [
-					{
-						"action" : "particle",
-						"specification" : {
-							"type" : "ember",
-							"size" : 0.75,
-							"color" : [255, 255, 255, 255],
-							"fullbright" : true,
-							"trail" : true,
-							"initialVelocity" : [0.0, 0.0],
-							"finalVelocity" : [0.0, 0.0],
-							"approach" : [0, 0],
-							"timeToLive" : 0.1,
-							"layer" : "middle",
-							"variance" : {
-								"size" : 0.25,
-								"initialVelocity" : [8.0, 8.0]
-							}
-						}
-					}
-				]
-			},
-			{
-				"action" : "sound",
-				"options" : [ 
-					"/sfx/projectiles/bullet_ricochet1.ogg",
-					"/sfx/projectiles/bullet_ricochet2.ogg",
-					"/sfx/projectiles/bullet_ricochet3.ogg",
-					"/sfx/projectiles/bullet_ricochet4.ogg",
-					"/sfx/projectiles/bullet_ricochet5.ogg",
-					"/sfx/projectiles/bullet_ricochet6.ogg",
-					"/sfx/projectiles/bullet_ricochet7.ogg",
-					"/sfx/projectiles/bullet_ricochet8.ogg",
-					"/sfx/projectiles/bullet_ricochet9.ogg",
-					"/sfx/projectiles/bullet_ricochet10.ogg",
-					"/sfx/projectiles/bullet_ricochet11.ogg",
-					"/sfx/projectiles/bullet_ricochet12.ogg",
-					"/sfx/projectiles/bullet_ricochet13.ogg"
-				]
-			}
-		]
-	}
+	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
 }

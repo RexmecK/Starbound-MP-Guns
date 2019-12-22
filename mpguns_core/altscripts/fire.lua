@@ -28,7 +28,20 @@ function alt:init()
 		self.config = root.assetJson(directory(config.altfire))
 	else
 		self.config = config.altfire
-    end
+	end
+	
+	if self.config.projectileConfig then
+		if type(self.config.projectileConfig) == "string" then
+			self.config.projectileConfig = root.assetJson(directory(self.config.projectileConfig))
+		end
+	else
+		self.config.projectileConfig = {}
+	end
+
+	if self.config.knockback then
+		self.config.projectileConfig.knockback = self.config.knockback
+	end
+
     self.ammo = config.altammo or self.config.magazineCapacity
     self:setupEvents()
 end

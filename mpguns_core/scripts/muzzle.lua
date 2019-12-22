@@ -82,8 +82,8 @@ function muzzle:fireProjectile(projectileName, projectileConfig)
 		end
 
 		--damageMultiplier
-		if self.damageMultiplier ~= 1 and projectileConfig and projectileConfig.power then
-			projectileConfig.power = (projectileConfig.power or 1) * self.damageMultiplier
+		if self.damageMultiplier ~= 1 and type(projectileConfig) == "table" then
+			projectileConfig.powerMultiplier = self.damageMultiplier
 		end
 
 		world.spawnProjectile(projectileName, position + mcontroller.position(), ownerId, direction, false, projectileConfig)
