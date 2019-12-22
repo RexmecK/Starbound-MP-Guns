@@ -21,6 +21,6 @@
 	//dps = (rpm / 60) * projectileConfig.power
 
 	"casingParticle" : "casing",
-	"projectileName" : "bullet-4",
+	"projectileName" : "armcannonfire",
 	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
 }

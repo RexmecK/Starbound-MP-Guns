@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.01, // add up a number to force update
+	"itemVersion" : 1.2, // add up a number to force update
 
 	"shortdescription" : "Ameli 5.56",
 	"category" : "Light Machine Gun",
@@ -64,7 +64,7 @@
 			"muzzleFlash" : {
 				"pointBeam" : 0,
 				"pointAngle" : 0,
-				"color" : [155, 155, 0],
+				"color" : [100, 50, 0],
 				"pointLight" : false,
 				"anchorPart" : "muzzlePosition",
 				"active" : false,
@@ -184,12 +184,12 @@
 				"muzzleFlash" : {"default" : "off",
 					"states" : {
 						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
-						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.0166 },
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.016, "properties" : {"lightsOff" : ["muzzleFlash"]}},
 						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.0166},
 						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.0166},
 						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.0166},
 						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.0166},
-						"off" : {"properties" : {"lightsOff" : ["muzzleFlash"], "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
+						"off" : {"properties" : { "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
 					}
 				},
 				"vapor" : {"default" : "off",

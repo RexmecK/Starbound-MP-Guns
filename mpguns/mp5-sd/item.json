@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.055, // add up a number to force update
+	"itemVersion" : 1.2, // add up a number to force update
 
 	"shortdescription" : "MP5-SD",
 	"category" : "SMG",
@@ -50,7 +50,7 @@
 			"muzzleFlash" : {
 				"pointBeam" : 0,
 				"pointAngle" : 0,
-				"color" : [155, 155, 0],
+				"color" : [100, 50, 0],
 				"pointLight" : false,
 				"anchorPart" : "muzzlePosition",
 				"active" : false,
