@@ -6,11 +6,11 @@
 	"chamberAutoLoad" : true,
 	"chamberEject" : true,
 
-	"recoil" : 32,
-	"recoilRecovery" : 12,
-	"recoilResponse" : 6,
+	"recoil" : 15,
+	"recoilRecovery" : 8,
+	"recoilResponse" : 2,
 	
-	"movingInaccuracy" : 45,
+	"movingInaccuracy" : 35,
 	"standingInaccuracy" : 1,
 	"crouchInaccuracyMultiplier" : 0.5,
 

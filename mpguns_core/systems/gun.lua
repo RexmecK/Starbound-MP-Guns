@@ -28,7 +28,7 @@ function main:setupEvents()
 			local angle = self.config.recoil
 			local recoilMultiplier = 1
 			if not mpguns:getPreference("cameraRecoil") then
-				recoilMultiplier = recoilMultiplier * 1.5
+				recoilMultiplier = recoilMultiplier * 2
 			end
 			
 			if self.config.crouchRecoilMultiplier and mcontroller.crouching() then 
@@ -181,7 +181,7 @@ function main:getRecoilCamera()
 	if not mpguns:getPreference("cameraRecoil") then
 		return vec2(0,0)
 	end
-	return vec2(0, (aim:getRecoil() * 0.03125))
+	return vec2(0, (aim:getRecoil() * 0.125))
 end
 
 function main:getTargetAim()

@@ -9,7 +9,7 @@
     "chamberEject" : false,
     "usePrimaryAmmo" : true,
 
-	"recoil" : 25,
+	"recoil" : 9,
 	"recoilRecovery" : 16,
 	"recoilResponse" : 2,
 	

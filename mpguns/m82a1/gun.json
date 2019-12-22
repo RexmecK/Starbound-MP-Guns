@@ -7,9 +7,9 @@
 	"chamberAutoLoad" : true,
 	"chamberEject" : true,
 
-	"recoil" : 45,
-	"recoilRecovery" : 12,
-	"recoilResponse" : 8,
+	"recoil" : 15,
+	"recoilRecovery" : 16,
+	"recoilResponse" : 2,
 	"crouchRecoilMultiplier" : 0.5,
 	"velocityRecoil" : [-10, 0],
 	

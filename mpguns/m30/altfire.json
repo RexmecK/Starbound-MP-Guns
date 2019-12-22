@@ -2,7 +2,9 @@
 	"damageMultiplier" : 200,
 	"magazineCapacity" : 1,
 
-	"recoil" : 20,
+	"recoil" : 2,
+	"recoilRecovery" : 4,
+	"recoilResponse" : 2,
 
 	
 	"movingInaccuracy" : 15,
