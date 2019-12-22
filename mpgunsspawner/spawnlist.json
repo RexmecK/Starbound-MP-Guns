@@ -143,5 +143,10 @@
 		"name" : "UMP-45",
 		"image" : "/mpguns/ump45/icon.png",
 		"id" : "ump45"
+	},
+	{
+		"name" : "Kriss Vector",
+		"image" : "/mpguns/krissvector/icon.png",
+		"id" : "krissvector"
 	}
 ]
