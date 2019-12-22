@@ -138,5 +138,10 @@
 		"name" : "M14",
 		"image" : "/mpguns/m14/icon.png",
 		"id" : "m14"
+	},
+	{
+		"name" : "UMP-45",
+		"image" : "/mpguns/ump45/icon.png",
+		"id" : "ump45"
 	}
 ]
