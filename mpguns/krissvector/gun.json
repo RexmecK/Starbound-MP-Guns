@@ -7,8 +7,8 @@
 	"chamberAutoLoad" : true,
 	"chamberEject" : true,
 
-	"recoil" : 1.5,
-	"recoilRecovery" : 6,
+	"recoil" : 3.5,
+	"recoilRecovery" : 3,
 	"recoilResponse" : 4,
 	
 	"movingInaccuracy" : 6,
