@@ -1,0 +1,27 @@
+{
+
+	"damageMultiplier" : 30,
+	"knockback" : 9,
+
+	"magazineCapacity" : 7,
+	"chamberAutoLoad" : true,
+	"chamberEject" : true,
+
+	"recoil" : 4,
+	"recoilRecovery" : 3,
+	"recoilResponse" : 2,
+	
+	"movingInaccuracy" : 25,
+	"standingInaccuracy" : 5,
+	"crouchInaccuracyMultiplier" : 0.5,
+
+	"aimRatio" : 0.125,
+
+	"firemode" : "auto",
+	"rpm" : 350,
+
+	"casingParticle" : "casing",
+	"projectileName" : "armcannonfire",
+	"projectileCount" : 5,
+	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
+}

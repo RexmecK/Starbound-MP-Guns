@@ -148,5 +148,10 @@
 		"name" : "Kriss Vector",
 		"image" : "/mpguns/krissvector/icon.png",
 		"id" : "krissvector"
+	},
+	{
+		"name" : "Ulthman",
+		"image" : "/mpguns/ulthman/icon.png",
+		"id" : "ulthman"
 	}
 ]
