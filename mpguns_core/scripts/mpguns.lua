@@ -2,12 +2,10 @@ include "directory"
 
 mpguns = {}
 
--- gets a list of indexes from the items
-function mpguns:list()
-    return root.assetJson("/mpguns/_index.json", {})
-end
-
 -- get item from index
+-- index is a string that indexes /mpguns/<index>
+-- if index has beginning '/' it means it is a custom folder directory
+-- index can mean "id" from the spawnlist
 function mpguns:get(index)
     local res, item = pcall(root.assetJson, directory(index, "/mpguns/", "/").."item.json")
     if not res then sb.logWarn("Couldnt load item!") return end
@@ -17,20 +15,26 @@ function mpguns:get(index)
     return item
 end
 
+-- main api item
 function mpguns:base()
     local res, mpitem = pcall(root.assetJson, "/mpguns_core/mpitembase.json")
     if not res then sb.logWarn("Couldnt load item base!") return end
     return mpitem
 end
 
---builds a updated item to a mpitem
+-- builds a updated item to a mpitem
 function mpguns:makeMpitem(item)
     local mpitem = self:base()
     if not mpitem then return end
+
+    -- takes item config and merge it with base mpitem
     mpitem.parameters = sb.jsonMerge(mpitem.parameters, item)
+
+    -- loads animation path file into a object for vanilla mp purposes
     if mpitem.parameters.preloadAnimation and type(mpitem.parameters.animation) == "string" then
         mpitem.parameters.animation = root.assetJson(directory(mpitem.parameters.animation, item.directory))
     end
+
     return mpitem
 end
 
@@ -39,7 +43,7 @@ function mpguns:giveMpitem(mpitem)
     player.giveItem(mpitem)
 end
 
---gives player the mpitem
+--removes player the mpitem
 function mpguns:removeMpitem(mpitem)
     return player.consumeItem(mpitem, false, true)
 end
@@ -49,9 +53,9 @@ end
 -- error 2: the item doesnt exist anymore and should be removed
 -- returns a mpitem if update is required
 -- returns nil if no update is required
-function mpguns:updateMpitem(check_mpitem)
+function mpguns:updateMpitem(check_item)
     
-    local directory = check_mpitem.parameters.directory
+    local directory = check_item.parameters.directory
     if not directory then return end -- for unlinked mpitems
 
     local mpitem = self:base()
@@ -60,14 +64,13 @@ function mpguns:updateMpitem(check_mpitem)
     local item = self:get(directory)
     if not item then return nil, 2 end
 
-    if (item.itemVersion ~= check_mpitem.parameters.itemVersion) or 
-        (mpitem.parameters.baseVersion ~= check_mpitem.parameters.baseVersion) then
+    if (item.itemVersion ~= check_item.parameters.itemVersion) or (mpitem.parameters.baseVersion ~= check_item.parameters.baseVersion) then
         return self:makeMpitem(item)
     end
     
 end
 
---User Settings
+-- User Settings --
 mpguns.userSettings = {
     cameraAim = true,
     cameraRecoil = true,
