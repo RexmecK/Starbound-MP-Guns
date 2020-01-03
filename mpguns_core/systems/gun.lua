@@ -49,6 +49,7 @@ function main:setupEvents()
 	animations:addEvent("reload1", function() self:reload(1) end)
 	animations:addEvent("eject", function() self:eject() end)
 	animations:addEvent("load", function() self:load() end)
+	animations:addEvent("checkload", function() if self.storage.loaded ~=1 then self:load() end end)
 	animations:addEvent("unload", function() self:unload() end)
 end
 
