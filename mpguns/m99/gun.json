@@ -1,0 +1,28 @@
+{
+
+	"damageMultiplier" : 500,
+	"knockback" : 30,
+
+	"magazineCapacity" : 30,
+	"chamberAutoLoad" : false,
+	"chamberEject" : false,
+
+	"recoil" : 12,
+	"recoilRecovery" : 16,
+	"recoilResponse" : 4,
+	"crouchRecoilMultiplier" : 0.5,
+	"velocityRecoil" : [-10, 0],
+	
+	"movingInaccuracy" : 45,
+	"standingInaccuracy" : 0,
+	"crouchInaccuracyMultiplier" : 0.5,
+
+	"aimRatio" : 0.125,
+
+	"firemode" : "semi",
+	"rpm" : 600,
+
+	"casingParticle" : "casing",
+	"projectileName" : "armcannonfire",
+	"projectileConfig" : "/mpguns_core/projectileConfigs/penetratingbullet.config"
+}

@@ -153,5 +153,10 @@
 		"name" : "Ulthman",
 		"image" : "/mpguns/ulthman/icon.png",
 		"id" : "ulthman"
+	},
+	{
+		"name" : "Barrett M99",
+		"image" : "/mpguns/m99/icon.png",
+		"id" : "m99"
 	}
 ]
