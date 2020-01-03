@@ -10,7 +10,7 @@
 	"recoilRecovery" : 4,
 	"recoilResponse" : 2,
 	
-	"movingInaccuracy" : 15,
+	"movingInaccuracy" : 5,
 	"standingInaccuracy" : 0.2,
 	"crouchInaccuracyMultiplier" : 0.5,
 
