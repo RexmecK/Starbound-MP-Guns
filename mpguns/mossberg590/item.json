@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.2, // add up a number to force update
+	"itemVersion" : 1.211, // add up a number to force update
 
 	"shortdescription" : "Mossberg 590",
 	"category" : "Shotgun",
@@ -42,10 +42,10 @@
 			"click4" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip3.ogg"], "pitchMultiplier" : 1.35},
 			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
 			"click6" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip3.ogg"], "pitchMultiplier" : 0.85},
-			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.5},
-			"firesound2" : {"pool" : ["/sfx/gun/rifle1.ogg"], "pitchMultiplier" : 1.25},
-			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.25},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.79}
+			"firesound1" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.3, "volume" : 1.5},
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.7},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.8},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.7}
 		},
 		"lights" : {
 			"muzzleFlash" : {
@@ -361,6 +361,6 @@
 			}
 		},
 
-		"transformationGroups" : {"muzzleFlash":{"transform":{"scale":[2.5,2.5],"position":[0,0.03675]}},"gun":{"transform":{"rotationPoint":[2.9375,1.1875],"scalePoint":[0,0],"rotation":0,"scale":[0.4375,0.4375],"position":[-3.1875,-0.5625]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.0625,-0.1875]}},"lever":{"transform":{"position":[0,0]}},"shell":{"transform":{"scale":[0,0],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-14.375}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.4375,0.3125],"rotation":0}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.1875,0.0625]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":14.1875}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-4.75}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":35.9375}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-19.875}}}
+		"transformationGroups" : {"gun":{"transform":{"scalePoint":[0,0],"rotationPoint":[2.9375,1.1875],"scale":[0.4375,0.4375],"rotation":0,"position":[-3.5625,-0.0625]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1,-0.0625]}},"lever":{"transform":{"position":[0,0]}},"shell":{"transform":{"scale":[0,0],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2.5,2.5],"position":[0,0.03675]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-40.0625}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-14.375}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.4375,0.3125],"rotation":0}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.1875,0.0625]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":4.9375}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":37.75}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":35.9375}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-19.875}}}
 	}
 }
