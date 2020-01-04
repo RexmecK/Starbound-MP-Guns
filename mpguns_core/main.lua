@@ -14,6 +14,9 @@ end
 function init()
 	include "config" --needed to load certain configs
 	include "directory" 
+
+	if checkUpdates() then return end
+
 	init = function()
 		if main and main.init then
 			main:init()
@@ -26,15 +29,20 @@ function init()
 end
 
 -- activeitem only
+local checked = false
 function checkUpdates()
+	checked = true
 	if not item then return end
 	
 	include "mpguns" 
 	local thisitem = item.descriptor()
-	local updates = mpguns:updateMpitem(thisitem)
-	if updates then
+	local updates, err = mpguns:updateMpitem(thisitem)
+	if type(updates) == "table" then
 		item.setCount(0)
 		mpguns:giveMpitem(updates)
+		return true
+	elseif err and err == 2 then
+		item.setCount(0)
 		return true
 	end
 	return false
@@ -43,11 +51,9 @@ end
 update_lastInfo = {}
 update_info = {}
 update_lateInited = false
-local checked = false
 
 function update(...)
 	if not checked then
-		checked = true
 		if checkUpdates() then return end
 	end
 	
