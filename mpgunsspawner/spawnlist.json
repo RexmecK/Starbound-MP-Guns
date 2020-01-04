@@ -30,11 +30,6 @@
 		"id" : "mossberg590"
 	},
 	{
-		"name" : "MP5-SD",
-		"image" : "/mpguns/mp5-sd/icon.png",
-		"id" : "mp5-sd"
-	},
-	{
 		"name" : "Scar-H",
 		"image" : "/mpguns/scar-h/icon.png",
 		"id" : "scar-h"
