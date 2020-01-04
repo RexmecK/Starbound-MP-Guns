@@ -1,5 +1,5 @@
 {
-	"damageMultiplier" : 200,
+	"damageMultiplier" : 30,
 	"magazineCapacity" : 1,
 
 	"recoil" : 2,

@@ -1,6 +1,6 @@
 {
 
-	"damageMultiplier" : 400,
+	"damageMultiplier" : 50,
 	"knockback" : 10,
 
 	"magazineCapacity" : 1,
@@ -11,7 +11,7 @@
 	"recoilRecovery" : 7,
 	"recoilResponse" : 2,
 	
-	"movingInaccuracy" : 10,
+	"movingInaccuracy" : 5,
 	"standingInaccuracy" : 0.2,
 	"crouchInaccuracyMultiplier" : 0.5,
 

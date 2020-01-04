@@ -109,6 +109,7 @@ end
 
 function alt:fireProjectile()
     muzzle.inaccuracy = self:getInaccuracy()
+    muzzle.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
 	for i=1,self.config.projectileCount or 1 do
 		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig)
 	end

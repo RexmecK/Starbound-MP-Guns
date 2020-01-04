@@ -1,6 +1,6 @@
 {
 
-	"damageMultiplier" : 90,
+	"damageMultiplier" : 12,
 
 	"magazineCapacity" : 30,
 	"chamberAutoLoad" : true,
@@ -10,7 +10,7 @@
 	"recoilRecovery" : 4,
 	"recoilResponse" : 2,
 	
-	"movingInaccuracy" : 10,
+	"movingInaccuracy" : 5,
 	"standingInaccuracy" : 0,
 	"crouchInaccuracyMultiplier" : 0.5,
 

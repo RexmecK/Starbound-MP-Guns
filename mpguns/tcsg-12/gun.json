@@ -1,6 +1,6 @@
 {
 
-	"damageMultiplier" : 50,
+	"damageMultiplier" : 5,
 	"knockback" : 10,
 
 	"magazineCapacity" : 10,
@@ -12,8 +12,8 @@
 	"recoilResponse" : 2,
 	
 	"movingInaccuracy" : 45,
-	"standingInaccuracy" : 5,
-	"crouchInaccuracyMultiplier" : 0.5,
+	"standingInaccuracy" : 10,
+	"crouchInaccuracyMultiplier" : 0.75,
 
 	"aimRatio" : 0.5,
 

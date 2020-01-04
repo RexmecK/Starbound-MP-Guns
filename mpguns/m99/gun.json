@@ -1,6 +1,6 @@
 {
 
-	"damageMultiplier" : 500,
+	"damageMultiplier" : 80,
 	"knockback" : 30,
 
 	"magazineCapacity" : 30,

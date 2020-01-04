@@ -1,6 +1,6 @@
 {
 
-	"damageMultiplier" : 1,
+	"damageMultiplier" : 10,
 
 	"magazineCapacity" : 30,
 	"chamberAutoLoad" : true,
@@ -22,7 +22,7 @@
 	"casingParticle" : "casing",
 	"projectileName" : "throwinggnome1",
 	"projectileConfig" : {
-		"power" : 50,
+		"power" : 1,
 		"bounces" : 3,
 		"timeToLive" : 1, 
 		"speed" : 50,

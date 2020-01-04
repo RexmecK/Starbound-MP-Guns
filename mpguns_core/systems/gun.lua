@@ -73,8 +73,6 @@ function main:init()
 		self.config.projectileConfig.knockback = self.config.knockback
 	end
 
-	muzzle.damageMultiplier = self.config.damageMultiplier or 1
-
 	aim.recoilRecovery = self.config.recoilRecovery or 8
 	aim.recoilResponse = self.config.recoilResponse or 1
 
@@ -257,6 +255,7 @@ function main:fire()
 end
 
 function main:fireProjectile()
+	muzzle.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
 	for i=1,self.config.projectileCount or 1 do
 		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig)
 	end

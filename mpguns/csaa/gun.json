@@ -1,6 +1,6 @@
 {
 
-	"damageMultiplier" : 300,
+	"damageMultiplier" : 30,
 
 	"magazineCapacity" : 5,
 	"chamberDryIfFire" : true,
