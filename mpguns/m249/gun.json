@@ -1,9 +1,9 @@
 {
 
-	"damageMultiplier" : 12,
+	"damageMultiplier" : 11,
 	"knockback" : 9,
 
-	"magazineCapacity" : 200,
+	"magazineCapacity" : 100,
 	"chamberAutoLoad" : true,
 	"chamberEject" : true,
 

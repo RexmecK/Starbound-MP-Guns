@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.2, // add up a number to force update
+	"itemVersion" : 1.21, // add up a number to force update
 
 	"shortdescription" : "M249",
 	"category" : "Light Machine Gun",
@@ -43,10 +43,10 @@
 			"click7" : {"pool" : ["/sfx/gun/reload/rocket_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
 			"click8" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 1.5},
 
-			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.125},
-			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.25},
-			"firesound3" : {"pool" : ["/sfx/gun/grenadeblast_small3.ogg"], "pitchMultiplier" : 1.5},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.75}
+			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.2},
+			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.7},
+			"firesound3" : {"pool" : ["/sfx/gun/ar4.ogg"], "pitchMultiplier" : 1.0},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.8}
 		},
 		"lights" : {
 			"muzzleFlash" : {
@@ -178,7 +178,7 @@
 			"stateTypes" : {
 				"muzzleFlash" : {"default" : "off",
 					"states" : {
-						"0" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.024, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
 						"1" : {"frames" : 1, "mode" : "transition", "transition" : "0", "cycle" : 0.016},
 						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
 						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
@@ -392,6 +392,6 @@
 			}
 		},
 
-		"transformationGroups" : {"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"gun":{"transform":{"rotationPoint":[2.3125,0.8125],"rotation":0,"scale":[0.5625,0.5625],"position":[-3,-1.375]}},"bullets":{"transform":{"rotationPoint":[2.75,0.875],"rotation":0,"position":[0,0]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.625,-0.3125]}},"lever":{"transform":{}},"mag":{"transform":{"scalePoint":[5.375,1.375],"rotationPoint":[3,0.5],"rotation":0,"scale":[1,1],"position":[0,0]}},"handle":{"transform":{"rotationPoint":[3.5625,1.5625],"rotation":-11.5,"scale":[1,1],"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":9.6875}},"base":{"interpolated":false,"transform":{}},"cover":{"transform":{"rotationPoint":[3.4375,1.5625],"rotation":0}},"R_offset":{"ignore":true,"interpolated":false,"transform":{}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-45}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":45}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":9.3125}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-5.3125}}}
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[2.3125,0.8125],"scale":[0.5,0.5],"rotation":0,"position":[-2.4375,-0.4375]}},"bullets":{"transform":{"rotationPoint":[2.75,0.875],"rotation":0,"position":[0,0]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.8125,-0.1875]}},"lever":{"transform":{}},"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"mag":{"transform":{"scalePoint":[5.375,1.375],"rotationPoint":[3,0.5],"scale":[1,1],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-28.1875}},"handle":{"transform":{"rotationPoint":[3.5625,1.5625],"scale":[1,1],"rotation":-11.5,"position":[0,0]}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-8.75}},"base":{"interpolated":false,"transform":{}},"cover":{"transform":{"rotationPoint":[3.4375,1.5625],"rotation":0}},"R_offset":{"ignore":true,"interpolated":false,"transform":{}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-13.5}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":45}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":24.125}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-5.3125}}}
 	}
 }
