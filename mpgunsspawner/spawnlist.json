@@ -158,5 +158,10 @@
 		"name" : "Barrett M99",
 		"image" : "/mpguns/m99/icon.png",
 		"id" : "m99"
+	},
+	{
+		"name" : "H&K G36C",
+		"image" : "/mpguns/g36c/icon.png",
+		"id" : "g36c"
 	}
 ]
