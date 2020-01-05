@@ -158,5 +158,10 @@
 		"name" : "H&K G36C",
 		"image" : "/mpguns/g36c/icon.png",
 		"id" : "g36c"
+	},
+	{
+		"name" : "H&K MP5SD",
+		"image" : "/mpguns/mp5sd/icon.png",
+		"id" : "mp5sd"
 	}
 ]
