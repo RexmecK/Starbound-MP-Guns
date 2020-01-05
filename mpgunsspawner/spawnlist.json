@@ -163,5 +163,10 @@
 		"name" : "H&K MP5SD",
 		"image" : "/mpguns/mp5sd/icon.png",
 		"id" : "mp5sd"
+	},
+	{
+		"name" : "H&K MP5A3",
+		"image" : "/mpguns/mp5a3/icon.png",
+		"id" : "mp5a3"
 	}
 ]
