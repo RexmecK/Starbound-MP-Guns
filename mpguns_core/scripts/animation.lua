@@ -146,22 +146,25 @@ end
 
 --key to key interpolation
 function animation:ktk(from, to, ratio)
-	local from = self:ftk(from)
-	local to = self:ftk(to)
+	local fromT = self:ftk(from)
+	local toT = self:ftk(to)
 	local current = {}
 	for i,transform in pairs(transforms.default) do
-		local timeRatio = ratio ^ (to[i].curve or 1)
+		local timeRatio = ratio
+		if to.transforms[i] then
+			timeRatio = ratio ^ (to.transforms[i].curve or 1)
+		end
 		current[i] = {}
 		for i2, property in pairs(transform) do
 			if i == "time" or i == "curve" then
 				--dont give internal stuff
 			elseif type(property) == "table" and #property == 2 then
 				current[i][i2] = vec2(
-					from[i][i2][1] + ((to[i][i2][1] - from[i][i2][1]) * timeRatio), 
-					from[i][i2][2] + ((to[i][i2][2] - from[i][i2][2]) * timeRatio)
+					fromT[i][i2][1] + ((toT[i][i2][1] - fromT[i][i2][1]) * timeRatio), 
+					fromT[i][i2][2] + ((toT[i][i2][2] - fromT[i][i2][2]) * timeRatio)
 				)
 			elseif type(property) == "number" then
-				current[i][i2] = from[i][i2] + ((to[i][i2] - from[i][i2]) * timeRatio)
+				current[i][i2] = fromT[i][i2] + ((toT[i][i2] - fromT[i][i2]) * timeRatio)
 			end
 		end
 	end
