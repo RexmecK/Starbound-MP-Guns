@@ -1,24 +1,24 @@
 {
 
-	"damageMultiplier" : 10,
-	"knockback" : 9,
+	"damageMultiplier" : 11,
+	"knockback" : 6,
 
-	"magazineCapacity" : 30,
+	"magazineCapacity" : 100,
 	"chamberAutoLoad" : true,
 	"chamberEject" : true,
 
-	"recoil" : 2,
-	"recoilRecovery" : 4,
+	"recoil" : 5,
+	"recoilRecovery" : 3,
 	"recoilResponse" : 2,
 	
-	"movingInaccuracy" : 45,
+	"movingInaccuracy" : 5,
 	"standingInaccuracy" : 1,
 	"crouchInaccuracyMultiplier" : 0.5,
 
 	"aimRatio" : 0.5,
 
 	"firemode" : "auto",
-	"rpm" : 600,
+	"rpm" : 950,
 
 	"casingParticle" : "casing",
 	"projectileName" : "armcannonfire",
