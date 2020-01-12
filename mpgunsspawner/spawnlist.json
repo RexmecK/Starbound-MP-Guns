@@ -168,5 +168,10 @@
 		"name" : "H&K MP5A3",
 		"image" : "/mpguns/mp5a3/icon.png",
 		"id" : "mp5a3"
+	},
+	{
+		"name" : "MG42",
+		"image" : "/mpguns/mg42/icon.png",
+		"id" : "mg42"
 	}
 ]
