@@ -173,5 +173,15 @@
 		"name" : "MG42",
 		"image" : "/mpguns/mg42/icon.png",
 		"id" : "mg42"
+	},
+	{
+		"name" : "CMMG Mk47 Mutant",
+		"image" : "/mpguns/mk47/icon.png",
+		"id" : "mk47"
+	},
+	{
+		"name" : "CMMG Mk47 Mutant (Custom 1)",
+		"image" : "/mpguns/mk47custom1/icon.png",
+		"id" : "mk47custom1"
 	}
 ]
