@@ -183,5 +183,10 @@
 		"name" : "CMMG Mk47 Mutant (Custom 1)",
 		"image" : "/mpguns/mk47custom1/icon.png",
 		"id" : "mk47custom1"
+	},
+	{
+		"name" : "IMI Galil",
+		"image" : "/mpguns/imigalil/icon.png",
+		"id" : "imigalil"
 	}
 ]
