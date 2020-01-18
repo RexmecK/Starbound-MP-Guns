@@ -35,6 +35,17 @@ function mpguns:makeMpitem(item)
         mpitem.parameters.animation = root.assetJson(directory(mpitem.parameters.animation, item.directory))
     end
 
+    if item.patches then
+        mpitem.parameters.patches = {}
+        for i,v in pairs(item.patches) do
+            res, e = pcall(sb.mergeJson, mpitem.parameters, v)
+            if res then
+                mpitem.parameters = res
+                mpitem.parameters.patches[i] = v
+            end
+        end
+    end
+
     return mpitem
 end
 
@@ -65,6 +76,9 @@ function mpguns:updateMpitem(check_item)
     if not item then return nil, 2 end
 
     if (item.itemVersion ~= check_item.parameters.itemVersion) or (mpitem.parameters.baseVersion ~= check_item.parameters.baseVersion) then
+        if check_item.parameters.patches then
+            item.patches = check_item.parameters.patches
+        end
         return self:makeMpitem(item)
     end
     
