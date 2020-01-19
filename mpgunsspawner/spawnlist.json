@@ -188,5 +188,10 @@
 		"name" : "IMI Galil",
 		"image" : "/mpguns/imigalil/icon.png",
 		"id" : "imigalil"
+	},
+	{
+		"name" : "Famas F1",
+		"image" : "/mpguns/famasf1/icon.png",
+		"id" : "famasf1"
 	}
 ]
