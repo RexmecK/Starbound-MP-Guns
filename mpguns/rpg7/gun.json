@@ -20,7 +20,7 @@
 	"rpm" : 600,
 
 	"casingParticle" : "casing",
-	"projectileName" : "armcannonfire",
+	"projectileName" : "plasmabullet",
 	"projectileConfig" : {
 		"power" : 100, 
 		"timeToLive" : 0.1, 

@@ -20,7 +20,7 @@
 	"firemode" : "semi",
 	"rpm" : 600,
 
-	"projectileName" : "armcannonfire",
+	"projectileName" : "plasmabullet",
 	"projectileCount" : 5,
 	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
 }

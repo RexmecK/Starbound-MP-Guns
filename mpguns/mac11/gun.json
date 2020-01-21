@@ -21,6 +21,6 @@
 	"rpm" : 1200,
 
 	"casingParticle" : "casing",
-	"projectileName" : "armcannonfire",
+	"projectileName" : "plasmabullet",
 	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
 }
