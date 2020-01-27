@@ -1,0 +1,26 @@
+{
+
+	"damageMultiplier" : 23,
+	"knockback" : 7,
+
+	"magazineCapacity" : 32,
+	"chamberAutoLoad" : true,
+	"chamberEject" : true,
+
+	"recoil" : 3,
+	"recoilRecovery" : 8,
+	"recoilResponse" : 2,
+	
+	"movingInaccuracy" : 5,
+	"standingInaccuracy" : 1,
+	"crouchInaccuracyMultiplier" : 0.5,
+
+	"aimRatio" : 0.25,
+
+	"firemode" : "auto",
+	"rpm" : 550,
+
+	"casingParticle" : "casing",
+	"projectileName" : "plasmabullet",
+	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
+}

@@ -193,5 +193,10 @@
 		"name" : "Famas F1",
 		"image" : "/mpguns/famasf1/icon.png",
 		"id" : "famasf1"
+	},
+	{
+		"name" : "MP40",
+		"image" : "/mpguns/mp40/icon.png",
+		"id" : "mp40"
 	}
 ]
