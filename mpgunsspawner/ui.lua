@@ -41,6 +41,7 @@ function main:loadlist(keywords)
             local elementConfig = root.assetJson("/mpgunsspawner/element1.json")
             elementConfig.children.name.value = v.name
             elementConfig.children.content.file = v.image or "/assetmissing.png"
+            elementConfig.children.content_shadow.file = (v.image or "/assetmissing.png").."?setcolor=000f?replace=000=0005"
             elementConfig.children[v.id] = elementConfig.children.top
             elementConfig.children.top = nil
             

@@ -13,6 +13,15 @@
 			"file" : "/mpgunsspawner/image/elementbg.png",
 			"callback" : "null"
 		},
+		"content_shadow" : {
+			"zlevel" : 2,
+			"type" : "image",
+			"file" : "/assetmissing.png",
+			"position" : [35.5, 15.5],
+			"centered" : true,
+			"maxSize" : [63,26],
+			"callback" : "null"
+		},
 		"content" : {
 			"zlevel" : 3,
 			"type" : "image",
