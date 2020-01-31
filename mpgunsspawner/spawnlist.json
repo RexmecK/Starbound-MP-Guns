@@ -198,5 +198,10 @@
 		"name" : "MP40",
 		"image" : "/mpguns/mp40/icon.png",
 		"id" : "mp40"
+	},
+	{
+		"name" : "Winchester Model 1894",
+		"image" : "/mpguns/winchester1894/icon.png",
+		"id" : "winchester1894"
 	}
 ]
