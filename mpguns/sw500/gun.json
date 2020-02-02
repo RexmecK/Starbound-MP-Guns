@@ -1,6 +1,6 @@
 {
 
-	"damageMultiplier" : 50,
+	"damageMultiplier" : 40,
 	"knockback" : 10,
 
 	"magazineCapacity" : 5,
@@ -8,8 +8,8 @@
 	"disallowAnimationLoad" : true,
 	"chamberEject" : false,
 
-	"recoil" : 15,
-	"recoilRecovery" : 8,
+	"recoil" : 8,
+	"recoilRecovery" : 16,
 	"recoilResponse" : 2,
 	
 	"movingInaccuracy" : 45,
