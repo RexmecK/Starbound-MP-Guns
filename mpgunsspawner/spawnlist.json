@@ -203,5 +203,10 @@
 		"name" : "Winchester Model 1894",
 		"image" : "/mpguns/winchester1894/icon.png",
 		"id" : "winchester1894"
+	},
+	{
+		"name" : "M134 Minigun Vulcan",
+		"image" : "/mpguns/m134/icon.png",
+		"id" : "m134"
 	}
 ]
