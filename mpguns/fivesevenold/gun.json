@@ -1,24 +1,24 @@
 {
 
-	"damageMultiplier" : 17,
+	"damageMultiplier" : 18,
 	"knockback" : 7,
 
 	"magazineCapacity" : 20,
 	"chamberAutoLoad" : true,
 	"chamberEject" : true,
 
-	"recoil" : 6,
-	"recoilRecovery" : 8,
-	"recoilResponse" : 1,
+	"recoil" : 9,
+	"recoilRecovery" : 2,
+	"recoilResponse" : 4,
 	
 	"movingInaccuracy" : 5,
-	"standingInaccuracy" : 1,
+	"standingInaccuracy" : 0.1,
 	"crouchInaccuracyMultiplier" : 0.5,
 
-	"aimRatio" : 0.5,
+	"aimRatio" : 0.0625,
 
 	"firemode" : "semi",
-	"rpm" : 500,
+	"rpm" : 900,
 
 	"casingParticle" : "casing",
 	"projectileName" : "plasmabullet",

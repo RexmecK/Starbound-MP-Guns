@@ -10,11 +10,6 @@
 		"id" : "deagle"
 	},
 	{
-		"name" : "Five SeveN",
-		"image" : "/mpguns/fiveseven/icon.png",
-		"id" : "fiveseven"
-	},
-	{
 		"name" : "M1 Garand",
 		"image" : "/mpguns/m1garand/icon.png",
 		"id" : "m1garand"
@@ -208,5 +203,10 @@
 		"name" : "M134 Vulcan Minigun",
 		"image" : "/mpguns/m134/icon.png",
 		"id" : "m134"
+	},
+	{
+		"name" : "Five SeveN",
+		"image" : "/mpguns/fiveseven/icon.png",
+		"id" : "fiveseven"
 	}
 ]
