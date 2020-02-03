@@ -53,6 +53,10 @@ function minigun:update(dt, firemode, shift, moves)
     end
 end
 
+function minigun:uninit()
+    self:setState(false)
+end
+
 function minigun:setState(a)
     if self.config.barrelStates then
         if a then 
