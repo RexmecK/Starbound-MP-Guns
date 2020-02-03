@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.01, // add up a number to force update
 
 	"shortdescription" : "MG42",
 	"category" : "Light Machine Gun",
@@ -350,28 +350,6 @@
 				"zLevel" : 100,
 				"anchorPart" : "casingPosition",
 				"particles" : [
-					{ 
-						"count" : 1,
-						"particle" : {
-							"type" : "textured",
-							"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=040000;e4e4e4=000001;6a6a6a=040001?multiply=fff0?scale=3.5;0.5?crop=0;0;4;1?replace;0000=ba4;01000000=ba4;02000000=ba4;03000000=ba4",
-							"position" : [0, 0],
-							"finalVelocity" : [0, -100],
-							"approach" : [0, 80],
-							"initialVelocity" : [-1.5, 8.0],
-							"angularVelocity" : 720,
-							"collidesForeground" : true,
-							"destructionAction" : "fade",
-							"destructionTime" : 0.85,
-							"size" : 0.5,
-							"layer" : "front",
-							"timeToLive" : 2.0,
-							"variance" : {
-								"angularVelocity" : 360,
-								"initialVelocity" : [3.0,2.0]
-							}
-						}
-					},
 					{ 
 						"count" : 1,
 						"particle" : {

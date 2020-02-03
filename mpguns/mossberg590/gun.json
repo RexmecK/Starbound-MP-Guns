@@ -20,7 +20,12 @@
 	"firemode" : "semi",
 	"rpm" : 600,
 
-	"casingParticle" : "casing",
+	"casing" : {
+		"part" : "casingPosition",
+		"type" : "12gauge",
+		"velocity" : [-2,10],
+		"count" : 1
+	},
 	"projectileCount" : 5,
 	"projectileName" : "plasmabullet",
 	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"

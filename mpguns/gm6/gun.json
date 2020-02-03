@@ -7,8 +7,8 @@
 	"chamberAutoLoad" : true,
 	"chamberEject" : true,
 
-	"recoil" : 20,
-	"recoilRecovery" : 8,
+	"recoil" : 10,
+	"recoilRecovery" : 16,
 	"recoilResponse" : 3,
 	"crouchRecoilMultiplier" : 0.25,
 	
@@ -21,7 +21,13 @@
 	"firemode" : "semi",
 	"rpm" : 200,
 
-	"casingParticle" : "casing",
+	
+	"casing" : {
+		"part" : "casingPosition",
+		"type" : "50cal",
+		"velocity" : [-2,10],
+		"count" : 1
+	},
 	"projectileName" : "plasmabullet",
 	"projectileConfig" : "/mpguns_core/projectileConfigs/penetratingbullet.config"
 }

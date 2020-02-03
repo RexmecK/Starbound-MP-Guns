@@ -22,7 +22,12 @@
 	"firemode" : "semi",
 	"rpm" : 450,
 
-	"casingParticle" : "casing",
+	"casing" : {
+		"part" : "casingPosition",
+		"type" : "50cal",
+		"velocity" : [-2,10],
+		"count" : 1
+	},
 	"projectileName" : "plasmabullet",
 	"projectileConfig" : "/mpguns_core/projectileConfigs/penetratingbullet.config"
 }

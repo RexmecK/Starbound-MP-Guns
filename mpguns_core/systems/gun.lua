@@ -51,6 +51,7 @@ function main:setupEvents()
 	animations:addEvent("load", function() self:load() end)
 	animations:addEvent("checkload", function() if self.storage.loaded ~=1 then self:load() end end)
 	animations:addEvent("unload", function() self:unload() end)
+	animations:addEvent("casing", function() self:casing() end)
 end
 
 function main:init()
@@ -328,11 +329,34 @@ function main:ammoCount()
 end
 
 function main:eject()
-	if self.storage.loaded > 0 and self.config.casingParticle then
-		animator.burstParticleEmitter(self.config.casingParticle)
+	if self.storage.loaded > 0 and not self.config.noCasingEject then
+		self:casing()
 	end
 	self.storage.loaded = 0
 	self:save()
+end
+
+function main:casing()
+	if mpguns:getPreference("disableCasings") then return end
+
+	if self.config.casingParticle then
+		animator.burstParticleEmitter(self.config.casingParticle)
+	end
+	if self.config.casing and self.config.casing.type and self.config.casing.part then
+		local casingConfig = root.assetJson(directory(self.config.casing.type, "/mpguns_core/casingConfigs/", ".config"))
+		local pos = activeItem.handPosition(animator.transformPoint(self.config.casing.offset or {0,0},self.config.casing.part)) + mcontroller.position()
+
+		local position = activeItem.handPosition(animator.transformPoint(self.config.casing.offset or {0,0},self.config.casing.part))
+		local end_position = activeItem.handPosition(animator.transformPoint((self.config.casing.offset or {0,0}) + vec2(0,1),self.config.casing.part))
+		local angle = (end_position - position):angle()
+
+		casingConfig.parameters.ownerId = activeItem.ownerEntityId()
+
+		for i=1,self.config.casing.count or 1 do
+			casingConfig.parameters.velocity = vec2(self.config.casing.velocity or casingConfig.parameters.velocity):rotate((-angle * aim.facing) + math.rad((math.random(450,900) - 450) / 10)) * vec2(aim.facing, 1)
+			world.spawnMonster(casingConfig.type, pos, casingConfig.parameters)
+		end
+	end
 end
 
 function main:load()

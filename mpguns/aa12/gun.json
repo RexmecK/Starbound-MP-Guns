@@ -20,7 +20,12 @@
 	"firemode" : "auto",
 	"rpm" : 300,
 
-	"casingParticle" : "casing",
+	"casing" : {
+		"part" : "casingPosition",
+		"type" : "12gauge",
+		"velocity" : [-2,10],
+		"count" : 1
+	},
 	"projectileName" : "plasmabullet",
 	"projectileCount" : 5,
 	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"

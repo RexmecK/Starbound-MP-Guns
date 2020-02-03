@@ -91,6 +91,7 @@ mpguns.userSettings = {
     disableW = false,
     autoreload = true,
     autoload = true,
+    disableCasings = false,
 }
 
 local initeduserpref = false
