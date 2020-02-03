@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.221, // add up a number to force update
+	"itemVersion" : 1.231, // add up a number to force update
 
 	"shortdescription" : "AK-47",
 	"category" : "Assault Rifle",
@@ -40,10 +40,10 @@
 			"click4" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip3.ogg"], "pitchMultiplier" : 1.1},
 			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
 			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
-			"firesound1" : {"pool" : ["/sfx/gun/shotgun2.ogg"], "pitchMultiplier" : 1.5},
-			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.2},
-			"firesound3" : {"pool" : ["/sfx/gun/revolver3.ogg"], "pitchMultiplier" : 1.1},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.8}
+			"firesound1" : {"pool" : ["/sfx/gun/shotgun2.ogg"], "pitchMultiplier" : 1.4},
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.1},
+			"firesound3" : {"pool" : ["/sfx/gun/revolver3.ogg"], "pitchMultiplier" : 1.2},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9}
 		},
 		"lights" : {
 			"muzzleFlash" : {
