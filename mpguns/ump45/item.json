@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.2, // add up a number to force update
+	"itemVersion" : 1.21, // add up a number to force update
 
 	"shortdescription" : "UMP-45",
 	"category" : "Smg",
@@ -272,13 +272,15 @@
 							"color" : [255,255,172,255],
 							"initialVelocity" : [10.0, 0.0],
 							"destructionAction" : "shrink",
-							"destructionTime" : 0.45,
+							"destructionTime" : 0.032,
 							"fade" : 1,
 							"size" : 0.5,
 							"layer" : "back",
-							"timeToLive" : 0.245,
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"trail" : true,
 							"variance" : {
-								"initialVelocity" : [2.0,2.0],
+								"initialVelocity" : [2.0,8.0],
 								"size" : 0.25
 							}
 						}
@@ -300,13 +302,15 @@
 							"color" : [255,128,64,255],
 							"initialVelocity" : [10.0, 0.0],
 							"destructionAction" : "shrink",
-							"destructionTime" : 0.45,
+							"destructionTime" : 0.032,
 							"fade" : 1,
 							"size" : 0.5,
 							"layer" : "back",
-							"timeToLive" : 0.245,
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"trail" : true,
 							"variance" : {
-								"initialVelocity" : [2.0,2.0],
+								"initialVelocity" : [2.0,8.0],
 								"size" : 0.25
 							}
 						}
