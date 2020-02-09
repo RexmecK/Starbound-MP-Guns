@@ -39,6 +39,7 @@ function muzzle:getPositions()
 end
 
 function muzzle:fire(ammo)
+	local indiscriminateMode = status.statusProperty("indiscriminateMode")
 	for i,v in pairs(self._parts) do
 		-- world.spawnProjectile(`String` projectileName [arg1], `Vec2F` position [arg2], [`EntityId` sourceEntityId] [arg3], [`Vec2F` direction] [arg4], [`bool` trackSourceEntity] [arg5], [`Json` parameters] [arg6])
 
@@ -62,11 +63,16 @@ function muzzle:fire(ammo)
 			projectileArgs[6].power = (projectileArgs[6].power or 1) * self.damageMultiplier
 		end
 
+		if indiscriminateMode then
+			projectileArgs[6].damageTeam = { type = "indiscriminate" }
+		end
+
 		world.spawnProjectile(table.unpack(projectileArgs))
 	end
 end
 
 function muzzle:fireProjectile(projectileName, projectileConfig)
+	local indiscriminateMode = status.statusProperty("indiscriminateMode")
 	local ownerId = activeItem.ownerEntityId()
 	for i,v in pairs(self._parts) do
 		-- world.spawnProjectile(`String` projectileName [arg1], `Vec2F` position [arg2], [`EntityId` sourceEntityId] [arg3], [`Vec2F` direction] [arg4], [`bool` trackSourceEntity] [arg5], [`Json` parameters] [arg6])
@@ -84,6 +90,10 @@ function muzzle:fireProjectile(projectileName, projectileConfig)
 		--damageMultiplier
 		if self.damageMultiplier ~= 1 and type(projectileConfig) == "table" then
 			projectileConfig.powerMultiplier = self.damageMultiplier
+		end
+
+		if indiscriminateMode then
+			projectileConfig.damageTeam = { type = "indiscriminate" }
 		end
 
 		world.spawnProjectile(projectileName, position + mcontroller.position(), ownerId, direction, false, projectileConfig)

@@ -208,5 +208,10 @@
 		"name" : "Five SeveN",
 		"image" : "/mpguns/fiveseven/icon.png",
 		"id" : "fiveseven"
+	},
+	{
+		"name" : "Komodo Assault Shotgun",
+		"image" : "/mpguns/komodoassaultshotgun/icon.png",
+		"id" : "komodoassaultshotgun"
 	}
 ]
