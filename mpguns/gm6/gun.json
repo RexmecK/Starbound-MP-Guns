@@ -28,6 +28,6 @@
 		"velocity" : [-2,10],
 		"count" : 1
 	},
-	"projectileName" : "plasmabullet",
+	"projectileName" : "bullet-4",
 	"projectileConfig" : "/mpguns_core/projectileConfigs/penetratingbullet.config"
 }
