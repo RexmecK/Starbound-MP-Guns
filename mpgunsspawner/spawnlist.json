@@ -213,5 +213,10 @@
 		"name" : "Komodo Assault Shotgun",
 		"image" : "/mpguns/komodoassaultshotgun/icon.png",
 		"id" : "komodoassaultshotgun"
+	},
+	{
+		"name" : "M202 Flash",
+		"image" : "/mpguns/m202flash/icon.png",
+		"id" : "m202flash"
 	}
 ]
