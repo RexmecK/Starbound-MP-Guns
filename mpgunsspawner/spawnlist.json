@@ -1,10 +1,5 @@
 [
 	{
-		"name" : "Ak-47",
-		"image" : "/mpguns/ak47/icon.png",
-		"id" : "ak47"
-	},
-	{
 		"name" : "Desert eagle",
 		"image" : "/mpguns/deagle/icon.png",
 		"id" : "deagle"
@@ -218,5 +213,20 @@
 		"name" : "M202 Flash",
 		"image" : "/mpguns/m202flash/icon.png",
 		"id" : "m202flash"
+	},
+	{
+		"name" : "AKS-74",
+		"image" : "/mpguns/aks74/icon.png",
+		"id" : "aks74"
+	},
+	{
+		"name" : "AK-74",
+		"image" : "/mpguns/ak74/icon.png",
+		"id" : "ak74"
+	},
+	{
+		"name" : "AK-47",
+		"image" : "/mpguns/ak47/icon.png",
+		"id" : "ak47"
 	}
 ]
