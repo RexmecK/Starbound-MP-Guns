@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.221, // add up a number to force update
+	"itemVersion" : 1.222, // add up a number to force update
 
 	"shortdescription" : "M249",
 	"category" : "Light Machine Gun",
@@ -180,11 +180,11 @@
 					"states" : {
 						"0" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.024, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
 						"1" : {"frames" : 1, "mode" : "transition", "transition" : "0", "cycle" : 0.016},
-						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016, "properties":{"lightsOff" : ["muzzleFlash"]}},
 						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
 						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.016},
 						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.016},
-						"off" : {"properties" : { "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
+						"off" : {"properties" : {"particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
 					}
 				},
 				"vapor" : {"default" : "off",
