@@ -27,12 +27,12 @@ function alt:scope()
     self.scoping = not self.scoping
     if self.scoping then
         main:overrideAnimate("fire", "fire_scoped")
-        animations:play("scope")
+        main:animate("scope")
         crosshair.override = config.scopeCursor or "/mpguns_core/cursor/scope.cursor"
         main.config.aimRatio = config.scopeAimRatio or 0.5
     else
         main:overrideAnimate("fire", nil)
-        animations:play("unscope")
+        main:animate("unscope")
         crosshair.override = false
         main.config.aimRatio = self.originalAimRatio
     end

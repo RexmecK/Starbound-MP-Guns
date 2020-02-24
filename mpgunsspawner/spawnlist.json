@@ -228,5 +228,10 @@
 		"name" : "AK-47",
 		"image" : "/mpguns/ak47/icon.png",
 		"id" : "ak47"
+	},
+	{
+		"name" : "FNH Scar 20S",
+		"image" : "/mpguns/fnhScar20s/icon.png",
+		"id" : "fnhScar20s"
 	}
 ]
