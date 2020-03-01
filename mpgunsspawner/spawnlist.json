@@ -233,5 +233,15 @@
 		"name" : "FNH Scar 20S",
 		"image" : "/mpguns/fnhScar20s/icon.png",
 		"id" : "fnhScar20s"
+	},
+	{
+		"name" : "H&K 416",
+		"image" : "/mpguns/hk416/icon.png",
+		"id" : "hk416"
+	},
+	{
+		"name" : "H&K 416 Custom 1",
+		"image" : "/mpguns/hk416custom1/icon.png",
+		"id" : "hk416custom1"
 	}
 ]

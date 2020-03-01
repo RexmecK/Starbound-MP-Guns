@@ -1,0 +1,346 @@
+{
+	"itemVersion" : 1.0, // add up a number to force update
+
+	"shortdescription" : "H&K 416",
+	"category" : "Rifle",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=800000;e4e4e4=000020;6a6a6a=800020?multiply=fff0?scale=127.5;31.5?crop=0;0;128;32?replace;22000f00=333;22001000=111;2010=333;22001200=111;22001300=333;22001400=111;22001500=444;23000e00=444;23000f00=111;23001000=444;23001100=111;23001200=444;23001300=111;23001400=222;23001500=222;24000e00=222;24000f00=222;24001000=222;24001100=222;24001200=222;24001300=222;24001400=444;24001500=555;24001600=222;25000e00=222;25000f00=333;25001000=222;25001100=333;25001300=333;25001400=444;25001500=333;25001700=222;26000f00=333;26001000=222;26001100=333;26001300=333;26001400=444;26001500=333;26001600=222;27001000=333;27001100=222;27001200=222;27001300=333;27001400=444;27001500=333;28001100=333;28001200=222;28001300=333;28001400=444;28001500=333;29001200=222;29001300=333;29001400=444;29001500=333;2a001200=222;2a001300=333;2a001400=444;2a001500=333;2b001200=222;2b001300=333;2b001400=444;2b001500=333;2c001300=333;2c001400=444;2c001500=333;2d001300=333;2d001400=444;2d001500=333;2e000b00=222;2e000c00=333;2e001400=555;2e001500=444;2f000b00=222;2f000c00=111;2f000d00=222;2f000e00=333;2f001200=222;2f001300=222;2f001400=444;2f001500=222;30000b00=222;30000c00=222;30000d00=111;30000e00=111;30000f00=333;30001100=222;30001200=555;30001300=333;30001400=777;30001500=333;30001600=777;31000b00=222;31000d00=222;31000e00=222;31000f00=111;31001000=222;31001100=333;31001200=700;31001300=333;31001400=555;31001500=333;31001600=444;32000d00=222;32000f00=222;32001000=222;32001100=111;32001200=333;32001300=333;32001400=555;32001500=333;32001600=222;32001700=333;32001800=333;33000f00=222;3010=555;33001200=333;33001300=333;33001400=555;33001500=333;33001600=222;33001700=333;33001800=666;34000f00=222;34001000=555;34001200=333;34001300=333;34001400=444;34001500=222;34001600=222;35000f00=222;35001200=111;35001300=222;35001400=222;35001500=333;35001600=222;35001700=333;36000e00=111;36000f00=222;36001000=222;36001100=222;36001200=222;36001300=222;36001400=666;36001500=333;36001600=222;37000b00=111;37000c00=111;37000d00=111;37000e00=222;37000f00=444;37001000=333;37001100=333;37001200=333;37001300=222;37001400=555;37001500=333;37001600=222;37001700=333;38000800=111;38000900=111;38000a00=111;38000b00=222;38000c00=222;38000d00=222;38000e00=111;38000f00=444;38001000=333;38001100=333;38001200=333;38001300=222;38001400=555;38001500=333;38001600=222;39000800=222;39000900=222;39000a00=222;39000b00=111;39000c00=111;39000d00=111;39000e00=222;39000f00=444;39001000=333;39001100=333;39001200=333;39001300=222;39001400=666;39001500=333;39001600=222;39001700=333;3a000900=111;3a000a00=111;3a000b00=222;3a000c00=222;3a000d00=222;3a000e00=111;3a000f00=444;3a001000=222;3a001100=222;3a001200=333;3a001300=222;3a001400=222;3a001500=222;3a001600=222;3b000900=222;3b000a00=222;3b000b00=111;3b000c00=111;3b000d00=111;3b000f00=444;3b001200=222;3b001300=111;3b001400=555;3b001500=333;3b001600=222;3b001700=333;3c000a00=111;3c001300=111;3c001400=222;3c001500=333;3c001600=222;3d001200=222;3d001300=111;3d001400=555;3d001500=333;3d001600=222;3d001700=333;3e001300=111;3e001400=222;3e001600=222;3f001200=222;3f001300=111;3f001400=555;3f001500=333;3f001600=222;3f001700=333;40001300=111;40001400=222;40001600=222;41001200=222;41001300=111;41001400=555;41001600=222;41001700=333;42001300=111;42001400=222;42001500=333;42001600=222;43001200=222;43001300=111;43001400=555;43001600=222;43001700=333;44001300=111;44001400=222;44001600=222;45001200=222;45001300=111;45001400=555;45001500=333;45001600=222;45001700=333;46001300=111;46001400=222;46001600=222;47001200=222;47001300=111;47001400=555;47001600=222;47001700=333;48001300=111;48001400=222;48001500=333;48001600=222;49001200=222;49001300=111;49001400=555;49001600=222;49001700=333;4a001300=111;4a001400=222;4a001600=222;4b001200=222;4b001300=111;4b001400=555;4b001500=333;4b001600=222;4b001700=333;4c001300=111;4c001400=444;4c001500=222;4c001600=222;4d001400=333;4e001400=222;4f001400=222;50001400=222;51001400=222;52001400=333;53001300=333;53001400=444;54001300=111;54001400=444;54001500=222;54001600=222;54001700=333;54001800=444;55001400=333;56001400=222;57001400=222;58001400=222;59001400=222;5a001400=333;5b001400=444;5c001400=222;5d001400=444",
+	"description" : "Desc.",
+	"rarity" : "Common",
+	"maxStack" : 31,
+
+	"system" : "gun", // check in "/mpguns_core/systems/"
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbase.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"firesound1" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.9},
+			"firesound2" : {"pool" : ["/sfx/gun/shotgun1.ogg"], "pitchMultiplier" : 0.5},
+			"firesound3" : {"pool" : ["/sfx/gun/grenadeblast_small_fire3.ogg"], "pitchMultiplier" : 1.6},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.1},
+
+			"reload1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
+			"reload3" : {"pool" : ["/sfx/gun/reload/ar_reload_clip1.ogg"], "pitchMultiplier" : 1.25},
+			"load1" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip2.ogg"], "pitchMultiplier" : 1.85},
+			"load3" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.4},
+			"load5" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.6},
+
+			"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5}
+		},
+		"lights" : {
+			"muzzleFlash" : {
+				"pointBeam" : 0,
+				"pointAngle" : 0,
+				"color" : [100, 50, 0],
+				"pointLight" : false,
+				"anchorPart" : "muzzlePosition",
+				"active" : false,
+				"position" : [0, 0]
+			}
+		},
+		"animatedParts" : {
+			"parts" : {
+				//arms are layered at zlevel: back:6 - front:200
+
+				"gunbg" : {
+					"properties" : {
+						"zLevel" : 14,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"mag" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"transformationGroups" : ["mag", "gun", "base"]
+					}
+				},
+				"lever1" : {
+					"properties" : {
+						"zLevel" : 16,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"transformationGroups" : ["lever1", "gun", "base"]
+					}
+				},
+				"lever2" : {
+					"properties" : {
+						"zLevel" : 16,
+						"offset" : [0,0],
+						"image" : "<sprite_3>",
+						"centered" : false,
+						"transformationGroups" : ["lever2", "gun", "base"]
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 17,
+						"offset" : [0,0],
+						"image" : "<sprite_4>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						// define projectile output position anchored with gun transform
+						"offset" : [11.875,2.625],
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [-0.125,-0.75],
+						"centered" : false,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							},
+							"2" : {
+								"properties" : {
+									"image" : "<muzzleFlash_2>"
+								}
+							},
+							"3" : {
+								"properties" : {
+									"image" : "<muzzleFlash_3>"
+								}
+							},
+							"4" : {
+								"properties" : {
+									"image" : "<muzzleFlash_4>"
+								}
+							},
+							"5" : {
+								"properties" : {
+									"image" : "<muzzleFlash_5>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						// define casing position fx here
+						"offset" : [7,2.625],
+						"transformationGroups" : ["gun", "base"]
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.032, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.016, "properties" : {"lightsOff" : ["muzzleFlash"]}},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
+						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
+						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.016},
+						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.016},
+						"off" : {"properties" : { "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
+					}
+				},
+				"vapor" : {"default" : "off",
+					"states" : {
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 2.0, "properties" : {"particleEmittersOff" : ["vapor"]}},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 1.0, "properties" : {"particleEmittersOn" : ["vapor"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["vapor"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"vapor" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 80],
+							"color" : [255,255,255,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.05,
+							"layer" : "front",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [0.2,0.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [192,192,192,45],
+							"initialVelocity" : [5.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "back",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"spark" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,255,172,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.032,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"trail" : true,
+							"variance" : {
+								"initialVelocity" : [2.0,8.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"spark2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,128,64,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.032,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"trail" : true,
+							"variance" : {
+								"initialVelocity" : [2.0,8.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"smoke2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [192,192,192,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "back", 
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [1.0,2.0],
+								"size" : 0.5
+							}
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[6.4375,2.125],"rotation":0,"scale":[0.5,0.5],"position":[-7.0625,-1.5]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.75,-0.125]}},"mag":{"transform":{"rotationPoint":[7.1875,1.6875],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-25}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-23.5}},"base":{"interpolated":false,"transform":{"position":[0,0]}},"lever1":{"transform":{"position":[0,0]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.1875,0]}},"lever2":{"transform":{"position":[0,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-4.1875}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":38.6875}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":26.0625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":0.4375}}}
+	}
+}
