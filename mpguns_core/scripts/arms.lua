@@ -6,6 +6,32 @@ include "vec2"
 include "tableutil"
 include "updateable"
 
+-- OLD 2018 code --
+
+local transformationsgroups = {}
+
+local function eqmat(a,b)
+	if #a ~= #b then return false end
+	for i=1,#a do
+		if a[i] ~= b[i] then
+			return false 
+		end
+	end
+	return true
+end
+
+local function setTransformations(name, mat)
+	if not transformationsgroups[name] or not eqmat(transformationsgroups[name], mat) then
+		if animator.hasTransformationGroup(name) then
+			animator.resetTransformationGroup(name) 
+			animator.scaleTransformationGroup(name, {mat[1], mat[2]}, {mat[3], mat[4]})
+			animator.rotateTransformationGroup(name, math.rad(mat[5]), {mat[6], mat[7]})
+			animator.translateTransformationGroup(name,{mat[8], mat[9]})
+		end
+		transformationsgroups[name] = mat
+	end
+end
+
 local function lerp(a,b,r)
 	return a + (b - a) * r
 end
@@ -136,170 +162,185 @@ function arms:init()
 		transforms:addCustom("R_arm1", table.vmerge({rotation = 0}, (animationTranformationGroup.R_arm1 or {}).transform or {} ),
 			function(thisTransform) 
 				name = "R_arm1"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					local setting = {
-						position = frontArmHandPosition,
-						rotationPoint = ((frontArmRotationCenter - armCenter) + frontArmHandPosition),
-						rotation = thisTransform.rotation or 0,
-						scale = vec2(1),
-						scalePoint = vec2(0),
-					}
+				local setting = {
+					position = frontArmHandPosition,
+					rotationPoint = ((frontArmRotationCenter - armCenter) + frontArmHandPosition),
+					rotation = thisTransform.rotation or 0,
+					scale = vec2(1),
+					scalePoint = vec2(0),
+				}
 
-					animator.resetTransformationGroup(name) 
-					animator.scaleTransformationGroup(name, setting.scale, setting.scalePoint)
-					animator.rotateTransformationGroup(name, math.rad(setting.rotation), setting.rotationPoint - setting.position)
-					animator.translateTransformationGroup(name, setting.position)
-				end
+				local rotationPointComp = setting.rotationPoint - setting.position
+				setTransformations(name, 
+					{
+						setting.scale[1], setting.scale[2], setting.scalePoint[1], setting.scalePoint[2],
+						setting.rotation, rotationPointComp[1], rotationPointComp[2],
+						setting.position[1], setting.position[2]
+					}
+				)
 			end
 		)
 
 		transforms:addCustom("R_arm2", table.vmerge({rotation = 0}, (animationTranformationGroup.R_arm2 or {}).transform or {}),
 			function(thisTransform)
 				local name = "R_arm2"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					local setting  = calculateTransform({
-						position = vec2(23 * 0.125,0),
-						rotationPoint = vec2(0,17 * 0.125 + 0.0625),
+				local setting  = calculateTransform({
+					position = vec2(23 * 0.125,0),
+					rotationPoint = vec2(0,17 * 0.125 + 0.0625),
 
-						rotation = thisTransform.rotation or 0,
+					rotation = thisTransform.rotation or 0,
 
-						scale = vec2(1),
-						scalePoint = vec2(0),
-					})
+					scale = vec2(1),
+					scalePoint = vec2(0),
+				})
 
-					animator.resetTransformationGroup(name) 
-					animator.scaleTransformationGroup(name, setting.scale, setting.scalePoint)
-					animator.rotateTransformationGroup(name, math.rad(setting.rotation), setting.rotationPoint)
-					animator.translateTransformationGroup(name, setting.position)
-				end
+				setTransformations(name, 
+					{
+						setting.scale[1], setting.scale[2], setting.scalePoint[1], setting.scalePoint[2],
+						setting.rotation, setting.rotationPoint[1], setting.rotationPoint[2],
+						setting.position[1], setting.position[2]
+					}
+				)
 			end
 		)
 
 		transforms:addCustom("R_hand", table.vmerge({rotation = 0}, (animationTranformationGroup.R_hand or {}).transform or {}),
 			function(thisTransform)
 				local name = "R_hand"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					local setting  = calculateTransform({
-						position = vec2(0.375,0),
-						rotationPoint = vec2(0.125,18 * 0.125),
+				local setting  = calculateTransform({
+					position = vec2(0.375,0),
+					rotationPoint = vec2(0.125,18 * 0.125),
 
-						rotation = thisTransform.rotation or 0,
+					rotation = thisTransform.rotation or 0,
 
-						scale = vec2(1),
-						scalePoint = vec2(0),
-					})
+					scale = vec2(1),
+					scalePoint = vec2(0),
+				})
 
-					animator.resetTransformationGroup(name) 
-					animator.scaleTransformationGroup(name, setting.scale, setting.scalePoint)
-					animator.rotateTransformationGroup(name, math.rad(setting.rotation), setting.rotationPoint)
-					animator.translateTransformationGroup(name, setting.position)
-				end
+				setTransformations(name, 
+					{
+						setting.scale[1], setting.scale[2], setting.scalePoint[1], setting.scalePoint[2],
+						setting.rotation, setting.rotationPoint[1], setting.rotationPoint[2],
+						setting.position[1], setting.position[2]
+					}
+				)
 			end
 		)
 
 		transforms:addCustom("L_arm1", table.vmerge({rotation = 0}, (animationTranformationGroup.L_arm1 or {}).transform or {}),
 			function(thisTransform)
 				local name = "L_arm1"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					local setting  = {
-						position = frontArmHandPosition,
-						rotationPoint = (frontArmRotationCenter - armCenter) + frontArmHandPosition,
+				local setting  = {
+					position = frontArmHandPosition,
+					rotationPoint = (frontArmRotationCenter - armCenter) + frontArmHandPosition,
 
-						rotation = thisTransform.rotation or 0,
+					rotation = thisTransform.rotation or 0,
 
-						scale = vec2(1),
-						scalePoint = vec2(0),
+					scale = vec2(1),
+					scalePoint = vec2(0),
+				}
+
+				local rotationPointComp = setting.rotationPoint - setting.position
+				setTransformations(name, 
+					{
+						setting.scale[1], setting.scale[2], setting.scalePoint[1], setting.scalePoint[2],
+						setting.rotation, rotationPointComp[1], rotationPointComp[2],
+						setting.position[1], setting.position[2]
 					}
-
-					animator.resetTransformationGroup(name) 
-					animator.scaleTransformationGroup(name, setting.scale, setting.scalePoint)
-					animator.rotateTransformationGroup(name, math.rad(setting.rotation), setting.rotationPoint - setting.position)
-					animator.translateTransformationGroup(name, setting.position)
-				end
+				)
 			end
 		)
 
 		transforms:addCustom("L_arm2", table.vmerge({rotation = 0}, (animationTranformationGroup.L_arm2 or {}).transform or {}),
 			function(thisTransform)
 				local name = "L_arm2"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					local setting  = calculateTransform({
-						position = vec2(23 * 0.125,0),
-						rotationPoint = vec2(0,17 * 0.125 + 0.0625),
+				local setting  = calculateTransform({
+					position = vec2(23 * 0.125,0),
+					rotationPoint = vec2(0,17 * 0.125 + 0.0625),
 
-						rotation = thisTransform.rotation or 0,
+					rotation = thisTransform.rotation or 0,
 
-						scale = vec2(1),
-						scalePoint = vec2(0),
-					})
+					scale = vec2(1),
+					scalePoint = vec2(0),
+				})
 
-					animator.resetTransformationGroup(name) 
-					animator.scaleTransformationGroup(name, setting.scale, setting.scalePoint)
-					animator.rotateTransformationGroup(name, math.rad(setting.rotation), setting.rotationPoint)
-					animator.translateTransformationGroup(name, setting.position)
-				end
+				setTransformations(name, 
+					{
+						setting.scale[1], setting.scale[2], setting.scalePoint[1], setting.scalePoint[2],
+						setting.rotation, setting.rotationPoint[1], setting.rotationPoint[2],
+						setting.position[1], setting.position[2]
+					}
+				)
 			end
 		)
 
 		transforms:addCustom("L_hand", table.vmerge({rotation = 0}, (animationTranformationGroup.L_hand or {}).transform or {}),
 			function(thisTransform)
 				local name = "L_hand"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					local setting  = calculateTransform({
-						position = vec2(0.375,0),
-						rotationPoint = vec2(0.125,18 * 0.125),
+				local setting  = calculateTransform({
+					position = vec2(0.375,0),
+					rotationPoint = vec2(0.125,18 * 0.125),
 
-						rotation = thisTransform.rotation or 0,
+					rotation = thisTransform.rotation or 0,
 
-						scale = vec2(1,1),
-						scalePoint = vec2(0,0),
-					})
+					scale = vec2(1,1),
+					scalePoint = vec2(0,0),
+				})
 
-					animator.resetTransformationGroup(name) 
-					animator.scaleTransformationGroup(name, setting.scale, setting.scalePoint)
-					animator.rotateTransformationGroup(name, math.rad(setting.rotation), setting.rotationPoint)
-					animator.translateTransformationGroup(name, setting.position)
-				end
+				setTransformations(name, 
+					{
+						setting.scale[1], setting.scale[2], setting.scalePoint[1], setting.scalePoint[2],
+						setting.rotation, setting.rotationPoint[1], setting.rotationPoint[2],
+						setting.position[1], setting.position[2]
+					}
+				)
 			end
 		)
 
 		transforms:addCustom("L_offset", table.vmerge({position = vec2(0)}, (animationTranformationGroup.L_offset or {}).transform or {}),
 			function(tt) 
 				local name = "L_offset"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					animator.resetTransformationGroup(name) 
-					animator.translateTransformationGroup(name, tt.position)
-				end
+				setTransformations(name, 
+					{
+						1, 1, 0, 0,
+						0, 0, 0,
+						tt.position[1], tt.position[2]
+					}
+				)
 			end
 		)
 
 		transforms:addCustom("R_offset", table.vmerge({position = vec2(0)}, (animationTranformationGroup.R_offset or {}).transform or {}),
 			function(tt) 
 				local name = "R_offset"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					animator.resetTransformationGroup(name) 
-					animator.translateTransformationGroup(name, tt.position)
-				end
+				setTransformations(name, 
+					{
+						1, 1, 0, 0,
+						0, 0, 0,
+						tt.position[1], tt.position[2]
+					}
+				)
 			end
 		)
 
 		transforms:addCustom("global", table.vmerge({position = armCenter, rotation = 0, rotationPoint = vec2(0)}, (animationTranformationGroup.global or {}).transform or {}),
 			function(thisTransform)
 				local name = "global"
-				if animator.hasTransformationGroup(name) then --Check to prevent crashing
-					local setting  = calculateTransform({
-						position = thisTransform.position or vec2(0),
-						scale = thisTransform.scale or vec2(1),
-						scalePoint = thisTransform.scalePoint or vec2(0),
-						rotation = thisTransform.rotation or 0,
-						rotationPoint = thisTransform.rotationPoint or vec2(0)
-					})
-					
-					animator.resetTransformationGroup(name) 
-					animator.scaleTransformationGroup(name, setting.scale, setting.scalePoint)
-					animator.rotateTransformationGroup(name, math.rad(setting.rotation), setting.rotationPoint)
-					animator.translateTransformationGroup(name, setting.position)
-				end
+				local setting  = calculateTransform({
+					position = thisTransform.position or vec2(0),
+					scale = thisTransform.scale or vec2(1),
+					scalePoint = thisTransform.scalePoint or vec2(0),
+					rotation = thisTransform.rotation or 0,
+					rotationPoint = thisTransform.rotationPoint or vec2(0)
+				})
+				
+				setTransformations(name, 
+					{
+						setting.scale[1], setting.scale[2], setting.scalePoint[1], setting.scalePoint[2],
+						setting.rotation, setting.rotationPoint[1], setting.rotationPoint[2],
+						setting.position[1], setting.position[2]
+					}
+				)
 			end
 		)
 	end

@@ -134,6 +134,8 @@ function main:update(...)
 	if animations:isAnyPlaying() then
 		transforms:reset()
 		transforms:apply(animations:transforms())
+	elseif transforms.applied then 
+		transforms:reset()
 	end
 	transforms:update(dt)
 

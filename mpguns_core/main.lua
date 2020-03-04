@@ -3,8 +3,10 @@ includePath = modPath.."scripts/"
 
 _included = {}
 function include(util)
-	require(includePath..util..".lua")
-	_included[includePath..util..".lua"] = true
+	if not _included[includePath..util..".lua"] then
+		require(includePath..util..".lua")
+		_included[includePath..util..".lua"] = true
+	end
 end
 
 function system(name)

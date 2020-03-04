@@ -1,5 +1,5 @@
 include "vec2"
-include "Class"
+include "class"
 
 local worldWrapped = world
 local _world = {}

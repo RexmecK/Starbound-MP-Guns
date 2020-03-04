@@ -62,7 +62,7 @@ function v2:__index(a)
 end
 
 function v2:__newindex(a, b)
-	local t =  type(a)
+	local t = type(a)
 	if t == "number" then
 		if a == 1 then 
 			self[1] = b
@@ -77,30 +77,6 @@ function v2:__newindex(a, b)
 		end
 	end
 	return self
-end
-
-function v2:__call(x, y) -- constructor
-	local cloned = class:new(v2)
-
-	if type(x) == "table" then
-		if x[1] then
-			cloned[1] = x[1]
-			cloned[2] = x[2] or x[1]
-		elseif #x >= 2 then
-			cloned[1] = x[1]
-			cloned[2] = x[2] or x[1]
-		end
-	elseif x and y then
-		cloned[1] = x
-		cloned[2] = y
-	elseif x then
-		cloned[1] = x
-		cloned[2] = x
-	end
-
-	cloned[1] = cloned[1] or 0
-	cloned[2] = cloned[2] or 0
-	return cloned
 end
 
 --basic operators
@@ -206,4 +182,19 @@ function v2:__metatable(b)
 	return nil
 end
 
-vec2 = class:new(v2)
+local vec2mt = class:methodsOnly(v2)
+
+function vec2(x, y) -- constructor
+	local n = {0,0}
+	setmetatable(n, vec2mt)
+
+	if type(x) == "table" then
+		n[1] = x[1]
+		n[2] = x[2] or x[1]
+	elseif x then
+		n[1] = x
+		n[2] = y or x
+	end
+
+	return n
+end

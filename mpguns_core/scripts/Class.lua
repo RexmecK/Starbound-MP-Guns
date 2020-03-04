@@ -27,3 +27,15 @@ function class:new(tab)
 	setmetatable(newClass, inheritMetatable)
 	return newClass
 end
+
+
+function class:methodsOnly(t)
+	local mt = {}
+	for i,v in pairs(t) do
+		if tostring(i):sub(1,2) == "__" then
+			mt[i] = v
+		end
+	end
+
+	return mt
+end

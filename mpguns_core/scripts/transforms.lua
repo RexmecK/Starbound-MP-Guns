@@ -22,6 +22,30 @@ function transforms:init()
 	self:update(1/60)
 end
 
+local function eqmat(a,b)
+	if #a ~= #b then return false end
+	for i=1,#a do
+		if a[i] ~= b[i] then
+			return false 
+		end
+	end
+	return true
+end
+
+local transformationsgroups = {}
+
+local function setTransformations(name, mat)
+	if not transformationsgroups[name] or not eqmat(transformationsgroups[name], mat) then
+		if animator.hasTransformationGroup(name) then
+			animator.resetTransformationGroup(name) 
+			animator.scaleTransformationGroup(name, {mat[1], mat[2]}, {mat[3], mat[4]})
+			animator.rotateTransformationGroup(name, math.rad(mat[5]), {mat[6], mat[7]})
+			animator.translateTransformationGroup(name,{mat[8], mat[9]})
+		end
+		transformationsgroups[name] = mat
+	end
+end
+
 function transforms:update(dt)
 	if not self.default then
 		self:load()
@@ -30,7 +54,7 @@ function transforms:update(dt)
 		if self.custom[name] then
 			local current = table.vmerge(table.copy(def), self.override[name] or self.current[name] or {})
 			self.custom[name](current)
-		elseif animator.hasTransformationGroup(name) then
+		else
 			local current = self.override[name] or self.current[name] or {}
 			local cal = {
 				scale			= current.scale or def.scale or 1,
@@ -39,10 +63,17 @@ function transforms:update(dt)
 				rotation		= current.rotation or def.rotation or 0,
 				rotationPoint	= vec2(current.scalePoint or def.scalePoint or 0):lerp( current.rotationPoint or def.rotationPoint or 0, current.scale or def.scale or 1)
 			}
-			animator.resetTransformationGroup(name) 
-			animator.scaleTransformationGroup(name, cal.scale, cal.scalePoint)
-			animator.rotateTransformationGroup(name, math.rad(cal.rotation), cal.rotationPoint)
-			animator.translateTransformationGroup(name, cal.position)
+			--animator.resetTransformationGroup(name) 
+			--animator.scaleTransformationGroup(name, cal.scale, cal.scalePoint)
+			--animator.rotateTransformationGroup(name, math.rad(cal.rotation), cal.rotationPoint)
+			--animator.translateTransformationGroup(name, cal.position)
+			setTransformations(name,
+				{
+					cal.scale[1], cal.scale[2], cal.scalePoint[1], cal.scalePoint[2],
+					cal.rotation, cal.rotationPoint[1], cal.rotationPoint[2],
+					cal.position[1], cal.position[2]
+				}
+			)
 		end
 	end
 	self.override = {}
@@ -74,12 +105,16 @@ function transforms:blend(transforms)
 end
 
 -- reset and apply
+transforms.applied = false
+
 function transforms:apply(transforms)
-	self:reset()
+	--self:reset()
+	self.applied = true
 	self:blend(transforms)
 end
 
 function transforms:reset()
+	self.applied = false
 	self.current = {}
 end
 
