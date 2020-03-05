@@ -46,6 +46,8 @@ function mpguns:makeMpitem(item)
         end
     end
 
+    mpitem.skin = item.skin
+
     return mpitem
 end
 
@@ -78,6 +80,9 @@ function mpguns:updateMpitem(check_item)
     if (item.itemVersion ~= check_item.parameters.itemVersion) or (mpitem.parameters.baseVersion ~= check_item.parameters.baseVersion) then
         if check_item.parameters.patches then
             item.patches = check_item.parameters.patches
+        end
+        if check_item.parameters.skin then
+            item.skin = check_item.parameters.skin
         end
         return self:makeMpitem(item)
     end

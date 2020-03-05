@@ -12,6 +12,7 @@ include "camera"
 include "crosshair"
 include "events"
 include "mpguns"
+include "skin"
 include "vec2"
 
 main = {}
@@ -78,6 +79,7 @@ function main:init()
 	aim.recoilResponse = self.config.recoilResponse or 1
 
 	sprites:load(config.sprites)
+	skin:init()
 
 	self.storage = config.storage or {}
 	self.storage.ammo = self.storage.ammo or self.config.magazineCapacity
@@ -85,7 +87,7 @@ function main:init()
 	if type(self.storage.dry) == "boolean" and not self.storage.dry then
 		self.storage.dry = false
 	else
-		self.storage.dry = true
+		self.storage.dry = skin
 	end
 
 	if config.altscript then
