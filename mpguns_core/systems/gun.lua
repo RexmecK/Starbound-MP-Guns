@@ -87,7 +87,7 @@ function main:init()
 	if type(self.storage.dry) == "boolean" and not self.storage.dry then
 		self.storage.dry = false
 	else
-		self.storage.dry = skin
+		self.storage.dry = true
 	end
 
 	if config.altscript then
@@ -136,8 +136,6 @@ function main:update(...)
 	if animations:isAnyPlaying() then
 		transforms:reset()
 		transforms:apply(animations:transforms())
-	elseif transforms.applied then 
-		transforms:reset()
 	end
 	transforms:update(dt)
 
