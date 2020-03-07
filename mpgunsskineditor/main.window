@@ -1,0 +1,231 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+
+			"base" : "/mpgunsskineditor/image/x.png",
+			"hover" : "/mpgunsskineditor/image/x.png",
+			"pressed" : "/mpgunsskineditor/image/x.png",
+			"pressedOffset" : [0, 0],
+
+			"callback" : "close",
+			"position" : [279, 206],
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : -1,
+			"type" : "background",
+
+			"fileHeader" : "/mpgunsskineditor/image/header.png",
+			"fileBody" : "/mpgunsskineditor/image/body.png"
+		},
+
+		"h1" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [3, 207],
+			"value" : "^#3b3b3b;Multiplayer guns skin applier"
+		},
+
+		"bg" : {
+			"zlevel" : 1,
+			"type" : "image",
+
+			"file" : "/mpgunsskineditor/image/bg.png"
+		},
+		
+		"tags" : {
+			"buttons" : {
+				"vertical" : {
+					"forward" : {
+						"hover" : "/mpgunsskineditor/image/sup.png?brightness=60",
+						"pressed" : "",
+						"base" : "/mpgunsskineditor/image/sup.png"
+					},
+					"backward" : {
+						"hover" : "/mpgunsskineditor/image/sdown.png?brightness=60",
+						"pressed" : "",
+						"base" : "/mpgunsskineditor/image/sdown.png"
+					}
+				},
+				"horizontal" : {
+					"forward" : {
+						"hover" : "/interface/scrollarea/harrow-forwardhover.png",
+						"pressed" : "",
+						"base" : "/interface/scrollarea/harrow-forward.png"
+					},
+					"backward" : {
+						"hover" : "/interface/scrollarea/harrow-backwardhover.png",
+						"pressed" : "",
+						"base" : "/interface/scrollarea/harrow-backward.png"
+					}
+				}
+			},
+			"children" : {
+				"list" : {
+					"schema" : {
+						"listTemplate" : {
+							"background" : {
+								"file" : "/mpgunsskineditor/image/listelement.png",
+								"zlevel" : -1,
+								"type" : "image",
+								"position" : [0, 0]
+							},
+							"name" : {
+								"vAnchor" : "mid",
+								"hAnchor" : "left",
+								"type" : "label",
+								"color" : "#fff",
+								"wrapWidth" : 75,
+								//"fontSize" : 8,
+								"width" : 138,
+								"position" : [4, 8],
+								"value" : "Replace Me"
+							}
+						},
+						"spacing" : [0, 2],
+						"memberSize" : [271, 24],
+						"unselectedBG" : "/mpgunsskineditor/image/listelement.png",
+						"selectedBG" : "/mpgunsskineditor/image/listelement.png?brightness=60"
+					},
+					"type" : "list",
+					"position" : [0, 0],
+					"hAnchor" : "left",
+					"vAnchor" : "top"
+				}
+			},
+			"rect" : [4, 5, 287, 190],
+			"type" : "scrollArea",
+			"zlevel" : 15,
+			"thumbs" : {
+				"vertical" : {
+					"hover" : {
+						"inner" : "/mpgunsskineditor/image/scrollmid.png?brightness=60",
+						"begin" : "/mpgunsskineditor/image/scrollbottom.png?brightness=60",
+						"end" : "/mpgunsskineditor/image/scrolltop.png?brightness=60"
+					},
+					"pressed" : {
+						"inner" : "/mpgunsskineditor/image/scrollmid.png?brightness=60",
+						"begin" : "/mpgunsskineditor/image/scrollbottom.png?brightness=60",
+						"end" : "/mpgunsskineditor/image/scrolltop.png?brightness=60"
+					},
+					"base" : {
+						"inner" : "/mpgunsskineditor/image/scrollmid.png",
+						"begin" : "/mpgunsskineditor/image/scrollbottom.png",
+						"end" : "/mpgunsskineditor/image/scrolltop.png"
+					}
+				},
+				"horizontal" : {
+					"hover" : {
+						"inner" : "/interface/scrollarea/hthumb-innerhover.png",
+						"begin" : "/interface/scrollarea/hthumb-beginhover.png",
+						"end" : "/interface/scrollarea/hthumb-endhover.png"
+					},
+					"pressed" : {
+						"inner" : "/interface/scrollarea/hthumb-innerhover.png",
+						"begin" : "/interface/scrollarea/hthumb-beginhover.png",
+						"end" : "/interface/scrollarea/hthumb-endhover.png"
+					},
+					"base" : {
+						"inner" : "/interface/scrollarea/hthumb-inner.png",
+						"begin" : "/interface/scrollarea/hthumb-begin.png",
+						"end" : "/interface/scrollarea/hthumb-end.png"
+					}
+				}
+			}
+		},
+
+		"inputbg" : {
+			"zlevel" : 50,
+			"type" : "image",
+
+			"visible" : false,
+
+			"file" : "/mpgunsskineditor/image/inputbg.png"
+		},
+		
+		"spriteinput" : {
+			"zlevel" : 51,
+			"type" : "textbox",
+			
+			"visible" : false,
+
+			"position" : [7, 92],
+			"maxWidth" : 280,
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"callback" : "callback" 
+		},
+		"spriteapply" : {
+			"zlevel" : 51,
+			"type" : "button",
+			"base" : "/mpgunsskineditor/image/button.png",
+			
+			"visible" : false,
+
+          	"caption" : "Apply",
+			"position" : [4, 76],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+		"spriteclear" : {
+			"zlevel" : 51,
+			"type" : "button",
+			"base" : "/mpgunsskineditor/image/button.png",
+			
+			"visible" : false,
+
+          	"caption" : "Clear",
+			"position" : [70, 76],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+		"spritecancel" : {
+			"zlevel" : 51,
+			"type" : "button",
+			"base" : "/mpgunsskineditor/image/button.png",
+			
+			"visible" : false,
+
+          	"caption" : "Cancel",
+			"position" : [136, 76],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+
+		"edit" : {
+			"type" : "button",
+			"base" : "/mpgunsskineditor/image/button.png",
+
+          	"caption" : "Edit",
+			"position" : [2, 193],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+
+		"apply" : {
+			"type" : "button",
+			"base" : "/mpgunsskineditor/image/button.png",
+
+          	"caption" : "Apply",
+			"position" : [224, 193],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		}
+	},
+
+	"canvasClickCallbacks" : {},
+	
+	"canvasKeyCallbacks" : {},
+	
+	"scriptWidgetCallbacks" : [
+		"callback"
+	],
+		
+	"directory" : "/mpgunsskineditor/",
+	"scripts" : ["/mpguns_core/main.lua"],
+	"system" : "/mpgunsskineditor/ui.lua",
+	"scriptDelta" : 1
+}

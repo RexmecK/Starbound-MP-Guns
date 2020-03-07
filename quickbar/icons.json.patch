@@ -8,5 +8,10 @@
 		"op": "add",
     	"path": "/normal/-",
     	"value": { "label" : "MP Guns Settings", "pane" : "/mpgunssettings/main.window", "icon" : "/mpgunssettings/image/smallicon.png" }
+    },
+	{
+		"op": "add",
+    	"path": "/normal/-",
+    	"value": { "label" : "MP Guns Skin Applier", "pane" : "/mpgunsskineditor/main.window", "icon" : "/mpgunsskineditor/image/smallicon.png" }
     }
 ]

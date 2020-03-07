@@ -11,12 +11,15 @@ function skin:init()
         self:applySprites(configskin)
     end
 
+    config.skin = configskin or {}
+    
     message.setHandler("skin.apply", function(loc, _, skin) if not loc then return end self:apply(skin) end)
-    message.setHandler("skin.getTags", function(loc, _, skin) if not loc then return end self:getTags() end)
+    message.setHandler("skin.getTags", function(loc, _, skin) if not loc then return end return self:getTags() end)
 end
 
 function skin:apply(skin)
     config.skin = skin
+	sprites:load(config.sprites)
     self:applySprites(skin)
 end
 
@@ -34,7 +37,7 @@ function skin:getTags()
     local list = {}
     if sprites then
         for name,sprite in pairs(sprites) do
-            list[#list + 1] = name
+            list[name] = config.skin[name] or ""
         end
     end
     return list
