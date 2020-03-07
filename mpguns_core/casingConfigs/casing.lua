@@ -1,6 +1,6 @@
 ownerId = nil
 clientsideSounds = {}
-timeToLive = 0.5
+timeToLive = 0.8
 
 function init()
     ownerId = config.getParameter("ownerId")
