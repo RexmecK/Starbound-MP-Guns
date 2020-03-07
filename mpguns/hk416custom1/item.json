@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.01, // add up a number to force update
+	"itemVersion" : 1.02, // add up a number to force update
 
 	"shortdescription" : "H&K 416 Custom 1",
 	"category" : "Rifle",
@@ -350,6 +350,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[6.4375,2.125],"rotation":0,"scale":[0.5,0.5],"position":[-7.0625,-1.5]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.75,-0.125]}},"mag":{"transform":{"rotationPoint":[7.1875,1.6875],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-25}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-23.5}},"base":{"interpolated":false,"transform":{"position":[0,0]}},"lever1":{"transform":{"position":[0,0]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.1875,0]}},"lever2":{"transform":{"position":[0,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-4.1875}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":38.6875}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":26.0625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":0.4375}}}
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[6.4375,2.125],"rotation":0,"scale":[0.5,0.5],"position":[-7.0625,-1.75]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.6875,-0.3125]}},"mag":{"transform":{"rotationPoint":[7.1875,1.6875],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-25}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-23.5}},"lever1":{"transform":{"position":[0,0]}},"base":{"interpolated":false,"transform":{"position":[0,0]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.1875,0]}},"lever2":{"transform":{"position":[0,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-9.75}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":38.6875}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":26.0625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":0.4375}}}
 	}
 }

@@ -1,11 +1,11 @@
 {
   "author" : "Rexmeck",
-  "description" : "[h1]Guns made for vanilla multiplayer[/h1]\nhttps://www.discord.gg/yJAruMV\n\n[h1]How to Spawn guns[/h1]\n- Open Quickbar mini\n- Open the MPguns Interface\n\n[h1]Controls[/h1]\n Fire: Primary-click\n Activate-Special: Alt-click\n Activate-Special-Attachment: S+Shift\n Reload: Shift-W\n Eject: W\n\n[h1]Current Guns[/h1]\n- Scar-H\n- M1 Garand\n- Desert eagle\n- Mossberg 590\n- M249\n- Mac-11\n- RPG-7\n- M16A2\n- AA-12\n- Barrett M82A1\n- Sawed-off\n- M27 IAR\n- TCSG-12\n- Glock 19x\n- S&W Model 500\n- Mosin Nagant\n- M30 LuftWaffe Drilling\n- M1911\n- Musket Rifle\n- Kel-Tec KSG\n- Colt Single Action Army\n- GM6 Lynx\n- G2 Contender\n- Ameli 5.56\n- M14\n- UMP-45\n- Kriss-Vector\n- [Sci-fi] Ulthman\n- Barrett M99\n- G36C\n- MP5SD3\n- MP5A3\n- MG42\n- MK47\n- IMI Galil\n- Famas F1\n- MP40\n- Winchester Model 1894\n- M134 Vulcan Minigun\n- Five-SeveN\n- [Sci-fi] Komodo Assault Shotgun\n- M202 Flash\n- AKS-74\n- AK-74\n- AK-47\n- FNH Scar 20S",
+  "description" : "[h1]Guns made for vanilla multiplayer[/h1]\nhttps://www.discord.gg/yJAruMV\n\n[h1]How to Spawn guns[/h1]\n- Open Quickbar mini\n- Open the MPguns Interface\n\n[h1]Controls[/h1]\n Fire: Primary-click\n Activate-Special: Alt-click\n Activate-Special-Attachment: S+Shift\n Reload: Shift-W\n Eject: W\n\n[h1]Current Guns[/h1]\n- Scar-H\n- M1 Garand\n- Desert eagle\n- Mossberg 590\n- M249\n- Mac-11\n- RPG-7\n- M16A2\n- AA-12\n- Barrett M82A1\n- Sawed-off\n- M27 IAR\n- TCSG-12\n- Glock 19x\n- S&W Model 500\n- Mosin Nagant\n- M30 LuftWaffe Drilling\n- M1911\n- Musket Rifle\n- Kel-Tec KSG\n- Colt Single Action Army\n- GM6 Lynx\n- G2 Contender\n- Ameli 5.56\n- M14\n- UMP-45\n- Kriss-Vector\n- [Sci-fi] Ulthman\n- Barrett M99\n- G36C\n- MP5SD3\n- MP5A3\n- MG42\n- MK47\n- IMI Galil\n- Famas F1\n- MP40\n- Winchester Model 1894\n- M134 Vulcan Minigun\n- Five-SeveN\n- [Sci-fi] Komodo Assault Shotgun\n- M202 Flash\n- AKS-74\n- AK-74\n- AK-47\n- FNH Scar 20S\n- H&K 416",
   "friendlyName" : "Multiplayer guns",
   "includes" : ["QuickbarMini"],
   "link" : "steam://url/CommunityFilePage/1931428350",
   "name" : "mpguns",
   "steamContentId" : "1931428350",
   "tags" : "Weapons",
-  "version" : "alpha 15"
+  "version" : "alpha 16"
 }
