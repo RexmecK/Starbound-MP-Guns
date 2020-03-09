@@ -243,5 +243,20 @@
 		"name" : "H&K 416 Custom 1",
 		"image" : "/mpguns/hk416custom1/icon.png",
 		"id" : "hk416custom1"
+	},
+	{
+		"name" : "Glock 19",
+		"image" : "/mpguns/glock19/icon.png",
+		"id" : "glock19"
+	},
+	{
+		"name" : "RSS Glock 19",
+		"image" : "/mpguns/rssglock19/icon.png",
+		"id" : "rssglock19"
+	},
+	{
+		"name" : "RSS Glock 19 Suppressed",
+		"image" : "/mpguns/rssglock19suppressed/icon.png",
+		"id" : "rssglock19suppressed"
 	}
 ]
