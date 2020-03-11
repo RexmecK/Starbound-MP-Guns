@@ -1,6 +1,7 @@
 include "updateable"
 include "config"
 include "animator"
+include "activeItem"
 include "directory"
 
 skin = {}
@@ -24,6 +25,10 @@ function skin:apply(skin)
 end
 
 function skin:applySprites(skin)
+    if skin.inventoryIcon then
+        activeItem.setInventoryIcon(skin.inventoryIcon)
+        skin.inventoryIcon = nil
+    end
     for i,v in pairs(skin) do
         animator.setGlobalTag(i,v)
     end
@@ -40,5 +45,6 @@ function skin:getTags()
             list[name] = config.skin[name] or ""
         end
     end
+    list["inventoryIcon"] = config.inventoryIcon
     return list
 end
