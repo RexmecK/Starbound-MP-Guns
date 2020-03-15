@@ -258,5 +258,10 @@
 		"name" : "RSS Glock 19 Suppressed",
 		"image" : "/mpguns/rssglock19suppressed/icon.png",
 		"id" : "rssglock19suppressed"
+	},
+	{
+		"name" : "OTs-03 SVU",
+		"image" : "/mpguns/ots03/icon.png",
+		"id" : "ots03"
 	}
 ]
