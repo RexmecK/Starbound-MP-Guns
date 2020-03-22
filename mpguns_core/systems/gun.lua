@@ -56,28 +56,13 @@ function main:setupEvents()
 end
 
 function main:init()
-	self.config = {}
-
 	if type(config.gun) == "string" then
 		self.config = root.assetJson(directory(config.gun))
 	else
-		self.config = config.gun
-	end
-	if self.config.projectileConfig then
-		if type(self.config.projectileConfig) == "string" then
-			self.config.projectileConfig = root.assetJson(directory(self.config.projectileConfig))
-		end
-	else
-		self.config.projectileConfig = {}
+		self.config = config.gun or {}
 	end
 
-	if self.config.knockback then
-		self.config.projectileConfig.knockback = self.config.knockback
-	end
-
-	aim.recoilRecovery = self.config.recoilRecovery or 8
-	aim.recoilResponse = self.config.recoilResponse or 1
-
+	self:initData()
 	sprites:load(config.sprites)
 	skin:init()
 
@@ -89,6 +74,17 @@ function main:init()
 	else
 		self.storage.dry = true
 	end
+
+	self:loadOtherScripts()
+
+	transforms:init()
+	animations:init()
+	self:animate("draw")
+	self:setupEvents()
+end
+
+function main:loadOtherScripts()
+	events:fire("loadOtherScripts")
 
 	if config.altscript then
 		pcall(function() require(directory(config.altscript, modPath.."altscripts/", ".lua")) end)
@@ -103,11 +99,25 @@ function main:init()
 	if alt and alt.init then
 		alt:init()
 	end
+end
 
-	transforms:init()
-	animations:init()
-	self:animate("draw")
-	self:setupEvents()
+function main:initData()
+	if self.config.projectileConfig then
+		if type(self.config.projectileConfig) == "string" then
+			self.config.projectileConfig = root.assetJson(directory(self.config.projectileConfig))
+		end
+	else
+		self.config.projectileConfig = {}
+	end
+
+	if self.config.knockback then
+		self.config.projectileConfig.knockback = self.config.knockback
+	end
+
+	events:fire("initData")
+
+	aim.recoilRecovery = self.config.recoilRecovery or 8
+	aim.recoilResponse = self.config.recoilResponse or 1
 end
 
 function main:update(...)
@@ -190,6 +200,19 @@ function main:getTargetAim()
 	return activeItem.ownerAimPosition()
 end
 
+function main:getInaccuracy()
+	local vel = math.max(math.abs(mcontroller.xVelocity()), math.abs(mcontroller.yVelocity() + 1.27))
+	local movingRatio = math.min(vel / 14, 1)
+
+	local acc = (self.config.movingInaccuracy * movingRatio) + (self.config.standingInaccuracy * (1 - movingRatio))
+
+	if mcontroller.crouching() and self.config.crouchInaccuracyMultiplier then
+		return acc * self.config.crouchInaccuracyMultiplier
+	else
+		return acc
+	end
+end
+
 --UI mechanics
 
 function main:getCrosshairValue()
@@ -228,6 +251,7 @@ end
 
 function main:fire()
 	if self.storage.loaded == 1 then
+		events:fire("fire_true")
 		if self.config.chamberEject then
 			self:eject()
 		else
@@ -251,8 +275,10 @@ function main:fire()
 		self:animate("fire")
 		return 1
 	elseif self.storage.loaded == 2 then
+		events:fire("fire_dry")
 		return 2
 	else
+		events:fire("fire_noammo")
 		return 0
 	end
 end
@@ -261,19 +287,6 @@ function main:fireProjectile()
 	muzzle.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
 	for i=1,self.config.projectileCount or 1 do
 		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig)
-	end
-end
-
-function main:getInaccuracy()
-	local vel = math.max(math.abs(mcontroller.xVelocity()), math.abs(mcontroller.yVelocity() + 1.27))
-	local movingRatio = math.min(vel / 14, 1)
-
-	local acc = (self.config.movingInaccuracy * movingRatio) + (self.config.standingInaccuracy * (1 - movingRatio))
-
-	if mcontroller.crouching() and self.config.crouchInaccuracyMultiplier then
-		return acc * self.config.crouchInaccuracyMultiplier
-	else
-		return acc
 	end
 end
 

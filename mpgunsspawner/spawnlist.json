@@ -263,5 +263,10 @@
 		"name" : "OTs-03 SVU",
 		"image" : "/mpguns/ots03/icon.png",
 		"id" : "ots03"
+	},
+	{
+		"name" : "SPAS-12",
+		"image" : "/mpguns/spas12/icon.png",
+		"id" : "spas12"
 	}
 ]
