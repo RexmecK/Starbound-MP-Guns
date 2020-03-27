@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.21, // add up a number to force update
+	"itemVersion" : 1.2, // add up a number to force update
 
 	"shortdescription" : "GM6 Lynx",
 	"category" : "Sniper Rifle",
@@ -40,9 +40,9 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/rocketblast3.ogg"], "pitchMultiplier" : 1.4},
-			"firesound2" : {"pool" : ["/sfx/gun/rifle1.ogg"], "pitchMultiplier" : 0.9},
-			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.6},
+			"firesound1" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.7},
+			"firesound2" : {"pool" : ["/sfx/gun/rifle1.ogg"], "pitchMultiplier" : 0.7},
+			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.7},
 			"firesound4" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.2},
 				
 			"load1" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 1.75},
@@ -388,6 +388,6 @@
 			}
 		},
 
-		"transformationGroups" : {"lever":{},"bullet":{"transform":{"position":[0,0]}},"gun":{"transform":{"rotationPoint":[3.0625,1],"rotation":0,"scale":[0.5,0.5],"position":[-3.125,-0.9375]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.625,-0.3125]}},"barrel":{"transform":{"position":[0,-0.0625]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"mag":{"transform":{"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-7.625}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":0.75}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.125,0.0625]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-15}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":24}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":21.125}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-17.375}}}
+		"transformationGroups" : {"bullet":{"transform":{"position":[0,0]}},"gun":{"transform":{"rotationPoint":[3.0625,1],"scale":[0.5,0.5],"rotation":0,"position":[-3.1875,-0.5]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.75,-0.3125]}},"barrel":{"transform":{"position":[0,-0.0625]}},"lever":{"transform":{}},"mag":{"transform":{"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-17.3125}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-27.3125}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.125,0.0625]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-4.3125}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":25.4375}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":25.4375}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":3.875}}}
 		}
 }

@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.2231, // add up a number to force update
+	"itemVersion" : 1.23, // add up a number to force update
 
 	"shortdescription" : "Smith & Wesson Model 500",
 	"category" : "Revolver",
@@ -37,9 +37,9 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/revolver1.ogg"], "pitchMultiplier" : 0.645, "volume":1.25},
+			"firesound1" : {"pool" : ["/sfx/gun/revolver2.ogg"], "pitchMultiplier" : 0.6, "volume":1.125},
 			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.5},
-			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.7},
+			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.4},
 			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9},
 
 			"ready1" : {"pool" : ["/sfx/gun/reload/rocket_reload_clip3.ogg"], "pitchMultiplier" : 3.9},

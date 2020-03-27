@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.21, // add up a number to force update
+	"itemVersion" : 1.22, // add up a number to force update
 
 	"shortdescription" : "M1911",
 	"category" : "Pistol",
@@ -38,10 +38,10 @@
 	"animationCustom" : {
 		"sounds" : {
 			//"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5},
-			"firesound1" : {"pool" : ["/sfx/gun/pistol3.ogg"], "pitchMultiplier" : 1.3},
+			"firesound1" : {"pool" : ["/sfx/gun/pistol3.ogg"], "pitchMultiplier" : 1.1},
 			"firesound2" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.1},
-			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.085},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.2},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.4},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.1},
 
 			"reload1" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip2.ogg"], "pitchMultiplier" : 1.8},
 			"reload2" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 1.8},

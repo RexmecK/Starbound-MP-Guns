@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.011, // add up a number to force update
 
 	"shortdescription" : "Winchester Model 1894",
 	"category" : "Rifle",
@@ -31,10 +31,10 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/rifle1.ogg"], "pitchMultiplier" : 0.8},
-			"firesound2" : {"pool" : ["/sfx/gun/shotgun1.ogg"], "pitchMultiplier" : 1.25},
-			"firesound3" : {"pool" : ["/sfx/gun/pistol1.ogg"], "pitchMultiplier" : 1.15},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.1},
+			"firesound1" : {"pool" : ["/sfx/gun/rifle1.ogg"], "pitchMultiplier" : 0.9},
+			"firesound2" : {"pool" : ["/sfx/gun/shotgun1.ogg"], "pitchMultiplier" : 1.1},
+			"firesound3" : {"pool" : ["/sfx/gun/pistol1.ogg"], "pitchMultiplier" : 1.0},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9},
 
 			"load1" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 1.5},
 			"load2" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 1.5},

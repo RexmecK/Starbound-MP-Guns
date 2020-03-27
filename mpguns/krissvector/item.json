@@ -34,10 +34,10 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/sniper1.ogg"], "pitchMultiplier" : 1.3},
-			"firesound2" : {"pool" : ["/sfx/gun/pistol2.ogg"], "pitchMultiplier" : 1.8},
+			"firesound1" : {"pool" : ["/sfx/gun/sniper1.ogg"], "pitchMultiplier" : 1.21},
+			"firesound2" : {"pool" : ["/sfx/gun/pistol2.ogg"], "pitchMultiplier" : 1.5},
 			"firesound3" : {"pool" : ["/sfx/gun/ar3.ogg"], "pitchMultiplier" : 1.4},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.0},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9},
 
 			"reload1" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 1.7},
 			"reload2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 1.7},

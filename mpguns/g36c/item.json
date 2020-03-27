@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.02, // add up a number to force update
+	"itemVersion" : 1.01, // add up a number to force update
 
 	"shortdescription" : "H&K G36C",
 	"category" : "Carbine",
@@ -36,9 +36,9 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.7},
-			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.9},
-			"firesound3" : {"pool" : ["/sfx/gun/pulserifle1.ogg"], "pitchMultiplier" : 1.0},
+			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.2},
+			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.5},
+			"firesound3" : {"pool" : ["/sfx/gun/pulserifle1.ogg"], "pitchMultiplier" : 1.1},
 			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9},
 
 			"reload1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 1.8},

@@ -8,11 +8,11 @@
 	"chamberEject" : true,
 
 	"recoil" : 8,
-	"recoilRecovery" : 8,
+	"recoilRecovery" : 4,
 	"recoilResponse" : 2,
 	
 	"movingInaccuracy" : 50,
-	"standingInaccuracy" : 30,
+	"standingInaccuracy" : 15,
 
 	"aimRatio" : 0.125,
 

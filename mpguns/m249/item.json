@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.222, // add up a number to force update
+	"itemVersion" : 1.23, // add up a number to force update
 
 	"shortdescription" : "M249",
 	"category" : "Light Machine Gun",
@@ -43,8 +43,8 @@
 			"click7" : {"pool" : ["/sfx/gun/reload/rocket_reload_clip3.ogg"], "pitchMultiplier" : 1.5},
 			"click8" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 1.5},
 
-			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.2},
-			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.7},
+			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.0},
+			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.5},
 			"firesound3" : {"pool" : ["/sfx/gun/ar4.ogg"], "pitchMultiplier" : 1.0},
 			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.8}
 		},

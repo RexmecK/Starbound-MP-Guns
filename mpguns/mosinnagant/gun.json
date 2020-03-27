@@ -8,7 +8,7 @@
 	"chamberEject" : false,
 
 	"recoil" : 8,
-	"recoilRecovery" : 4,
+	"recoilRecovery" : 8,
 	"recoilResponse" : 2,
 	
 	"movingInaccuracy" : 45,

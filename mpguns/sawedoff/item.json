@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.21, // add up a number to force update
+	"itemVersion" : 1.221, // add up a number to force update
 
 	"shortdescription" : "Sawed-off",
 	"category" : "Shotgun",
@@ -41,9 +41,9 @@
 			"reload4" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 1.5},
 			"reload5" : {"pool" : ["/sfx/gun/reload/ar_reload_clip1.ogg"], "pitchMultiplier" : 1.5},
 
-			"firesound1" : {"pool" : ["/sfx/gun/shotgun4.ogg"], "pitchMultiplier" : 0.8},
-			"firesound2" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.5},
-			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.25}
+			"firesound1" : {"pool" : ["/sfx/gun/shotgun4.ogg"], "pitchMultiplier" : 1.2},
+			"firesound2" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.6},
+			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.7}
 		},
 		"lights" : {
 			"muzzleFlash" : {

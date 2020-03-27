@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.02, // add up a number to force update
 
 	"shortdescription" : "Glock 19",
 	"category" : "Pistol",
@@ -34,10 +34,10 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.8},
+			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.5},
 			"firesound2" : {"pool" : ["/sfx/gun/sniper4.ogg"], "pitchMultiplier" : 2.1},
 			"firesound3" : {"pool" : ["/sfx/gun/pistol2.ogg"], "pitchMultiplier" : 1.0},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.0},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.1},
 
 			"reload1" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip1.ogg"], "pitchMultiplier" : 1.8},
 			"reload2" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 1.8},

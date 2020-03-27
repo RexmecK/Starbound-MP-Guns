@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.01, // add up a number to force update
 
 	"shortdescription" : "IMI Galil",
 	"category" : "Rifle",
@@ -34,10 +34,10 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.0},
+			"firesound1" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.1},
 			"firesound2" : {"pool" : ["/sfx/gun/shotgun3.ogg"], "pitchMultiplier" : 1.5},
-			"firesound3" : {"pool" : ["/sfx/gun/pulserifle1.ogg"], "pitchMultiplier" : 1.1},
-			"firesound4" : {"pool" : ["/sfx/gun/rifle1.ogg"], "pitchMultiplier" : 1.0},
+			"firesound3" : {"pool" : ["/sfx/gun/pulserifle1.ogg"], "pitchMultiplier" : 1.2},
+			"firesound4" : {"pool" : ["/sfx/gun/rifle1.ogg"], "pitchMultiplier" : 1.1},
 
 			"reload1" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip2.ogg"], "pitchMultiplier" : 2},
 			"reload2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip1.ogg"], "pitchMultiplier" : 2},
