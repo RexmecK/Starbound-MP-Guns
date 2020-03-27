@@ -8,7 +8,7 @@
 	"chamberEject" : false,
 
 	"recoil" : 12,
-	"recoilRecovery" : 16,
+	"recoilRecovery" : 6,
 	"recoilResponse" : 4,
 	"crouchRecoilMultiplier" : 0.5,
 	"velocityRecoil" : [-10, 0],
