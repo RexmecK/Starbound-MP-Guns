@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.2111, // add up a number to force update
+	"itemVersion" : 1.22, // add up a number to force update
 
 	"shortdescription" : "Mossberg 590",
 	"category" : "Shotgun",
@@ -41,11 +41,12 @@
 			"click3" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip3.ogg"], "pitchMultiplier" : 0.8},
 			"click4" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip3.ogg"], "pitchMultiplier" : 1.35},
 			"click5" : {"pool" : ["/assetmissing.ogg"], "pitchMultiplier" : 1.5},
-			"click6" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip3.ogg"], "pitchMultiplier" : 0.85},
+			"click6" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip3.ogg"], "pitchMultiplier" : 0.8},
+
 			"firesound1" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.3, "volume" : 1.5},
-			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.7},
-			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.8},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.7}
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.65},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.6},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9}
 		},
 		"lights" : {
 			"muzzleFlash" : {
