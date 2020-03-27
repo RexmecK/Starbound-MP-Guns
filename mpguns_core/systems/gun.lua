@@ -137,6 +137,8 @@ function main:update(...)
 	self:updateReload(...)
 
 	--gameplay mechanics
+	self.targetCameraRecoil = vec2(0, (aim:getRecoil() * 0.5))
+	self.currentCameraRecoil = self.currentCameraRecoil:lerp(self.targetCameraRecoil, 0.125)
 	camera.target = self:getAimCamera() + self:getRecoilCamera()
 	muzzle.inaccuracy = self:getInaccuracy()
 	crosshair.value = self:getCrosshairValue()
@@ -189,11 +191,14 @@ function main:getAimCamera()
 	return world.distance(activeItem.ownerAimPosition(), mcontroller.position()) * vec2(self.config.aimRatio / 2)
 end
 
+main.targetCameraRecoil = vec2(0,0)
+main.currentCameraRecoil = vec2(0,0)
+
 function main:getRecoilCamera()
 	if not mpguns:getPreference("cameraRecoil") then
 		return vec2(0,0)
 	end
-	return vec2(0, (aim:getRecoil() * 0.125))
+	return self.currentCameraRecoil
 end
 
 function main:getTargetAim()

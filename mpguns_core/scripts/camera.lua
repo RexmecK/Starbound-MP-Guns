@@ -7,7 +7,7 @@ include "world"
 camera = {}
 camera.position = vec2(0)
 camera.target = vec2(0)
-camera.lerpRatio = 0.5
+camera.lerpRatio = 1.0
 
 function camera:init()
 	self:checkAlive()
