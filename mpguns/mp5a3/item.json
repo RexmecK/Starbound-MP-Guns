@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.01, // add up a number to force update
 
 	"shortdescription" : "H&K MP5A3",
 	"category" : "Smg",
@@ -34,10 +34,10 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.5},
-			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.6},
-			"firesound3" : {"pool" : ["/sfx/gun/ar2.ogg"], "pitchMultiplier" : 1.05},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.1},
+			"firesound1" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.4},
+			"firesound2" : {"pool" : ["/sfx/gun/mech_flakcannon2.ogg"], "pitchMultiplier" : 1.5},
+			"firesound3" : {"pool" : ["/sfx/gun/ar2.ogg"], "pitchMultiplier" : 1.1},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 1.0},
 
 			"reload1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip1.ogg"], "pitchMultiplier" : 1.7},
 			"reload2" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip1.ogg"], "pitchMultiplier" : 1.7},
@@ -175,7 +175,7 @@
 			"stateTypes" : {
 				"muzzleFlash" : {"default" : "off",
 					"states" : {
-						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.032, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
 						 "1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.016, "properties" : {"lightsOff" : ["muzzleFlash"]}},
 						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
 						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
