@@ -1,14 +1,14 @@
 {
 
-	"damageMultiplier" : 22,
+	"damageMultiplier" : 12,
 	"knockback" : 9,
 
 	"magazineCapacity" : 8,
 	"chamberAutoLoad" : true,
 	"chamberEject" : false,
 
-	"recoil" : 11,
-	"recoilRecovery" : 12,
+	"recoil" : 12,
+	"recoilRecovery" : 4,
 	"recoilResponse" : 2,
 	
 	"movingInaccuracy" : 25,
