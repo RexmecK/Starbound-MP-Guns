@@ -268,5 +268,10 @@
 		"name" : "SPAS-12",
 		"image" : "/mpguns/spas12/icon.png",
 		"id" : "spas12"
+	},
+	{
+		"name" : "M1921 Thompson (Drum mag)",
+		"image" : "/mpguns/m1921drum/icon.png",
+		"id" : "m1921drum"
 	}
 ]
