@@ -8,10 +8,12 @@
 	"chamberEject" : true,
 
 	"recoil" : 15,
-	"recoilRecovery" : 16,
-	"recoilResponse" : 2,
+	"recoilRecovery" : 8,
+	"recoilResponse" : 5,
 	"crouchRecoilMultiplier" : 0.5,
 	"velocityRecoil" : [-10, 0],
+	"armRecoil" : 1.0,
+	"armRecoilRecovery" : 8,
 	
 	"movingInaccuracy" : 90,
 	"standingInaccuracy" : 0,

@@ -323,9 +323,9 @@ function arms:init()
 			end
 		)
 
-		transforms:addCustom("global", table.vmerge({position = armCenter, rotation = 0, rotationPoint = vec2(0)}, (animationTranformationGroup.global or {}).transform or {}),
+		transforms:addCustom("globalArms", table.vmerge({position = armCenter, rotation = 0, rotationPoint = vec2(0)}, (animationTranformationGroup.global or {}).transform or {}),
 			function(thisTransform)
-				local name = "global"
+				local name = "globalArms"
 				local setting  = calculateTransform({
 					position = thisTransform.position or vec2(0),
 					scale = thisTransform.scale or vec2(1),

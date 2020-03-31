@@ -72,7 +72,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_0>",
 						"centered" : false,
-						"transformationGroups" : ["shell", "gun", "base"]
+						"transformationGroups" : ["shell", "gun", "base", "globalRecoil"]
 					}
 				},
 				"gun" : {
@@ -81,7 +81,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_1>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"pump" : {
@@ -90,14 +90,14 @@
 						"offset" : [0,0],
 						"image" : "<sprite_2>",
 						"centered" : false,
-						"transformationGroups" : ["pump", "gun", "base"]
+						"transformationGroups" : ["pump", "gun", "base", "globalRecoil"]
 					}
 				},
 
 				"muzzlePosition" : {
 					"properties" : {
 						"offset" : [6.875,1.875],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"muzzleFlash" : {
@@ -148,7 +148,7 @@
 				"casingPosition" : {
 					"properties" : {
 						"offset" : [1.75,1.875],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				}
 			},

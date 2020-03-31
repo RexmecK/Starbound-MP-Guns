@@ -5,7 +5,6 @@ include "muzzle"
 include "transforms"
 include "animations"
 include "animator"
-include "arms"
 include "sprites"
 include "directory"
 include "camera"
@@ -14,6 +13,7 @@ include "events"
 include "mpguns"
 include "skin"
 include "vec2"
+include "globalRecoil"
 
 main = {}
 main.config = {}
@@ -25,24 +25,9 @@ main.reloadLooping = false
 main.overridenAnimates = {}
 
 function main:setupEvents()
-	animations:addEvent("recoil", function() 
-			local angle = self.config.recoil
-			local recoilMultiplier = 1
-			if not mpguns:getPreference("cameraRecoil") then
-				recoilMultiplier = recoilMultiplier * 2
-			end
-			
-			if self.config.crouchRecoilMultiplier and mcontroller.crouching() then 
-				recoilMultiplier = recoilMultiplier * self.config.crouchRecoilMultiplier
-			end
-			
-			angle = angle * recoilMultiplier
-
-			if self.config.velocityRecoil then 
-				mcontroller.addMomentum(vec2(self.config.velocityRecoil):rotate(aim:angle()) * vec2(aim.facing,1) * recoilMultiplier)
-			end
-
-			aim:recoil(angle)
+	animations:addEvent("recoil", 
+		function() 
+			self:recoil()
 		end
 	)
 	animations:addEvent("reloadLoop", function() self.reloadLooping = true end)
@@ -62,6 +47,10 @@ function main:init()
 		self.config = config.gun or {}
 	end
 
+	if not config.noFlexArms then
+		include "arms"
+	end
+
 	self:initData()
 	sprites:load(config.sprites)
 	skin:init()
@@ -79,6 +68,7 @@ function main:init()
 
 	transforms:init()
 	animations:init()
+	globalRecoil:init()
 	self:animate("draw")
 	self:setupEvents()
 end
@@ -118,6 +108,7 @@ function main:initData()
 
 	aim.recoilRecovery = self.config.recoilRecovery or 8
 	aim.recoilResponse = self.config.recoilResponse or 1
+	globalRecoil.recoveryLerp = 1 / (self.config.armRecoilRecovery or self.config.recoilRecovery or 4)
 end
 
 function main:update(...)
@@ -137,7 +128,7 @@ function main:update(...)
 	self:updateReload(...)
 
 	--gameplay mechanics
-	self.targetCameraRecoil = vec2(0, (aim:getRecoil() * 0.5))
+	self.targetCameraRecoil = vec2(0, (aim:getRecoil() * 0.25))
 	self.currentCameraRecoil = self.currentCameraRecoil:lerp(self.targetCameraRecoil, 0.125)
 	camera.target = self:getAimCamera() + self:getRecoilCamera()
 	muzzle.inaccuracy = self:getInaccuracy()
@@ -216,6 +207,29 @@ function main:getInaccuracy()
 	else
 		return acc
 	end
+end
+
+function main:recoil()
+	local angle = self.config.recoil
+	local armRecoil = self.config.armRecoil or 0
+	local recoilMultiplier = 1
+	if not mpguns:getPreference("cameraRecoil") then
+		recoilMultiplier = recoilMultiplier * 2
+	end
+	
+	if self.config.crouchRecoilMultiplier and mcontroller.crouching() then 
+		recoilMultiplier = recoilMultiplier * self.config.crouchRecoilMultiplier
+	end
+	
+	angle = angle * recoilMultiplier
+
+	if self.config.velocityRecoil then 
+		mcontroller.addMomentum(vec2(self.config.velocityRecoil):rotate(aim:angle()) * vec2(aim.facing,1) * recoilMultiplier)
+	end
+
+	globalRecoil.offset = globalRecoil.offset + vec2(-armRecoil, 0)
+
+	aim:recoil(angle)
 end
 
 --UI mechanics

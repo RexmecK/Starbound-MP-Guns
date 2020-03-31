@@ -49,15 +49,15 @@
 			"parts" : {
 				//those are needed for the arm api
 				"R_arm1"	: {
-					"properties":{"zLevel" : 160,"centered" : false,"image" : "<R_a1>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm1", "R_offset", "global", "base"]},
+					"properties":{"zLevel" : 160,"centered" : false,"image" : "<R_a1>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm1", "R_offset", "global", "base", "globalRecoil"]},
 					"partStates":{"right" : {"front" : {"properties" : {"zLevel" : 160}},"back" : {"properties" : {"zLevel" : 5}}}}
 				},
 				"R_af1"	: {
-					"properties":{"zLevel" : 170,"centered" : false,"image" : "<R_af1>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm1", "R_offset", "global", "base"]},
+					"properties":{"zLevel" : 170,"centered" : false,"image" : "<R_af1>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm1", "R_offset", "global", "base", "globalRecoil"]},
 					"partStates":{"right" : {"front" : {"properties" : {"zLevel" : 170}},"back" : {"properties" : {"zLevel" : 6}}}}
 				},
 				"R_arm2"	: {
-					"properties":{"zLevel" : 140,"centered" : false,"image" : "<R_a2>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm2", "R_arm1", "R_offset", "global", "base"]},
+					"properties":{"zLevel" : 140,"centered" : false,"image" : "<R_a2>","offset" : [0.0, 0.0],"transformationGroups" : ["R_arm2", "R_arm1", "R_offset", "global", "base", "globalRecoil"]},
 					"partStates":{"right" : {"front" : {"properties" : {"zLevel" : 140}},"back" : {"properties" : {"zLevel" : 3}}}}
 				},
 				"R_af2"		: {
@@ -165,13 +165,13 @@
 						"offset" : [0,0],
 						"image" : "<sprite_0>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"muzzlePosition" : {
 					"properties" : {
 						"offset" : [5.125,1.5],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"muzzleFlash" : {
@@ -206,7 +206,7 @@
 				"casingPosition" : {
 					"properties" : {
 						"offset" : [0.0,1.5],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				}
 			},

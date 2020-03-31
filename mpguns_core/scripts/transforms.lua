@@ -34,7 +34,7 @@ end
 
 local transformationsgroups = {}
 
-local function setTransformations(name, mat)
+function setTransformations(name, mat)
 	if not transformationsgroups[name] or not eqmat(transformationsgroups[name], mat) then
 		if animator.hasTransformationGroup(name) then
 			animator.resetTransformationGroup(name) 

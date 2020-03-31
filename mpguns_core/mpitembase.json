@@ -2,7 +2,7 @@
 	"name" : "broom", 
 	"count" : 1, 
 	"parameters" : {
-		"baseVersion" : 1.01,
+		"baseVersion" : 1.02,
 
 		"itemName" : null,
 		"price" : 0,

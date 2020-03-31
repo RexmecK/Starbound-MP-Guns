@@ -36,7 +36,7 @@
 		"draw_dry" : "animations/draw_dry.keyframes",
 		"load_dry" : "animations/load_dry.keyframes"
 	},
-	
+	{"gun":{"transform":{"rotationPoint":[4.4375,2.8125],"rotation":0,"scale":[0.4375,0.4375],"position":[-3.9375,-2.1875]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.5,0.0625]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"rotationPoint":[3.875,2.375],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"globalRecoil":{"interpolated":true,"transform":{}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":0}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-34.5}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[0,-0.0625]}},"globalArms":{"ignore":true,"interpolated":false,"transform":{}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":21.3125}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-20.625}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-34.75}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":62}}}
 	"preloadAnimation" : true,
 	"animation" : "/mpguns/animationbase.json",
 	
@@ -75,7 +75,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_0>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"mag" : {
@@ -84,7 +84,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_1>",
 						"centered" : false,
-						"transformationGroups" : ["mag","gun", "base"]
+						"transformationGroups" : ["mag","gun", "base", "globalRecoil"]
 					}
 				},
 				"lever" : {
@@ -93,7 +93,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_2>",
 						"centered" : false,
-						"transformationGroups" : ["lever","gun", "base"]
+						"transformationGroups" : ["lever","gun", "base", "globalRecoil"]
 					}
 				},
 				"gun" : {
@@ -102,7 +102,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_3>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -110,7 +110,7 @@
 					"properties" : {
 						// define projectile output position anchored with gun transform
 						"offset" : [9.875,2.75],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"muzzleFlash" : {
@@ -162,7 +162,7 @@
 					"properties" : {
 						// define casing position fx here
 						"offset" : [5,2.75],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				}
 			},

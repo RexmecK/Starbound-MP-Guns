@@ -10,6 +10,8 @@
 	"recoil" : 3,
 	"recoilRecovery" : 2.5,
 	"recoilResponse" : 2,
+	"armRecoil" : 0.125,
+	"armRecoilRecovery" : 8,
 	
 	"movingInaccuracy" : 14,
 	"standingInaccuracy" : 0.5,

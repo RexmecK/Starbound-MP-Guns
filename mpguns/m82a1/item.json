@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.21, // add up a number to force update
+	"itemVersion" : 1.22, // add up a number to force update
 
 	"shortdescription" : "M82A1",
 	"category" : "Sniper Rifle",
@@ -56,7 +56,7 @@
 			"reload6" : {"pool" : ["/sfx/gun/reload/sniper_reload_clip3.ogg"], "pitchMultiplier" : 0.75},
 
 			"firesound1" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.5},
-			"firesound2" : {"pool" : ["/sfx/gun/grenadeblast_fire1.ogg"], "pitchMultiplier" : 1.8},
+			"firesound2" : {"pool" : ["/sfx/gun/grenadeblast_fire1.ogg"], "pitchMultiplier" : 1.5},
 			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.75},
 			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9}
 		},
@@ -80,7 +80,7 @@
 						"zLevel" : 14,
 						"offset" : [0,0],
 						"centered" : false,
-						"transformationGroups" : ["muzzle", "gun", "base"]
+						"transformationGroups" : ["muzzle", "gun", "base", "globalRecoil"]
 					},
 					"partStates" : {
 						"heat" : {
@@ -100,7 +100,7 @@
 						"image" : "<sprite_6>",
 						"offset" : [0,0],
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -110,7 +110,7 @@
 						"image" : "<sprite_7>",
 						"offset" : [0,0],
 						"centered" : false,
-						"transformationGroups" : ["mag", "gun", "base"]
+						"transformationGroups" : ["mag", "gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -120,7 +120,7 @@
 						"image" : "<sprite_8>",
 						"offset" : [0,0],
 						"centered" : false,
-						"transformationGroups" : ["lever", "gun", "base"]
+						"transformationGroups" : ["lever", "gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -130,14 +130,14 @@
 						"image" : "<sprite_9>",
 						"offset" : [0,0],
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 
 				"muzzlePosition" : {
 					"properties" : {
 						"offset" : [12.25,1.5],
-						"transformationGroups" : ["muzzle", "gun", "base"]
+						"transformationGroups" : ["muzzle", "gun", "base", "globalRecoil"]
 					}
 				},
 				"muzzleFlash" : {
@@ -164,7 +164,7 @@
 				"casingPosition" : {
 					"properties" : {
 						"offset" : [4.625,1.5],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				}
 			},

@@ -12,6 +12,8 @@
 	"recoilResponse" : 4,
 	"crouchRecoilMultiplier" : 0.5,
 	"velocityRecoil" : [-10, 0],
+	"armRecoil" : 1.0,
+	"armRecoilRecovery" : 8,
 	
 	"movingInaccuracy" : 45,
 	"standingInaccuracy" : 0,

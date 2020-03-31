@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.21, // add up a number to force update
+	"itemVersion" : 1.221, // add up a number to force update
 
 	"shortdescription" : "M27 IAR",
 	"category" : "Rifle",
@@ -73,7 +73,7 @@
 						"offset" : [0,-0.375],
 						"image" : "<sprite_0>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"mag" : {
@@ -82,7 +82,7 @@
 						"offset" : [0,-0.375],
 						"image" : "<sprite_1>",
 						"centered" : false,
-						"transformationGroups" : ["mag", "gun", "base"]
+						"transformationGroups" : ["mag", "gun", "base", "globalRecoil"]
 					}
 				},
 				"lever" : {
@@ -91,7 +91,7 @@
 						"offset" : [0,-0.375],
 						"image" : "<sprite_2>",
 						"centered" : false,
-						"transformationGroups" : ["lever", "gun", "base"]
+						"transformationGroups" : ["lever", "gun", "base", "globalRecoil"]
 					}
 				},
 				"lever2" : {
@@ -100,7 +100,7 @@
 						"offset" : [0,-0.375],
 						"image" : "<sprite_3>",
 						"centered" : false,
-						"transformationGroups" : ["lever2", "gun", "base"]
+						"transformationGroups" : ["lever2", "gun", "base", "globalRecoil"]
 					}
 				},
 				"gun" : {
@@ -109,7 +109,7 @@
 						"offset" : [0,-0.375],
 						"image" : "<sprite_4>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"levercover" : {
@@ -118,14 +118,14 @@
 						"offset" : [0,-0.375],
 						"image" : "<sprite_5>",
 						"centered" : false,
-						"transformationGroups" : ["levercover", "gun", "base"]
+						"transformationGroups" : ["levercover", "gun", "base", "globalRecoil"]
 					}
 				},
 
 				"muzzlePosition" : {
 					"properties" : {
 						"offset" : [7.0,1.375],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"muzzleFlash" : {
@@ -176,7 +176,7 @@
 				"casingPosition" : {
 					"properties" : {
 						"offset" : [3.0,1.25],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				}
 			},
@@ -382,6 +382,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[2.5625,0.8125],"rotation":0,"scale":[0.5675,0.5675],"position":[-2.5,-0.875]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1,-0.3125]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"scalePoint":[3.125,0.5625],"rotationPoint":[3.1875,0.625],"scale":[1,1],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-15}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.375,0.25],"rotation":0,"position":[0,0.0625]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.0625,-0.1875]}},"lever2":{"transform":{"position":[0,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":0}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":15.0625}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":15.5625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"levercover":{"transform":{"scalePoint":[3.0625,1.125],"scale":[1,1]}}}
+		"transformationGroups" : {"gun":{"transform":{"rotationPoint":[2.5625,0.8125],"rotation":0,"scale":[0.5675,0.5675],"position":[-2.625,-0.625]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1,-0.3125]}},"lever":{"transform":{"position":[0,0]}},"mag":{"transform":{"rotationPoint":[3.1875,0.625],"scalePoint":[3.125,0.5625],"scale":[1,1],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"globalRecoil":{"ignore":true,"interpolated":true,"transform":{}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-27.5625}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-18.1875}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.375,0.25],"rotation":0,"position":[0,0.0625]}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.0625,-0.1875]}},"globalArms":{"ignore":true,"interpolated":false,"transform":{}},"lever2":{"transform":{"position":[0,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":1.5625}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":29}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":15.5625}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":9.125}},"levercover":{"transform":{"scalePoint":[3.0625,1.125],"scale":[1,1]}}}
 	}
 }

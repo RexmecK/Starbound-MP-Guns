@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.01, // add up a number to force update
+	"itemVersion" : 1.02, // add up a number to force update
 
 	"shortdescription" : "IMI Galil",
 	"category" : "Rifle",
@@ -68,7 +68,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_0>",
 						"centered" : false,
-						"transformationGroups" : ["stock", "gun", "base"]
+						"transformationGroups" : ["stock", "gun", "base", "globalRecoil"]
 					}
 				},
 				"gunbg" : {
@@ -77,7 +77,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_1>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"mag" : {
@@ -86,7 +86,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_2>",
 						"centered" : false,
-						"transformationGroups" : ["mag", "gun", "base"]
+						"transformationGroups" : ["mag", "gun", "base", "globalRecoil"]
 					}
 				},
 				"lever" : {
@@ -95,7 +95,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_3>",
 						"centered" : false,
-						"transformationGroups" : ["lever", "gun", "base"]
+						"transformationGroups" : ["lever", "gun", "base", "globalRecoil"]
 					}
 				},
 				"gun" : {
@@ -104,7 +104,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_4>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -112,7 +112,7 @@
 					"properties" : {
 						// define projectile output position anchored with gun transform
 						"offset" : [6.375,1.5],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"muzzleFlash" : {
@@ -164,7 +164,7 @@
 					"properties" : {
 						// define casing position fx here
 						"offset" : [3.375,1.5],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				}
 			},
@@ -370,6 +370,6 @@
 			}
 		},
 
-		"transformationGroups" : {"gun":{"transform":{"rotation":0,"scale":[0.5,0.5],"position":[-2.375,-0.3125]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.0625,-0.0625]}},"lever":{"transform":{"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"mag":{"transform":{"rotationPoint":[3.3125,0.6875],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-38.8125}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-16.8125}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{}},"stock":{"transform":{"scalePoint":[1.625,0],"scale":[1,1]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":6.1875}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":34}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":24.1875}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-7.25}}}
+		"transformationGroups" : {"gun":{"transform":{"rotation":0,"scale":[0.5,0.5],"position":[-2.375,-0.25]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[1.0625,-0.0625]}},"lever":{"transform":{"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"mag":{"transform":{"rotationPoint":[3.3125,0.6875],"rotation":0,"position":[0,0]}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-38.8125}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-16.8125}},"base":{"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{}},"stock":{"transform":{"scalePoint":[1.625,0],"scale":[1,1]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":6.1875}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":34}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":24.1875}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-7.25}}}
 	}
 }

@@ -12,10 +12,12 @@ alt.fireCooldown = 0
 function alt:setupEvents()
 	animations:addEvent("recoilalt", function() 
 			local angle = self.config.recoil
+			local armRecoil = self.config.armRecoil or 0
 			if self.config.crouchRecoilMultiplier and mcontroller.crouching() then 
 				angle = angle * self.config.crouchRecoilMultiplier
 			end
 			aim:recoil(angle)
+			globalRecoil.offset = globalRecoil.offset + vec2(-armRecoil, 0)
 		end
 	)
 	animations:addEvent("reloadalt", function() self:reload() end)

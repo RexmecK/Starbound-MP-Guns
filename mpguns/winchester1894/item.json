@@ -64,7 +64,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_0>",
 						"centered" : false,
-						"transformationGroups" : ["lever1", "gun", "base"]
+						"transformationGroups" : ["lever1", "gun", "base", "globalRecoil"]
 					}
 				},
 				"lever2" : {
@@ -73,7 +73,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_1>",
 						"centered" : false,
-						"transformationGroups" : ["lever2", "lever1", "gun", "base"]
+						"transformationGroups" : ["lever2", "lever1", "gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -83,7 +83,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_2>",
 						"centered" : false,
-						"transformationGroups" : ["lever3", "gun", "base"]
+						"transformationGroups" : ["lever3", "gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -93,7 +93,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_3>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				
@@ -103,7 +103,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_4>",
 						"centered" : false,
-						"transformationGroups" : ["bullet", "gun", "base"]
+						"transformationGroups" : ["bullet", "gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -113,7 +113,7 @@
 						"offset" : [0,0],
 						"image" : "<sprite_5>",
 						"centered" : false,
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 
@@ -121,7 +121,7 @@
 					"properties" : {
 						// define projectile output position anchored with gun transform
 						"offset" : [6.125,1],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				},
 				"muzzleFlash" : {
@@ -173,7 +173,7 @@
 					"properties" : {
 						// define casing position fx here
 						"offset" : [2.5,0.875],
-						"transformationGroups" : ["gun", "base"]
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
 					}
 				}
 			},
