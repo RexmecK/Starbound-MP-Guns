@@ -52,7 +52,16 @@ function main:init()
 	end
 
 	self:initData()
-	sprites:load(config.sprites)
+	local spritestoload = config.sprites
+    if type(spritestoload) == "string" then
+        spritestoload = root.assetJson(directory(spritestoload))
+    end
+	if mpguns:getPreference("lowQuality") then
+		for i,v in pairs(spritestoload) do
+			spritestoload[i] = v.."?scale=0.525?scalenearest=1.90476190476190"
+		end
+	end
+	sprites:load(spritestoload)
 	skin:init()
 
 	self.storage = config.storage or {}
