@@ -273,5 +273,10 @@
 		"name" : "M1921 Thompson (Drum mag)",
 		"image" : "/mpguns/m1921drum/icon.png",
 		"id" : "m1921drum"
+	},
+	{
+		"name" : "Stechkin APS",
+		"image" : "/mpguns/aps/icon.png",
+		"id" : "aps"
 	}
 ]
