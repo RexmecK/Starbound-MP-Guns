@@ -116,7 +116,7 @@ function main:initData()
 
 	events:fire("initData")
 
-	muzzle.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
+	self.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
 	
 	aim.recoilRecovery = self.config.recoilRecovery or 8
 	aim.recoilResponse = self.config.recoilResponse or 1
