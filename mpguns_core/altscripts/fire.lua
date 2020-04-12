@@ -8,6 +8,7 @@ alt = {}
 alt.config = {}
 alt.ammo = 0
 alt.fireCooldown = 0
+alt.damageMultiplier = 1
 
 function alt:setupEvents()
 	animations:addEvent("recoilalt", function() 
@@ -43,7 +44,7 @@ function alt:init()
 	if self.config.knockback then
 		self.config.projectileConfig.knockback = self.config.knockback
 	end
-
+	self.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
     self.ammo = config.altammo or self.config.magazineCapacity
     self:setupEvents()
 end
@@ -111,9 +112,8 @@ end
 
 function alt:fireProjectile()
     muzzle.inaccuracy = self:getInaccuracy()
-    muzzle.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
 	for i=1,self.config.projectileCount or 1 do
-		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig)
+		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig, self.damageMultiplier)
 	end
 end
 

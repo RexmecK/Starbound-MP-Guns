@@ -23,6 +23,7 @@ main.burstCooldown = 0
 main.queuedFire = 0
 main.reloadLooping = false
 main.overridenAnimates = {}
+main.damageMultiplier = 1
 
 function main:setupEvents()
 	animations:addEvent("recoil", 
@@ -115,6 +116,8 @@ function main:initData()
 
 	events:fire("initData")
 
+	muzzle.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
+	
 	aim.recoilRecovery = self.config.recoilRecovery or 8
 	aim.recoilResponse = self.config.recoilResponse or 1
 	globalRecoil.recoveryLerp = 1 / (self.config.armRecoilRecovery or self.config.recoilRecovery or 4)
@@ -312,9 +315,8 @@ function main:fire()
 end
 
 function main:fireProjectile()
-	muzzle.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
 	for i=1,self.config.projectileCount or 1 do
-		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig)
+		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig, self.damageMultiplier)
 	end
 end
 
