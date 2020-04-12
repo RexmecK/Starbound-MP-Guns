@@ -123,6 +123,8 @@ function main:initData()
 	globalRecoil.recoveryLerp = 1 / (self.config.armRecoilRecovery or self.config.recoilRecovery or 4)
 end
 
+local transformUpdateTick = 0
+
 function main:update(...)
 	local dt = ({...})[1]
 
@@ -147,12 +149,28 @@ function main:update(...)
 	crosshair.value = self:getCrosshairValue()
 	item.setCount(math.max(self:ammoCount(), 1))
 
-	animations:update(dt)
-	if animations:isAnyPlaying() then
-		transforms:reset()
-		transforms:apply(animations:transforms())
+	if mpguns:getPreference("smoothAnimations") then
+		animations:update(dt)
+		if animations:isAnyPlaying() then
+			transforms:reset()
+			transforms:apply(animations:transforms())
+		end
+		transforms:update(dt)
+	else
+		animations:update(dt)
+		if animations:isAnyPlaying() and transformUpdateTick <= 0 then
+			transforms:reset()
+			transforms:apply(animations:transforms())
+			transformUpdateTick = 2
+		elseif transformUpdateTick > 0 then
+			transformUpdateTick = transformUpdateTick - 1
+		elseif not animations:isAnyPlaying() and transformUpdateTick == 0 then
+			transforms:reset()
+			transforms:apply(animations:transforms())
+			transformUpdateTick = -1
+		end
+		transforms:update(dt)
 	end
-	transforms:update(dt)
 
 	aim:at(self:getTargetAim())
 	aim:update(dt)

@@ -10,7 +10,7 @@
 			"pressedOffset" : [0, 0],
 
 			"callback" : "close",
-			"position" : [134, 93],
+			"position" : [134, 106],
 			"zlevel" : 99
 		},
 
@@ -25,7 +25,7 @@
 		"h1" : {
 			"zlevel" : 100,
 			"type" : "label",
-			"position" : [2, 95],
+			"position" : [2, 108],
 			"value" : "^#3b3b3b;Multiplayer guns settings"
 		},
 		
@@ -174,6 +174,27 @@
 			"type" : "label",
 			"position" : [16, 80],
 			"value" : "Low Quality Mode"
+		},
+
+		"smoothAnimations" : {
+			"type" : "button",
+			"base" : "/mpgunssettings/image/uncheck.png",
+			"hover" : "/mpgunssettings/image/uncheck.png?brightness=60",
+
+			"baseImageChecked" : "/mpgunssettings/image/checked.png",
+			"hoverImageChecked" : "/mpgunssettings/image/checked.png?brightness=60",
+
+			"checkable" : true,
+			"checked" : false,
+			"position" : [2, 93],
+			"hAnchor" : "left",
+			"callback" : "callback"
+		},
+		"smoothAnimations_text" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [16, 93],
+			"value" : "Smooth Animations"
 		}
 
 	},
@@ -193,7 +214,8 @@
 		"autoreload",
 		"autoload",
 		"disableCasings",
-		"lowQuality"
+		"lowQuality",
+		"smoothAnimations"
 	],
 		
 	"directory" : "/mpgunssettings/",
