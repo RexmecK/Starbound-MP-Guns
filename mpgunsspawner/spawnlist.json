@@ -278,5 +278,10 @@
 		"name" : "Stechkin APS",
 		"image" : "/mpguns/aps/icon.png",
 		"id" : "aps"
+	},
+	{
+		"name" : "WA2000",
+		"image" : "/mpguns/wa2000/icon.png",
+		"id" : "wa2000"
 	}
 ]
