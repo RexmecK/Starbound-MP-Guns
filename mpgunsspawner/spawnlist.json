@@ -283,5 +283,10 @@
 		"name" : "WA2000",
 		"image" : "/mpguns/wa2000/icon.png",
 		"id" : "wa2000"
+	},
+	{
+		"name" : "AWP",
+		"image" : "/mpguns/awp/icon.png",
+		"id" : "awp"
 	}
 ]
