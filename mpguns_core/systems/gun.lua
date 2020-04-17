@@ -48,8 +48,13 @@ function main:init()
 		self.config = config.gun or {}
 	end
 
-	if not config.noFlexArms then
+	if config.noFlexArms then
+		self.noFlexArms = true
+		globalRecoil.vanillaRecoil = true
+		include "altarms"
+	else
 		include "arms"
+		globalRecoil.shoulderbob = true
 	end
 
 	self:initData()
@@ -128,6 +133,16 @@ local transformUpdateTick = 0
 function main:update(...)
 	local dt = ({...})[1]
 
+	if self.noFlexArms then
+    	--world.debugPoint(activeItem.handPosition(animator.transformPoint({0.375,2.375},"R_hand")) + mcontroller.position(),"green")
+    	--world.debugPoint(activeItem.handPosition(animator.transformPoint({0.375,2.375},"L_hand")) + mcontroller.position(),"green")
+		--altarms.frontTarget = activeItem.handPosition(animator.transformPoint({0.375,2.375},"R_hand"))
+		--altarms.backTarget = activeItem.handPosition(animator.transformPoint({0.375,2.25},"L_hand"))
+		altarms.frontTarget = activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint"))
+		altarms.backTarget = activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint"))
+    	world.debugPoint(activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint")) + mcontroller.position(),"green")
+    	world.debugPoint(activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint")) + mcontroller.position(),"green")
+	end
 
 	if alt and alt.update then
 		alt:update(...)

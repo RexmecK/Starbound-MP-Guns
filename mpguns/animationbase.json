@@ -28,6 +28,16 @@
 	},
 	"animatedParts":{
 		"parts":{
+			"R_handPoint"	:{
+				"properties":{"centered":false,"image":"","offset":[0.0,0.0],"transformationGroups":["R_handPoint","base"]},
+				"partStates":{}
+			},
+			"L_handPoint"	:{
+				"properties":{"centered":false,"image":"","offset":[0.0,0.0],"transformationGroups":["L_handPoint","base"]},
+				"partStates":{}
+			},
+
+
 			//Right bare arms
 			"R_hand"	:{
 				"properties":{"centered":false,"image":"<R_hand>","offset":[0.0,0.0],"transformationGroups":["R_hand","R_arm2","R_arm1","R_offset","globalArms","base","globalRecoil"]},
@@ -155,6 +165,9 @@
 		"null":[]
 	},
 	"transformationGroups":{
+		"R_handPoint"	:{"interpolated":false},
+		"L_handPoint"	:{"interpolated":false},
+
 		"R_hand"	:{"ignore":true,"interpolated":false},
 		"R_arm2"	:{"ignore":true,"interpolated":false},
 		"R_offset"	:{"ignore":true,"interpolated":false},

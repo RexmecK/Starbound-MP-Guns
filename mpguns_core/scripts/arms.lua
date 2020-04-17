@@ -371,7 +371,10 @@ function arms:update(dt)
 
 		local handhold = activeItem.hand()
 
-		if not self.twohand then --non two hand here
+		if self.hide then
+			self:setFullArm("L", false, self.fullbright) -- it will hide it
+			self:setFullArm("R", false, self.fullbright)
+		elseif not self.twohand then --non two hand here
 			animator.setAnimationState("left", whatlayer(direction, handhold))
 			animator.setAnimationState("right", whatlayer(-direction, handhold))
 			self:setFullArm("L", false, self.fullbright) -- it will hide it

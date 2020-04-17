@@ -1,0 +1,383 @@
+{
+	"itemVersion" : 1.2, // add up a number to force update
+
+	"shortdescription" : "M16A2",
+	"category" : "Rifle",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=3b0000;e4e4e4=00000f;6a6a6a=3b000f?multiply=fff0?scale=58.5;14.5?crop=0;0;59;15?replace;02000800=333;02000900=333;02000a00=222;03000500=222;03000600=333;03000700=333;03000800=222;03000900=222;03000a00=111;04000500=111;04000600=222;04000700=222;04000800=222;04000900=222;04000a00=111;05000500=111;05000600=222;05000700=222;05000800=222;05000900=222;05000a00=111;06000400=666;06000600=111;06000700=222;06000800=222;06000900=222;06000a00=111;07000600=111;07000700=222;07000800=222;07000900=222;07000a00=111;08000600=111;08000700=222;08000800=222;08000900=222;08000a00=111;09000700=111;09000800=222;09000900=222;09000a00=111;0a000700=111;0a000800=222;0a000900=222;0a000a00=111;0b000700=111;0b000800=222;0b000900=222;0b000a00=111;0c000800=111;0c000900=222;0c000a00=111;0d000800=111;0d000900=222;0d000a00=111;0e000800=111;0e000900=222;0e000a00=111;0f000100=111;0f000200=000;0f000300=000;0f000800=111;0f000900=222;0f000a00=111;10000100=111;10000200=000;10000300=000;10000400=000;10000500=000;10000800=222;10000900=444;10000a00=555;10000b00=777;11000100=111;11000200=111;11000300=111;11000400=000;11000500=000;11000600=111;11000700=222;11000800=333;11000900=333;11000a00=777;11000b00=222;11000c00=333;12000100=111;12000300=111;12000400=111;12000500=111;12000600=111;12000700=333;12000800=333;12000900=222;12000a00=111;12000b00=333;12000c00=333;12000d00=333;13000300=111;13000500=333;13000600=222;13000700=333;13000800=333;13000900=222;13000a00=111;13000b00=333;13000c00=222;13000d00=777;13000e00=333;14000500=333;14000600=777;14000700=333;14000800=333;14000900=222;14000a00=555;14000b00=333;14000d00=222;14000e00=333;15000500=333;15000700=333;15000800=333;15000900=222;15000a00=555;15000b00=333;15000d00=222;15000e00=333;16000500=222;16000600=333;16000700=333;16000800=777;16000900=111;16000a00=222;16000b00=333;16000d00=222;17000300=777;17000400=777;17000500=777;17000600=222;17000700=222;17000800=222;17000900=555;17000a00=444;17000b00=333;17000d00=222;18000000=666;18000100=777;18000200=777;18000300=666;18000400=666;18000500=666;18000600=222;18000700=333;18000800=333;18000900=555;18000a00=777;18000b00=333;18000d00=222;19000000=555;19000100=666;19000200=666;19000300=555;19000400=555;19000500=555;19000600=222;19000700=333;19000800=333;19000900=555;19000a00=777;19000b00=333;19000d00=222;1a000100=555;1a000200=555;1a000300=666;1a000400=666;1a000500=666;1a000600=222;1a000700=333;1a000800=333;1a000900=555;1a000a00=444;1a000b00=333;1a000d00=333;1b000100=666;1b000200=666;1b000300=666;1b000600=111;1b000800=222;1b000900=111;1b000a00=222;1b000b00=333;1b000c00=333;1c000800=444;1c000900=444;1c000a00=555;1c000b00=444;1d000900=333;1d000a00=444;1d000b00=333;1e000800=111;1e000900=111;1e000a00=333;1e000b00=222;1f000800=111;1f000900=111;1f000a00=333;1f000b00=222;20000800=000;20000900=000;20000a00=222;20000b00=111;21000800=111;21000900=111;21000a00=333;21000b00=222;22000800=000;22000900=000;22000a00=222;22000b00=111;23000800=111;23000900=111;23000a00=333;23000b00=222;24000800=000;24000900=000;24000a00=222;24000b00=111;25000800=111;25000900=111;25000a00=333;25000b00=222;26000900=000;26000a00=222;27000900=111;27000a00=333;28000700=666;28000900=111;28000a00=222;29000800=666;29000900=222;29000a00=444;29000b00=222;2a000a00=333;2a000c00=222;2b000a00=333;2b000d00=222;2c000900=222;2c000a00=444;2c000b00=222;2c000c00=222;2c000d00=222;2c000e00=222;2d000a00=333;2e000a00=333;2f000a00=333;30000a00=222;31000a00=333;32000a00=222",
+	"description" : "A Known rifle to have issues in harsh conditions. This third variant is improved with more reliability.",
+	"rarity" : "Common",
+	"maxStack" : 31,
+
+	"system" : "gun",
+	"altscript" : "changefiremode",
+	"firemodes" : ["burst", "auto"],
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"noFlexArms" : true,
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+	
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbase.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"switch" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip2.ogg"], "pitchMultiplier" : 0.8},
+			"click1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"click2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"click3" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip1.ogg"], "pitchMultiplier" : 2.0},
+			"click4" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"click5" : {"pool" : ["/sfx/gun/reload/shotgun_reload_clip1.ogg"], "pitchMultiplier" : 2.0},
+			"click6" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"firesound1" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.7},
+			"firesound2" : {"pool" : ["/sfx/gun/sniper1.ogg"], "pitchMultiplier" : 1.1},
+			"firesound3" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.1},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.9}
+		},
+		"lights" : {
+			"muzzleFlash" : {
+				"pointBeam" : 0,
+				"pointAngle" : 0,
+				"color" : [100, 50, 0],
+				"pointLight" : false,
+				"anchorPart" : "muzzlePosition",
+				"active" : false,
+				"position" : [0, 0]
+			}
+		},
+		"animatedParts" : {
+			"parts" : {
+				"mag" : {
+					"properties" : {
+						"zLevel" : 14,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"transformationGroups" : ["mag", "gun", "base", "globalRecoil"]
+					}
+				},
+				"gun_bg" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
+					}
+				},
+				"lever" : {
+					"properties" : {
+						"zLevel" : 16,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"transformationGroups" : ["lever", "gun", "base", "globalRecoil"]
+					}
+				},
+				"lever2" : {
+					"properties" : {
+						"zLevel" : 16,
+						"offset" : [0,0],
+						"image" : "<sprite_3>",
+						"centered" : false,
+						"transformationGroups" : ["lever2", "gun", "base", "globalRecoil"]
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 17,
+						"offset" : [0,0],
+						"image" : "<sprite_4>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
+					}
+				},
+				"levercover" : {
+					"properties" : {
+						"zLevel" : 18,
+						"offset" : [0,0],
+						"image" : "<sprite_5>",
+						"centered" : false,
+						"transformationGroups" : ["levercover", "gun", "base", "globalRecoil"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						"offset" : [6.375,1.375],
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [-0.125,-0.75],
+						"centered" : false,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							},
+							"2" : {
+								"properties" : {
+									"image" : "<muzzleFlash_2>"
+								}
+							},
+							"3" : {
+								"properties" : {
+									"image" : "<muzzleFlash_3>"
+								}
+							},
+							"4" : {
+								"properties" : {
+									"image" : "<muzzleFlash_4>"
+								}
+							},
+							"5" : {
+								"properties" : {
+									"image" : "<muzzleFlash_5>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						"offset" : [3.0,1.25],
+						"transformationGroups" : ["gun", "base", "globalRecoil"]
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 0.064, "properties" : {"lightsOn" : ["muzzleFlash"], "particleEmittersOn" : ["smoke", "spark", "spark2", "smoke2"]}},
+						 "1" : {"frames" : 1, "mode" : "transition", "transition" : "2", "cycle" : 0.016, "properties" : {"lightsOff" : ["muzzleFlash"]}},
+						"2" : {"frames" : 1, "mode" : "transition", "transition" : "3", "cycle" : 0.016},
+						"3" : {"frames" : 1, "mode" : "transition", "transition" : "4", "cycle" : 0.016},
+						"4" : {"frames" : 1, "mode" : "transition", "transition" : "5", "cycle" : 0.016},
+						"5" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 0.016},
+						"off" : {"properties" : { "particleEmittersOff" : ["smoke", "spark", "spark2", "smoke2"]}}
+					}
+				},
+				"vapor" : {"default" : "off",
+					"states" : {
+						"0" : {"frames" : 1, "mode" : "transition", "transition" : "1", "cycle" : 2.0, "properties" : {"particleEmittersOff" : ["vapor"]}},
+						"1" : {"frames" : 1, "mode" : "transition", "transition" : "off", "cycle" : 1.0, "properties" : {"particleEmittersOn" : ["vapor"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["vapor"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"vapor" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 80],
+							"color" : [255,255,255,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.05,
+							"layer" : "front",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [0.2,0.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [192,192,192,45],
+							"initialVelocity" : [5.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "back",
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [2.0,2.0],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"spark" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,255,172,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.032,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"trail" : true,
+							"variance" : {
+								"initialVelocity" : [2.0,8.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"spark2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [255,128,64,255],
+							"initialVelocity" : [10.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.032,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"trail" : true,
+							"variance" : {
+								"initialVelocity" : [2.0,8.0],
+								"size" : 0.25
+							}
+						}
+					}
+				]
+			},
+			"smoke2" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [0, 0],
+							"finalVelocity" : [0, 2],
+							"approach" : [0, 10],
+							"color" : [192,192,192,45],
+							"initialVelocity" : [0.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.25,
+							"layer" : "back", 
+							"timeToLive" : 0.45,
+							"variance" : {
+								"initialVelocity" : [1.0,2.0],
+								"size" : 0.5
+							}
+						}
+					}
+				]
+			},
+			"casing" : {
+				"emissionRate" : 16.0,
+				"zLevel" : 100,
+				"anchorPart" : "casingPosition",
+				"particles" : [
+					{ 
+						"count" : 1,
+						"particle" : {
+							"type" : "textured",
+							"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=0c0000;e4e4e4=000003;6a6a6a=0c0003?multiply=fff0?scale=11.5;2.5?crop=0;0;12;3?replace;0000=1100;00000100=0100;00000200=0100;01000000=826923;01000100=1100;01000200=9a7c29;02000000=1100;02000100=0100;02000200=0100;03000000=1100;03000100=0100;03000200=0100;04000000=1100;04000100=0100;04000200=0100;05000000=1100;05000100=0100;05000200=0100;06000000=1100;06000100=0100;06000200=0100;07000000=1100;07000100=0100;07000200=0100;08000000=1100;08000100=0100;08000200=0100;09000000=1100;09000100=0100;09000200=0100;0a000000=826923;0a000100=1100;0a000200=9a7c29;0b000100=1100?replace;0100=b2912f;1100=9a7d29",
+							"position" : [0, 0],
+							"finalVelocity" : [0, -100],
+							"approach" : [0, 80],
+							"initialVelocity" : [-1.5, 8.0],
+							"angularVelocity" : 720,
+							"collidesForeground" : true,
+							"destructionAction" : "fade",
+							"destructionTime" : 0.85,
+							"size" : 0.25,
+							"layer" : "front",
+							"timeToLive" : 2.0,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [3.0,2.0]
+							}
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"R_handPoint":{"interpolated":false,"transform":{"rotationPoint":[0,0],"position":[-0.5,0.25]}},"gun":{"transform":{"rotationPoint":[2.5625,0.8125],"rotation":0,"scale":[0.5675,0.5675],"position":[-3,-0.1875]}},"L_offset":{"ignore":true,"interpolated":false,"transform":{"curve":1,"position":[0.9375,-0.125]}},"L_handPoint":{"interpolated":false,"transform":{"position":[0.5,0.5]}},"lever":{"transform":{"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[1.5,1.5],"position":[0,0.03675]}},"mag":{"transform":{"rotationPoint":[3.1875,0.625],"scalePoint":[3.125,0.5625],"rotation":0,"scale":[1,1],"position":[0,0]}},"globalRecoil":{"ignore":true,"interpolated":true,"transform":{}},"R_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-27.375}},"global":{"ignore":true,"interpolated":false,"transform":{}},"L_hand":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}},"base":{"interpolated":false,"transform":{"rotationPoint":[-1.375,0.25],"rotation":0,"position":[0,0]}},"lever2":{"transform":{"position":[0,0]}},"globalArms":{"ignore":true,"interpolated":false,"transform":{}},"R_offset":{"ignore":true,"interpolated":false,"transform":{"position":[-0.125,0]}},"R_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":-9.125}},"R_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":41.8125}},"L_arm1":{"ignore":true,"interpolated":false,"transform":{"rotation":24.5}},"levercover":{"transform":{"scalePoint":[3.0625,1.125],"scale":[1,1]}},"L_arm2":{"ignore":true,"interpolated":false,"transform":{"rotation":-10}}}
+	}
+}
