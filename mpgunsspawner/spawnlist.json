@@ -38,5 +38,10 @@
 		"name" : "MK18 Custom",
 		"image" : "/mpguns/mk18custom/icon.png",
 		"id" : "mk18custom"
+	},
+	{
+		"name" : "MP7",
+		"image" : "/mpguns/mp7/icon.png",
+		"id" : "mp7"
 	}
 ]
