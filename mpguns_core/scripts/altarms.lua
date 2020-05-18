@@ -123,17 +123,22 @@ function altarms:update(dt,firemode, shift)
         --world.debugPoint(mcontroller.position() + pos, {0,0,0, math.max(math.min(255 * (0.003 ^ distance), 255), 0) })
     
     end
-
-    if frontClosest then
-        activeItem.setFrontArmFrame(frontClosest[1])
-    end
-    if backClosest then
-        activeItem.setBackArmFrame(backClosest[1])
-    end
+	local twohanded = activeItem.twoHanded()
+	if twohanded then
+	    if frontClosest then
+	        activeItem.setFrontArmFrame(frontClosest[1])
+	    end
+	    if backClosest then
+	        activeItem.setBackArmFrame(backClosest[1])
+		end
+	else
+	    if frontClosest then
+	        activeItem.setFrontArmFrame(frontClosest[1])
+	        activeItem.setBackArmFrame(frontClosest[1])
+		end
+	end
 end
 
 function altarms:uninit()
 
 end
-
-updateable:add("altarms")

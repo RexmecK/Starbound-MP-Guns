@@ -1,1 +1,0 @@
-[{"transforms":{"lever":{"position":[-0.75,0]}},"burstParticle":[],"animationState":{},"fireEvents":[],"wait":0.1,"playSounds":[],"lights":{}},{"transforms":{"lever":{}},"burstParticle":[],"animationState":{},"fireEvents":["load"],"wait":0.1,"playSounds":["reload5","reload6"],"lights":{}}]

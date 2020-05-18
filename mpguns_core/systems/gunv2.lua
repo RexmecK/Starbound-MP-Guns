@@ -1,0 +1,528 @@
+include "config"
+include "activeItem"
+include "aim"
+include "muzzle"
+include "transforms"
+include "animations"
+include "animator"
+include "sprites"
+include "directory"
+include "camera"
+include "crosshair"
+include "events"
+include "mpguns"
+include "skin"
+include "vec2"
+include "globalRecoil"
+include "altarms"
+
+main = {}
+main.config = {}
+main.storage = {}
+main.fireCooldown = 0
+main.burstCooldown = 0
+main.queuedFire = 0
+main.reloadLooping = false
+main.overridenAnimates = {}
+main.damageMultiplier = 1
+
+function main:setupEvents()
+	animations:addEvent("recoil", 
+		function() 
+			self:recoil()
+		end
+	)
+	animations:addEvent("reloadLoop", function() self.reloadLooping = true end)
+	animations:addEvent("reload", function() self:reload() end)
+	animations:addEvent("reload1", function() self:reload(1) end)
+	animations:addEvent("eject", function() self:eject() end)
+	animations:addEvent("load", function() self:load() end)
+	animations:addEvent("checkload", function() if self.storage.loaded ~=1 then self:load() end end)
+	animations:addEvent("unload", function() self:unload() end)
+	animations:addEvent("casing", function() self:casing() end)
+	animations:addEvent("dropmag", function() self:dropmag() end)
+end
+
+function main:init()
+	if type(config.gun) == "string" then
+		self.config = root.assetJson(directory(config.gun))
+	else
+		self.config = config.gun or {}
+	end
+
+	globalRecoil.vanillaRecoil = true
+	self.noFlexArms = true
+	altarms:init()
+
+	self:initData()
+	local spritestoload = config.sprites
+    if type(spritestoload) == "string" then
+        spritestoload = root.assetJson(directory(spritestoload))
+    end
+	if mpguns:getPreference("lowQuality") then
+		for i,v in pairs(spritestoload) do
+			spritestoload[i] = v.."?scale=0.525?scalenearest=1.90476190476190"
+		end
+	end
+	sprites:load(spritestoload)
+	skin:init()
+
+	self.storage = config.storage or {}
+	self.storage.ammo = self.storage.ammo or self.config.magazineCapacity
+	self.storage.loaded = self.storage.loaded or 0
+	if type(self.storage.dry) == "boolean" and not self.storage.dry then
+		self.storage.dry = false
+	else
+		self.storage.dry = true
+	end
+
+	self:loadOtherScripts()
+
+	local confanimation = config:getAnimation()
+    transforms:addCustom(
+        "armRotation", 
+            (confanimation.transformationGroups.armRotation or {}).transform or {rotation = 0}, 
+        function(tr)
+	        aim.offset = tr.rotation or 0
+        end
+	)
+	
+	transforms:init()
+	animations:init()
+	globalRecoil:init()
+	self:animate("draw")
+	self:setupEvents()
+end
+
+function main:loadOtherScripts()
+	events:fire("loadOtherScripts")
+
+	if config.altscript then
+		pcall(function() require(directory(config.altscript, modPath.."altscripts/", ".lua")) end)
+	end
+
+	if config.additionnalScripts then
+		for i,v in pairs(config.additionnalScripts) do
+			pcall(function() require(directory(v, modPath.."scripts/", ".lua")) end)
+		end
+	end
+
+	if alt and alt.init then
+		alt:init()
+	end
+end
+
+function main:initData()
+	if self.config.projectileConfig then
+		if type(self.config.projectileConfig) == "string" then
+			self.config.projectileConfig = root.assetJson(directory(self.config.projectileConfig))
+		end
+	else
+		self.config.projectileConfig = {}
+	end
+
+	if self.config.knockback then
+		self.config.projectileConfig.knockback = self.config.knockback
+	end
+
+	events:fire("initData")
+
+	self.damageMultiplier = (self.config.damageMultiplier or 1) * activeItem.ownerPowerMultiplier()
+	
+	aim.recoilRecovery = self.config.recoilRecovery or 8
+	aim.recoilResponse = self.config.recoilResponse or 1
+	globalRecoil.recoveryLerp = 1 / (self.config.armRecoilRecovery or self.config.recoilRecovery or 4)
+end
+
+local transformUpdateTick = 0
+
+function main:update(...)
+	local dt = ({...})[1]
+
+	if alt and alt.update then
+		alt:update(...)
+	end
+
+	self:updateTimers(...)
+
+	self:updateFireControls(...)
+	self:updateFire(...)
+
+	self:updateReloadControls(...)
+	self:updateReload(...)
+
+	--gameplay mechanics
+	self.targetCameraRecoil = vec2(0, (aim:getRecoil() * 0.25))
+	self.currentCameraRecoil = self.currentCameraRecoil:lerp(self.targetCameraRecoil, 0.125)
+	camera.target = self:getAimCamera() + self:getRecoilCamera()
+	muzzle.inaccuracy = self:getInaccuracy()
+	crosshair.value = self:getCrosshairValue()
+	item.setCount(math.max(self:ammoCount(), 1))
+
+	if mpguns:getPreference("smoothAnimations") then
+		animations:update(dt)
+		if animations:isAnyPlaying() then
+			transforms:reset()
+			transforms:apply(animations:transforms())
+		end
+		transforms:update(dt)
+	else
+		animations:update(dt)
+		if animations:isAnyPlaying() and transformUpdateTick <= 0 then
+			transforms:reset()
+			transforms:apply(animations:transforms())
+			transformUpdateTick = 2
+		elseif transformUpdateTick > 0 then
+			transformUpdateTick = transformUpdateTick - 1
+		elseif not animations:isAnyPlaying() and transformUpdateTick == 0 then
+			transforms:reset()
+			transforms:apply(animations:transforms())
+			transformUpdateTick = -1
+		end
+		transforms:update(dt)
+	end
+
+	aim:at(self:getTargetAim())
+	aim:update(dt)
+
+	if self.noFlexArms then
+		altarms.frontTarget = activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint"))
+		altarms.backTarget = activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint"))
+    	world.debugPoint(activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint")) + mcontroller.position(),"green")
+    	world.debugPoint(activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint")) + mcontroller.position(),"green")
+		altarms:update(...)
+	end
+end
+
+function main:uninit()
+	if alt and alt.uninit then
+		alt:uninit()
+	end
+
+	self:save()
+	item.setCount(1)
+end
+
+function main:save()
+	config.storage = self.storage
+end
+
+function main:updateTimers(dt)
+	if self.fireCooldown > 0 then
+		self.fireCooldown = math.max(self.fireCooldown - dt, 0)
+	end
+	
+	if self.fireCooldown == 0 and self.storage.canLoad and self.storage.loaded ~= 1 then
+		self:load()
+		self.storage.canLoad = false
+		self:save()
+	end
+
+	if self.burstCooldown > 0 and self.fireCooldown == 0 then
+		self.burstCooldown = math.max(self.burstCooldown - dt, 0)
+	end
+end
+
+--Aiming Mechanics
+
+function main:getAimCamera()
+	if not mpguns:getPreference("cameraAim") then
+		return vec2(0,0)
+	end
+	return world.distance(activeItem.ownerAimPosition(), mcontroller.position()) * vec2(self.config.aimRatio / 2)
+end
+
+main.targetCameraRecoil = vec2(0,0)
+main.currentCameraRecoil = vec2(0,0)
+
+function main:getRecoilCamera()
+	if not mpguns:getPreference("cameraRecoil") then
+		return vec2(0,0)
+	end
+	return self.currentCameraRecoil
+end
+
+function main:getTargetAim()
+	return activeItem.ownerAimPosition()
+end
+
+function main:getInaccuracy()
+	local vel = math.max(math.abs(mcontroller.xVelocity()), math.abs(mcontroller.yVelocity() + 1.27))
+	local movingRatio = math.min(vel / 14, 1)
+
+	local acc = (self.config.movingInaccuracy * movingRatio) + (self.config.standingInaccuracy * (1 - movingRatio))
+
+	if mcontroller.crouching() and self.config.crouchInaccuracyMultiplier then
+		return acc * self.config.crouchInaccuracyMultiplier
+	else
+		return acc
+	end
+end
+
+function main:recoil()
+	local angle = self.config.recoil
+	local armRecoil = self.config.armRecoil or 0
+	local recoilMultiplier = 1
+	
+	if self.config.crouchRecoilMultiplier and mcontroller.crouching() then 
+		recoilMultiplier = recoilMultiplier * self.config.crouchRecoilMultiplier
+	end
+	
+	angle = angle * recoilMultiplier
+
+	if self.config.velocityRecoil then 
+		mcontroller.addMomentum(vec2(self.config.velocityRecoil):rotate(aim:angle()) * vec2(aim.facing,1) * recoilMultiplier)
+	end
+
+	globalRecoil.offset = globalRecoil.offset + vec2(-armRecoil, 0)
+
+	aim:recoil(angle)
+end
+
+--UI mechanics
+
+function main:getCrosshairValue()
+	return ((muzzle.inaccuracy + math.abs(aim:getRecoil())) / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 25
+end
+
+--firing mechanics
+
+function main:updateFireControls(dt, firemode, shift, moves)
+	--primary firing
+	if firemode == "primary" and muzzle:canFire() and (self.storage.ammo > 0 or self.storage.loaded == 1) and self.queuedFire == 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) then
+		if self.config.firemode == "auto" then
+			self.queuedFire = 1
+		elseif self.config.firemode == "burst" and self.burstCooldown == 0 then
+			self.queuedFire = 3
+			self.burstCooldown = self.config.burstCooldown or 0.5
+		elseif self.config.firemode == "semi" and update_lastInfo[2] ~= "primary" then
+			self.queuedFire = 1
+		end
+	end
+end
+
+function main:updateFire(dt)
+	if self.queuedFire > 0 and self.fireCooldown == 0 and (not animations:isAnyPlaying() or self:isPlaying("fire")) and muzzle:canFire() then
+		local result = self:fire()
+		if result == 1 then
+			events:fire("fire")
+			self.queuedFire = self.queuedFire - 1
+		elseif result == 2 then
+			self.queuedFire = 0
+		end
+	elseif (self.queuedFire > 0 and self.storage.ammo <= 0 and self.storage.loaded ~= 1) or self:isPlaying("load") or self:isPlaying("reload") then
+		self.queuedFire = 0
+	end
+end
+
+function main:fire()
+	if self.storage.loaded == 1 then
+		events:fire("fire_true")
+		if self.config.chamberEject then
+			self:eject()
+		else
+			self.storage.loaded = 2
+			self:save()
+		end
+
+		if self.config.chamberAutoLoad and self.storage.ammo > 0 then
+			self.storage.canLoad = true
+			self:save()
+		end
+
+		self:fireProjectile()
+		self.fireCooldown = 60 / self.config.rpm
+
+		if self.storage.ammo == 0 or self.config.chamberDryIfFire then
+			self.storage.dry = true
+			self:save()
+		end
+
+		self:animate("fire")
+		return 1
+	elseif self.storage.loaded == 2 then
+		events:fire("fire_dry")
+		return 2
+	else
+		events:fire("fire_noammo")
+		return 0
+	end
+end
+
+function main:fireProjectile()
+	for i=1,self.config.projectileCount or 1 do
+		muzzle:fireProjectile(self.config.projectileName, self.config.projectileConfig, self.damageMultiplier)
+	end
+end
+
+--ammo mechanics
+
+function main:updateReloadControls(dt, firemode, shift, moves)
+	if self.reloadLooping and firemode ~= "none" then
+		self.interuptReload = true
+	end
+	if animations:isAnyPlaying() then return end
+	if not self.reloadLooping then
+		if ((shift and moves.up) or (self.storage.loaded ~= 1 and self.storage.ammo == 0 and mpguns:getPreference("autoreload"))) and self.fireCooldown <= 0 and (self.storage.ammo < self.config.magazineCapacity or self.config.magazineCapacity == 0) and firemode == "none" then
+			events:fire("reload")
+			if not animations:isAnyPlaying() then
+				self:animate("reload")
+			end
+		end
+		
+		if ((not shift and moves.up and not mpguns:getPreference("disableW")) or (self.storage.loaded ~= 1 and self.storage.ammo ~= 0 and mpguns:getPreference("autoload"))) and self.fireCooldown <= 0 and not self.config.disallowAnimationLoad then
+			events:fire("load")
+			if not animations:isAnyPlaying() then
+				self:animate("load")
+			end
+		end
+	end
+end
+
+function main:updateReload(dt)
+	if self.reloadLooping and not animations:isAnyPlaying() then
+		if self.storage.ammo < self.config.magazineCapacity and not self.interuptReload then
+			self:animate("reloadLoop")
+		else
+			self:animate("reloadLoopEnd")
+			self.reloadLooping = false
+			self.interuptReload = false
+		end
+	end
+end
+
+function main:reload(amount)
+	if amount then
+		self.storage.ammo = self.storage.ammo + amount
+	else
+		self.storage.ammo = self.config.magazineCapacity
+	end
+	self:save()
+end
+
+function main:ammoCount()
+	local ammo = self.storage.ammo
+	if self.storage.loaded and self.storage.loaded == 1 then
+		ammo = ammo + 1
+	end
+	return ammo
+end
+
+function main:eject()
+	if self.storage.loaded > 0 and not self.config.noCasingEject then
+		self:casing()
+	end
+	self.storage.loaded = 0
+	self:save()
+end
+
+function main:casing()
+	if mpguns:getPreference("disableCasings") then return end
+
+	if self.config.casingParticle then
+		animator.burstParticleEmitter(self.config.casingParticle)
+	end
+	if self.config.casing and self.config.casing.type and self.config.casing.part then
+		local casingConfig = root.assetJson(directory(self.config.casing.type, "/mpguns_core/casingConfigs/", ".config"))
+		local pos = activeItem.handPosition(animator.transformPoint(self.config.casing.offset or {0,0},self.config.casing.part)) + mcontroller.position()
+
+		local position = activeItem.handPosition(animator.transformPoint(self.config.casing.offset or {0,0},self.config.casing.part))
+		local end_position = activeItem.handPosition(animator.transformPoint((self.config.casing.offset or {0,0}) + vec2(0,1),self.config.casing.part))
+		local angle = (end_position - position):angle()
+
+		casingConfig.parameters.ownerId = activeItem.ownerEntityId()
+
+		for i=1,self.config.casing.count or 1 do
+			casingConfig.parameters.velocity = vec2(self.config.casing.velocity or casingConfig.parameters.velocity):rotate((-angle * aim.facing) + math.rad((math.random(450,900) - 450) / 10)) * vec2(aim.facing, 1)
+			world.spawnMonster(casingConfig.type, pos, casingConfig.parameters)
+		end
+	end
+end
+
+local maginited = false
+local magconfig = {}
+local function initmag(s)
+	magconfig = root.assetJson("/mpguns_core/mag.config")
+
+	if s.config.mag.scale then
+		magconfig.parameters.scale = s.config.mag.scale
+	end
+
+	if s.config.mag.image then
+		magconfig.parameters.animationCustom.globalTagDefaults.magimage = s.config.mag.image
+	end
+end
+
+function main:dropmag()
+	if self.config.mag and self.config.mag.part then
+		
+		if not maginited then
+			maginited = true
+			initmag(self)
+		end
+
+		local pos = activeItem.handPosition(animator.transformPoint(self.config.mag.offset or {0,0},self.config.mag.part)) + mcontroller.position()
+
+		local position = activeItem.handPosition(animator.transformPoint(self.config.mag.offset or {0,0},self.config.mag.part))
+		local end_position = activeItem.handPosition(animator.transformPoint((self.config.mag.offset or {0,0}) + vec2(0,1),self.config.mag.part))
+		local angle = (end_position - position):angle()
+
+		magconfig.parameters.ownerId = activeItem.ownerEntityId()
+
+		for i=1,self.config.mag.count or 1 do
+			magconfig.parameters.velocity = vec2(self.config.mag.velocity or magconfig.parameters.velocity):rotate((-angle * aim.facing) + math.rad((math.random(450,900) - 450) / 10)) * vec2(aim.facing, 1)
+			world.spawnMonster(magconfig.type, pos, magconfig.parameters)
+		end
+	end
+end
+
+function main:load()
+	if self.storage.loaded > 0 then
+		main:eject()
+	end
+	self.storage.dry = false
+	if self.storage.ammo <= 0 then return end
+	self.storage.loaded = 1
+	self.storage.ammo = self.storage.ammo - 1
+	self:save()
+end
+
+function main:unload()
+	if self.storage.ammo <= 0 then return end
+	self.storage.ammo = 0
+	self:save()
+end
+
+--animation mechanics
+
+function main:animate(animationname)
+	if self.overridenAnimates[animationname] and (animations:has(self.overridenAnimates[animationname]) or animations:has(self.overridenAnimates[animationname].."_dry")) then
+		animationname = self.overridenAnimates[animationname]
+	end
+
+	animations:stop(animationname)
+	animations:stop(animationname.."_dry")
+	if self.storage.dry and animations:has(animationname.."_dry") then
+		animations:play(animationname.."_dry")
+	else
+		animations:play(animationname)
+	end
+end
+
+function main:overrideAnimate(animationname, newanimationname) --temporary animation replacement
+	animations:stop(animationname)
+	animations:stop(animationname.."_dry")
+	self.overridenAnimates[animationname] = newanimationname
+end
+
+function main:isPlaying(animationname)
+	if self.overridenAnimates[animationname] and (animations:has(self.overridenAnimates[animationname]) or animations:has(self.overridenAnimates[animationname].."_dry")) then
+		animationname = self.overridenAnimates[animationname]
+	end
+
+	if self.storage.dry and animations:has(animationname.."_dry") then
+		return animations:isPlaying(animationname.."_dry")
+	else
+		return animations:isPlaying(animationname)
+	end
+end

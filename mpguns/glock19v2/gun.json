@@ -1,0 +1,42 @@
+{
+
+	"damageMultiplier" : 25,
+	"knockback" : 5,
+
+	"magazineCapacity" : 15,
+	"chamberAutoLoad" : true,
+	"chamberEject" : true,
+
+	"recoil" : 8,
+	"recoilRecovery" : 2,
+	"recoilResponse" : 2,
+	"armRecoil" : 0.125,
+	"armRecoilRecovery" : 8,
+	
+	"movingInaccuracy" : 5,
+	"standingInaccuracy" : 0.5,
+	"crouchInaccuracyMultiplier" : 0.5,
+
+	"aimRatio" : 0.05,
+
+	"firemode" : "semi",
+	"rpm" : 800,
+
+	"casing" : {
+		"part" : "casingPosition",
+		"type" : "9mm",
+		"velocity" : [-2,10],
+		"count" : 1
+	},
+
+	"mag" : {
+		"part" : "magPosition",
+		"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=050000;e4e4e4=00000b;6a6a6a=05000b?multiply=fff0?scale=4.5;10.5?crop=0;0;5;11?replace;0000=333;00000100=bbb;00000200=bbb;00000300=bbb;01000000=333;01000100=bbb;01000200=bbb;01000300=bbb;01000400=bbb;01000500=bbb;01000600=bbb;01000700=bbb;02000000=333;02000100=bbb;02000200=bbb;02000300=bbb;02000400=bbb;02000500=bbb;02000600=bbb;02000700=bbb;02000800=bbb;02000900=bbb;02000a00=bbb;03000000=333;03000400=bbb;03000500=bbb;03000600=bbb;03000700=bbb;03000800=bbb;03000900=bbb;03000a00=bbb;04000800=bbb;04000900=bbb;04000a00=bbb",
+		"scale" : 0.5,
+		"velocity" : [-2,0],
+		"count" : 1
+	},
+
+	"projectileName" : "plasmabullet",
+	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
+}

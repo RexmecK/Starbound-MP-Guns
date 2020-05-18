@@ -58,7 +58,7 @@ local antilock = false
 function dualwieldrecoil(angle)
 	if antilock then return end
 	antilock = true
-	aim:recoil(angle)
+	aim:recoil(angle * 0.5)
 	antilock = false
 end
 
@@ -67,7 +67,7 @@ function aim:recoil(angle)
 		angle = -angle
 	end
 	self._recoil = self._recoil + angle
-	if not config.twoHanded then
+	if not activeItem.twoHanded() then
 		local otherhandfunc = activeItem.callOtherHandScript("dualwieldrecoil", angle)
 	end
 end

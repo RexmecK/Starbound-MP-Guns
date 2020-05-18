@@ -1,1 +1,0 @@
-[{"lights":{},"burstParticle":[],"animationState":{},"fireEvents":[],"wait":0.1,"playSounds":[],"transforms":{"lever":{"position":[-0.75,0]},"gun":{"rotation":-1.875}}},{"lights":{},"burstParticle":[],"animationState":{},"fireEvents":["load"],"wait":0.05,"playSounds":["click6"],"transforms":{}}]

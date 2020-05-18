@@ -1,292 +1,32 @@
 [
 	{
-		"name" : "Desert eagle",
-		"image" : "/mpguns/deagle/icon.png",
-		"id" : "deagle"
+		"name" : "P250",
+		"image" : "/mpguns/p250/icon.png",
+		"id" : "p250"
 	},
 	{
-		"name" : "M1 Garand",
-		"image" : "/mpguns/m1garand/icon.png",
-		"id" : "m1garand"
+		"name" : "USP 45",
+		"image" : "/mpguns/usp45/icon.png",
+		"id" : "usp45"
 	},
 	{
-		"name" : "M249",
-		"image" : "/mpguns/m249/icon.png",
-		"id" : "m249"
-	},
-	{
-		"name" : "Mossberg 590",
-		"image" : "/mpguns/mossberg590/icon.png",
-		"id" : "mossberg590"
-	},
-	{
-		"name" : "Scar-H",
-		"image" : "/mpguns/scar-h/icon.png",
-		"id" : "scar-h"
-	},
-	{
-		"name" : "Mac-11",
-		"image" : "/mpguns/mac11/icon.png",
-		"id" : "mac11"
-	},
-	{
-		"name" : "RPG-7",
-		"image" : "/mpguns/rpg7/icon.png",
-		"id" : "rpg7"
-	},
-	{
-		"name" : "M16A2",
-		"image" : "/mpguns/m16a2/icon.png",
-		"id" : "m16a2"
-	},
-	{
-		"name" : "AA-12",
-		"image" : "/mpguns/aa12/icon.png",
-		"id" : "aa12"
-	},
-	{
-		"name" : "M82A1",
-		"image" : "/mpguns/m82a1/icon.png",
-		"id" : "m82a1"
-	},
-	{
-		"name" : "Sawed-off",
-		"image" : "/mpguns/sawedoff/icon.png",
-		"id" : "sawedoff"
-	},
-	{
-		"name" : "M27 IAR",
-		"image" : "/mpguns/m27/icon.png",
-		"id" : "m27"
-	},
-	{
-		"name" : "TCSG-12",
-		"image" : "/mpguns/tcsg-12/icon.png",
-		"id" : "tcsg-12"
-	},
-	{
-		"name" : "Glock 19x",
-		"image" : "/mpguns/glock19x/icon.png",
-		"id" : "glock19x"
-	},
-	{
-		"name" : "S&W Model 500",
-		"image" : "/mpguns/sw500/icon.png",
-		"id" : "sw500"
-	},
-	{
-		"name" : "Mosin Nagant",
-		"image" : "/mpguns/mosinnagant/icon.png",
-		"id" : "mosinnagant"
-	},
-	{
-		"name" : "M30 LuftWaffe Drilling",
-		"image" : "/mpguns/m30/icon.png",
-		"id" : "m30"
-	},
-	{
-		"name" : "M1911",
-		"image" : "/mpguns/m1911/icon.png",
-		"id" : "m1911"
-	},
-	{
-		"name" : "Musket Rifle",
-		"image" : "/mpguns/musket/icon.png",
-		"id" : "musket"
-	},
-	{
-		"name" : "Kel-Tec KSG",
-		"image" : "/mpguns/ksg/icon.png",
-		"id" : "ksg"
-	},
-	{
-		"name" : "CSAA",
-		"image" : "/mpguns/csaa/icon.png",
-		"id" : "csaa"
-	},
-	{
-		"name" : "GM6 Lynx",
-		"image" : "/mpguns/gm6/icon.png",
-		"id" : "gm6"
-	},
-	{
-		"name" : "G2 Contender",
-		"image" : "/mpguns/g2/icon.png",
-		"id" : "g2"
-	},
-	{
-		"name" : "Ameli 5.56",
-		"image" : "/mpguns/ameli/icon.png",
-		"id" : "ameli"
-	},
-	{
-		"name" : "M14",
-		"image" : "/mpguns/m14/icon.png",
-		"id" : "m14"
-	},
-	{
-		"name" : "UMP-45",
-		"image" : "/mpguns/ump45/icon.png",
-		"id" : "ump45"
-	},
-	{
-		"name" : "Kriss Vector",
-		"image" : "/mpguns/krissvector/icon.png",
-		"id" : "krissvector"
-	},
-	{
-		"name" : "Ulthman",
-		"image" : "/mpguns/ulthman/icon.png",
-		"id" : "ulthman"
-	},
-	{
-		"name" : "Barrett M99",
-		"image" : "/mpguns/m99/icon.png",
-		"id" : "m99"
-	},
-	{
-		"name" : "H&K G36C",
-		"image" : "/mpguns/g36c/icon.png",
-		"id" : "g36c"
-	},
-	{
-		"name" : "H&K MP5SD3",
-		"image" : "/mpguns/mp5sd3/icon.png",
-		"id" : "mp5sd3"
-	},
-	{
-		"name" : "H&K MP5A3",
-		"image" : "/mpguns/mp5a3/icon.png",
-		"id" : "mp5a3"
-	},
-	{
-		"name" : "MG42",
-		"image" : "/mpguns/mg42/icon.png",
-		"id" : "mg42"
-	},
-	{
-		"name" : "CMMG Mk47 Mutant",
-		"image" : "/mpguns/mk47/icon.png",
-		"id" : "mk47"
-	},
-	{
-		"name" : "CMMG Mk47 Mutant (Custom 1)",
-		"image" : "/mpguns/mk47custom1/icon.png",
-		"id" : "mk47custom1"
-	},
-	{
-		"name" : "IMI Galil",
-		"image" : "/mpguns/imigalil/icon.png",
-		"id" : "imigalil"
-	},
-	{
-		"name" : "Famas F1",
-		"image" : "/mpguns/famasf1/icon.png",
-		"id" : "famasf1"
-	},
-	{
-		"name" : "MP40",
-		"image" : "/mpguns/mp40/icon.png",
-		"id" : "mp40"
-	},
-	{
-		"name" : "Winchester Model 1894",
-		"image" : "/mpguns/winchester1894/icon.png",
-		"id" : "winchester1894"
-	},
-	{
-		"name" : "M134 Vulcan Minigun",
-		"image" : "/mpguns/m134/icon.png",
-		"id" : "m134"
-	},
-	{
-		"name" : "Five SeveN",
-		"image" : "/mpguns/fiveseven/icon.png",
-		"id" : "fiveseven"
-	},
-	{
-		"name" : "Komodo Assault Shotgun",
-		"image" : "/mpguns/komodoassaultshotgun/icon.png",
-		"id" : "komodoassaultshotgun"
-	},
-	{
-		"name" : "M202 Flash",
-		"image" : "/mpguns/m202flash/icon.png",
-		"id" : "m202flash"
-	},
-	{
-		"name" : "AKS-74",
-		"image" : "/mpguns/aks74/icon.png",
-		"id" : "aks74"
-	},
-	{
-		"name" : "AK-74",
-		"image" : "/mpguns/ak74/icon.png",
-		"id" : "ak74"
-	},
-	{
-		"name" : "AK-47",
-		"image" : "/mpguns/ak47/icon.png",
-		"id" : "ak47"
-	},
-	{
-		"name" : "FNH Scar 20S",
-		"image" : "/mpguns/fnhScar20s/icon.png",
-		"id" : "fnhScar20s"
-	},
-	{
-		"name" : "H&K 416",
-		"image" : "/mpguns/hk416/icon.png",
-		"id" : "hk416"
-	},
-	{
-		"name" : "H&K 416 Custom 1",
-		"image" : "/mpguns/hk416custom1/icon.png",
-		"id" : "hk416custom1"
+		"name" : "M45A1",
+		"image" : "/mpguns/m45a1/icon.png",
+		"id" : "m45a1"
 	},
 	{
 		"name" : "Glock 19",
-		"image" : "/mpguns/glock19/icon.png",
-		"id" : "glock19"
+		"image" : "/mpguns/glock19v2/icon.png",
+		"id" : "glock19v2"
 	},
 	{
-		"name" : "RSS Glock 19",
-		"image" : "/mpguns/rssglock19/icon.png",
-		"id" : "rssglock19"
+		"name" : "Makarov PM",
+		"image" : "/mpguns/makarovpm/icon.png",
+		"id" : "makarovpm"
 	},
 	{
-		"name" : "RSS Glock 19 Suppressed",
-		"image" : "/mpguns/rssglock19suppressed/icon.png",
-		"id" : "rssglock19suppressed"
-	},
-	{
-		"name" : "OTs-03 SVU",
-		"image" : "/mpguns/ots03/icon.png",
-		"id" : "ots03"
-	},
-	{
-		"name" : "SPAS-12",
-		"image" : "/mpguns/spas12/icon.png",
-		"id" : "spas12"
-	},
-	{
-		"name" : "M1921 Thompson (Drum mag)",
-		"image" : "/mpguns/m1921drum/icon.png",
-		"id" : "m1921drum"
-	},
-	{
-		"name" : "Stechkin APS",
-		"image" : "/mpguns/aps/icon.png",
-		"id" : "aps"
-	},
-	{
-		"name" : "WA2000",
-		"image" : "/mpguns/wa2000/icon.png",
-		"id" : "wa2000"
-	},
-	{
-		"name" : "AWP",
-		"image" : "/mpguns/awp/icon.png",
-		"id" : "awp"
+		"name" : "Desert Eagle",
+		"image" : "/mpguns/deaglev2/icon.png",
+		"id" : "deaglev2"
 	}
 ]

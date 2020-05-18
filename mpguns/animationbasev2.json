@@ -1,0 +1,28 @@
+{
+	"globalTagDefaults":{
+		"selfimage":"/assetmissing.png"
+	},
+	"animatedParts":{
+		"parts":{
+			"R_handPoint"	:{
+				"properties":{"centered":false,"image":"","offset":[0.0,0.0],"transformationGroups":["R_handPoint","base"]},
+				"partStates":{}
+			},
+			"L_handPoint"	:{
+				"properties":{"centered":false,"image":"","offset":[0.0,0.0],"transformationGroups":["L_handPoint","base"]},
+				"partStates":{}
+			}
+		},
+		"stateTypes":{}
+	},
+	"particleEmitters":{},
+	"sounds":{
+		"null":[]
+	},
+	"transformationGroups":{
+		"R_handPoint"	:{"interpolated":false},
+		"L_handPoint"	:{"interpolated":false},
+		"base"		:{"interpolated":false},
+		"globalRecoil"	:{"ignore":true, "interpolated":true}
+	}
+}

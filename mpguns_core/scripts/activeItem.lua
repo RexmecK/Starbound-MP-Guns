@@ -1,5 +1,6 @@
 include "vec2"
 include "class"
+include "config"
 
 local activeItemWrapped = activeItem
 local _activeItem = {}
@@ -20,6 +21,19 @@ end
 
 function _activeItem.handPosition(relative)
 	return vec2(activeItemWrapped.handPosition(relative))
+end
+
+local twohanded = nil
+
+function _activeItem.twoHanded()
+	if type(twohanded) == "nil" then twohanded = config.getParameter("twoHanded", true) end
+
+	return twohanded
+end
+
+function _activeItem.setTwoHandedGrip(b)
+	activeItemWrapped.setTwoHandedGrip(b)
+	twohanded = b
 end
 
 function _activeItem:__index(key)

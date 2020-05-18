@@ -1,0 +1,196 @@
+{
+	"itemVersion" : 1.0, // add up a number to force update
+
+	"shortdescription" : "Glock 19",
+	"category" : "Pistol",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=270000;e4e4e4=00001f;6a6a6a=27001f?multiply=fff0?scale=38.5;30.5?crop=0;0;39;31?replace;09000b00=111;09000c00=111;09001200=111;09001300=333;09001400=333;09001500=333;0a000a00=111;0a000b00=111;0a000c00=111;0a000d00=111;0a000e00=111;0a001100=111;0a001200=111;0a001300=333;0a001400=333;0a001500=333;0a001600=111;0b000900=333;0b000a00=111;0b000b00=111;0b000c00=111;0b000d00=111;0b000e00=111;0b000f00=111;0b001000=111;0b001100=111;0b001200=111;0b001300=333;0b001400=333;0b001500=333;0b001600=111;0c000900=333;0c000a00=111;0c000b00=111;0c000c00=111;0c000d00=111;0c000e00=111;0c000f00=333;0c001000=333;0c001100=111;0c001200=111;0c001300=333;0c001400=333;0c001500=333;0d000900=333;0d000a00=111;0d000b00=111;0d000c00=111;0d000d00=111;0d000e00=111;0d000f00=333;0d001000=333;0d001100=111;0d001200=111;0d001300=333;0d001400=333;0d001500=333;0e000900=333;0e000a00=111;0e000b00=111;0e000c00=111;0e000d00=111;0e000e00=333;0e000f00=333;0e001000=111;0e001100=111;0e001200=111;0e001300=333;0e001400=333;0e001500=333;0f000d00=111;0f000e00=333;0f000f00=333;0f001000=111;0f001100=111;0f001200=111;0f001300=333;0f001400=333;0f001500=333;10000e00=111;10000f00=111;10001000=111;10001100=111;10001200=111;10001300=333;10001400=333;10001500=333;11000e00=111;11001000=333;1010=111;11001200=111;11001300=333;11001400=333;11001500=333;12000e00=111;12000f00=333;12001000=333;12001100=111;12001200=111;12001300=333;12001400=bbb;12001500=bbb;13000e00=111;13000f00=333;13001100=111;13001200=111;13001300=333;13001400=bbb;13001500=bbb;14000e00=111;14001100=111;14001200=111;14001300=333;14001400=bbb;14001500=bbb;15000e00=111;15000f00=111;15001000=111;15001100=111;15001200=111;15001300=333;15001400=333;15001500=333;16000e00=111;16001100=111;16001200=111;16001300=333;16001400=333;16001500=333;17001100=111;17001200=111;17001300=333;17001400=333;17001500=333;18001100=111;18001200=111;18001300=333;18001400=333;18001500=333;19001100=111;19001200=111;19001300=333;19001400=333;19001500=333;1a001100=111;1a001200=111;1a001300=333;1a001400=333;1a001500=333;1b001100=111;1b001200=111;1b001300=333;1b001400=333;1b001500=333;1b001600=111;1c001100=111;1c001200=111;1c001300=333;1c001400=333;1c001500=333;1c001600=111",
+	"description" : "",
+	"rarity" : "Common",
+	"maxStack" : 16,
+
+	"system" : "gunv2", // check in "/mpguns_core/systems/"
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbasev2.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"firesound1" : {"pool" : ["/sfx/gun/shotgun1.ogg"], "pitchMultiplier" : 1.05, "volume" : 1.2},
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.7},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.2},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.85, "volume" : 1.1},
+			"reload1" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"reload2" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip1.ogg"], "pitchMultiplier" : 1.0},
+			"reload3" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+
+			"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5}
+		},
+		"lights" : {},
+		"animatedParts" : {
+			"parts" : {
+				"mag" : {
+					"properties" : {
+						"zLevel" : 10,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["mag"]
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 11,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+				"slide" : {
+					"properties" : {
+						"zLevel" : 12,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["slide"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						// define projectile output position anchored with gun transform
+						"offset" : [3.5,2.625],
+						"anchorPart" : "gun"
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0.0,0.0],
+						"centered" : true,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						// define casing position fx here
+						"offset" : [2,2.625],
+						"anchorPart" : "gun"
+					}
+				},
+				
+				"magPosition" : {
+					"properties" : {
+						// define mag position fx here
+						"offset" : [1.875,1.75],
+						"anchorPart" : "mag"
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"mode" : "transition", "transition" : "1", "cycle" : 0.032, "properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}},
+						"1" : {"mode" : "transition", "transition" : "off", "cycle" : 0.032, "properties" : {"particleEmittersOn" : ["smoke","muzzleFlash"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [1, 0],
+							"finalVelocity" : [0, 8.0],
+							"approach" : [0, 2],
+							"color" : [172,172,172,45],
+							"angularVelocity" : 180,
+							"initialVelocity" : [3.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.25,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [0.2,0.0],
+								"position" : [1, 1],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"muzzleFlash" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"size" : 2,
+							"color" : [0,0,0,0],
+							"light" : [253, 222, 57, 255],
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"layer" : "middle"
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"mag":{"transform":{"rotationPoint":[1.8125,1.8125],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_handPoint":{"interpolated":false,"transform":{"position":[-0.0625,0.375]}},"globalRecoil":{"ignore":true,"interpolated":true,"transform":{}},"armRotation":{"ignore":true,"transform":{"rotation":-5}},"gun":{"transform":{"rotationPoint":[2.25,2.0625],"rotation":5,"scale":[0.4375,0.4375],"position":[-1.6875,-0.8125]}},"base":{"interpolated":false,"transform":{}},"slide":{"transform":{"position":[0,0]}},"L_handPoint":{"interpolated":false,"transform":{"position":[-0.0625,0.25]}}}
+	}
+}
