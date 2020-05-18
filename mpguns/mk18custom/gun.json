@@ -14,10 +14,10 @@
 	"armRecoilRecovery" : 4,
 	
 	"movingInaccuracy" : 5,
-	"standingInaccuracy" : 0.5,
+	"standingInaccuracy" : 0.25,
 	"crouchInaccuracyMultiplier" : 0.5,
 
-	"aimRatio" : 0.05,
+	"aimRatio" : 0.1,
 
 	"firemode" : "auto",
 	"rpm" : 600,

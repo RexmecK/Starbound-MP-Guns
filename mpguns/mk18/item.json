@@ -100,7 +100,7 @@
 				"muzzlePosition" : {
 					"properties" : {
 						// define projectile output position anchored with gun transform
-						"offset" : [10,3.25],
+						"offset" : [9.75,3.25],
 						"anchorPart" : "gun"
 					}
 				},
