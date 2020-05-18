@@ -28,5 +28,15 @@
 		"name" : "Desert Eagle",
 		"image" : "/mpguns/deaglev2/icon.png",
 		"id" : "deaglev2"
+	},
+	{
+		"name" : "MK18",
+		"image" : "/mpguns/mk18/icon.png",
+		"id" : "mk18"
+	},
+	{
+		"name" : "MK18 Custom",
+		"image" : "/mpguns/mk18custom/icon.png",
+		"id" : "mk18custom"
 	}
 ]
