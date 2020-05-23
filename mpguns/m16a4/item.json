@@ -1,0 +1,216 @@
+{
+	"itemVersion" : 1.01, // add up a number to force update
+
+	"shortdescription" : "M16A4",
+	"category" : "Rifle",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=0000;eaeaea=6c000000;e4e4e4=00002a00;6a6a6a=6c002a00?scale=107.5;41.5?crop=0;0;108;42?replace;1d001800=222;1d001900=222;1d001a00=222;1d001b00=222;1e001200=222;1e001300=222;1e001400=222;1e001500=222;1e001600=222;1e001700=222;1e001800=222;1e001900=222;1e001a00=222;1e001b00=222;1f001200=222;1f001300=222;1f001400=222;1f001500=222;1f001600=222;1f001700=222;1f001800=444;1f001900=444;1f001a00=444;1f001b00=444;20001300=222;20001400=222;20001500=444;20001600=444;20001700=444;20001800=444;20001900=444;20001a00=444;20001b00=444;21001400=222;21001500=222;21001600=444;21001700=444;21001800=444;21001900=444;21001a00=444;21001b00=444;22001400=222;22001500=222;22001600=444;22001700=444;22001800=444;22001900=444;22001a00=444;22001b00=444;23001500=222;23001600=222;23001700=444;23001800=444;23001900=444;23001a00=444;23001b00=444;24001500=222;24001600=222;24001700=444;24001800=444;24001900=444;24001a00=444;24001b00=444;25001600=222;25001700=222;25001800=444;25001900=444;25001a00=444;25001b00=444;26001600=222;26001700=222;26001800=444;26001900=444;26001a00=444;26001b00=444;27001700=222;27001800=222;27001900=444;27001a00=444;27001b00=444;28001700=222;28001800=222;28001900=444;28001a00=444;28001b00=444;29001800=222;29001900=222;29001a00=444;29001b00=444;2a001000=222;2a001100=222;2a001800=222;2a001900=222;2a001a00=444;2a001b00=444;2b001000=222;2b001100=111;2b001200=111;2b001700=222;2b001800=222;2b001900=222;2b001a00=222;2b001b00=222;2c000f00=222;2c001000=222;2c001100=111;2c001200=111;2c001300=111;2c001400=111;2c001700=222;2c001800=222;2c001900=111;2c001a00=111;2c001b00=222;2c001c00=444;2d000f00=222;2d001000=222;2d001100=222;2d001200=222;2d001300=111;2d001400=111;2d001500=222;2d001600=222;2d001700=222;2d001800=222;2d001900=111;2d001a00=111;2d001b00=222;2d001c00=444;2d001d00=222;2e001200=222;2e001300=222;2e001400=222;2e001500=222;2e001600=222;2e001700=222;2e001800=222;2e001900=444;2e001a00=444;2e001b00=222;2e001c00=222;2e001d00=222;2e001e00=222;2f001300=222;2f001400=222;2f001500=222;2f001600=222;2f001700=222;2f001800=222;2f001900=444;2f001a00=444;2f001b00=222;2f001c00=222;2f001d00=222;30001400=222;30001500=222;30001600=222;30001700=222;30001800=222;30001900=444;30001a00=444;30001b00=222;30001c00=222;31001400=222;31001600=aaa;31001700=222;31001800=222;31001900=333;31001a00=333;31001b00=222;31001c00=222;32001400=222;32001500=aaa;32001700=222;32001800=222;32001900=333;32001a00=444;32001b00=444;32001c00=222;33001400=222;33001700=222;33001800=222;33001900=333;33001a00=111;33001b00=111;33001c00=222;34001000=444;34001100=444;34001200=444;34001300=444;34001400=222;34001500=222;34001600=222;34001700=222;34001800=222;34001900=bbb;34001a00=bbb;34001b00=222;34001c00=222;35000c00=444;35000d00=444;35000e00=444;35000f00=444;35001000=444;35001100=444;35001200=444;35001300=444;35001400=222;35001500=222;35001600=222;35001700=222;35001800=222;35001900=bbb;35001a00=bbb;35001b00=222;35001c00=222;36000c00=444;36000d00=444;36000e00=444;36000f00=444;36001000=333;36001100=333;36001200=333;36001300=333;36001400=333;36001500=222;36001600=222;36001700=222;36001800=222;36001900=aaa;36001a00=aaa;36001b00=222;36001c00=222;37000c00=333;37000d00=333;37000e00=333;37000f00=333;37001000=333;37001100=333;37001200=333;37001300=333;37001400=333;37001500=222;37001600=222;37001700=222;37001800=222;37001900=aaa;37001a00=aaa;37001b00=222;37001c00=222;38000d00=333;38000e00=333;38000f00=333;38001000=444;38001100=444;38001200=444;38001300=444;38001400=444;38001500=222;38001600=222;38001700=222;38001800=222;38001900=bbb;38001a00=bbb;38001b00=222;38001c00=222;39000d00=444;39000e00=444;39000f00=444;39001000=444;39001100=444;39001200=444;39001300=444;39001400=444;39001500=222;39001600=222;39001700=222;39001800=222;39001900=bbb;39001a00=bbb;39001b00=222;39001c00=222;3a000d00=444;3a000e00=444;3a000f00=444;3a001500=222;3a001600=222;3a001800=111;3a001900=111;3a001a00=111;3a001b00=111;3b001700=444;3b001800=222;3b001900=444;3b001a00=444;3b001b00=222;3b001c00=444;3c001700=444;3c001800=222;3c001900=222;3c001a00=222;3c001b00=111;3c001c00=444;3d001700=444;3d001800=222;3d001900=444;3d001a00=444;3d001b00=111;3d001c00=444;3e001700=444;3e001800=222;3e001900=444;3e001a00=444;3e001b00=222;3e001c00=444;3f001700=444;3f001800=222;3f001900=222;3f001a00=222;3f001b00=111;3f001c00=444;40001700=444;40001800=222;40001900=444;40001a00=444;40001b00=111;40001c00=444;41001700=444;41001800=222;41001900=444;41001a00=444;41001b00=222;41001c00=444;42001800=222;42001900=222;42001a00=222;42001b00=111;42001c00=444;43001800=222;43001900=444;43001a00=444;43001b00=111;43001c00=444;44001800=222;44001900=444;44001a00=444;44001b00=222;44001c00=444;45001800=222;45001900=222;45001a00=222;45001b00=111;45001c00=444;46001800=222;46001900=444;46001a00=444;46001b00=111;46001c00=444;47001700=444;47001800=222;47001900=444;47001a00=444;47001b00=222;47001c00=444;48001700=444;48001800=222;48001900=222;48001a00=222;48001b00=111;48001c00=444;49001700=444;49001800=222;49001900=444;49001a00=444;49001b00=111;49001c00=444;4a001700=444;4a001800=222;4a001900=444;4a001a00=444;4a001b00=222;4a001c00=444;4b001700=444;4b001800=222;4b001900=222;4b001a00=222;4b001b00=111;4b001c00=444;4c001700=444;4c001800=222;4c001900=222;4c001a00=222;4c001b00=111;4c001c00=444;4d001700=444;4d001800=222;4d001900=222;4d001a00=222;4d001b00=222;4d001c00=444;4e001800=222;4e001900=222;4e001a00=222;4e001b00=222;4e001c00=222;4f001800=222;4f001900=222;4f001a00=222;4f001b00=222;4f001c00=222;4f001d00=222;50001900=222;50001a00=222;50001c00=222;50001d00=222;50001e00=222;51001800=222;51001900=222;51001a00=222;51001b00=222;51001c00=222;51001d00=222;51001e00=222;52001800=222;52001900=222;52001a00=222;52001b00=222;52001c00=222;52001d00=222;52001e00=222;53001900=222;53001a00=222;54001900=222;54001a00=222;55001900=222;55001a00=222;56001900=222;56001a00=222;57001900=222;57001a00=222;58001900=222;58001a00=222;59001900=222;59001a00=222;5a001900=222;5a001a00=222;5b001900=222;5b001a00=222",
+	"description" : "",
+	"rarity" : "Common",
+	"maxStack" : 31,
+
+	"system" : "gunv2", // check in "/mpguns_core/systems/"
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbasev2.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"firesound1" : {"pool" : ["/sfx/gun/shotgun1.ogg"], "pitchMultiplier" : 1.2},
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.21},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.7},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.74},
+			"reload1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"reload2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"reload3" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"reload4" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip3.ogg"], "pitchMultiplier" : 1.2},
+
+			"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5}
+		},
+		"lights" : {},
+		"animatedParts" : {
+			"parts" : {
+				"gunbg" : {
+					"properties" : {
+						"zLevel" : 9,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"anchorPart" : "gun"
+					}
+				},
+				"lever" : {
+					"properties" : {
+						"zLevel" : 10,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["lever"]
+					}
+				},
+				"lever2" : {
+					"properties" : {
+						"zLevel" : 11,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"anchorPart" : "lever",
+						"transformationGroups" : ["lever2"]
+					}
+				},
+				"mag" : {
+					"properties" : {
+						"zLevel" : 12,
+						"offset" : [0,0],
+						"image" : "<sprite_3>",
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["mag"]
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 13,
+						"offset" : [0,0],
+						"image" : "<sprite_4>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						// define projectile output position anchored with gun transform
+						"offset" : [10.75,3.25],
+						"anchorPart" : "gun"
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0.0,0.0],
+						"centered" : true,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						// define casing position fx here
+						"offset" : [6.875,3.25],
+						"anchorPart" : "gun"
+					}
+				},
+				
+				"magPosition" : {
+					"properties" : {
+						// define mag position fx here
+						"offset" : [6.875,2.375],
+						"anchorPart" : "mag"
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"mode" : "transition", "transition" : "1", "cycle" : 0.032, "properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}},
+						"1" : {"mode" : "transition", "transition" : "off", "cycle" : 0.032, "properties" : {"particleEmittersOn" : ["smoke","muzzleFlash"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [1, 0],
+							"finalVelocity" : [0, 8.0],
+							"approach" : [0, 2],
+							"color" : [172,172,172,45],
+							"angularVelocity" : 180,
+							"initialVelocity" : [3.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.25,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [0.2,0.0],
+								"position" : [1, 1],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"muzzleFlash" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"size" : 2,
+							"color" : [0,0,0,0],
+							"light" : [253, 222, 57, 255],
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"layer" : "middle"
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"mag":{"transform":{"rotationPoint":[6.9375,2.25],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[-0.5,0.25]}},"globalRecoil":{"ignore":true,"interpolated":true},"armRotation":{"ignore":true,"transform":{"rotation":-5}},"gun":{"transform":{"rotationPoint":[6.25,2.75],"rotation":5,"scale":[0.5,0.5],"position":[-6.625,-1.8125]}},"base":{"interpolated":false},"lever2":{"transform":{"position":[0,0]}},"L_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[0.5625,0.6875]}},"lever":{"transform":{"position":[0,0]}}}
+	}
+}
