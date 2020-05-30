@@ -48,5 +48,10 @@
 		"name" : "M16A4",
 		"image" : "/mpguns/m16a4/icon.png",
 		"id" : "m16a4"
+	},
+	{
+		"name" : "AKM",
+		"image" : "/mpguns/akm/icon.png",
+		"id" : "akm"
 	}
 ]

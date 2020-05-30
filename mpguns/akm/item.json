@@ -1,0 +1,206 @@
+{
+	"itemVersion" : 1.0, // add up a number to force update
+
+	"shortdescription" : "AKM",
+	"category" : "Rifle",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=0000;eaeaea=6c000000;e4e4e4=00002a00;6a6a6a=6c002a00?scale=107.5;41.5?crop=0;0;108;42?replace;1d001200=111;1d001300=111;1d001400=111;1d001500=111;1d001600=111;1d001700=111;1d001800=111;1e001200=111;1e001300=111;1e001400=111;1e001500=111;1e001600=111;1e001700=111;1e001800=111;1f001200=431;1f001300=431;1f001400=431;1f001500=742;1f001600=742;1f001700=742;1f001800=742;20001300=431;20001400=431;20001500=742;20001600=742;20001700=742;20001800=742;21001300=431;21001400=431;21001500=742;21001600=742;21001700=742;21001800=742;22001400=431;22001500=431;22001600=742;22001700=742;22001800=742;23001400=431;23001500=431;23001600=742;23001700=742;23001800=742;24001400=431;24001500=431;24001600=742;24001700=742;25001400=431;25001500=431;25001600=742;25001700=742;26001500=431;26001600=431;26001700=742;26001800=742;27001500=431;27001600=431;27001700=742;27001800=742;28001500=431;28001600=431;28001700=742;28001800=742;29001500=431;29001600=431;29001700=742;29001800=742;2a001600=431;2a001700=431;2a001800=742;2b001600=431;2b001700=431;2b001800=742;2c000f00=431;2c001000=742;2c001100=742;2c001200=742;2c001500=742;2c001600=111;2c001700=111;2c001800=111;2c001900=333;2c001a00=333;2d000f00=431;2d001000=742;2d001100=742;2d001200=742;2d001300=742;2d001400=742;2d001500=742;2d001600=111;2d001700=111;2d001800=111;2d001900=333;2d001a00=333;2e000f00=431;2e001000=431;2e001100=431;2e001200=431;2e001300=742;2e001400=742;2e001500=742;2e001600=111;2e001700=111;2e001800=111;2e001900=333;2e001a00=333;2e001b00=333;2f001300=431;2f001400=431;2f001500=431;2f001600=111;2f001700=555;2f001800=555;2f001900=333;2f001a00=333;2f001b00=333;30001400=111;30001500=111;30001600=111;30001700=555;30001800=555;30001900=333;30001a00=333;30001b00=333;31001400=111;31001600=888;31001700=111;31001800=555;31001900=111;31001a00=333;31001b00=333;32001400=111;32001500=888;32001700=111;32001800=555;32001900=111;32001a00=333;32001b00=333;33001400=111;33001700=111;33001800=555;33001900=111;33001a00=333;33001b00=333;34001400=111;34001500=111;34001600=111;34001700=111;34001800=555;34001900=111;34001a00=333;34001b00=333;35001500=333;35001600=333;35001700=111;35001800=111;35001900=888;35001a00=888;35001b00=333;36001300=333;36001400=333;36001500=333;36001600=333;36001700=111;36001800=111;36001900=888;36001a00=888;36001b00=333;37001100=333;37001200=333;37001300=333;37001400=333;37001500=333;37001600=333;37001700=111;37001800=111;37001900=888;37001a00=888;37001b00=333;38000f00=333;38001000=333;38001100=333;38001200=333;38001300=333;38001400=333;38001500=555;38001600=555;38001700=111;38001800=111;38001900=888;38001a00=888;38001b00=333;39000e00=333;39000f00=333;39001000=333;39001100=333;39001200=333;39001300=555;39001400=555;39001500=333;39001600=333;39001700=111;39001800=111;39001900=555;39001a00=888;39001b00=333;3a000d00=333;3a000e00=333;3a000f00=333;3a001000=333;3a001100=555;3a001200=555;3a001300=333;3a001400=333;3a001700=111;3a001800=111;3a001900=555;3a001a00=888;3a001b00=333;3b000c00=333;3b000d00=333;3b000e00=333;3b000f00=333;3b001000=555;3b001100=333;3b001200=333;3b001700=111;3b001800=111;3b001900=111;3b001a00=111;3b001b00=111;3b001c00=111;3c000b00=333;3c000c00=333;3c000d00=333;3c000e00=333;3c000f00=555;3c001000=333;3c001700=111;3c001800=111;3c001900=111;3c001a00=111;3c001b00=111;3c001c00=111;3d000b00=333;3d000c00=333;3d000d00=333;3d000e00=555;3d000f00=333;3d001600=431;3d001700=742;3d001800=742;3d001900=742;3d001a00=111;3d001b00=111;3e000c00=333;3e000d00=555;3e000e00=333;3e001600=431;3e001700=742;3e001800=742;3e001900=742;3e001a00=111;3e001b00=111;3f000d00=333;3f001600=431;3f001700=742;3f001800=742;3f001900=742;3f001a00=742;3f001b00=742;40001600=431;40001700=742;40001800=742;40001900=111;40001a00=742;40001b00=742;41001700=431;41001800=742;41001900=111;41001a00=742;41001b00=742;42001700=431;42001800=742;42001900=742;42001a00=742;42001b00=742;43001700=431;43001800=742;43001900=111;43001a00=742;43001b00=742;44001700=431;44001800=742;44001900=111;44001a00=742;44001b00=742;45001700=431;45001800=742;45001900=742;45001a00=742;45001b00=742;46001700=111;46001800=111;46001a00=111;46001b00=111;47001700=111;47001800=111;47001a00=111;47001b00=111;48001700=111;48001800=111;48001900=111;48001a00=111;49001700=111;49001800=111;49001900=111;49001a00=111;4a001700=111;4a001800=111;4b001700=111;4b001800=111;4c001700=111;4c001800=111;4d001700=111;4d001800=111;4e001700=111;4e001800=111;4f001700=111;4f001800=111;4f001900=111;4f001a00=111;50001700=111;50001800=111;50001900=111;50001a00=111;50001b00=111;50001c00=111;51001700=111;51001800=111;51001900=111;51001a00=111;51001b00=111;51001c00=111;52001700=111;52001800=111;53001700=111;53001800=111",
+	"description" : "",
+	"rarity" : "Common",
+	"maxStack" : 31,
+
+	"system" : "gunv2", // check in "/mpguns_core/systems/"
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbasev2.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"firesound1" : {"pool" : ["/sfx/gun/shotgun3.ogg"], "pitchMultiplier" : 1.21},
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.3},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.7},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.72},
+			"reload1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"reload2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"reload3" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"reload4" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.6},
+
+			"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5}
+		},
+		"lights" : {},
+		"animatedParts" : {
+			"parts" : {
+				"gunbg" : {
+					"properties" : {
+						"zLevel" : 9,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"anchorPart" : "gun"
+					}
+				},
+				"mag" : {
+					"properties" : {
+						"zLevel" : 10,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["mag"]
+					}
+				},
+				"lever" : {
+					"properties" : {
+						"zLevel" : 11,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["lever"]
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 12,
+						"offset" : [0,0],
+						"image" : "<sprite_3>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						// define projectile output position anchored with gun transform
+						"offset" : [10.5,3],
+						"anchorPart" : "gun"
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0.0,0.0],
+						"centered" : true,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						// define casing position fx here
+						"offset" : [6.875,3.25],
+						"anchorPart" : "gun"
+					}
+				},
+				
+				"magPosition" : {
+					"properties" : {
+						// define mag position fx here
+						"offset" : [7.375,2.25],
+						"anchorPart" : "mag"
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"mode" : "transition", "transition" : "1", "cycle" : 0.032, "properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}},
+						"1" : {"mode" : "transition", "transition" : "off", "cycle" : 0.032, "properties" : {"particleEmittersOn" : ["smoke","muzzleFlash"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [1, 0],
+							"finalVelocity" : [0, 8.0],
+							"approach" : [0, 2],
+							"color" : [172,172,172,45],
+							"angularVelocity" : 180,
+							"initialVelocity" : [3.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.25,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [0.2,0.0],
+								"position" : [1, 1],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"muzzleFlash" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"size" : 2,
+							"color" : [0,0,0,0],
+							"light" : [253, 222, 57, 255],
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"layer" : "middle"
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"mag":{"transform":{"rotationPoint":[6.9375,2.25],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[-0.625,0.8125]}},"globalRecoil":{"ignore":true,"interpolated":true},"armRotation":{"ignore":true,"transform":{"rotation":0}},"gun":{"transform":{"rotationPoint":[6.25,2.75],"rotation":0,"scale":[0.5,0.5],"position":[-6.6875,-1.875]}},"base":{"interpolated":false},"L_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[0.5,0.75]}},"lever":{"transform":{"position":[0,0]}}}
+	}
+}
