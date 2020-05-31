@@ -53,5 +53,10 @@
 		"name" : "AKM",
 		"image" : "/mpguns/akm/icon.png",
 		"id" : "akm"
+	},
+	{
+		"name" : "Beretta M9A1",
+		"image" : "/mpguns/berettam9a1/icon.png",
+		"id" : "berettam9a1"
 	}
 ]
