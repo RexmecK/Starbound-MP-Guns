@@ -451,6 +451,10 @@ local function initmag(s)
 	if s.config.mag.image then
 		magconfig.parameters.animationCustom.globalTagDefaults.magimage = s.config.mag.image
 	end
+
+	if s.config.mag.imagefullbright then
+		magconfig.parameters.animationCustom.globalTagDefaults.magimagefullbright = s.config.mag.imagefullbright
+	end
 end
 
 function main:dropmag()
