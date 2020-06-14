@@ -2,6 +2,7 @@ include "updateable"
 include "vec2"
 include "activeItem"
 include "mcontroller"
+include "config"
 
 local backarms = {
 	["idle.1"] =		{		3,		1.375},
@@ -79,6 +80,8 @@ local backArmOffset = vec2({1, -0.375})
 altarms = {}
 altarms.frontTarget = vec2(0,0)
 altarms.backTarget = vec2(0,0)
+altarms.frontOffset = vec2(0,0)
+altarms.backOffset = vec2(0,0)
 
 function altarms:init()
     local calcbackarms = {}
@@ -91,7 +94,52 @@ function altarms:init()
     for i,v in pairs(frontarms) do
         calcfrontarms[i] = v - center - frontArmOffset
     end
-    frontarms = calcfrontarms
+	frontarms = calcfrontarms
+	
+	
+	local confanimation = config:getAnimation()
+    transforms:addCustom(
+        "frontOffset", 
+            (confanimation.transformationGroups.frontOffset or {}).transform or {position = vec2(0,0)}, 
+        function(tr)
+	        self.frontOffset = tr.position or vec2(0,0)
+        end
+	)
+    transforms:addCustom(
+        "backOffset", 
+            (confanimation.transformationGroups.backOffset or {}).transform or {position = vec2(0,0)}, 
+        function(tr)
+	        self.backOffset = tr.position or vec2(0,0)
+        end
+	)
+end
+
+local function createOffsetsDirectives(offset, frameSize)
+	if not frameSize then frameSize = vec2(43,43) end
+	local directives = ""
+	local max = math.ceil(math.max(math.abs(offset[1]*8), math.abs(offset[2]*8)))
+	if max == 0 then
+		return ""
+	end
+	--create padding
+	directives = directives.."?border="..max..";0000;0000"
+	local crop = {0,0,frameSize[1] + max*2, frameSize[2] + max*2}
+
+	if offset[1] > 0 then
+		crop[3] = crop[3] - math.ceil(offset[1]*8)*2
+	elseif offset[1] < 0 then
+		crop[1] = crop[1] - math.ceil(offset[1]*8)*2
+	end
+
+	if offset[2] > 0 then
+		crop[4] = crop[4] - math.ceil(offset[2]*8)*2
+	elseif offset[2] < 0 then
+		crop[2] = crop[2] - math.ceil(offset[2]*8)*2
+	end
+
+	directives = directives.."?crop="..table.concat(crop,";")
+
+	return directives
 end
 
 function altarms:update(dt,firemode, shift)
@@ -123,20 +171,27 @@ function altarms:update(dt,firemode, shift)
         --world.debugPoint(mcontroller.position() + pos, {0,0,0, math.max(math.min(255 * (0.003 ^ distance), 255), 0) })
     
     end
-	local twohanded = activeItem.twoHanded()
+	local twohanded = activeItem.twoHanded()	
+	local frontOffset = createOffsetsDirectives(self.frontOffset)
+	local backOffset = createOffsetsDirectives(self.backOffset)
 	if twohanded then
 	    if frontClosest then
-	        activeItem.setFrontArmFrame(frontClosest[1])
+	        activeItem.setFrontArmFrame(frontClosest[1]..frontOffset)
 	    end
 	    if backClosest then
-	        activeItem.setBackArmFrame(backClosest[1])
+	        activeItem.setBackArmFrame(backClosest[1]..backOffset)
 		end
 	else
 	    if frontClosest then
-	        activeItem.setFrontArmFrame(frontClosest[1])
-	        activeItem.setBackArmFrame(frontClosest[1])
+	        activeItem.setFrontArmFrame(frontClosest[1]..frontOffset)
+	        activeItem.setBackArmFrame(frontClosest[1]..frontOffset)
 		end
 	end
+
+	altarms.frontTarget = activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint"))
+	altarms.backTarget = activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint"))
+	world.debugPoint(activeItem.handPosition(animator.transformPoint(self.frontOffset,"R_handPoint")) + mcontroller.position(),"green")
+	world.debugPoint(activeItem.handPosition(animator.transformPoint(self.backOffset,"L_handPoint")) + mcontroller.position(),"green")
 end
 
 function altarms:uninit()

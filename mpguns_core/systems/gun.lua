@@ -134,14 +134,7 @@ function main:update(...)
 	local dt = ({...})[1]
 
 	if self.noFlexArms then
-    	--world.debugPoint(activeItem.handPosition(animator.transformPoint({0.375,2.375},"R_hand")) + mcontroller.position(),"green")
-    	--world.debugPoint(activeItem.handPosition(animator.transformPoint({0.375,2.375},"L_hand")) + mcontroller.position(),"green")
-		--altarms.frontTarget = activeItem.handPosition(animator.transformPoint({0.375,2.375},"R_hand"))
-		--altarms.backTarget = activeItem.handPosition(animator.transformPoint({0.375,2.25},"L_hand"))
-		altarms.frontTarget = activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint"))
-		altarms.backTarget = activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint"))
-    	world.debugPoint(activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint")) + mcontroller.position(),"green")
-    	world.debugPoint(activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint")) + mcontroller.position(),"green")
+		altarms:update(...)
 	end
 
 	if alt and alt.update then

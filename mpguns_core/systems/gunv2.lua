@@ -186,10 +186,6 @@ function main:update(...)
 	aim:update(dt)
 
 	if self.noFlexArms then
-		altarms.frontTarget = activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint"))
-		altarms.backTarget = activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint"))
-    	world.debugPoint(activeItem.handPosition(animator.transformPoint({0,0},"R_handPoint")) + mcontroller.position(),"green")
-    	world.debugPoint(activeItem.handPosition(animator.transformPoint({0,0},"L_handPoint")) + mcontroller.position(),"green")
 		altarms:update(...)
 	end
 end
