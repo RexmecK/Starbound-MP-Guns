@@ -155,7 +155,7 @@ function altarms:update(dt,firemode, shift)
         elseif frontClosest[2] > distance then
             frontClosest = {i, distance}
         end
-        --world.debugPoint(mcontroller.position() + pos, {0,0,0, math.max(math.min(255 * (0.003 ^ distance), 255), 0) })
+        world.debugPoint(mcontroller.position() + pos, {0,0,255, math.max(math.min(255 * (0.003 ^ distance), 255), 0) })
     end
 
     local backClosest = false
@@ -168,8 +168,7 @@ function altarms:update(dt,firemode, shift)
         elseif backClosest[2] > distance then
             backClosest = {i, distance}
         end
-        --world.debugPoint(mcontroller.position() + pos, {0,0,0, math.max(math.min(255 * (0.003 ^ distance), 255), 0) })
-    
+        world.debugPoint(mcontroller.position() + pos, {255,0,0, math.max(math.min(255 * (0.003 ^ distance), 255), 0) })
     end
 	local twohanded = activeItem.twoHanded()	
 	local frontOffset = createOffsetsDirectives(self.frontOffset)

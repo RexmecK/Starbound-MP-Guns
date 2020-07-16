@@ -327,7 +327,7 @@ function main:fire()
 		end
 
 		self:fireProjectile()
-		self.fireCooldown = 60 / self.config.rpm
+		self.fireCooldown = 60 / (self.config.rpm - 1)
 
 		if self.storage.ammo == 0 or self.config.chamberDryIfFire then
 			self.storage.dry = true

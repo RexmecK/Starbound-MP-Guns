@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.01, // add up a number to force update
 
 	"shortdescription" : "MK18 Custom",
 	"category" : "Rifle",
@@ -216,6 +216,6 @@
 			}
 		},
 
-		"transformationGroups" : {"mag":{"transform":{"rotationPoint":[6.9375,2.25],"rotation":0,"position":[0,0]}},"muzzleFlash":{"transform":{"scale":[2,2]}},"R_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[-0.5,0.25]}},"globalRecoil":{"ignore":true,"interpolated":true},"armRotation":{"ignore":true,"transform":{"rotation":-5}},"gun":{"transform":{"rotationPoint":[6.25,2.75],"rotation":5,"scale":[0.5,0.5],"position":[-6.625,-1.8125]}},"base":{"interpolated":false},"lever2":{"transform":{"position":[0,0]}},"L_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[0.5625,0.6875]}},"lever":{"transform":{"position":[0,0]}}}
+		"transformationGroups" : {"muzzleFlash":{"transform":{"scale":[2,2]}},"mag":{"transform":{"rotationPoint":[6.9375,2.25],"rotation":0,"position":[0,0]}},"R_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[-0.4375,0.375]}},"globalRecoil":{"ignore":true,"interpolated":true},"armRotation":{"ignore":true,"transform":{"rotation":-5}},"gun":{"transform":{"rotationPoint":[6.25,2.75],"scale":[0.5,0.5],"rotation":5,"position":[-6.625,-1.8125]}},"base":{"interpolated":false},"lever2":{"transform":{"position":[0,0]}},"L_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[0.3125,0.5]}},"lever":{"transform":{"position":[0,0]}}}
 	}
 }
