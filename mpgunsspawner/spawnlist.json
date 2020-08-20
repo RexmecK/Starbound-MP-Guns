@@ -63,5 +63,10 @@
 		"name" : "VSS Vintorez",
 		"image" : "/mpguns/vss/icon.png",
 		"id" : "vss"
+	},
+	{
+		"name" : "HK PSG-1",
+		"image" : "/mpguns/hkpsg1/icon.png",
+		"id" : "hkpsg1"
 	}
 ]

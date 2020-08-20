@@ -1,0 +1,42 @@
+{
+
+	"damageMultiplier" : 62,
+	"knockback" : 5,
+
+	"magazineCapacity" : 20,
+	"chamberAutoLoad" : true,
+	"chamberEject" : true,
+
+	"recoil" : 12,
+	"recoilRecovery" : 2,
+	"recoilResponse" : 2,
+	"armRecoil" : 0.2,
+	"armRecoilRecovery" : 4,
+	
+	"movingInaccuracy" : 15,
+	"standingInaccuracy" : 0.25,
+	"crouchInaccuracyMultiplier" : 0.5,
+
+	"aimRatio" : 0.05,
+
+	"firemode" : "semi",
+	"rpm" : 230,
+
+	"casing" : {
+		"part" : "casingPosition",
+		"type" : "5mm",
+		"velocity" : [-2,10],
+		"count" : 1
+	},
+
+	"mag" : {
+		"part" : "magPosition",
+		"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=0000;eaeaea=05000000;e4e4e4=00000a00;6a6a6a=05000a00?scale=4.5;9.5?crop=0;0;5;10?replace;0000=444;00000100=444;00000200=444;00000300=444;00000400=444;00000500=444;00000600=444;00000700=444;00000800=444;01000000=444;01000100=444;01000200=444;01000300=444;01000400=444;01000500=444;01000600=444;01000700=444;01000800=444;02000100=444;02000200=444;02000300=444;02000400=444;02000500=444;02000600=444;02000700=444;02000800=444;03000100=222;03000200=222;03000300=222;03000400=222;03000500=222;03000600=222;03000700=222;03000800=222;03000900=222;04000100=444;04000200=444;04000300=444;04000400=444;04000500=444;04000600=444;04000700=444;04000800=444;04000900=444",
+		"scale" : 0.5,
+		"velocity" : [-2,0],
+		"count" : 1
+	},
+
+	"projectileName" : "plasmabullet",
+	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
+}
