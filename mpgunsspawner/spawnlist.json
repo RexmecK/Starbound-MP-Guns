@@ -73,5 +73,10 @@
 		"name" : "FN FAL",
 		"image" : "/mpguns/fnfal/icon.png",
 		"id" : "fnfal"
+	},
+	{
+		"name" : "PP-19 Bizon",
+		"image" : "/mpguns/pp19bizon/icon.png",
+		"id" : "pp19bizon"
 	}
 ]

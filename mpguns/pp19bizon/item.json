@@ -1,0 +1,206 @@
+{
+	"itemVersion" : 1.0, // add up a number to force update
+
+	"shortdescription" : "PP-19 Bizon",
+	"category" : "SMG",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=0000;eaeaea=6c000000;e4e4e4=00002a00;6a6a6a=6c002a00?scale=107.5;41.5?crop=0;0;108;42?replace;1d001200=410;1d001300=410;1d001800=410;1d001900=410;1e001200=410;1e001300=410;1e001400=410;1e001500=410;1e001600=410;1e001700=410;1e001800=410;1e001900=410;1f001200=410;1f001300=410;1f001400=410;1f001500=410;1f001600=410;1f001700=410;1f001800=410;1f001900=410;20001200=410;20001300=410;20001800=410;20001900=410;21001200=410;21001300=410;21001800=410;21001900=410;22001300=410;22001400=410;22001800=410;22001900=410;23001300=410;23001400=410;23001800=410;23001900=410;24001400=410;24001500=410;24001800=410;24001900=410;25001400=410;25001500=410;25001800=410;25001900=410;26001500=410;26001600=410;26001800=410;26001900=410;27001500=410;27001600=410;27001800=410;27001900=410;28001600=410;28001700=410;28001800=410;28001900=410;29001600=410;29001700=410;29001800=410;29001900=410;2a001700=410;2a001800=410;2a001900=410;2b001700=410;2b001800=410;2b001900=410;2c001000=410;2c001100=010;2c001200=010;2c001500=410;2c001600=210;2c001700=210;2c001800=210;2c001900=110;2c001a00=210;2d001000=410;2d001100=010;2d001200=010;2d001300=010;2d001400=010;2d001500=410;2d001600=210;2d001700=210;2d001800=210;2d001900=110;2d001a00=210;2e000f00=410;2e001000=410;2e001100=410;2e001200=410;2e001300=010;2e001400=010;2e001500=410;2e001600=410;2e001700=210;2e001800=210;2e001900=010;2e001a00=210;2e001b00=110;2f001300=410;2f001400=410;2f001500=410;2f001600=410;2f001700=210;2f001800=555;2f001900=010;2f001a00=210;2f001b00=110;30001500=010;30001600=010;30001700=555;30001800=555;30001900=010;30001a00=210;30001b00=110;31001400=010;31001600=310;31001700=210;31001800=555;31001900=010;31001a00=210;31001b00=110;32001400=010;32001500=310;32001700=210;32001800=555;32001900=010;32001a00=210;32001b00=110;33001400=010;33001700=210;33001800=555;33001900=010;33001a00=210;33001b00=110;34001500=010;34001600=010;34001700=210;34001800=555;34001900=010;34001a00=210;34001b00=110;35001500=410;35001600=410;35001700=210;35001800=210;35001900=310;35001a00=210;35001b00=110;36001500=010;36001600=010;36001700=210;36001800=210;36001900=310;36001a00=310;36001b00=110;37001400=210;37001500=210;37001600=210;37001700=110;37001800=210;37001900=010;37001a00=310;37001b00=110;38001400=210;38001500=210;38001600=210;38001700=110;38001800=210;38001900=310;38001a00=110;38001b00=110;39001400=110;39001500=110;39001600=210;39001700=110;39001800=210;39001900=210;39001a00=110;39001b00=110;39001c00=010;3a001400=210;3a001500=210;3a001600=210;3a001700=410;3a001800=110;3a001900=110;3a001a00=410;3a001b00=410;3a001c00=010;3b001400=210;3b001500=210;3b001600=210;3b001700=410;3b001800=210;3b001900=210;3b001a00=110;3b001b00=110;3b001c00=010;3c001400=110;3c001500=110;3c001600=210;3c001700=410;3c001800=210;3c001900=210;3c001a00=110;3c001b00=110;3d001400=210;3d001500=210;3d001600=210;3d001700=410;3d001800=110;3d001900=010;3d001a00=110;3d001b00=110;3e001400=210;3e001500=210;3e001600=210;3e001700=410;3e001800=210;3e001900=010;3e001a00=210;3e001b00=110;3f001400=110;3f001500=110;3f001600=210;3f001700=410;3f001800=210;3f001900=210;3f001a00=210;3f001b00=110;40001400=210;40001500=210;40001600=210;40001700=410;40001800=210;40001900=010;40001a00=210;40001b00=110;41001400=210;41001500=210;41001600=210;41001700=410;41001800=210;41001900=010;41001a00=210;41001b00=110;42001400=110;42001500=110;42001600=210;42001700=410;42001800=210;42001900=210;42001a00=210;42001b00=110;43001400=210;43001500=210;43001600=210;43001700=410;43001800=210;43001900=010;43001a00=210;43001b00=110;44001400=210;44001500=210;44001600=210;44001700=410;44001800=210;44001900=010;44001a00=210;44001b00=110;45001300=010;45001400=010;45001500=010;45001600=010;45001700=010;45001800=010;45001900=210;45001a00=210;45001b00=110;46001400=010;46001500=010;46001600=010;46001800=010;46001900=010;46001b00=010;46001c00=010;47001800=010;47001900=010;47001a00=010;47001b00=010;47001c00=010;48001800=010;48001900=010;49001800=010;49001900=010;4a001800=010;4a001900=010?replace;010=151515;110=292929;210=383838;310=808080;410=1a1a1a",
+	"description" : "",
+	"rarity" : "Common",
+	"maxStack" : 65,
+
+	"system" : "gunv2", // check in "/mpguns_core/systems/"
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+
+	"animations" : {
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbasev2.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"firesound1" : {"pool" : ["/sfx/gun/sniper2.ogg"], "pitchMultiplier" : 1.8},
+			"firesound2" : {"pool" : ["/sfx/gun/plasma_sniper5.ogg"], "pitchMultiplier" : 3.9},
+			"firesound3" : {"pool" : ["/sfx/gun/mech_flakcannon1.ogg"], "pitchMultiplier" : 1.0},
+			"firesound4" : {"pool" : [], "pitchMultiplier" : 0.72},
+			"reload1" : {"pool" : ["/sfx/gun/reload/ar_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"reload2" : {"pool" : ["/sfx/gun/reload/ar_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"reload3" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
+			"reload4" : {"pool" : ["/sfx/gun/reload/grenade_reload_clip3.ogg"], "pitchMultiplier" : 1.6},
+
+			"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5}
+		},
+		"lights" : {},
+		"animatedParts" : {
+			"parts" : {
+				"gunbg" : {
+					"properties" : {
+						"zLevel" : 9,
+						"offset" : [0,0],
+						"image" : "<sprite_0>",
+						"centered" : false,
+						"anchorPart" : "gun"
+					}
+				},
+				"mag" : {
+					"properties" : {
+						"zLevel" : 10,
+						"offset" : [0,0],
+						"image" : "<sprite_1>",
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["mag"]
+					}
+				},
+				"lever" : {
+					"properties" : {
+						"zLevel" : 11,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["lever"]
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 12,
+						"offset" : [0,0],
+						"image" : "<sprite_3>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						// define projectile output position anchored with gun transform
+						"offset" : [9.125,3.125],
+						"anchorPart" : "gun"
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0.0,0.0],
+						"centered" : true,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						// define casing position fx here
+						"offset" : [6.875,3.125],
+						"anchorPart" : "gun"
+					}
+				},
+				
+				"magPosition" : {
+					"properties" : {
+						// define mag position fx here
+						"offset" : [7.875,2.75],
+						"anchorPart" : "mag"
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"mode" : "transition", "transition" : "1", "cycle" : 0.032, "properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}},
+						"1" : {"mode" : "transition", "transition" : "off", "cycle" : 0.032, "properties" : {"particleEmittersOn" : ["smoke","muzzleFlash"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [1, 0],
+							"finalVelocity" : [0, 8.0],
+							"approach" : [0, 2],
+							"color" : [172,172,172,45],
+							"angularVelocity" : 180,
+							"initialVelocity" : [3.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.25,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [0.2,0.0],
+								"position" : [1, 1],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"muzzleFlash" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"size" : 2,
+							"color" : [0,0,0,0],
+							"light" : [253, 222, 57, 255],
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"layer" : "middle"
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {"muzzleFlash":{"transform":{"scale":[2,2]}},"mag":{"transform":{"rotationPoint":[6.9375,2.25],"rotation":0,"position":[0,0]}},"R_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[-0.4375,0.375]}},"globalRecoil":{"ignore":true,"interpolated":true},"armRotation":{"ignore":true,"transform":{"rotation":-5}},"gun":{"transform":{"rotationPoint":[6.25,2.75],"scale":[0.5,0.5],"rotation":5,"position":[-6.625,-1.8125]}},"base":{"interpolated":false},"lever2":{"transform":{"position":[0,0]}},"L_handPoint":{"interpolated":false,"transform":{"rotation":0,"position":[0.4375,0.5625]}},"lever":{"transform":{"position":[0,0]}}}
+	}
+}
