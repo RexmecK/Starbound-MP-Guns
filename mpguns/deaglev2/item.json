@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.0, // add up a number to force update
+	"itemVersion" : 1.02, // add up a number to force update
 
 	"shortdescription" : "Desert Eagle 50 AE",
 	"category" : "Pistol",
@@ -34,10 +34,10 @@
 	
 	"animationCustom" : {
 		"sounds" : {
-			"firesound1" : {"pool" : ["/sfx/gun/shotgun3.ogg"], "pitchMultiplier" : 1.1, "volume" : 1.2},
-			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 0.69},
-			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.2},
-			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.69, "volume" : 1.1},
+			"firesound1" : {"pool" : ["/sfx/gun/shotgun3.ogg"], "pitchMultiplier" : 1.3, "volume" : 1.2},
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.0},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast1.ogg"], "pitchMultiplier" : 1.4},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.6, "volume" : 1.1},
 			"reload1" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
 			"reload2" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip1.ogg"], "pitchMultiplier" : 1.0},
 			"reload3" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip3.ogg"], "pitchMultiplier" : 2.0},
