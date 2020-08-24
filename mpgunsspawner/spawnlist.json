@@ -68,5 +68,10 @@
 		"name" : "HK PSG-1",
 		"image" : "/mpguns/hkpsg1/icon.png",
 		"id" : "hkpsg1"
+	},
+	{
+		"name" : "FN FAL",
+		"image" : "/mpguns/fnfal/icon.png",
+		"id" : "fnfal"
 	}
 ]
