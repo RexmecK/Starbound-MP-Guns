@@ -50,10 +50,10 @@ function skin:getTags()
     local list = {}
     if main.config.mag then
         if main.config.mag.image then
-            list["magImage"] = config.inventoryIcon
+            list["magImage"] = config.skin["magImage"] or ""
         end
         if main.config.mag.imagefullbright then
-            list["magImageFullbright"] = config.inventoryIcon
+            list["magImageFullbright"] = config.skin["magImageFullbright"] or ""
         end
     end
     if sprites then
