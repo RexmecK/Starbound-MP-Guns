@@ -49,12 +49,8 @@ function skin:getTags()
     end
     local list = {}
     if main.config.mag then
-        if main.config.mag.image then
-            list["magImage"] = config.skin["magImage"] or ""
-        end
-        if main.config.mag.imagefullbright then
-            list["magImageFullbright"] = config.skin["magImageFullbright"] or ""
-        end
+        list["magImage"] = config.skin["magImage"] or ""
+        list["magImageFullbright"] = config.skin["magImageFullbright"] or ""
     end
     if sprites then
         for name,sprite in pairs(sprites) do
