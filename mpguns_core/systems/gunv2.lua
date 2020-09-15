@@ -15,7 +15,6 @@ include "skin"
 include "vec2"
 include "globalRecoil"
 include "altarms"
-include "mpguns_anchorsprite"
 
 main = {}
 main.config = {}
@@ -76,8 +75,6 @@ function main:init()
 	altarms:init()
 
 	self:initData()
-	self:reloadSprites()
-	skin:init()
 
 	self.storage = config.storage or {}
 	self.storage.ammo = self.storage.ammo or self.config.magazineCapacity
@@ -89,6 +86,8 @@ function main:init()
 	end
 
 	self:loadOtherScripts()
+	self:reloadSprites()
+	skin:init()
 
 	local confanimation = config:getAnimation()
     transforms:addCustom(
