@@ -3,6 +3,7 @@ include "config"
 include "animator"
 include "activeItem"
 include "directory"
+include "sprites"
 
 skin = {}
 
@@ -20,7 +21,7 @@ end
 
 function skin:apply(skin)
     config.skin = skin
-	sprites:load(config.sprites)
+	main:reloadSprites()
     self:applySprites(skin)
 end
 
@@ -30,7 +31,14 @@ function skin:applySprites(skin)
         skin.inventoryIcon = nil
     end
     for i,v in pairs(skin) do
-        animator.setGlobalTag(i,v)
+        if v ~= "" then
+            animator.setGlobalTag(i,v)
+            if i == "magImage" then
+                main:setMagImage(v, false)
+            elseif i == "magImageFullbright" then
+                main:setMagImage(v, true)
+            end
+        end
     end
 end
 
@@ -40,6 +48,14 @@ function skin:getTags()
         sprites = root.assetJson(directory(sprites))
     end
     local list = {}
+    if main.config.mag then
+        if main.config.mag.image then
+            list["magImage"] = config.inventoryIcon
+        end
+        if main.config.mag.imagefullbright then
+            list["magImageFullbright"] = config.inventoryIcon
+        end
+    end
     if sprites then
         for name,sprite in pairs(sprites) do
             list[name] = config.skin[name] or ""

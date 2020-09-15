@@ -15,6 +15,7 @@ include "skin"
 include "vec2"
 include "globalRecoil"
 include "altarms"
+include "mpguns_anchorsprite"
 
 main = {}
 main.config = {}
@@ -43,6 +44,26 @@ function main:setupEvents()
 	animations:addEvent("dropmag", function() self:dropmag() end)
 end
 
+function main:reloadSprites()
+	local spritestoload = config.sprites
+    if type(spritestoload) == "string" then
+        spritestoload = root.assetJson(directory(spritestoload))
+    end
+	if mpguns:getPreference("lowQuality") then
+		for i,v in pairs(spritestoload) do
+			spritestoload[i] = v.."?scale=0.525?scalenearest=1.90476190476190"
+		end
+	end
+	for i,v in pairs(spritestoload) do
+        if i == "magImage" then
+            self:setMagImage(v, false)
+        elseif i == "magImageFullbright" then
+            self:setMagImage(v, true)
+        end
+	end
+	sprites:load(spritestoload)
+end
+
 function main:init()
 	if type(config.gun) == "string" then
 		self.config = root.assetJson(directory(config.gun))
@@ -55,16 +76,7 @@ function main:init()
 	altarms:init()
 
 	self:initData()
-	local spritestoload = config.sprites
-    if type(spritestoload) == "string" then
-        spritestoload = root.assetJson(directory(spritestoload))
-    end
-	if mpguns:getPreference("lowQuality") then
-		for i,v in pairs(spritestoload) do
-			spritestoload[i] = v.."?scale=0.525?scalenearest=1.90476190476190"
-		end
-	end
-	sprites:load(spritestoload)
+	self:reloadSprites()
 	skin:init()
 
 	self.storage = config.storage or {}
@@ -100,9 +112,9 @@ function main:loadOtherScripts()
 	if config.altscript then
 		pcall(function() require(directory(config.altscript, modPath.."altscripts/", ".lua")) end)
 	end
-
-	if config.additionnalScripts then
-		for i,v in pairs(config.additionnalScripts) do
+	local additionalScripts = config.additionnalScripts or config.additionalScripts;
+	if additionalScripts then
+		for i,v in pairs(additionalScripts) do
 			pcall(function() require(directory(v, modPath.."scripts/", ".lua")) end)
 		end
 	end
@@ -436,20 +448,34 @@ function main:casing()
 end
 
 local maginited = false
-local magconfig = {}
-local function initmag(s)
+local magconfig = nil
+
+function main:initmag(config)
 	magconfig = root.assetJson("/mpguns_core/mag.config")
 
-	if s.config.mag.scale then
-		magconfig.parameters.scale = s.config.mag.scale
+	if config.scale then
+		magconfig.parameters.scale = self.config.mag.scale
 	end
 
-	if s.config.mag.image then
-		magconfig.parameters.animationCustom.globalTagDefaults.magimage = s.config.mag.image
+	if config.image then
+		magconfig.parameters.animationCustom.globalTagDefaults.magimage = self.config.mag.image
 	end
 
-	if s.config.mag.imagefullbright then
-		magconfig.parameters.animationCustom.globalTagDefaults.magimagefullbright = s.config.mag.imagefullbright
+	if config.imagefullbright then
+		magconfig.parameters.animationCustom.globalTagDefaults.magimagefullbright = self.config.mag.imagefullbright
+	end
+end
+
+function main:setMagImage(image, isFullbright)
+	if not maginited then
+		maginited = true
+		self:initmag(self.config.mag)
+	end
+
+	if isFullbright then
+		magconfig.parameters.animationCustom.globalTagDefaults.magimagefullbright = image
+	else
+		magconfig.parameters.animationCustom.globalTagDefaults.magimage = image
 	end
 end
 
@@ -458,7 +484,7 @@ function main:dropmag()
 		
 		if not maginited then
 			maginited = true
-			initmag(self)
+			self:initmag(self.config.mag)
 		end
 
 		local pos = activeItem.handPosition(animator.transformPoint(self.config.mag.offset or {0,0},self.config.mag.part)) + mcontroller.position()
