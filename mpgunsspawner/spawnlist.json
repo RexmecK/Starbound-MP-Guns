@@ -78,5 +78,10 @@
 		"name" : "PP-19 Bizon",
 		"image" : "/mpguns/pp19bizon/icon.png",
 		"id" : "pp19bizon"
+	},
+	{
+		"name" : "AUG A3",
+		"image" : "/mpguns/auga3/icon.png",
+		"id" : "auga3"
 	}
 ]

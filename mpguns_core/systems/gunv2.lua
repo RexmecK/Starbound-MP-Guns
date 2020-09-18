@@ -165,6 +165,9 @@ function main:update(...)
 	--gameplay mechanics
 	self.targetCameraRecoil = vec2(0, (aim:getRecoil() * 0.25))
 	self.currentCameraRecoil = self.currentCameraRecoil:lerp(self.targetCameraRecoil, 0.125)
+	if aim:getRecoil() > 0 then
+		self.currentCameraRecoil[1] = math.sin(os.clock() * 3000) * 0.03
+	end
 	camera.target = self:getAimCamera() + self:getRecoilCamera()
 	muzzle.inaccuracy = self:getInaccuracy()
 	crosshair.value = self:getCrosshairValue()
