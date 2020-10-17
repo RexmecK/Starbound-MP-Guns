@@ -9,6 +9,9 @@ animation.keyTimeTarget = 0
 animation.playing = false
 animation.keyFrames = {}
 animation.defaultTransforms = {}
+animation.disableParticleEmitter = {}
+animation.disableAnimationState = {}
+animation.disableLights = {}
 
 local function parseKeyFramesVec2(keyFrames)
 	local newkeyframes = {}
@@ -52,17 +55,17 @@ function animation:_reachkey(key)
 		end
 	end
 	for i,v in pairs(key.animationState or {}) do
-		if type(v) == "string" and type(i) == "string" then
+		if type(v) == "string" and type(i) == "string" and not self.disableAnimationState[i] then
 			animator.setAnimationState(i,v, true)
 		end
 	end
 	for i,v in pairs(key.burstParticle or {}) do
-		if type(v) == "string" and type(i) == "number" then
+		if type(v) == "string" and type(i) == "number" and not self.disableParticleEmitter[i] then
 			animator.burstParticleEmitter(v)
 		end
 	end
 	for i,v in pairs(key.lights or {}) do
-		if type(v) == "bool" and type(i) == "string" then
+		if type(v) == "bool" and type(i) == "string" and not self.disableLights[i] then
 			animator.setLightActive(i,v)
 		end
 	end

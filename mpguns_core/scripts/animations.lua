@@ -137,3 +137,21 @@ function animations:fireEvents(name)
 		self._events[name]()
 	end
 end
+
+function animations:disableAnimationState(name)
+	for i,v in pairs(self.list) do
+		self.list[i].disableAnimationState[name] = true
+	end
+end
+
+function animations:disableParticleEmitter(name)
+	for i,v in pairs(self.list) do
+		self.list[i].disableParticleEmitter[name] = true
+	end
+end
+
+function animations:disableLights(name)
+	for i,v in pairs(self.list) do
+		self.list[i].disableLights[name] = true
+	end
+end

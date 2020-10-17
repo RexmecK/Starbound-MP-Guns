@@ -15,6 +15,17 @@
 		},
 		"stateTypes":{}
 	},
+	"light":{
+    	"flashlight" : {
+    	 	"active" : false,
+    	 	"position" : [0, 0],
+    	 	"transformationGroups" : ["flashlight"],
+    	 	"color" : [220, 220, 220],
+    	 	"pointLight" : true,
+    	 	"pointAngle" : 0.00,
+    	 	"pointBeam" : 2.5
+    	}
+	},
 	"particleEmitters":{},
 	"sounds":{
 		"null":[]
@@ -23,6 +34,7 @@
 		"R_handPoint"	:{"interpolated":false},
 		"L_handPoint"	:{"interpolated":false},
 		"base"		:{"interpolated":false},
-		"globalRecoil"	:{"ignore":true, "interpolated":true}
+		"globalRecoil"	:{"ignore":true, "interpolated":true},
+		"flashlight"		:{"ignore":true, "interpolated":false}
 	}
 }

@@ -39,6 +39,14 @@ function muzzle:getPositions()
 	return positions
 end
 
+function muzzle:getItemPositions()
+	local positions = {}
+	for i,v in pairs(self._parts) do
+		positions[i] = animator.transformPoint(v,i)
+	end
+	return positions
+end
+
 function muzzle:fireProjectile(projectileName, projectileConfig, damageMultiplier)
 	local indiscriminateMode = status.statusProperty("indiscriminateMode")
 	for i,v in pairs(self._parts) do
@@ -55,9 +63,11 @@ function muzzle:fireProjectile(projectileName, projectileConfig, damageMultiplie
 		end
 
 		--damageMultiplier
-		if damageMultiplier ~= 1 and type(projectileConfig) == "table" then
-			projectileConfig.powerMultiplier = damageMultiplier
+		if type(projectileConfig) ~= "table" then
+			projectileConfig = {}
 		end
+
+		projectileConfig.powerMultiplier = activeItem.ownerPowerMultiplier() * (damageMultiplier or 1)
 
 		if indiscriminateMode then
 			projectileConfig.damageTeam = { type = "indiscriminate" }

@@ -4,6 +4,7 @@ include "animator"
 include "activeItem"
 include "directory"
 include "sprites"
+include "events"
 
 skin = {}
 
@@ -14,14 +15,14 @@ function skin:init()
     end
 
     config.skin = configskin or {}
-    
+    self:refreshSprites()
     message.setHandler("skin.apply", function(loc, _, skin) if not loc then return end self:apply(skin) end)
     message.setHandler("skin.getTags", function(loc, _, skin) if not loc then return end return self:getTags() end)
 end
 
 function skin:apply(skin)
     config.skin = skin
-	main:reloadSprites()
+	self:refreshSprites()
     self:applySprites(skin)
 end
 
@@ -34,12 +35,13 @@ function skin:applySprites(skin)
         if v ~= "" then
             animator.setGlobalTag(i,v)
             if i == "magImage" then
-                main:setMagImage(v, false)
+                magazine:setDropImage(v, false)
             elseif i == "magImageFullbright" then
-                main:setMagImage(v, true)
+                magazine:setDropImage(v, true)
             end
         end
     end
+	events:fire("applySkins")
 end
 
 function skin:getTags()
@@ -60,3 +62,28 @@ function skin:getTags()
     list["inventoryIcon"] = config.inventoryIcon
     return list
 end
+
+--turns every sprite to default
+function skin:refreshSprites()
+	local spritestoload = config.sprites
+    if type(spritestoload) == "string" then
+        spritestoload = root.assetJson(directory(spritestoload))
+    end
+	if mpguns:getPreference("lowQuality") then
+		for i,v in pairs(spritestoload) do
+			spritestoload[i] = v.."?scale=0.525?scalenearest=1.90476190476190"
+		end
+	end
+	for i,v in pairs(spritestoload) do
+        if i == "magImage" then
+            magazine:setDropImage(v, false)
+        elseif i == "magImageFullbright" then
+            magazine:setDropImage(v, true)
+        end
+	end
+	sprites:load(spritestoload)
+    
+	events:fire("refreshSprites")
+end
+
+updateable:add("skin")

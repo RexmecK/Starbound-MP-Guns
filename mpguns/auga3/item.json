@@ -1,5 +1,5 @@
 {
-	"itemVersion" : 1.01, // add up a number to force update
+	"itemVersion" : 1.1, // add up a number to force update
 
 	"shortdescription" : "AUG A3",
 	"category" : "Rifle",
@@ -28,6 +28,8 @@
 		"draw_dry" : "animations/draw_dry.keyframes",
 		"load_dry" : "animations/load_dry.keyframes"
 	},
+	
+	"magazine" : "magazine.json",
 	
 	"preloadAnimation" : true,
 	"animation" : "/mpguns/animationbasev2.json",

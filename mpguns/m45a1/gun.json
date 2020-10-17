@@ -29,14 +29,6 @@
 		"count" : 1
 	},
 
-	"mag" : {
-		"part" : "magPosition",
-		"image" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=000;eaeaea=060000;e4e4e4=00000b;6a6a6a=06000b?multiply=fff0?scale=5.5;10.5?crop=0;0;6;11?replace;00000100=444;01000000=444;01000100=444;01000200=bbb;01000300=bbb;01000400=bbb;01000500=bbb;01000600=bbb;02000000=444;02000100=bbb;02000200=bbb;02000300=bbb;02000400=bbb;02000500=bbb;02000600=bbb;02000700=bbb;02000800=bbb;02000900=bbb;02000a00=bbb;03000000=444;03000100=777;03000200=777;03000300=777;03000400=777;03000500=777;03000600=777;03000700=bbb;03000800=bbb;03000900=bbb;03000a00=bbb;04000000=444;04000100=bbb;04000200=bbb;04000300=bbb;04000400=bbb;04000500=bbb;04000600=bbb;04000700=777;04000800=777;04000900=777;05000000=444;05000700=bbb;05000800=bbb;05000900=bbb",
-		"scale" : 0.5,
-		"velocity" : [-2,0],
-		"count" : 1
-	},
-
 	"projectileName" : "plasmabullet",
 	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
 }
