@@ -31,8 +31,8 @@ function init()
 		if main and main.init then
 			main:init()
 		end
-		if itemScript and itemScript.init then
-			itemScript:init()
+		if luaItem and luaItem.init then
+			luaItem:init()
 		end
 	end
 

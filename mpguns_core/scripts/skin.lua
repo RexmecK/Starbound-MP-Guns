@@ -9,13 +9,12 @@ include "events"
 skin = {}
 
 function skin:init()
+    self:refreshSprites()
+
     local configskin = config.skin
     if configskin then
         self:applySprites(configskin)
     end
-
-    config.skin = configskin or {}
-    self:refreshSprites()
     message.setHandler("skin.apply", function(loc, _, skin) if not loc then return end self:apply(skin) end)
     message.setHandler("skin.getTags", function(loc, _, skin) if not loc then return end return self:getTags() end)
 end
@@ -50,7 +49,7 @@ function skin:getTags()
         sprites = root.assetJson(directory(sprites))
     end
     local list = {}
-    if main.config.mag then
+    if main.config.mag or config.magazine then
         list["magImage"] = config.skin["magImage"] or ""
         list["magImageFullbright"] = config.skin["magImageFullbright"] or ""
     end

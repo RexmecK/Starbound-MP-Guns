@@ -273,7 +273,7 @@ end
 --UI mechanics
 
 function main:getCrosshairValue()
-	return ((muzzle.inaccuracy + math.abs(aim:getRecoil())) / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy)) * 25
+	return ((muzzle.inaccuracy + math.abs(aim:getRecoil())) / math.max(self.config.movingInaccuracy, self.config.standingInaccuracy, 0.000001)) * 25
 end
 
 --firing mechanics
