@@ -1,0 +1,210 @@
+{
+	"itemVersion" : 1.0, // add up a number to force update
+
+	"shortdescription" : "Taurus Model 44",
+	"category" : "Revolver",
+	"inventoryIcon" : "/assetmissing.png?crop;0;0;1;1?setcolor=fff?replace;fff0=fff?border=1;fff;000?scale=1.15;1.12?crop;1;1;3;3?replace;fbfbfb=0000;eaeaea=41000000;e4e4e4=00003400;6a6a6a=41003400?scale=64.5;51.5?crop=0;0;65;52?replace;09000800=110;09000900=110;09000a00=010;09000b00=010;0a000700=110;0a000800=110;0a000900=110;0a000a00=010;0a000b00=010;0a000c00=010;0a000d00=010;0b000700=110;0b000800=110;0b000900=010;0b000a00=010;0b000b00=010;0b000c00=010;0b000d00=010;0b000e00=010;0b000f00=110;0c000700=110;0c000800=110;0c000900=010;0c000a00=010;0c000b00=010;0c000c00=010;0c000d00=010;0c000e00=010;0c000f00=110;0c001000=110;0c001100=110;0d000800=110;0d000900=110;0d000a00=110;0d000b00=110;0d000c00=010;0d000d00=010;0d000e00=110;0d000f00=110;0d001000=110;0d001100=110;0d001200=210;0d001400=010;0d001500=010;0e000800=110;0e000b00=110;0e000c00=110;0e000d00=110;0e000e00=110;0e000f00=110;0e001000=210;0e001100=210;0e001200=210;0e001300=010;0e001400=010;0e001500=010;0f000b00=110;0f000d00=110;0f000e00=110;0f000f00=210;0f001000=210;0f001100=210;0f001200=210;0f001300=210;0f001400=010;10000d00=210;10000e00=210;10000f00=210;10001000=210;10001100=210;10001200=310;10001300=310;10001400=210;10001500=210;10001600=110;11000c00=210;11000e00=010;11000f00=210;11001000=210;1010=310;11001200=310;11001300=310;11001400=310;11001500=210;11001600=110;12000c00=210;12000d00=010;12000e00=010;12000f00=210;12001000=410;12001100=210;12001200=210;12001300=410;12001400=410;12001500=210;13000c00=210;13000d00=010;13000f00=210;13001000=410;13001100=210;13001200=210;13001300=410;13001400=410;13001500=210;14000c00=210;14000f00=210;14001000=410;14001100=310;14001200=210;14001300=310;14001400=410;14001500=210;15000d00=210;15000e00=210;15000f00=210;15001000=410;15001100=310;15001200=210;15001300=310;15001400=410;15001500=210;16000f00=210;16001000=410;16001100=310;16001200=210;16001300=310;16001400=410;16001500=410;17000f00=210;17001000=410;17001100=310;17001200=310;17001300=310;17001400=310;17001500=410;18000f00=210;18001000=410;18001100=210;18001200=410;18001300=210;18001400=410;18001500=410;19001100=210;19001200=210;19001300=210;19001400=410;19001500=410;1a001200=210;1a001300=210;1a001400=410;1a001500=310;1b001200=210;1b001300=210;1b001400=410;1b001500=310;1c001200=210;1c001300=210;1c001400=410;1c001500=410;1d001200=210;1d001300=210;1d001400=410;1d001500=310;1e001200=210;1e001300=210;1e001400=410;1e001500=310;1f001200=210;1f001300=210;1f001400=410;1f001500=410;20001200=210;20001300=210;20001400=410;20001500=310;21001200=210;21001300=210;21001400=410;21001500=310;22001200=210;22001300=210;22001400=410;22001500=410;23001200=210;23001300=210;23001400=410;23001500=410;23001600=110;24001200=210;24001300=210;24001400=410;24001500=410;24001600=110;25001300=210;25001400=410;25001500=410;25001600=110;26001300=210;26001400=410;26001500=410;26001600=110?replace;010=303030;110=383838;210=b6b6b6;310=7b7b7b;410=e6e6e6",
+	"description" : "",
+	"rarity" : "Common",
+	"maxStack" : 6,
+
+	"system" : "gunv2", // check in "/mpguns_core/systems/"
+	"altscript" : "fire",
+	"altfire" : "altfire.json",
+
+	"gun" : "gun.json",
+	"sprites" : "sprites.json",
+
+	"muzzle" : [
+		{"part" : "muzzlePosition", "offset" : [0,0]}
+	],
+
+	"animations" : {
+		"altfire" : "animations/altfire.keyframes",
+
+		"fire" : "animations/fire.keyframes",
+		"reload" : "animations/reload.keyframes",
+		"draw" : "animations/draw.keyframes",
+		"load" : "animations/load.keyframes",
+
+		"fire_dry" : "animations/fire_dry.keyframes",
+		"reload_dry" : "animations/reload_dry.keyframes",
+		"draw_dry" : "animations/draw_dry.keyframes",
+		"load_dry" : "animations/load_dry.keyframes"
+	},
+	
+	"preloadAnimation" : true,
+	"animation" : "/mpguns/animationbasev2.json",
+	
+	"animationCustom" : {
+		"sounds" : {
+			"firesound1" : {"pool" : ["/sfx/gun/pistol3.ogg"], "pitchMultiplier" : 1.15, "volume" : 1.0},
+			"firesound2" : {"pool" : ["/sfx/gun/tank_shot.ogg"], "pitchMultiplier" : 1.0, "volume" : 0.75},
+			"firesound3" : {"pool" : ["/sfx/gun/rocketblast2.ogg"], "pitchMultiplier" : 1.10, "volume" : 0.89},
+			"firesound4" : {"pool" : ["/sfx/gun/sniper3.ogg"], "pitchMultiplier" : 0.79, "volume" : 1.3},
+			"reload1" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 2.0},
+			"reload2" : {"pool" : ["/sfx/gun/reload/machinepistol_reload_clip2.ogg"], "pitchMultiplier" : 1.0},
+			"reload3" : {"pool" : ["/sfx/gun/reload/pistol_reload_clip1.ogg"], "pitchMultiplier" : 2.0},
+
+			"sound" : {"pool" : ["/sfx/gun/ar1.ogg"], "pitchMultiplier" : 1.5}
+		},
+		"lights" : {},
+		"animatedParts" : {
+			"parts" : {
+				"roller" : {
+					"properties" : {
+						"zLevel" : 10,
+						"offset" : [0,0],
+						"centered" : false,
+						"anchorPart" : "gun",
+						"transformationGroups" : ["roller"]
+					},
+					"partStates" : {
+						"roller" : {
+							"0" : {"properties" : {"image" : "<sprite_0>"}},
+							"1" : {"properties" : {"image" : "<sprite_1>"}}
+						}
+					}
+				},
+				"gun" : {
+					"properties" : {
+						"zLevel" : 11,
+						"offset" : [0,0],
+						"image" : "<sprite_2>",
+						"centered" : false,
+						"transformationGroups" : ["gun", "base"]
+					}
+				},
+
+				"muzzlePosition" : {
+					"properties" : {
+						// define projectile output position anchored with gun transform
+						"offset" : [4.25,2.625],
+						"anchorPart" : "gun"
+					}
+				},
+				"muzzleFlash" : {
+					"properties" : {
+						"zLevel" : 15,
+						"offset" : [0.0,0.0],
+						"centered" : true,
+						"fullbright" : true,
+						"transformationGroups" : ["muzzleFlash"],
+						"anchorPart" : "muzzlePosition"
+					},
+					"partStates" : {
+						"muzzleFlash" : {
+							"0" : {
+								"properties" : {
+									"image" : "<muzzleFlash_0>"
+								}
+							},
+							"1" : {
+								"properties" : {
+									"image" : "<muzzleFlash_1>"
+								}
+							}
+						}
+					}
+				},
+				
+				"casingPosition" : {
+					"properties" : {
+						// define casing position fx here
+						"offset" : [2,2.625],
+						"anchorPart" : "gun"
+					}
+				},
+				
+				"magPosition" : {
+					"properties" : {
+						// define mag position fx here
+						"offset" : [1.875,1.75],
+						"anchorPart" : "mag"
+					}
+				}
+			},
+			
+			"stateTypes" : {
+				"muzzleFlash" : {"default" : "off",
+					"states" : {
+						"0" : {"mode" : "transition", "transition" : "1", "cycle" : 0.032, "properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}},
+						"1" : {"mode" : "transition", "transition" : "off", "cycle" : 0.032, "properties" : {"particleEmittersOn" : ["smoke","muzzleFlash"]}},
+						"off" : {"properties" : {"particleEmittersOff" : ["smoke","muzzleFlash"]}}
+					}
+				},
+				"roller" : {"default" : "0",
+					"states" : {
+						"0" : {},
+						"1" : {}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"smoke" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{ 
+						"count" : 2,
+						"particle" : {
+							"type" : "animated",
+							"animation" : "/animations/dust2/dust2.animation?scale=4",
+							"position" : [1, 0],
+							"finalVelocity" : [0, 8.0],
+							"approach" : [0, 2],
+							"color" : [172,172,172,45],
+							"angularVelocity" : 180,
+							"initialVelocity" : [3.0, 0.0],
+							"destructionAction" : "shrink",
+							"destructionTime" : 0.85,
+							"fade" : 1,
+							"size" : 0.5,
+							"layer" : "back",
+							"timeToLive" : 0.25,
+							"variance" : {
+								"angularVelocity" : 360,
+								"initialVelocity" : [0.2,0.0],
+								"position" : [1, 1],
+								"size" : 0.125
+							}
+						}
+					}
+				]
+			},
+			"muzzleFlash" : {
+				"emissionRate" : 64.0,
+				"zLevel" : 100,
+				"anchorPart" : "muzzlePosition",
+				"particles" : [
+					{
+						"count" : 1,
+						"particle" : {
+							"type" : "ember",
+							"size" : 2,
+							"color" : [0,0,0,0],
+							"light" : [253, 222, 57, 255],
+							"timeToLive" : 0.032,
+							"fullbright" : true,
+							"layer" : "middle"
+						}
+					}
+				]
+			}
+		},
+
+		"transformationGroups" : {
+			"roller":{"transform":{}},
+			"muzzleFlash":{"transform":{"scale":[2,2]}},
+			"R_handPoint":{"interpolated":false,"transform":{"position":[-0.0625,0.375]}},
+			"globalRecoil":{"ignore":true,"interpolated":true,"transform":{}},
+			"armRotation":{"ignore":true,"transform":{"rotation":-5}},
+			"gun":{"transform":{"rotationPoint":[2.25,2.0625],"scale":[0.5,0.5],"rotation":5,"position":[-1.6875,-0.8125]}},
+			"base":{"interpolated":false,"transform":{}},
+			"L_handPoint":{"interpolated":false,"transform":{"position":[-0.0625,0.25]}}
+		}
+	}
+}

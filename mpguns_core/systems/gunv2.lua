@@ -469,7 +469,11 @@ function main:casing()
 		casingConfig.parameters.ownerId = activeItem.ownerEntityId()
 
 		for i=1,self.gunConfig.casing.count or 1 do
-			casingConfig.parameters.velocity = vec2(self.gunConfig.casing.velocity or casingConfig.parameters.velocity):rotate((-angle * aim.facing) + math.rad((math.random(450,900) - 450) / 10)) * vec2(aim.facing, 1)
+			local random = 0
+			if self.gunConfig.casing.randomAngle and self.gunConfig.casing.randomAngle > 0 then
+				random = (math.random((math.abs(self.gunConfig.casing.randomAngle) * 2) * 1000) / 1000) - (self.gunConfig.casing.randomAngle)
+			end
+			casingConfig.parameters.velocity = vec2(self.gunConfig.casing.velocity or casingConfig.parameters.velocity):rotate(((-angle + math.rad(random)) * aim.facing) + math.rad((math.random(450,900) - 450) / 10)) * vec2(aim.facing, 1)
 			world.spawnMonster(casingConfig.type, pos, casingConfig.parameters)
 		end
 	end

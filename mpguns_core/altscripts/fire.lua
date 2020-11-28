@@ -64,11 +64,11 @@ function alt:update(dt, firemode, shift)
 				main.storage.loaded = 2
 				main:save()
 			end
-			if self.config.chamberAutoLoad and main.storage.ammo > 0 then
+			if self.config.chamberAutoLoad and (main.storage.ammo or (magazine and magazine:count())) > 0 then
 				main.storage.canLoad = true
 				main:save()
 			end
-			if main.storage.ammo == 0 or self.config.chamberDryIfFire then
+			if (main.storage.ammo or (magazine and magazine:count())) == 0 or self.config.chamberDryIfFire then
 				main.storage.dry = true
 				main:save()
 			end

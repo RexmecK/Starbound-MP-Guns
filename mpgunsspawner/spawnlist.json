@@ -83,5 +83,10 @@
 		"name" : "AUG A3",
 		"image" : "/mpguns/auga3/icon.png",
 		"id" : "auga3"
+	},
+	{
+		"name" : "Taurus Model 44",
+		"image" : "/mpguns/taurus44/icon.png",
+		"id" : "taurus44"
 	}
 ]
