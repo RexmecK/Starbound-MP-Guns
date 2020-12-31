@@ -88,5 +88,10 @@
 		"name" : "Taurus Model 44",
 		"image" : "/mpguns/taurus44/icon.png",
 		"id" : "taurus44"
+	},
+	{
+		"name" : "P90",
+		"image" : "/mpguns/p90/icon.png",
+		"id" : "p90"
 	}
 ]

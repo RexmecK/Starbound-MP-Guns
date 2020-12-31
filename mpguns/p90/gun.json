@@ -1,0 +1,34 @@
+{
+
+	"damageMultiplier" : 16,
+	"knockback" : 5,
+
+	"magazineCapacity" : 50,
+	"chamberAutoLoad" : true,
+	"chamberEject" : true,
+
+	"recoil" : 4,
+	"recoilRecovery" : 2,
+	"recoilResponse" : 2,
+	"armRecoil" : 0.2,
+	"armRecoilRecovery" : 4,
+	
+	"movingInaccuracy" : 3,
+	"standingInaccuracy" : 0.5,
+	"crouchInaccuracyMultiplier" : 0.5,
+
+	"aimRatio" : 0.05,
+
+	"firemode" : "auto",
+	"rpm" : 900,
+
+	"casing" : {
+		"part" : "casingPosition",
+		"type" : "9mm",
+		"velocity" : [0,-10],
+		"count" : 1
+	},
+
+	"projectileName" : "plasmabullet",
+	"projectileConfig" : "/mpguns_core/projectileConfigs/bullet.config"
+}
