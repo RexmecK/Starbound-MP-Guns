@@ -93,5 +93,10 @@
 		"name" : "P90",
 		"image" : "/mpguns/p90/icon.png",
 		"id" : "p90"
+	},
+	{
+		"name" : "MP5A5",
+		"image" : "/mpguns/mp5a5/icon.png",
+		"id" : "mp5a5"
 	}
 ]
