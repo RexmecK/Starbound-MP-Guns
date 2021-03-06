@@ -1,6 +1,6 @@
 {
   "author" : "Rexmeck",
-  "description" : "[h1]Guns made for vanilla multiplayer[/h1]\nhttps://www.discord.gg/yJAruMV\n\n[h1]How to Spawn guns[/h1]\n- Open Quickbar mini\n- Open the MPguns Interface\n\n[h1]Controls[/h1]\n Fire: Left click\n Activate-Special: Right Click\n Activate-Special-Attachment: S+Shift\n Reload: Shift-W\n Eject: W\n\n[h1]Current Update[/h1]\n- Taurus Model 44",
+  "description" : "[h1]Guns made for vanilla multiplayer[/h1]\nhttps://www.discord.gg/yJAruMV\n\n[h1]How to Spawn guns[/h1]\n- Open Quickbar mini\n- Open the MPguns Interface\n\n[h1]Controls[/h1]\n Fire: Left click\n Activate-Special: Right Click\n Activate-Special-Attachment: S+Shift\n Reload: Shift-W\n Eject: W\n\n[h1]Current Update[/h1]\n- P90\n- MP5A5",
   "friendlyName" : "Multiplayer guns",
   "includes" : ["QuickbarMini"],
   "link" : "steam://url/CommunityFilePage/1931428350",
