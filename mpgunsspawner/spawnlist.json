@@ -98,5 +98,10 @@
 		"name" : "MP5A5",
 		"image" : "/mpguns/mp5a5/icon.png",
 		"id" : "mp5a5"
+	},
+	{
+		"name" : "Glock 17",
+		"image" : "/mpguns/glock17/icon.png",
+		"id" : "glock17"
 	}
 ]
