@@ -24,7 +24,7 @@
 
 	"casing" : {
 		"part" : "casingPosition",
-		"type" : "5mm",
+		"type" : "9mm",
 		"velocity" : [-2,10],
 		"count" : 1
 	},
